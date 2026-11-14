@@ -52,12 +52,20 @@ def fetch_items(kws=None, musinsa=False, limit=60):
             items.append({"img":u,"origin":origin,"author":"스냅创作者","src":"Musinsa","w":w,"h":h})
         return items
     q = ",".join("?"*len(kws))
+    # 质量分层: 分辨率过滤(竖图≥400x600) + 按收藏数排序 + 时间近者优先
     rows = con.execute(f"""SELECT img_url,origin_url,author,license,w,h,tags FROM items
         WHERE source='duitang' AND json_extract(tags,'$.kw') IN ({q})
-        ORDER BY id DESC LIMIT ?""", (*kws, limit)).fetchall()
+          AND COALESCE(w,600)>=400 AND COALESCE(h,800)>=500
+        ORDER BY COALESCE(json_extract(raw,'$.favorite_count'),0) DESC, id DESC
+        LIMIT ?""", (*kws, limit * 3)).fetchall()
     items = []
+    from collections import defaultdict
+    per_kw = defaultdict(int)
+    cap = max(6, limit // max(1, len(kws)))
     for img,origin,author,lic,w,h,tags in rows:
         kw = json.loads(tags).get("kw") if tags else ""
+        if per_kw[kw] >= cap: continue
+        per_kw[kw] += 1
         sid = json.loads(tags).get("sender_id") if tags else None
         items.append({"img":img,"origin":origin,"author":author or (f"创作者{sid}" if sid else None),"src":"堆糖","w":w,"h":h,"kw":kw})
     con.close()
@@ -90,6 +98,7 @@ def page(title, desc, body, accent, path="/"):
 </head>
 <body>
 {body}
+<script src="/lightbox.js" defer></script>
 </body>
 </html>'''
 

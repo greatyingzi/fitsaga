@@ -1,4 +1,3 @@
-
 # ---------- Nikki 套装页生成 (gen_nikki.py) ----------
 import sqlite3, pathlib
 import html as html_mod
@@ -16,14 +15,18 @@ def slugify(name: str) -> str:
     s = re.sub(r"[^\w\u4e00-\u9fff-]+", "-", name.strip())
     return s.strip("-") or "suit"
 
-def gen_nikki_pages(limit_games=("无限暖暖", "闪耀暖暖", "奇迹暖暖"), per_game_cap=300):
+def gen_nikki_pages(limit_games=("无限暖暖", "闪耀暖暖", "奇迹暖暖"), per_game_cap=300, page_size=60):
+    import os
+    page_no = int(os.environ.get("NIKKI_PAGE", "1"))
     out = []
     con = sqlite3.connect(DB)
     (PUB / "nikki").mkdir(parents=True, exist_ok=True)
     sitemap_urls = []
     for game in limit_games:
-        rows = con.execute("SELECT id,name FROM suits WHERE game=? ORDER BY id LIMIT ?",
+        allrows = con.execute("SELECT id,name FROM suits WHERE game=? ORDER BY id LIMIT ?",
                            (game, per_game_cap)).fetchall()
+        page_no = int(__import__('os').environ.get("NIKKI_PAGE", "1"))
+        rows = allrows[(page_no-1)*page_size : page_no*page_size]
         # 索引页
         idx_cards = []
         for sid, name in rows:
@@ -32,11 +35,22 @@ def gen_nikki_pages(limit_games=("无限暖暖", "闪耀暖暖", "奇迹暖暖")
             cover = first[0] if first else ""
             n_imgs = con.execute("SELECT COUNT(*) FROM suit_imgs WHERE suit_id=?", (sid,)).fetchone()[0]
             if n_imgs == 0: continue
-            idx_cards.append(f'''<a class="scard" href="/nikki/{slug}">
+            idx_cards.append(f'''<a class="scard" href="/nikki/s/{slug}">
   <img src="{html_mod.escape(cover)}" alt="{html_mod.escape(game+name)}套装展示图" loading="lazy">
   <div class="sname">{html_mod.escape(name)}</div>
   <div class="smeta">{n_imgs} 张图 · {html_mod.escape(game)}</div>
 </a>''')
+        fname = {"无限暖暖":"infinity","闪耀暖暖":"shining","奇迹暖暖":"miracle"}[game]
+        total_pages = max(1, (len(allrows) + page_size - 1) // page_size) if game == "无限暖暖" else 1
+        parts = []
+        if total_pages > 1:
+            if page_no > 1:
+                parts.append(f'<a class="chip" href="/nikki/{fname}-{page_no-1}.html">← 上一页</a>')
+            parts.append(f'<span class="chip on">第 {page_no} / {total_pages} 页</span>')
+            if page_no < total_pages:
+                parts.append(f'<a class="chip" href="/nikki/{fname}-{page_no+1}.html">下一页 →</a>')
+            parts.append('<a class="chip" href="/nikki/infinity-1.html">第 1 页</a>')
+        pager = "".join(parts)
         idx_html = f'''<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -52,12 +66,14 @@ def gen_nikki_pages(limit_games=("无限暖暖", "闪耀暖暖", "奇迹暖暖")
 </style></head><body>
 <header class="hero small"><h1><span style="color:#f5c76e">{html_mod.escape(game)}</span> 套装图鉴</h1>
 <p class="sub">{len(idx_cards)} 套 · 数据来自 {("BWIKI")}</p></header>
-<main class="sec"><div class="sgrid">{"".join(idx_cards)}</div></main>
+<main class="sec"><div class="sgrid">{"".join(idx_cards)}</div>
+<nav class="stylechips" style="margin-top:1.5rem">{pager}</nav></main>
 <footer><div><b style="color:#f5c76e">FitSaga</b> · 游戏时装图鉴</div>
 <div class="source">游戏素材版权归叠纸网络/官方所有 · 数据整理自 BWIKI(biligame) · © 2026 FitSaga</div></footer>
+<script src="/lightbox.js" defer></script>
 </body></html>'''
-        fname = {"无限暖暖":"infinity","闪耀暖暖":"shining","奇迹暖暖":"miracle"}[game]
-        (PUB / f"nikki/{fname}.html").write_text(idx_html, encoding="utf-8")
+        outname = f"nikki/{fname}-{page_no}.html" if (game == "无限暖暖" and page_no > 1) else f"nikki/{fname}.html"
+        (PUB / outname).write_text(idx_html, encoding="utf-8")
         sitemap_urls.append(f"/nikki/{fname}.html")
         out.append(f"{game} index: {len(idx_cards)} suits")
     con.close()

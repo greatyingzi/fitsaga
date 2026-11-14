@@ -72,6 +72,7 @@ def main():
 </main>
 <footer><div><b style="color:#f5c76e">FitSaga</b> · 每一套时装，都是一个故事</div>
 <div class="source">游戏素材版权归叠纸网络所有 · 数据整理自 BWIKI · <a style="color:#9d8fa8" href="/nikki/infinity">全部套装图鉴</a> · © 2026 FitSaga</div></footer>
+<script src="/lightbox.js" defer></script>
 </body></html>'''
         (PUB / f"collection/{c['slug']}.html").write_text(page, encoding="utf-8")
         urls.append(f"/collection/{c['slug']}")
