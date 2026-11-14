@@ -40,6 +40,7 @@ def gen_nikki_pages(limit_games=("无限暖暖", "闪耀暖暖", "奇迹暖暖")
         idx_html = f'''<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
 <title>{html_mod.escape(game)}套装图鉴 · FitSaga</title>
 <meta name="description" content="{html_mod.escape(game)}全部套装图鉴：展示图、部件图、海报，逐张标注来源。">
 <style>{CSS}</style><style>

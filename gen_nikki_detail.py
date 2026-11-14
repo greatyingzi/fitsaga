@@ -33,6 +33,7 @@ def main(cap=300):
         page = f'''<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
 <title>{html.escape(name)} · {html.escape(game)}套装图鉴 · FitSaga</title>
 <meta name="description" content="{html.escape(name)}({html.escape(game)})套装图鉴：{n}张展示图/部件图/海报，来源BWIKI，点击查看。">
 <link rel="canonical" href="https://fitsaga.pages.dev/nikki/s/{slug}">

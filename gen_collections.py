@@ -57,6 +57,7 @@ def main():
         page = f'''<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
 <title>{html.escape(c["title"])} · FitSaga</title>
 <meta name="description" content="{html.escape(c["desc"])}共 {len(cards)} 套，数据来自无限暖暖套装库。">
 <link rel="canonical" href="https://fitsaga.pages.dev/collection/{c["slug"]}">
