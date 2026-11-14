@@ -14,22 +14,37 @@ a{color:inherit;text-decoration:none}
 .hero h1{font-size:clamp(1.8rem,5vw,3.4rem);font-weight:800;line-height:1.3;background:linear-gradient(90deg,#ffd9a8,#ff7eb3,#c793ff,#8ec5ff);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero .sub{margin-top:.8rem;color:#cbb8d4;letter-spacing:.12em;font-size:clamp(.9rem,2vw,1.05rem)}
 .stylechips{display:flex;flex-wrap:wrap;gap:.55rem;justify-content:center;margin-top:1.8rem}
-.chip{padding:.5rem 1rem;border-radius:999px;font-size:.85rem;font-weight:600;color:#fff;box-shadow:0 4px 12px rgba(0,0,0,.35);transition:transform .2s;opacity:.85}
+.chip{display:inline-block;padding:.6rem 1.05rem;border-radius:999px;font-size:.9rem;font-weight:600;color:#fff;box-shadow:0 4px 12px rgba(0,0,0,.35);transition:transform .2s;opacity:.85}
 .chip:hover{transform:translateY(-2px);opacity:1}
 .chip.on{outline:2px solid #fff5;opacity:1}
 .sec{padding:2.5rem 1.5rem;max-width:1100px;margin:0 auto}
 .sec-head h2{font-size:clamp(1.3rem,3vw,1.9rem);font-weight:800}
-.sec-head p{width:100%;margin-top:.4rem;opacity:.85;font-size:.92rem}
+.sec-head p{width:100%;margin-top:.4rem;opacity:.85;font-size:.95rem}
 .intro{max-width:640px;color:#cbb8d4;line-height:1.8;font-size:.95rem;margin-bottom:1.4rem}
 .masonry{columns:3 240px;column-gap:14px}
 @media(max-width:640px){.masonry{columns:2 140px}}
 .shot{break-inside:avoid;margin-bottom:14px;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 6px 20px rgba(0,0,0,.4);background:#241b2c}
 .shot img{width:100%;display:block;transition:transform .35s}
 .shot:hover img{transform:scale(1.04)}
-.shot .cap{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:.5rem;padding:1.5rem .7rem .5rem;font-size:.72rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.7))}
-.shot .cap em{font-style:normal;opacity:.75;white-space:nowrap}
-footer{padding:2.5rem 1.5rem;text-align:center;color:#9d8fa8;font-size:.85rem;background:#0f0c13;margin-top:2rem}
-footer .source{opacity:.55;font-size:.75rem;margin-top:.5rem;line-height:1.7}
+.shot .cap{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:.5rem;padding:1.5rem .7rem .55rem;font-size:.78rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+.shot .cap em{font-style:normal;opacity:.75;white-space:nowrap;font-size:.78rem}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(160px,100%),1fr));gap:14px}
+.scard{background:#241b2c;border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+.scard img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.sname{padding:.6rem .7rem .1rem;font-weight:700;font-size:.9rem}
+.smeta{padding:0 .7rem .7rem;font-size:.78rem;color:#9d8fa8}
+footer{padding:2.5rem 1.5rem;text-align:center;color:#9d8fa8;font-size:.9rem;background:#0f0c13;margin-top:2rem}
+footer .links{margin-top:.7rem;display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+footer .links a{display:inline-block;padding:.55rem .9rem;border-radius:10px;background:#241b2c;font-size:.9rem;min-height:44px;line-height:1.4}
+footer .source{opacity:.6;font-size:.78rem;margin-top:.6rem;line-height:1.7}
+.sec-head a{display:inline-block;padding:.6rem .1rem;min-height:44px;line-height:1.7;font-size:.92rem}
+/* flywheel round3 fixes */
+.hero.small{min-height:26vh}
+.hero .sub{letter-spacing:.05em;max-width:22em;line-height:1.8}
+.collection-cap{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:.15rem;padding:2.2rem .8rem .6rem;font-size:.85rem;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+.shot .cap{font-size:.85rem}
+.shot .cap .view{font-size:.78rem;opacity:.8}
+.masonry .shot img{max-height:520px;object-fit:cover}
 </style></head><body>
 <header class="hero small"><h1><span style="color:#ff7eb3">暗夜哥特 · 套装精选</span></h1>
 <p class="sub">20 套 · 无限暖暖 · BWIKI 数据</p></header>
@@ -39,64 +54,64 @@ footer .source{opacity:.55;font-size:.75rem;margin-top:.5rem;line-height:1.7}
 <nav class="stylechips" style="margin-bottom:1.5rem"><a class="chip" style="background:linear-gradient(135deg,#2a1832,#e8608a55)" href="/collection/starry-night">星夜漫游</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#e8608a55)" href="/collection/fairytale-dream">童话与梦</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#e8608a55)" href="/collection/spring-floral">花开时节</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#e8608a55)" href="/collection/ocean-rain">海洋与雨</a></nav>
 <div class="masonry"><figure class="shot">
   <a href="/nikki/s/咏叹银夜莺-暗影"><img src="https://patchwiki.biligame.com/images/wxnn/3/38/beq1a5x81ndb7jquadyxn25z6yko1qt.png" alt="咏叹银夜莺·暗影 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>咏叹银夜莺·暗影</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>咏叹银夜莺·暗影</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/心愿金蔷薇-暗蚀"><img src="https://patchwiki.biligame.com/images/wxnn/9/9e/bml1k8mq67nff4ms4r5dou2nvt5y2un.png" alt="心愿金蔷薇·暗蚀 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>心愿金蔷薇·暗蚀</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>心愿金蔷薇·暗蚀</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/潮流暗夜"><img src="https://patchwiki.biligame.com/images/wxnn/e/e7/6ktfir3m6co0c2qfbnrged1bho4f8rd.png" alt="潮流暗夜 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>潮流暗夜</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>潮流暗夜</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/白夜长旋舞-暗涌"><img src="https://patchwiki.biligame.com/images/wxnn/9/95/l6iu2zwjez2vemby7n79fzfqb1a8cd5.png" alt="白夜长旋舞·暗涌 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>白夜长旋舞·暗涌</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>白夜长旋舞·暗涌</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/花漾梦萦-暗潮"><img src="https://patchwiki.biligame.com/images/wxnn/c/cf/msba8muts29cgd4fdobv3rmaw0kxo13.png" alt="花漾梦萦·暗潮 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>花漾梦萦·暗潮</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>花漾梦萦·暗潮</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/云朵白日梦-碧影"><img src="https://patchwiki.biligame.com/images/wxnn/b/bc/o4ejxstkr8l8m6g7isa7sjbhdanur8n.png" alt="云朵白日梦·碧影 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>云朵白日梦·碧影</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>云朵白日梦·碧影</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/只影片梦"><img src="https://patchwiki.biligame.com/images/wxnn/4/43/mcv0cut1j38ud6zu82a116x88yt757z.png" alt="只影片梦 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>只影片梦</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>只影片梦</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/只影片梦-晚城"><img src="https://patchwiki.biligame.com/images/wxnn/5/58/b6ggn2imjzt6v2gvl49l6rih48sa4gf.png" alt="只影片梦·晚城 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>只影片梦·晚城</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>只影片梦·晚城</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/只影片梦-蜜绘"><img src="https://patchwiki.biligame.com/images/wxnn/4/46/e4i7ck7137npdg33rda89s5j26tdlpg.png" alt="只影片梦·蜜绘 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>只影片梦·蜜绘</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>只影片梦·蜜绘</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/启源造律-昔影"><img src="https://patchwiki.biligame.com/images/wxnn/1/10/a8cud2xc36a8bibzj9ci4xgjaos9j1u.png" alt="启源造律·昔影 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>启源造律·昔影</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>启源造律·昔影</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/妖夜鉴影"><img src="https://patchwiki.biligame.com/images/wxnn/6/6b/c5hhl0u0vfklw04v1fr8u1g4eiq8bxe.png" alt="妖夜鉴影 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>妖夜鉴影</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>妖夜鉴影</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/妖夜鉴影-幽罗"><img src="https://patchwiki.biligame.com/images/wxnn/6/60/crwcl73l04nl5e1hbjsy4x2twu7srld.png" alt="妖夜鉴影·幽罗 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>妖夜鉴影·幽罗</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>妖夜鉴影·幽罗</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/妖夜鉴影-心照"><img src="https://patchwiki.biligame.com/images/wxnn/1/1a/8a29p1sp20ukw998iaft2366erwwxqs.png" alt="妖夜鉴影·心照 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>妖夜鉴影·心照</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>妖夜鉴影·心照</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/孤翎之影"><img src="https://patchwiki.biligame.com/images/wxnn/b/b9/oif9b5eyofvhn345s4x8agqllc0yve3.png" alt="孤翎之影 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>孤翎之影</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>孤翎之影</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/孤翎之影-断痕"><img src="https://patchwiki.biligame.com/images/wxnn/3/31/ejy58ch025bqygs2qvojpn7ampkigo4.png" alt="孤翎之影·断痕 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>孤翎之影·断痕</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>孤翎之影·断痕</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/孤翎之影-默守"><img src="https://patchwiki.biligame.com/images/wxnn/c/c3/jre0ygtq3yerqkvf4dbljsxt3t5648v.png" alt="孤翎之影·默守 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>孤翎之影·默守</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>孤翎之影·默守</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/幽影嬉夜时"><img src="https://patchwiki.biligame.com/images/wxnn/1/19/5zn11pfhehscv8w2ww8rvle9tz8zy7z.png" alt="幽影嬉夜时 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>幽影嬉夜时</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>幽影嬉夜时</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/幽影嬉夜时-巡守"><img src="https://patchwiki.biligame.com/images/wxnn/8/89/f9rn1niq78ca2zhcodhea5fafc8u2j6.png" alt="幽影嬉夜时·巡守 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>幽影嬉夜时·巡守</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>幽影嬉夜时·巡守</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/幽影嬉夜时-心引"><img src="https://patchwiki.biligame.com/images/wxnn/d/d4/j18azflhmpwmwtur7x0qr71iwj0kfof.png" alt="幽影嬉夜时·心引 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>幽影嬉夜时·心引</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>幽影嬉夜时·心引</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/幽篁清影"><img src="https://patchwiki.biligame.com/images/wxnn/d/d1/32juagw12q3w1akx47ajp1aft9ufbbw.png" alt="幽篁清影 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>幽篁清影</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>幽篁清影</span><em class="view">图鉴 →</em></figcaption>
 </figure></div>
 </main>
 <footer><div><b style="color:#f5c76e">FitSaga</b> · 每一套时装，都是一个故事</div>

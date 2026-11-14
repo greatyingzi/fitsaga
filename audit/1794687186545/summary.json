@@ -1,0 +1,8 @@
+{
+  "pass": 38,
+  "fail": 2,
+  "fails": [
+    "m390_home:tapTargets {\"broken\":0,\"hOverflow\":false,\"smallText\":0,\"tapSmall\":9,\"visImgs\":108,\"err\":0} err=0",
+    "d1280_home:tapTargets {\"broken\":0,\"hOverflow\":false,\"smallText\":0,\"tapSmall\":9,\"visImgs\":108,\"err\":0} err=0"
+  ]
+}

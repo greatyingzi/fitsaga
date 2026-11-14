@@ -14,22 +14,37 @@ a{color:inherit;text-decoration:none}
 .hero h1{font-size:clamp(1.8rem,5vw,3.4rem);font-weight:800;line-height:1.3;background:linear-gradient(90deg,#ffd9a8,#ff7eb3,#c793ff,#8ec5ff);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero .sub{margin-top:.8rem;color:#cbb8d4;letter-spacing:.12em;font-size:clamp(.9rem,2vw,1.05rem)}
 .stylechips{display:flex;flex-wrap:wrap;gap:.55rem;justify-content:center;margin-top:1.8rem}
-.chip{padding:.5rem 1rem;border-radius:999px;font-size:.85rem;font-weight:600;color:#fff;box-shadow:0 4px 12px rgba(0,0,0,.35);transition:transform .2s;opacity:.85}
+.chip{display:inline-block;padding:.6rem 1.05rem;border-radius:999px;font-size:.9rem;font-weight:600;color:#fff;box-shadow:0 4px 12px rgba(0,0,0,.35);transition:transform .2s;opacity:.85}
 .chip:hover{transform:translateY(-2px);opacity:1}
 .chip.on{outline:2px solid #fff5;opacity:1}
 .sec{padding:2.5rem 1.5rem;max-width:1100px;margin:0 auto}
 .sec-head h2{font-size:clamp(1.3rem,3vw,1.9rem);font-weight:800}
-.sec-head p{width:100%;margin-top:.4rem;opacity:.85;font-size:.92rem}
+.sec-head p{width:100%;margin-top:.4rem;opacity:.85;font-size:.95rem}
 .intro{max-width:640px;color:#cbb8d4;line-height:1.8;font-size:.95rem;margin-bottom:1.4rem}
 .masonry{columns:3 240px;column-gap:14px}
 @media(max-width:640px){.masonry{columns:2 140px}}
 .shot{break-inside:avoid;margin-bottom:14px;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 6px 20px rgba(0,0,0,.4);background:#241b2c}
 .shot img{width:100%;display:block;transition:transform .35s}
 .shot:hover img{transform:scale(1.04)}
-.shot .cap{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:.5rem;padding:1.5rem .7rem .5rem;font-size:.72rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.7))}
-.shot .cap em{font-style:normal;opacity:.75;white-space:nowrap}
-footer{padding:2.5rem 1.5rem;text-align:center;color:#9d8fa8;font-size:.85rem;background:#0f0c13;margin-top:2rem}
-footer .source{opacity:.55;font-size:.75rem;margin-top:.5rem;line-height:1.7}
+.shot .cap{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:.5rem;padding:1.5rem .7rem .55rem;font-size:.78rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+.shot .cap em{font-style:normal;opacity:.75;white-space:nowrap;font-size:.78rem}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(160px,100%),1fr));gap:14px}
+.scard{background:#241b2c;border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+.scard img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.sname{padding:.6rem .7rem .1rem;font-weight:700;font-size:.9rem}
+.smeta{padding:0 .7rem .7rem;font-size:.78rem;color:#9d8fa8}
+footer{padding:2.5rem 1.5rem;text-align:center;color:#9d8fa8;font-size:.9rem;background:#0f0c13;margin-top:2rem}
+footer .links{margin-top:.7rem;display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+footer .links a{display:inline-block;padding:.55rem .9rem;border-radius:10px;background:#241b2c;font-size:.9rem;min-height:44px;line-height:1.4}
+footer .source{opacity:.6;font-size:.78rem;margin-top:.6rem;line-height:1.7}
+.sec-head a{display:inline-block;padding:.6rem .1rem;min-height:44px;line-height:1.7;font-size:.92rem}
+/* flywheel round3 fixes */
+.hero.small{min-height:26vh}
+.hero .sub{letter-spacing:.05em;max-width:22em;line-height:1.8}
+.collection-cap{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:.15rem;padding:2.2rem .8rem .6rem;font-size:.85rem;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+.shot .cap{font-size:.85rem}
+.shot .cap .view{font-size:.78rem;opacity:.8}
+.masonry .shot img{max-height:520px;object-fit:cover}
 </style></head><body>
 <header class="hero small"><h1><span style="color:#ff7eb3">花开时节 · 套装精选</span></h1>
 <p class="sub">20 套 · 无限暖暖 · BWIKI 数据</p></header>
@@ -39,64 +54,64 @@ footer .source{opacity:.55;font-size:.75rem;margin-top:.5rem;line-height:1.7}
 <nav class="stylechips" style="margin-bottom:1.5rem"><a class="chip" style="background:linear-gradient(135deg,#2a1832,#e8608a55)" href="/collection/starry-night">星夜漫游</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#e8608a55)" href="/collection/fairytale-dream">童话与梦</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#e8608a55)" href="/collection/ocean-rain">海洋与雨</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#e8608a55)" href="/collection/dark-gothic">暗夜哥特</a></nav>
 <div class="masonry"><figure class="shot">
   <a href="/nikki/s/别离花客"><img src="https://patchwiki.biligame.com/images/wxnn/5/5c/6ztqptpyadl2arh2rxhsbt0tdn787hn.png" alt="别离花客 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>别离花客</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>别离花客</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/午后花篱"><img src="https://patchwiki.biligame.com/images/wxnn/d/d2/d9rggkwo1glwg3ohm4tm230szp0t65v.png" alt="午后花篱 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>午后花篱</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>午后花篱</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/午后花篱-明熠"><img src="https://patchwiki.biligame.com/images/wxnn/2/22/ems3ae7romdzozg0ah06vom67h39jh9.jpg" alt="午后花篱·明熠 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>午后花篱·明熠</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>午后花篱·明熠</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/午后花篱-栖野"><img src="https://patchwiki.biligame.com/images/wxnn/0/09/ifikbxmmr99jp7xuokc3fwtkgc0d46i.jpg" alt="午后花篱·栖野 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>午后花篱·栖野</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>午后花篱·栖野</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/向阳花纪"><img src="https://patchwiki.biligame.com/images/wxnn/4/4c/mje9ika8icl1lsvod8y5yrxt38usj5y.png" alt="向阳花纪 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>向阳花纪</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>向阳花纪</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/向阳花纪-林曦"><img src="https://patchwiki.biligame.com/images/wxnn/d/d1/nrvl1zp285b4ltnaimu1edmgs2uf9we.png" alt="向阳花纪·林曦 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>向阳花纪·林曦</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>向阳花纪·林曦</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/向阳花纪-盛堇"><img src="https://patchwiki.biligame.com/images/wxnn/d/d3/s9bl2rmfr4kpc3sfbaoqtkfors41p8r.png" alt="向阳花纪·盛堇 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>向阳花纪·盛堇</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>向阳花纪·盛堇</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/如果爱上一朵花"><img src="https://patchwiki.biligame.com/images/wxnn/0/07/9p3mdlmf6poe1l268m90pgc2n32wp9u.png" alt="如果爱上一朵花 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>如果爱上一朵花</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>如果爱上一朵花</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/如果爱上一朵花-唯一"><img src="https://patchwiki.biligame.com/images/wxnn/f/fc/5ckkwf1mxgkjgc18ksgjofipyxks9vm.png" alt="如果爱上一朵花·唯一 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>如果爱上一朵花·唯一</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>如果爱上一朵花·唯一</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/如果爱上一朵花-思念"><img src="https://patchwiki.biligame.com/images/wxnn/8/8e/ofkvtrqd5ltjwcf1n8tur8a0flrj1bt.png" alt="如果爱上一朵花·思念 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>如果爱上一朵花·思念</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>如果爱上一朵花·思念</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/如果爱上一朵花-青涩"><img src="https://patchwiki.biligame.com/images/wxnn/4/4f/7qz449hm0gqhriim1842b1ft7l269cc.png" alt="如果爱上一朵花·青涩 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>如果爱上一朵花·青涩</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>如果爱上一朵花·青涩</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/如果爱上一朵花-驯化"><img src="https://patchwiki.biligame.com/images/wxnn/4/43/pcj24zuvuh7chpgbgnw7yui21ppgfmj.png" alt="如果爱上一朵花·驯化 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>如果爱上一朵花·驯化</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>如果爱上一朵花·驯化</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/如雨坠-如花开"><img src="https://patchwiki.biligame.com/images/wxnn/a/a9/mkaknkz5tmmn78z7sf2rlmm2jawthhy.png" alt="如雨坠，如花开 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>如雨坠，如花开</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>如雨坠，如花开</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/如雨坠-如花开-告别"><img src="https://patchwiki.biligame.com/images/wxnn/d/d6/170rjuhbxartu11g80dtwh5xvrzjoca.png" alt="如雨坠，如花开·告别 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>如雨坠，如花开·告别</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>如雨坠，如花开·告别</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/如雨坠-如花开-怒放"><img src="https://patchwiki.biligame.com/images/wxnn/1/1f/ceveq92kiqaz0vh3wso2h5c4ub4vn3b.png" alt="如雨坠，如花开·怒放 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>如雨坠，如花开·怒放</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>如雨坠，如花开·怒放</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/如雨坠-如花开-未绽"><img src="https://patchwiki.biligame.com/images/wxnn/5/5e/8hamva0kzexl601dln76er8c37ec5jl.png" alt="如雨坠，如花开·未绽 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>如雨坠，如花开·未绽</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>如雨坠，如花开·未绽</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/如雨坠-如花开-等候"><img src="https://patchwiki.biligame.com/images/wxnn/4/40/hnn48vl7otmbxlzrhjlaoasotcnr3qy.png" alt="如雨坠，如花开·等候 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>如雨坠，如花开·等候</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>如雨坠，如花开·等候</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/定格瞬间-花海"><img src="https://patchwiki.biligame.com/images/wxnn/c/ce/fze38dtxmknt5as7wkkn0y3r6r9xle4.png" alt="定格瞬间·花海 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>定格瞬间·花海</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>定格瞬间·花海</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/愿笔生花"><img src="https://patchwiki.biligame.com/images/wxnn/3/3c/s8iutmrncks4zp4z7h0t050agua09c4.png" alt="愿笔生花 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>愿笔生花</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>愿笔生花</span><em class="view">图鉴 →</em></figcaption>
 </figure><figure class="shot">
   <a href="/nikki/s/愿笔生花-星舞"><img src="https://patchwiki.biligame.com/images/wxnn/b/b8/sgp3pqb73888r2ph96bzbj14ynex2jh.png" alt="愿笔生花·星舞 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>愿笔生花·星舞</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>愿笔生花·星舞</span><em class="view">图鉴 →</em></figcaption>
 </figure></div>
 </main>
 <footer><div><b style="color:#f5c76e">FitSaga</b> · 每一套时装，都是一个故事</div>

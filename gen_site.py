@@ -135,7 +135,7 @@ def home():
     body = f'''
 <section class="hero">
   <h1>每一种美，<br>都值得一场时装冒险 ✦</h1>
-  <p class="sub">古 风 · 优 雅 · 甜 美 · 性 感 · 青 春 · 潮 流 · 美 妆</p>
+  <p class="sub">古风 · 优雅 · 甜美 · 性感 · 青春 · 潮流<br>美妆 · 变美 · 每日灵感</p>
   <nav class="stylechips">{chips}</nav>
 </section>
 {"".join(secs)}

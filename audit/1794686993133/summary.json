@@ -1,0 +1,18 @@
+{
+  "pass": 28,
+  "fail": 12,
+  "fails": [
+    "m390_home:brokenImgs {\"broken\":105,\"hOverflow\":false,\"smallText\":324,\"tapSmall\":13,\"visImgs\":108,\"err\":0} err=0",
+    "m390_home:tinyText {\"broken\":105,\"hOverflow\":false,\"smallText\":324,\"tapSmall\":13,\"visImgs\":108,\"err\":0} err=0",
+    "m390_home:tapTargets {\"broken\":105,\"hOverflow\":false,\"smallText\":324,\"tapSmall\":13,\"visImgs\":108,\"err\":0} err=0",
+    "m390__style_hanfu_html:brokenImgs {\"broken\":56,\"hOverflow\":false,\"smallText\":180,\"tapSmall\":0,\"visImgs\":60,\"err\":0} err=0",
+    "m390__style_hanfu_html:tinyText {\"broken\":56,\"hOverflow\":false,\"smallText\":180,\"tapSmall\":0,\"visImgs\":60,\"err\":0} err=0",
+    "m390__collection_starry_night:tinyText {\"broken\":0,\"hOverflow\":false,\"smallText\":59,\"tapSmall\":0,\"visImgs\":20,\"err\":0} err=0",
+    "d1280_home:brokenImgs {\"broken\":102,\"hOverflow\":false,\"smallText\":324,\"tapSmall\":13,\"visImgs\":108,\"err\":0} err=0",
+    "d1280_home:tinyText {\"broken\":102,\"hOverflow\":false,\"smallText\":324,\"tapSmall\":13,\"visImgs\":108,\"err\":0} err=0",
+    "d1280_home:tapTargets {\"broken\":102,\"hOverflow\":false,\"smallText\":324,\"tapSmall\":13,\"visImgs\":108,\"err\":0} err=0",
+    "d1280__style_hanfu_html:brokenImgs {\"broken\":52,\"hOverflow\":false,\"smallText\":180,\"tapSmall\":0,\"visImgs\":60,\"err\":0} err=0",
+    "d1280__style_hanfu_html:tinyText {\"broken\":52,\"hOverflow\":false,\"smallText\":180,\"tapSmall\":0,\"visImgs\":60,\"err\":0} err=0",
+    "d1280__collection_starry_night:tinyText {\"broken\":0,\"hOverflow\":false,\"smallText\":59,\"tapSmall\":1,\"visImgs\":20,\"err\":0} err=0"
+  ]
+}

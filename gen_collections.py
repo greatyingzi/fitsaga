@@ -51,7 +51,7 @@ def main():
             slug = slugify(name)
             cards.append(f'''<figure class="shot">
   <a href="/nikki/s/{slug}"><img src="{html.escape(img[0])}" alt="{html.escape(name)} 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>{html.escape(name)}</span><em>查看图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>{html.escape(name)}</span><em class="view">图鉴 →</em></figcaption>
 </figure>''')
         chips = "".join(f'<a class="chip" style="background:linear-gradient(135deg,#2a1832,#e8608a55)" href="/collection/{o["slug"]}">{html.escape(o["title"].split(" ·")[0])}</a>' for o in COLLECTIONS if o["slug"] != c["slug"])
         page = f'''<!doctype html>
