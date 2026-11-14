@@ -49,7 +49,7 @@ def gen_nikki_pages(limit_games=("无限暖暖", "闪耀暖暖", "奇迹暖暖")
             parts.append(f'<span class="chip on">第 {page_no} / {total_pages} 页</span>')
             if page_no < total_pages:
                 parts.append(f'<a class="chip" href="/nikki/{fname}-{page_no+1}.html">下一页 →</a>')
-            parts.append('<a class="chip" href="/nikki/infinity-1.html">第 1 页</a>')
+            parts.append('<a class="chip" href="/nikki/infinity.html">第 1 页</a>')
         pager = "".join(parts)
         idx_html = f'''<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8">

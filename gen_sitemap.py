@@ -20,6 +20,8 @@ def main():
     # 图鉴索引
     for f in ["infinity","shining","miracle"]:
         entries.append((f"{BASE}/nikki/{f}.html", "0.8"))
+    for p in [2,3,4,5]:
+        entries.append((f"{BASE}/nikki/infinity-{p}.html", "0.7"))
     # 合集
     for c in ["starry-night","fairytale-dream","spring-floral","ocean-rain","dark-gothic"]:
         entries.append((f"{BASE}/collection/{c}", "0.9"))

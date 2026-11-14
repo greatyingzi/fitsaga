@@ -46,6 +46,7 @@ const BASE = 'https://fitsaga.pages.dev';
       for (let y = 0; y < document.body.scrollHeight; y += 800) { window.scrollTo(0, y); await new Promise(r => setTimeout(r, 80)); }
     });
     await page.waitForLoadState('networkidle').catch(()=>{});
+    await page.evaluate(() => Promise.all([...document.querySelectorAll('img')].map(i => i.complete ? 1 : new Promise(r => { i.onload = i.onerror = r; setTimeout(r, 12000); }))));
     const imgStat = await page.evaluate(() => {
       const imgs = [...document.querySelectorAll('img')];
       return { total: imgs.length, broken: imgs.filter(i => i.naturalWidth === 0 && (i.currentSrc || i.src) && i.getBoundingClientRect().width > 0).length };
