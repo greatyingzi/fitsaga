@@ -1,0 +1,49 @@
+name: daily-collect-and-deploy
+
+on:
+  schedule:
+    # 每天北京时间 04:00 (UTC 20:00 前一天) 采集一次
+    - cron: "0 20 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fitsaga-daily
+  cancel-in-progress: false
+
+jobs:
+  collect-build-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run collectors (duitang + musinsa)
+        run: |
+          cd collector
+          python3 duitang.py --pages 3 --limit 24
+          python3 musinsa.py
+
+      - name: Generate site
+        run: python3 gen_site.py
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy public --project-name=fitsaga --branch=main --commit-dirty=true
+
+      - name: Commit updated DB back to repo (incremental memory)
+        run: |
+          git config user.name "fitsaga-bot"
+          git config user.email "android_li@foxmail.com"
+          git add data/fitsaga.db
+          git diff --cached --quiet && echo "no db changes" || git commit -m "chore: daily db update [skip ci]"
+          git push
