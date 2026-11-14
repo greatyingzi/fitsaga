@@ -31,7 +31,11 @@ jobs:
           python3 musinsa.py
 
       - name: Generate site
-        run: python3 gen_site.py
+        run: |
+          python3 gen_site.py
+          python3 gen_nikki.py
+          python3 gen_nikki_detail.py
+          python3 gen_collections.py
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
