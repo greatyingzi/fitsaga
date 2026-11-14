@@ -184,7 +184,7 @@ def home():
 </section>
 <footer>
   <div><b style="color:#f5c76e">FitSaga</b> · 每一套时装，都是一个故事</div>
-  <div class="links"><a href="/style/hanfu.html">风格图鉴</a><a href="/nikki/infinity.html">无限暖暖</a><a href="/nikki/shining.html">闪耀暖暖</a><a href="/nikki/miracle.html">奇迹暖暖</a></div>
+  <div class="links"><a href="/style/hanfu.html">风格图鉴</a><a href="/nikki/infinity.html">无限暖暖</a><a href="/nikki/miracle.html">奇迹暖暖</a><a href="/zara.html">ZARA大片</a></div>
   <div class="source">图片版权归原创作者所有，点击图片访问原始分享页 · © 2026 FitSaga</div>
 </footer>'''
     return page("FitSaga · 每一种美，都值得一场时装冒险", "FitSaga 穿搭图鉴：古风汉服、旗袍、甜美、辣妹、JK、街拍、韩系、美妆——真实搭配灵感，逐张标注来源。", body, "#e8608a")
