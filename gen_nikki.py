@@ -15,7 +15,7 @@ def slugify(name: str) -> str:
     s = re.sub(r"[^\w\u4e00-\u9fff-]+", "-", name.strip())
     return s.strip("-") or "suit"
 
-def gen_nikki_pages(limit_games=("无限暖暖", "闪耀暖暖", "奇迹暖暖"), per_game_cap=300, page_size=60):
+def gen_nikki_pages(limit_games=("无限暖暖", "闪耀暖暖", "奇迹暖暖", "ZARA大片"), per_game_cap=300, page_size=60):
     import os
     page_no = int(os.environ.get("NIKKI_PAGE", "1"))
     out = []
@@ -40,8 +40,8 @@ def gen_nikki_pages(limit_games=("无限暖暖", "闪耀暖暖", "奇迹暖暖")
   <div class="sname">{html_mod.escape(name)}</div>
   <div class="smeta">{n_imgs} 张图 · {html_mod.escape(game)}</div>
 </a>''')
-        fname = {"无限暖暖":"infinity","闪耀暖暖":"shining","奇迹暖暖":"miracle"}[game]
-        total_pages = max(1, (len(allrows) + page_size - 1) // page_size) if game == "无限暖暖" else 1
+        fname = {"无限暖暖":"infinity","闪耀暖暖":"shining","奇迹暖暖":"miracle","ZARA大片":"zara"}[game]
+        total_pages = max(1, (len(allrows) + page_size - 1) // page_size) if game in ("无限暖暖", "ZARA大片") else 1
         parts = []
         if total_pages > 1:
             if page_no > 1:

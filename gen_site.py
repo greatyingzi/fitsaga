@@ -3,6 +3,7 @@
 生成: index.html, /style/<key>.html(xN), sitemap.xml, robots.txt
 """
 import sqlite3, json, pathlib, html, datetime
+import html as htmlMod
 
 ROOT = pathlib.Path(__file__).resolve().parent
 PUB = ROOT / "public"
@@ -127,6 +128,18 @@ def style_page(s):
 </footer>'''
     return page(f"{s['zh']}搭配图鉴 · FitSaga", f"{s['zh']}穿搭灵感图鉴：{s['desc']}海量真实搭配图片，逐张标注来源与作者。", body, s["accent"], f"/style/{s['key']}.html")
 
+def today_cards_html(limit=14):
+    con = sqlite3.connect(DB)
+    rows = con.execute("""SELECT img_url,origin_url,author,license,w,h,tags FROM items
+        WHERE source='duitang' AND COALESCE(w,600)>=400 AND COALESCE(h,800)>=500
+        ORDER BY COALESCE(json_extract(raw,'$.favorite_count'),0) DESC, id DESC LIMIT ?""", (limit,)).fetchall()
+    con.close()
+    cards = []
+    for i, (img, origin, author, lic, w, h, tags) in enumerate(rows):
+        kw = json.loads(tags).get("kw", "") if tags else ""
+        cards.append(f'<figure class="shot"><img src="{htmlMod.escape(img)}" alt="今日精选搭配灵感{i+1}" loading="lazy"><figcaption class="cap"><span>{htmlMod.escape(kw or "精选")}</span><em>查看 ↗</em></figcaption></figure>')
+    return "\n".join(cards)
+
 def home():
     secs = []
     for s in STYLES:
@@ -141,6 +154,7 @@ def home():
   <div class="masonry">{cards}</div>
 </section>''')
     chips = "".join(f'<a class="chip" style="background:linear-gradient(135deg,#2a1832,{s["accent"]}66)" href="/style/{s["key"]}.html">{s["zh"]}</a>' for s in STYLES)
+    today_cards = today_cards_html()
     body = f'''
 <section class="hero">
   <h1>每一种美，<br>都值得一场时装冒险 ✦</h1>
@@ -148,6 +162,13 @@ def home():
   <nav class="stylechips">{chips}</nav>
 </section>
 {"".join(secs)}
+<section class="sec" id="today" style="padding-top:1rem">
+  <div class="sec-head" style="color:#ffd9a8">
+    <h2>今日精选 🔥</h2>
+    <p style="color:#d8c9de">全网收藏最多的搭配灵感，每天更新 ——</p>
+  </div>
+  <div class="masonry">{today_cards}</div>
+</section>
 <section class="sec" id="collections">
   <div class="sec-head" style="color:#ff7eb3">
     <h2>策展合集</h2>
