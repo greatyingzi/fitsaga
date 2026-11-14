@@ -138,8 +138,22 @@ def home():
   <nav class="stylechips">{chips}</nav>
 </section>
 {"".join(secs)}
+<section class="sec" id="collections">
+  <div class="sec-head" style="color:#ff7eb3">
+    <h2>策展合集</h2>
+    <p style="color:#d8c9de">有人替你选好、排好、讲好的主题特辑 ——</p>
+  </div>
+  <nav class="stylechips" style="margin-top:.5rem;justify-content:flex-start">
+    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#e8608a66)" href="/collection/starry-night">星夜漫游</a>
+    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#c793ff66)" href="/collection/fairytale-dream">童话与梦</a>
+    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#ffd9a866)" href="/collection/spring-floral">花开时节</a>
+    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#8ec5ff66)" href="/collection/ocean-rain">海洋与雨</a>
+    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#b5548c66)" href="/collection/dark-gothic">暗夜哥特</a>
+  </nav>
+</section>
 <footer>
   <div><b style="color:#f5c76e">FitSaga</b> · 每一套时装，都是一个故事</div>
+  <div class="links"><a href="/style/hanfu.html">风格图鉴</a><a href="/nikki/infinity.html">无限暖暖</a><a href="/nikki/shining.html">闪耀暖暖</a><a href="/nikki/miracle.html">奇迹暖暖</a></div>
   <div class="source">图片版权归原创作者所有，点击图片访问原始分享页 · © 2026 FitSaga</div>
 </footer>'''
     return page("FitSaga · 每一种美，都值得一场时装冒险", "FitSaga 穿搭图鉴：古风汉服、旗袍、甜美、辣妹、JK、街拍、韩系、美妆——真实搭配灵感，逐张标注来源。", body, "#e8608a")
