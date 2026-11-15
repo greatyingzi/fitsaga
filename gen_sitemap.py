@@ -23,7 +23,10 @@ def main():
     for p in [2,3,4,5]:
         entries.append((f"{BASE}/nikki/infinity-{p}.html", "0.7"))
     # 合集
-    for c in ["starry-night","fairytale-dream","spring-floral","ocean-rain","dark-gothic"]:
+    for c in ["starry-night","fairytale-dream","spring-floral","ocean-rain","dark-gothic",
+              "jk-uniform","sweet-girl","quiet-luxury","dopamine","millard","american-retro",
+              "french-style","new-chinese","commute","knitwear","coat-season","qipao-modern",
+              "lolita-picks","hanfu-daily","travel-hanfu"]:
         entries.append((f"{BASE}/collection/{c}", "0.9"))
     # 全部详情页(有图的)
     con = sqlite3.connect(DB)

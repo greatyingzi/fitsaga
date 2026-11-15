@@ -180,6 +180,15 @@ def home():
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#ffd9a866)" href="/collection/spring-floral">花开时节</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#8ec5ff66)" href="/collection/ocean-rain">海洋与雨</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#b5548c66)" href="/collection/dark-gothic">暗夜哥特</a>
+    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#3f6fd866)" href="/collection/jk-uniform">JK 制服</a>
+    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#e0609e66)" href="/collection/sweet-girl">甜妹精选</a>
+    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#cbb8d466)" href="/collection/quiet-luxury">静奢风</a>
+    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#e0475f66)" href="/collection/dopamine">多巴胺</a>
+    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#8a6d3b66)" href="/collection/millard">美拉德</a>
+    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#0ea5a566)" href="/collection/new-chinese">新中式</a>
+    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#c23a5266)" href="/collection/qipao-modern">旗袍现代</a>
+    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#b5548c66)" href="/collection/hanfu-daily">汉服日常</a>
+    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#ffd9a866)" href="/collection/travel-hanfu">古镇旅拍</a>
   </nav>
 </section>
 <footer>

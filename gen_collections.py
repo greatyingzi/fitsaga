@@ -91,5 +91,70 @@ def main():
     print("sitemap urls:", sm.count("<loc>"))
     con.close()
 
+
+def gen_item_collections():
+    """基于items表(堆糖)的词策展合集 — 高收藏优先"""
+    import sqlite3 as sq
+    con = sq.connect(DB)
+    (PUB / "collection").mkdir(parents=True, exist_ok=True)
+    EXTRA = [
+      ("jk-uniform","JK 制服图鉴 · 高收藏精选","JK制服",["JK制服","格裙"],"青春与秩序感的平衡：格裙、水手服与秋冬叠穿的高收藏示范。"),
+      ("sweet-girl","甜妹穿搭精选 · 全网高收藏","甜妹穿搭",["甜妹穿搭","初恋感"],"甜妹风的收藏榜：马卡龙配色与初恋感单品的真实示范。"),
+      ("quiet-luxury","静奢风精选 · 低调的贵气","静奢风",["静奢风","千金风"],"静奢=不喊出来的贵：燕麦色、奶油白与软糯面料的收藏级示范。"),
+      ("dopamine","多巴胺穿搭精选 · 高饱和的快乐","多巴胺穿搭",["多巴胺穿搭"],"高饱和撞色的快乐法则：怎么穿亮色不显廉价。"),
+      ("millard","美拉德穿搭精选 · 秋冬的焦糖系","美拉德穿搭",["美拉德穿搭"],"棕橘焦糖色系的秋冬叙事：老钱风的近亲，更暖更松弛。"),
+      ("american-retro","美式复古精选 · Y2K与千禧","美式复古",["美式复古","千禧"],"美式复古的档案库：牛仔裤、棒球服与千禧辣妹的混搭样本。"),
+      ("french-style","法式穿搭精选 · 不过度用力","法式穿搭",["法式穿搭"],"法式的核心是「不费力的精致」：碎花、针织与红唇的配比。"),
+      ("new-chinese","新中式精选 · 传统与现代的接口","新中式",["新中式","汉元素"],"新中式的日常化样本：立领、盘扣与云肩的现代剪裁。"),
+      (" commute","通勤穿搭精选 · 一周不重样","通勤穿搭",["通勤穿搭","职场穿搭"],"通勤搭配的收藏榜：从周一到周五的秩序感。"),
+      ("knitwear","针织衫精选 · 软糯的秋冬","针织衫",["针织衫"],"针织的温柔算法：高领、开衫与马甲的层次。"),
+      ("coat-season","秋冬大衣精选 · 气场的重量","秋冬大衣",["秋冬大衣","羽绒服"],"大衣是秋冬的排面：驼色、黑色与格纹的收藏示范。"),
+      ("qipao-modern","旗袍现代穿法精选","旗袍",["旗袍"],"旗袍的日常化：改良剪裁与现代单品的碰撞。"),
+      ("lolita-picks","Lolita 精选 · 三派全收录","Lolita",["Lolita","洛丽塔"],"甜lo、Cla与中华风的收藏样本库。"),
+      ("hanfu-daily","汉服日常化精选 · 同袍的衣柜","汉服",["汉服","马面裙"],"汉服的日常穿法：从通勤到旅拍的真实示范。"),
+      ("travel-hanfu","古镇旅拍精选 · 穿越感构图","古镇旅拍",["古镇旅拍"],"旅拍的高级感来自场景与服装的互文：古城墙下的襦裙。"),
+    ]
+    urls = []
+    for slug, title, main_kw, kws, desc in EXTRA:
+        q = ",".join("?"*len(kws))
+        rows = con.execute(f"""SELECT img_url,origin_url,COALESCE(fav_count,json_extract(raw,'$.favorite_count'),0),author FROM items
+            WHERE source='duitang' AND json_extract(tags,'$.kw') IN ({q}) AND COALESCE(w,600)>=400 AND COALESCE(h,800)>=500
+            ORDER BY 3 DESC LIMIT 18""", kws).fetchall()
+        if not rows: continue
+        cards = []
+        for i,(u,o,f,a) in enumerate(rows):
+            cards.append(f'''<figure class="shot">
+  <img src="{html.escape(u)}" alt="{html.escape(title)} {i+1}" loading="lazy">
+  <figcaption class="cap"><span>{html.escape(main_kw)} · 收藏{f}</span><a href="{html.escape(o)}" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>''')
+        others = "".join(f'<a class="chip" style="background:linear-gradient(135deg,#2a1832,#ff7eb355)" href="/collection/{s}">{html.escape(t.split(" ·")[0])}</a>' for s,t,_,_,_ in EXTRA if s != slug)[:600]
+        page = f'''<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>{html.escape(title)} · FitSaga</title>
+<meta name="description" content="{html.escape(desc)}">
+<link rel="canonical" href="https://fitsaga.pages.dev/collection/{slug}">
+<style>{CSS}</style></head><body>
+<header class="hero small"><h1><span style="color:#ff7eb3">{html.escape(title)}</span></h1>
+<p class="sub">{len(rows)} 套 · 按收藏热度排序 · 每日更新</p></header>
+<main class="sec">
+<p class="intro">{html.escape(desc)}</p>
+<nav class="stylechips" style="margin-bottom:1.5rem">{others}</nav>
+<div class="masonry">{"".join(cards)}</div>
+</main>
+<footer><div><b style="color:#f5c76e">FitSaga</b> · 策展合集</div>
+<div class="source">图片版权归原创作者所有 · 点击来源↗访问原帖 · © 2026 FitSaga</div></footer>
+<script src="/lightbox.js" defer></script>
+</body></html>'''
+        (PUB / f"collection/{slug}.html").write_text(page, encoding="utf-8")
+        urls.append(slug)
+        print(f"[{slug}] {len(rows)} imgs")
+    con.close()
+    return urls
+
 if __name__ == "__main__":
     main()
+    u2 = gen_item_collections()
+    # 合并进sitemap
+    import subprocess
