@@ -44,14 +44,19 @@ def main():
                     seen.add(name); hits.append(name)
         hits = hits[:20]
         cards = []
-        for name in hits:
+        NOTES = {"starry-night":["静谧蓝调，夜色的第一步","星光落在肩线的位置刚好","月白的克制版，日常可穿","丝绒反光让深色活起来","适合正式夜场的叙事感"],
+  "fairytale-dream":["童话浓度刚好的一套","薄纱层次是这套的灵魂","低饱和让幻想变可信","圆头鞋收尾，甜度完整","故事感来自配色纪律"],
+  "spring-floral":["花开得克制，底色压得住","绿底是这季最稳的选择","大小花比例决定气质","一件外套把花拉回现代","通勤约会的两用解"],
+  "ocean-rain":["垂坠感就是这套的水","雾蓝几乎不挑人","光泽走出了涟漪","白色让水汽透出来","一件单品的全场叙事"],
+  "dark-gothic":["锋利但优雅的黑色纪律","银饰是唯一的金属色","露肤点到锁骨为止","格纹给黑色一个出口","红唇是这套的标点"]}[c["slug"]] or []
+        for i, name in enumerate(hits):
             sid = con.execute("SELECT id FROM suits WHERE game='无限暖暖' AND name=?", (name,)).fetchone()[0]
             img = con.execute("SELECT img_url FROM suit_imgs WHERE suit_id=? LIMIT 1", (sid,)).fetchone()
             if not img: continue
             slug = slugify(name)
             cards.append(f'''<figure class="shot">
   <a href="/nikki/s/{slug}"><img src="{html.escape(img[0])}" alt="{html.escape(name)} 无限暖暖套装展示图" loading="lazy"></a>
-  <figcaption class="cap"><span>{html.escape(name)}</span><em class="view">图鉴 →</em></figcaption>
+  <figcaption class="cap"><span>{html.escape(name)}</span><em class="view">{NOTES[i % len(NOTES)] if NOTES else ""}</em></figcaption>
 </figure>''')
         chips = "".join(f'<a class="chip" style="background:linear-gradient(135deg,#2a1832,#e8608a55)" href="/collection/{o["slug"]}">{html.escape(o["title"].split(" ·")[0])}</a>' for o in COLLECTIONS if o["slug"] != c["slug"])
         page = f'''<!doctype html>

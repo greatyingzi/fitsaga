@@ -82,13 +82,15 @@ def ingest(con, kw: str, pages: int, limit: int):
             img = ph.get("path")
             if not img:
                 continue
+            sender_name = (o.get("sender") or {}).get("name") or None
             rows.append((
                 "duitang", str(o.get("id")), img,
                 f"https://www.duitang.com/blog/?id={o.get('id')}",
-                None,                      # author: sender昵称需详情页, v1存sender_id
-                "hotlink-attribution",     # 黄灯: 热链+署名
+                sender_name,
+                "hotlink-attribution",
                 ph.get("width"), ph.get("height"),
-                json.dumps({"kw": kw, "tags": o.get("tags"), "sender_id": o.get("sender_id")},
+                json.dumps({"kw": kw, "tags": o.get("tags"), "sender_id": o.get("sender_id"),
+                            "sender_home": f"https://www.duitang.com/napi/people/{o.get('sender_id')}/posts/"},
                            ensure_ascii=False),
                 o.get("photo", {}).get("aigc_label"),
                 json.dumps(o, ensure_ascii=False)[:4000],

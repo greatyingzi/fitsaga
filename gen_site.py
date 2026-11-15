@@ -76,11 +76,11 @@ def card(it, i, style):
     alt = f"{style}搭配灵感图{i+1} · 来自{it.get('src','')}"
     dims = f'width="{it["w"]}" height="{it["h"]}"' if it.get("w") else ""
     author = esc(it.get("author") or "佚名创作者")
+    src_link = f'<a class="src-link" href="{esc(it["origin"])}" target="_blank" rel="nofollow noopener">来源↗</a>' if it.get("origin") else ""
     return f'''<figure class="shot">
-  <a href="{esc(it["origin"])}" target="_blank" rel="nofollow noopener">
-    <img src="{esc(it["img"])}" alt="{esc(alt)}" {dims} loading="lazy">
-  </a>
-  <figcaption class="cap"><span>{esc(style)} · {String(i+1).zfill(2) if False else str(i+1).zfill(2)}</span><em>© {author} · {esc(it.get("src",""))}</em></figcaption>
+  <img src="{esc(it["img"])}" alt="{esc(alt)}" {dims} loading="lazy">
+  {src_link}
+  <figcaption class="cap"><span>{esc(style)}</span><em>© {author} · {esc(it.get("src",""))}</em></figcaption>
 </figure>'''
 
 CSS = open(ROOT/"site.css", encoding="utf-8").read() if (ROOT/"site.css").exists() else ""
