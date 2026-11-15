@@ -15,7 +15,7 @@ def main(cap=300):
     con = sqlite3.connect(DB)
     (PUB / "nikki" / "s").mkdir(parents=True, exist_ok=True)
     rows = con.execute("""
-        SELECT s.id,s.name,s.game,COUNT(si.id) FROM suits s
+        SELECT s.id, COALESCE(s.alias_zh, s.name), s.game, COUNT(si.id) FROM suits s
         JOIN suit_imgs si ON si.suit_id=s.id
         GROUP BY s.id HAVING COUNT(si.id)>0 ORDER BY s.id LIMIT ?""", (cap,)).fetchall()
     urls = []

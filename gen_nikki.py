@@ -15,7 +15,7 @@ def slugify(name: str) -> str:
     s = re.sub(r"[^\w\u4e00-\u9fff-]+", "-", name.strip())
     return s.strip("-") or "suit"
 
-def gen_nikki_pages(limit_games=("无限暖暖", "闪耀暖暖", "奇迹暖暖", "ZARA大片"), per_game_cap=300, page_size=60):
+def gen_nikki_pages(limit_games=("无限暖暖", "闪耀暖暖", "奇迹暖暖", "奇迹暖暖HD", "ZARA大片"), per_game_cap=300, page_size=60):
     import os
     page_no = int(os.environ.get("NIKKI_PAGE", "1"))
     out = []
@@ -23,8 +23,10 @@ def gen_nikki_pages(limit_games=("无限暖暖", "闪耀暖暖", "奇迹暖暖",
     (PUB / "nikki").mkdir(parents=True, exist_ok=True)
     sitemap_urls = []
     for game in limit_games:
-        allrows = con.execute("SELECT id,name FROM suits WHERE game=? ORDER BY id LIMIT ?",
-                           (game, per_game_cap)).fetchall()
+        name_col = "alias_zh" if game == "奇迹暖暖HD" else "name"
+        allrows = [(sid, (alias or name)) for sid, name, alias in con.execute(
+            f"SELECT id,name,{name_col} FROM suits WHERE game=? ORDER BY id LIMIT ?",
+            (game, per_game_cap)).fetchall()]
         page_no = int(__import__('os').environ.get("NIKKI_PAGE", "1"))
         rows = allrows[(page_no-1)*page_size : page_no*page_size]
         # 索引页
@@ -40,8 +42,8 @@ def gen_nikki_pages(limit_games=("无限暖暖", "闪耀暖暖", "奇迹暖暖",
   <div class="sname">{html_mod.escape(name)}</div>
   <div class="smeta">{n_imgs} 张图 · {html_mod.escape(game)}</div>
 </a>''')
-        fname = {"无限暖暖":"infinity","闪耀暖暖":"shining","奇迹暖暖":"miracle","ZARA大片":"zara"}[game]
-        total_pages = max(1, (len(allrows) + page_size - 1) // page_size) if game in ("无限暖暖", "ZARA大片") else 1
+        fname = {"无限暖暖":"infinity","闪耀暖暖":"shining","奇迹暖暖":"miracle","奇迹暖暖HD":"miraclehd","ZARA大片":"zara"}[game]
+        total_pages = max(1, (len(allrows) + page_size - 1) // page_size) if game in ("无限暖暖", "ZARA大片", "奇迹暖暖HD") else 1
         parts = []
         if total_pages > 1:
             if page_no > 1:
@@ -72,7 +74,7 @@ def gen_nikki_pages(limit_games=("无限暖暖", "闪耀暖暖", "奇迹暖暖",
 <div class="source">游戏素材版权归叠纸网络/官方所有 · 数据整理自 BWIKI(biligame) · © 2026 FitSaga</div></footer>
 <script src="/lightbox.js" defer></script>
 </body></html>'''
-        outname = f"nikki/{fname}-{page_no}.html" if (game == "无限暖暖" and page_no > 1) else f"nikki/{fname}.html"
+        outname = f"nikki/{fname}-{page_no}.html" if (game in ("无限暖暖", "奇迹暖暖HD", "ZARA大片") and page_no > 1) else f"nikki/{fname}.html"
         (PUB / outname).write_text(idx_html, encoding="utf-8")
         sitemap_urls.append(f"/nikki/{fname}.html")
         out.append(f"{game} index: {len(idx_cards)} suits")
