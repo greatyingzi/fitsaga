@@ -59,6 +59,19 @@ def main():
         faq = "<h2>常见问题</h2><div>" + "".join(
             "<details><summary>" + html.escape(q) + "</summary><p>" + html.escape(a) + "</p></details>"
             for q, a in t.get("faq", [])) + "</div>" if t.get("faq") else ""
+        ex_html = ""
+        for ex2 in t.get("examples", []):
+            s2 = ex2["slug"]
+            ex_html += "<h3>" + html.escape(ex2["title"]) + "</h3>"
+            ex_html += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">'
+            ex_html += '<figure style="margin:0"><img src=" /topics/gta6/" + s2 + "-good.jpg" loading="lazy">'
+            ex_html += '<figcaption style="font-size:.75rem;color:#8ec5ff">OK ' + html.escape(ex2["good_cap"]) + '</figcaption>'
+
+            ex_html += '<figure style="margin:0"><img src=" /topics/gta6/" + s2 + "-bad.jpg" loading="lazy">'
+            ex_html += '<figcaption style="font-size:.75rem;color:#cbb8d4">X ' + html.escape(ex2["bad_cap"]) + '</figcaption>'
+
+            ex_html += '</figure>'
+            ex_html += '</div>'
         chase = '<div class="chase"><b>追更</b> · ' + html.escape(t["updated"]) + "</div>" if t.get("updated") else ""
         badge = '<span class="badge">热点专题</span>' if t.get("type") == "hot" else '<span class="badge">常青专题</span>'
         ld = json.dumps({"@context": "https://schema.org", "@type": "Article", "headline": t["title"],
@@ -76,7 +89,7 @@ def main():
                  "<h1>" + html.escape(t["title"]) + "</h1>",
                  '<div class="meta">AI 画法研究所 · 更新 ' + today + "</div>",
                  '<div class="lede">' + html.escape(t["lede"]) + "</div>",
-                 body, chase, faq,
+                 body, ex_html, chase, faq,
                  '<p style="margin-top:2.5rem"><a href="/topics.html">← 全部专题</a> · <a href="/">首页</a></p>',
                  "</article></div>", '<script src="/lightbox.js" defer></script>', "</body></html>"]
         (PUB / ("topics/" + t["slug"] + ".html")).write_text(chr(10).join(parts), encoding="utf-8")

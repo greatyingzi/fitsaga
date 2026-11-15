@@ -19,5 +19,25 @@
    "为什么我生成的像赛博朋克？",
    "大概率是 prompt 里出现了 cyberpunk/neon city 这类词。GTA6 的霓虹是「装饰」不是「世界规则」——把 neon 限定在 'neon signs' 这种局部词。"
   ]
+ ],
+ "examples": [
+  {
+   "slug": "sky",
+   "title": "对照 1 · 天空渐变",
+   "good_cap": "正例：pink orange purple gradient sky + natural sky gradient — 三段渐变+电影构图",
+   "bad_cap": "反例：只写 sunset — 普通旅游黄昏照，无 GTA 感"
+  },
+  {
+   "slug": "haze",
+   "title": "对照 2 · 水汽空气感",
+   "good_cap": "正例：humid haze + atmospheric perspective + wet street reflection — 远景发虚霓虹晕开",
+   "bad_cap": "反例：缺失氛围词 — 像贴纸拼贴，远景生硬"
+  },
+  {
+   "slug": "motion",
+   "title": "对照 3 · 人物动态",
+   "good_cap": "正例：candid pose, mid-motion — Rockstar 式「正在做事」的人物",
+   "bad_cap": "反例：standing pose — 摆拍感，GTA 愨全无"
+  }
  ]
 }
