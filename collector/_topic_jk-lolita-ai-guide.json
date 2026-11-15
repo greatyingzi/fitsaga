@@ -1,0 +1,18 @@
+{
+ "slug": "jk-lolita-ai-guide",
+ "title": "JK 制服与 Lolita 的 AI 生成要点：圈层术语的 prompt 映射",
+ "lede": "JK 与 Lolita 是中文圈最讲究「术语正确」的两个 fashion 圈层——格裙箱褶、柄图、裙撑、Cla 与甜 lo，这些词写进 prompt 才能生成圈里人认可的画面。",
+ "type": "evergreen",
+ "body_md": "## 一句话结论\n圈层风格的核心是**术语密度**：写 school uniform 出「美剧校服」，写 **japanese school uniform, pleated skirt, sailor collar** 才出 JK 感；写 lolita dress 出万圣节裙，写 **sweet lolita, bell-shaped silhouette, petticoat** 才出圈里认的 lo。\n\n## JK 制服词库\n- 基础：**japanese school uniform, sailor collar (seifuku), pleated skirt**\n- 格裙：**tartan plaid skirt**（格纹）+ 指定色系 navy/gray/brown\n- 西式：**blazer uniform, western style JK**（西装外套版）\n- 水手：**sailor fuku, neckerchief**（领巾色=年级色，可指定）\n- 场景：**classroom afternoon light / rooftop / sakura street**（JK 摄影三圣场景）\n- 长度圈规：45cm 主流甜系——prompt 可写 **above-knee pleated skirt**\n\n## Lolita 三派词库\n- 甜 lo：**sweet lolita, pastel colors, candy prints, big ribbon bow, bell-shaped petticoat silhouette**\n- Cla：**classic lolita, muted elegant colors, A-line silhouette, delicate lace, mature**\n- 中华风：**qi lolita, mandarin collar, chinese brocade, tassel accessories**\n- 通用铁律：**petticoat**（裙撑）必写——没有裙撑的 lo 不是 lo，是蓬蓬裙\n\n## 两圈共通要点\n- **knee high socks / mary jane shoes** 是两个圈层的标配鞋袜\n- 场景首选：**old town street, cafe window**——圈内摄影的经典场景\n- 发型：**twin tails**（JK）/ **curls with bonnet**（lo）\n\n## 正反例要点\n- lolita 不加 petticoat = 万圣节服装感（最常见错误）\n- JK + 成熟脸 = 「制服写真」而非 JK 感——加 youthful, schoolgirl aura 平衡\n- 中华风 lo 加 hanfu 词会形制混乱——qi lolita 是独立品类词",
+ "looks": [],
+ "faq": [
+  [
+   "生成 JK 图会被圈内挑“山正”吗？",
+   "AI 生成的柄图是原创的，不存在山正问题——这也是 AI 图在 JK 圈的优势。"
+  ],
+  [
+   "Lolita 生成图最常翻车的部位？",
+   "裙撑轮廓与袖型。petticoat 显式写 + bell-shaped silhouette 双保险。"
+  ]
+ ]
+}

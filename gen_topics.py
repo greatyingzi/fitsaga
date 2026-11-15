@@ -103,7 +103,7 @@ def main():
         card = '<a class="scard" href="/' + sub + '/' + t["slug"] + '" style="padding:1rem;display:block"><div class="sname">' + ("🔥 " if t.get("type") == "hot" else "📚 ") + html.escape(t["title"]) + '</div><div class="smeta" style="margin-top:.4rem;line-height:1.7">' + html.escape(t["lede"][:70]) + '…</div></a>'
         (en_cards if is_en else zh_cards).append(card)
         (PUB / (sub + "/" + t["slug"] + ".html")).write_text(NL.join(parts), encoding="utf-8")
-        print(("en:" if is_en else "zh:") + t["slug"])
+        print(("en:" if is_en else "zh:") + t["slug"], "| zh_cards:", len(zh_cards))
     # 中文索引
     idx = ["<!doctype html>", '<html lang="zh-CN"><head><meta charset="utf-8">',
            '<meta name="viewport" content="width=device-width,initial-scale=1">',

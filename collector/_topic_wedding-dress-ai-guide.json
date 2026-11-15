@@ -1,0 +1,18 @@
+{
+ "slug": "wedding-dress-ai-guide",
+ "title": "婚纱礼服 AI 生成指南：从婚纱摄影感到高定感",
+ "lede": "婚纱是 AI 生图里客单价最高的题材（写真/婚礼策划/礼服设计都在用）。三种婚纱质感的 prompt 分野与场景光线配方。",
+ "type": "evergreen",
+ "body_md": "## 一句话结论\n婚纱图的档次感由**面料+场景的匹配度**决定：蕾丝配花园（romantic）、缎面配影棚（high fashion）、轻纱配海边（destination）——错配立刻降档。\n\n## 三种婚纱的精确写法\n### 蕾丝浪漫派（花园婚礼感）\n**lace wedding dress with floral embroidery, cathedral veil, garden ceremony, soft golden light, bokeh flowers**\n- 关键词组合：lace + embroidery + veil + garden + golden bokeh\n### 缎面高定派（时尚大片感）\n**satin wedding gown, minimalist couture, studio lighting, seamless ivory backdrop, Vogue editorial**\n- 缎面靠剪裁说话——背景必须极简（seamless backdrop）\n### 轻纱目的地派（海边旅拍感）\n**flowy tulle wedding dress, beach destination wedding, wind-blown veil, sunset backlight, barefoot**\n- wind-blown 是灵魂词——海边婚纱没有风就是睡衣\n\n## 通用加分词\n**train trailing elegantly**（拖尾的优雅轨迹）/ **delicate beadwork**（钉珠细节）/ **off-shoulder neckline**\n\n## 正反例要点\n- 加 wedding photography, professional 的图更「像婚礼跟拍」；加 editorial 则更「像杂志」——两种商业用途不同\n- 新娘妆容写 natural bridal makeup, soft glow——浓妆词会破坏婚纱的纯净感\n- 场景人多的婚礼图（仪式全景）手部崩坏率高——优先生成新娘单人或双人特写\n\n## 配图参考\n本站 AI 灵感图鉴的「婚纱」板块（52 张社区高分生成图）与「礼服」板块可作为风格对照参考。",
+ "looks": [],
+ "faq": [
+  [
+   "生成的婚纱图能用于婚礼策划提案吗？",
+   "作为灵感参考可以；标注 AI 生成即可。真实婚礼的成片还是要实拍。"
+  ],
+  [
+   "面料词和光线词哪个优先？",
+   "婚纱先定面料（决定档次感），光线再匹配场景（决定氛围）。"
+  ]
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "slug": "cyberpunk-vs-miami",
+ "title": "赛博朋克 vs 迈阿密美学：一张表分清两种霓虹",
+ "lede": "两种最容易混淆的霓虹风格——一个来自银翼杀手的高密度未来城市，一个来自 GTA6 的迈阿密黄昏。写错一个词，画面气质完全跑偏。",
+ "type": "evergreen",
+ "body_md": "## 一句话结论\n赛博朋克的霓虹是**世界规则**（城市本身就是光源体），迈阿密的霓虹是**装饰元素**（日落时分的点缀）——prompt 里霓虹的「地位」决定风格归属。\n\n## 核心对照表\n| 维度 | 赛博朋克 | 迈阿密（GTA6） |\n| 天空 | 常年阴霾/紫绿污染色 | 粉橙紫自然渐变日落 |\n| 光源 | 全域霓虹+全息投影 | 霓虹灯牌+落日余晖 |\n| 街道 | 湿漉高反光+蒸汽 | 湿润但自然反光 |\n| 人物 | 义体改造/机能风 | 时尚写实/度假感 |\n| 情绪 | 反乌托邦压迫感 | 犯罪与自由的浪漫感 |\n\n## prompt 关键差异词\n- 赛博朋克专用：**cyberpunk city, holographic ads, neon everywhere, dystopian, blade runner atmosphere, techwear**\n- 迈阿密专用：**Miami aesthetic, art deco, golden hour, tropical, pastel neon signs, resort vibe**\n- 两者都可用：**wet street reflections, night city, cinematic**\n\n## 混搭警告\n- cyberpunk + sunset 渐变 = 「落日赛博」（实际上是个好风格，但不是 GTA6）\n- Miami + dystopian = 氛围撕裂（避免）\n- 想要「日落时分的赛博」：写 cyberpunk city at dusk, natural sky visible——显式让天空保留自然色\n\n## 判断流程\n1. 画面里的光主要来自天空？→ 迈阿密向\n2. 光主要来自人造光源（广告牌/全息）？→ 赛博朋克向\n3. 两者各半？→ 写 dominant source，明确主次",
+ "looks": [],
+ "faq": [
+  [
+   "GTA6 算赛博朋克吗？",
+   "不算。它是「现代犯罪浪漫」美学，霓虹是装饰。银翼杀手/攻壳才是赛博朋克正统。"
+  ],
+  [
+   "两种风格可以融合吗？",
+   "可以但要有主次——显式写 dominant light source。融合风格反而更容易出独特画面。"
+  ]
+ ]
+}

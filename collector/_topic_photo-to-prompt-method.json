@@ -1,0 +1,18 @@
+{
+ "slug": "photo-to-prompt-method",
+ "title": "真人照片转 AI prompt：把穿搭图变成可生成描述的方法论",
+ "lede": "AI 创作者最被低估的技能：把一张真实穿搭照片反向拆解成 prompt。本站 4700 张真实穿搭图的每一张，都是这个方法的练习素材。",
+ "type": "evergreen",
+ "body_md": "## 一句话结论\n照片转 prompt 的顺序 = **主体 → 服装（品类+面料+色）→ 姿态 → 场景 → 光线 → 媒介**，六层从内到外——漏层就会生成「意思对了但气质全无」的图。\n\n## 六层拆解示范（以一张街拍为例）\n原图描述：女生穿驼色大衣+白色直筒裤，走在傍晚的街道，侧脸回眸。\n- L1 主体：a young asian woman\n- L2 服装：wearing a camel wool coat over white straight-leg trousers\n- L3 姿态：walking, looking back over her shoulder, candid\n- L4 场景：on a city street in the evening, storefront lights\n- L5 光线：dusk ambient light, warm street lamps\n- L6 媒介：street style photography, 35mm, film grain\n合成：a young asian woman in a camel wool coat and white straight-leg trousers, walking on a city street at dusk, looking back over her shoulder, warm street lamp light, street style photography, 35mm film grain\n\n## 三条转译原则\n1. **色名精确化**：驼色=camel，不是 brown；奶油白=cream white，不是 white\n2. **行为词优于状态词**：walking > standing；mid-laugh > smiling\n3. **删掉 AI 画不好的**：原图里的复杂图案/文字/宠物，评估后再决定要不要写进 prompt\n\n## 反向验证工作流\n拆解 → 生成 → 与原图对照 → 修正缺失的层 → 再生成。两轮迭代后 prompt 会显著「像」原图。\n\n## 本站的练习场\n风格频道（9 类）与今日精选里的每张高收藏图都适合做转译练习——先自己拆，再看我们的图注与标签校对。",
+ "looks": [],
+ "faq": [
+  [
+   "转译的 prompt 能直接用吗？",
+   "能，但建议保留自己的六层结构习惯——比复制别人的 prompt 长期收益高。"
+  ],
+  [
+   "人像相似度怎么提高？",
+   "加种族/发型/年龄区间词（asian woman, long black hair, early 20s）——三词定位法。"
+  ]
+ ]
+}
