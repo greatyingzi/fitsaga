@@ -1,8 +1,9 @@
-name: daily-collect-and-deploy
+name: pipeline
 
 on:
+  push:
+    branches: [main, test]
   schedule:
-    # 每天北京时间 04:00 (UTC 20:00 前一天) 采集一次
     - cron: "0 20 * * *"
   workflow_dispatch: {}
 
@@ -10,13 +11,13 @@ permissions:
   contents: write
 
 concurrency:
-  group: fitsaga-daily
+  group: fitsaga-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
   collect-build-deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
 
@@ -33,29 +34,43 @@ jobs:
           python3 lofter.py || true
           python3 atlas_backfill.py
           python3 topic_miner.py || true
+          python3 hot_radar.py || true
 
-      - name: Generate site
+      - name: Generate site (all generators)
         run: |
           python3 gen_site.py
           python3 gen_nikki.py
+          NIKKI_PAGE=2 python3 gen_nikki.py
+          NIKKI_PAGE=3 python3 gen_nikki.py
           python3 gen_nikki_detail.py
           python3 gen_collections.py
           python3 gen_ai.py
           python3 gen_zara.py
           python3 gen_guide.py
+          python3 gen_topics.py
+          python3 gen_search_index.py
           python3 gen_sitemap.py
 
-      - name: Deploy to Cloudflare Pages
+      - name: Deploy to PROD (fitsaga.pages.dev, main only)
+        if: github.ref == 'refs/heads/main'
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy public --project-name=fitsaga --branch=main --commit-dirty=true
 
-      - name: Commit updated DB back to repo (incremental memory)
+      - name: Deploy to STAGING (fitsaga-dev.pages.dev, test only)
+        if: github.ref == 'refs/heads/test'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy public --project-name=fitsaga-dev --branch=test --commit-dirty=true
+
+      - name: Commit updated DB back
         run: |
           git config user.name "fitsaga-bot"
           git config user.email "android_li@foxmail.com"
-          git add data/fitsaga.db
+          git add data/
           git diff --cached --quiet && echo "no db changes" || git commit -m "chore: daily db update [skip ci]"
           git push
