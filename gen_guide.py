@@ -81,13 +81,14 @@ def main():
       title TEXT NOT NULL, status TEXT DEFAULT 'draft', md_path TEXT, lede TEXT,
       published_at TEXT, created_at TEXT DEFAULT (datetime('now')))""")
     n = con.execute("SELECT COUNT(*) FROM articles WHERE status='published'").fetchone()[0]
-    if n == 0:
-        # 老钱风样板文
-        sample = open(ROOT/"collector"/"_sample_article.json", encoding="utf-8").read()
-        a = json.loads(sample)
-        con.execute("INSERT OR IGNORE INTO articles (topic_id,slug,title,status,lede,published_at) VALUES (?,?,?,?,?,?)",
-                    (a["topic_id"], a["slug"], a["title"], "published", a["lede"], datetime.datetime.now().isoformat()))
-        con.commit()
+    # 扫描全部 _article_*.json 自动入库(幂等)
+    for f in sorted((ROOT/"collector").glob("_article_*.json")):
+        a = json.loads(f.read_text(encoding="utf-8"))
+        cur = con.execute("INSERT OR IGNORE INTO articles (slug,title,status,lede,published_at) VALUES (?,?,'published',?,?)",
+                          (a["slug"], a["title"], a.get("lede",""), datetime.datetime.now().isoformat()))
+        if cur.rowcount:
+            print("article registered:", a["slug"])
+    con.commit()
     rows = con.execute("SELECT id,slug,title,lede,published_at FROM articles WHERE status='published'").fetchall()
     urls = []
     for aid, slug, title, lede, pub in rows:
