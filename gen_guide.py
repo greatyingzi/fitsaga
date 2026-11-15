@@ -73,6 +73,7 @@ def article_html(a, body_html, looks_html):
 </div>
 <script src="/lightbox.js" defer></script>
 <script src="/search.js" defer></script>
+<script src="/theme.js" defer></script>
 </body></html>'''
 
 def main():

@@ -49,6 +49,7 @@ def main(cap=300):
 <div class="source">游戏素材版权归 {("叠纸网络" if "暖暖" in game else "官方")} 所有 · 数据整理自 BWIKI(biligame) · <a style="color:#9d8fa8" href="/nikki/infinity">返回图鉴索引</a> · © 2026 FitSaga</div></footer>
 <script src="/lightbox.js" defer></script>
 <script src="/search.js" defer></script>
+<script src="/theme.js" defer></script>
 </body></html>'''
         (PUB / f"nikki/s/{slug}.html").write_text(page, encoding="utf-8")
         urls.append(f"/nikki/s/{slug}")

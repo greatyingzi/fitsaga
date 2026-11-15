@@ -86,6 +86,8 @@ def card(it, i, style):
 
 CSS = open(ROOT/"site.css", encoding="utf-8").read() if (ROOT/"site.css").exists() else ""
 
+OG_TAGS = '<meta property="og:title" content="FitSaga · 每一种美，都值得一场时装冒险"><meta property="og:description" content="古风汉服、旗袍、甜美、辣妹、JK、街拍——真实搭配灵感与AI画法专题"><meta property="og:type" content="website"><meta property="og:url" content="https://fitsaga.pages.dev/"><meta name="twitter:card" content="summary"'
+
 def page(title, desc, body, accent, path="/"):
     return f'''<!doctype html>
 <html lang="zh-CN">
@@ -93,6 +95,7 @@ def page(title, desc, body, accent, path="/"):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
+{OG_TAGS}
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{BASE}{esc(path)}">
@@ -102,6 +105,7 @@ def page(title, desc, body, accent, path="/"):
 {body}
 <script src="/lightbox.js" defer></script>
 <script src="/search.js" defer></script>
+<script src="/theme.js" defer></script>
 </body>
 </html>'''
 

@@ -96,7 +96,8 @@ def main():
                  body, ex_html, chase, faq,
                  '<p style="margin-top:2.5rem"><a href="' + home_link + '">← ' + ("All topics" if is_en else "全部专题") + '</a> · <a href="/">Home</a></p>',
                  "</article></div>", '<script src="/lightbox.js" defer></script>',
-                 '<script src="/search.js" defer></script>', "</body></html>"]
+                 '<script src="/search.js" defer></script>
+<script src="/theme.js" defer></script>', "</body></html>"]
         (PUB / (sub + "/" + t["slug"] + ".html")).write_text(NL.join(parts), encoding="utf-8")
         card = '<a class="scard" href="/' + sub + '/' + t["slug"] + '" style="padding:1rem;display:block"><div class="sname">' + ("🔥 " if t.get("type") == "hot" else "📚 ") + html.escape(t["title"]) + '</div><div class="smeta" style="margin-top:.4rem;line-height:1.7">' + html.escape(t["lede"][:70]) + '…</div></a>'
         (en_cards if is_en else zh_cards).append(card)

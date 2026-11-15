@@ -74,6 +74,7 @@ def gen_nikki_pages(limit_games=("无限暖暖", "闪耀暖暖", "奇迹暖暖",
 <div class="source">游戏素材版权归叠纸网络/官方所有 · 数据整理自 BWIKI(biligame) · © 2026 FitSaga</div></footer>
 <script src="/lightbox.js" defer></script>
 <script src="/search.js" defer></script>
+<script src="/theme.js" defer></script>
 </body></html>'''
         outname = f"nikki/{fname}-{page_no}.html" if (game in ("无限暖暖", "奇迹暖暖HD", "ZARA大片") and page_no > 1) else f"nikki/{fname}.html"
         (PUB / outname).write_text(idx_html, encoding="utf-8")
