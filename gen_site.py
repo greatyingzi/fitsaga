@@ -101,6 +101,7 @@ def page(title, desc, body, accent, path="/"):
 <body>
 {body}
 <script src="/lightbox.js" defer></script>
+<script src="/search.js" defer></script>
 </body>
 </html>'''
 

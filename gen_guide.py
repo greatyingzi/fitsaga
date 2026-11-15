@@ -72,6 +72,7 @@ def article_html(a, body_html, looks_html):
 <p style="margin-top:2.5rem"><a href="/guide.html">← 返回穿搭研究所</a> · <a href="/">首页</a></p>
 </div>
 <script src="/lightbox.js" defer></script>
+<script src="/search.js" defer></script>
 </body></html>'''
 
 def main():
