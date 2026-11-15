@@ -58,7 +58,7 @@ def fetch_items(kws=None, musinsa=False, limit=60):
     rows = con.execute(f"""SELECT img_url,origin_url,author,license,w,h,tags,source FROM items
         WHERE source IN ('duitang','lofter') AND json_extract(tags,'$.kw') IN ({q})
           AND (COALESCE(w,600)>=400 AND COALESCE(h,800)>=500 OR source='lofter')
-        ORDER BY COALESCE(json_extract(raw,'$.favorite_count'),0) DESC, id DESC
+        ORDER BY (COALESCE(json_extract(raw,'$.favorite_count'),0) + CASE WHEN source='lofter' THEN 150 ELSE 0 END) DESC, id DESC
         LIMIT ?""", (*kws, limit * 3)).fetchall()
     items = []
     from collections import defaultdict
