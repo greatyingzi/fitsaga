@@ -30,6 +30,7 @@ jobs:
           python3 duitang.py --pages 3 --limit 24
           python3 musinsa.py
           python3 civitai.py
+          python3 lofter.py || true
           python3 atlas_backfill.py
           python3 topic_miner.py || true
 
