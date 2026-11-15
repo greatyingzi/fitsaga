@@ -39,7 +39,9 @@ def md2html(md):
         elif line.startswith("### "):
             out.append(f"<h3 style='color:#f5c76e;font-size:1.05rem;margin:1.2rem 0 .5rem'>{html.escape(line[4:])}</h3>")
         elif line.startswith("- "):
-            out.append(f"<p style='padding-left:1.2rem'>· {html.escape(line[2:])}</p>")
+            t = html.escape(line[2:])
+            t = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", t)
+            out.append(f"<p style='padding-left:1.2rem'>· {t}</p>")
         elif line.strip() == "":
             continue
         else:

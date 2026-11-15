@@ -1,0 +1,14 @@
+{
+  "pass": 32,
+  "fail": 8,
+  "fails": [
+    "m390_home:brokenImgs {\"broken\":1,\"hOverflow\":false,\"smallText\":0,\"tapSmall\":0,\"visImgs\":123,\"err\":0} err=0",
+    "m390__style_hanfu_html:brokenImgs {\"broken\":1,\"hOverflow\":false,\"smallText\":0,\"tapSmall\":0,\"visImgs\":61,\"err\":0} err=0",
+    "m390__collection_starry_night:brokenImgs {\"broken\":1,\"hOverflow\":false,\"smallText\":0,\"tapSmall\":0,\"visImgs\":21,\"err\":0} err=0",
+    "m390__nikki_s_奶酪与剑:brokenImgs {\"broken\":1,\"hOverflow\":false,\"smallText\":0,\"tapSmall\":1,\"visImgs\":3,\"err\":0} err=0",
+    "d1280_home:brokenImgs {\"broken\":1,\"hOverflow\":false,\"smallText\":0,\"tapSmall\":0,\"visImgs\":123,\"err\":0} err=0",
+    "d1280__style_hanfu_html:brokenImgs {\"broken\":1,\"hOverflow\":false,\"smallText\":0,\"tapSmall\":0,\"visImgs\":61,\"err\":0} err=0",
+    "d1280__collection_starry_night:brokenImgs {\"broken\":1,\"hOverflow\":false,\"smallText\":0,\"tapSmall\":1,\"visImgs\":21,\"err\":0} err=0",
+    "d1280__nikki_s_奶酪与剑:brokenImgs {\"broken\":1,\"hOverflow\":false,\"smallText\":0,\"tapSmall\":1,\"visImgs\":3,\"err\":0} err=0"
+  ]
+}

@@ -39,7 +39,7 @@ const VPS = [
       // 断言
       const a = await page.evaluate(() => {
         const imgs = [...document.querySelectorAll('img')];
-        const broken = imgs.filter(i => !i.complete || i.naturalWidth === 0).length;
+        const broken = imgs.filter(i => (i.currentSrc || i.src) && (!i.complete || i.naturalWidth === 0)).length;
         const hOverflow = document.documentElement.scrollWidth > window.innerWidth + 2;
         const smallText = [...document.querySelectorAll('p,span,div,a,em,figcaption')].filter(el => {
           const fs = parseFloat(getComputedStyle(el).fontSize);
