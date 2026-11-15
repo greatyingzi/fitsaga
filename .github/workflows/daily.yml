@@ -2,7 +2,7 @@ name: pipeline
 
 on:
   push:
-    branches: [main, test]
+    branches: [master, test]
   schedule:
     - cron: "0 20 * * *"
   workflow_dispatch: {}
@@ -52,7 +52,7 @@ jobs:
           python3 gen_sitemap.py
 
       - name: Deploy to PROD (fitsaga.pages.dev, main only)
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/master'
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
