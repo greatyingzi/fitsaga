@@ -1,0 +1,18 @@
+{
+ "slug": "fabric-texture-prompt",
+ "title": "面料质感 AI prompt 指南：让布料「可以被摸到」",
+ "lede": "面料是 AI 生图的公认难点（the fabric problem）——丝绒要哑光堆褶、纱要半透分层、缎要流光。这篇给出高频面料的精确质感词库，让 AI 画的布料可以被摸到。",
+ "type": "evergreen",
+ "body_md": "## 一句话结论\n面料写法的核心是**物理行为词**：不是写 silk（模型只给颜色），而是写 silk with liquid drape（有流动垂坠行为的丝）——行为让材质活过来。\n\n## 高频面料质感词库\n### 丝绒 Velvet（秋冬/哥特/华服）\n**velvet with soft matte pile, light-absorbing folds, crushed velvet texture**\n- 哑光吸光是丝绒的灵魂——加 light-absorbing 防止画成亮面\n### 纱 Chiffon/Tulle（仙女/童话/汉服披帛）\n**sheer chiffon layers, translucent tulle, fabric floating in wind, layered transparency**\n- layered transparency（分层透明）是多层纱的关键，单写 sheer 会变塑料纸\n### 缎面 Satin（旗袍/礼服/老钱）\n**satin with liquid sheen, flowing drape, soft highlights following the folds**\n- liquid sheen + highlights following folds = 缎面流光的标准写法\n### 针织 Knit（通勤/软糯系）\n**chunky knit sweater, visible stitch texture, soft wool fibers, cozy oversized fit**\n### 牛仔 Denim（街拍/复古）\n**raw denim texture, natural fading, selvedge detail, worn-in look**\n### 皮革 Leather（哥特/机车）\n**matte leather with natural creases, subtle sheen on edges, grain texture**\n\n## 面料组合的层次公式\n一套高级感的图 = **三种面料对比**：哑光（丝绒/针织）+ 流光（缎）+ 透（纱）。prompt 里显式写全三种，材质对话就成立——这是穿搭「材质对话」在 AI 侧的映射。\n\n## 正反例要点\n- elegant fabric 是废词。换成具体面料+行为。\n- 面料词超过 3 种会互相打架：一张图写 3 种是上限。\n- 特写图（fabric close-up）加 macro detail, thread visible 效果惊艳。\n\n## 位置法则\n面料词紧跟品类词后（a velvet hanfu jacket / a satin qipao）——距离近权重高。",
+ "looks": [],
+ "faq": [
+  [
+   "为什么丝绒总被画成亮面？",
+   "缺 light-absorbing 和 matte pile。丝绒的物理特征是吸光，模型默认按「布」处理。"
+  ],
+  [
+   "多面料组合会不会互相干扰？",
+   "3 种以内按「哑光+流光+透」的对比结构写，超过就平均化。"
+  ]
+ ]
+}

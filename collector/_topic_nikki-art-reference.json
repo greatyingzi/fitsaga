@@ -1,0 +1,18 @@
+{
+ "slug": "nikki-art-reference",
+ "title": "游戏时装 AI 参考：暖暖系原画的借色与再创作",
+ "lede": "游戏原画师与同人画师的真实工作流：找设定参考 → 拆配色与剪裁 → 再创作。暖暖系 2000+ 套装是最全的「中式幻想时装」参考库，这篇教怎么把它变成 AI 参考素材。",
+ "type": "evergreen",
+ "body_md": "## 一句话结论\n游戏时装参考的正确用法是**借设计语言，不是复刻画面**：提取配色方案、剪裁特征、材质组合——生成「同一设计血脉」的全新角色，才有创作价值且版权安全。\n\n## 从套装图到 prompt 的转译流程\n1. **配色提取**：套装主色（例：子夜舞曲 = 深蓝+银+微金）→ deep blue and silver palette with subtle gold accents\n2. **剪裁特征**：不对称裙摆 / 高开衩 / 层叠袖 → asymmetric hemline, layered sleeves, thigh slit\n3. **材质判断**：原画的材质对比（纱+金属/丝绒+刺绣）→ 套用面料词库\n4. **氛围补全**：原画多为棚拍感 → 补 soft studio lighting, fantasy backdrop\n\n## 三种参考强度（版权安全阶梯）\n- **强度 1 · 只借配色**（最安全）：生成全新角色，只共享色系 → 商用也低险\n- **强度 2 · 借剪裁结构**：形制相似细节全改 → 同人创作惯例区\n- **强度 3 · 复刻画面**：角色+服装+姿势全对齐 → 仅限个人欣赏/标注 fan art\n（游戏素材版权归叠纸——强度 3 别商用）\n\n## 生成「原画感」的关键词\n**concept art, official art, painterly rendering, clean lineart influence, fantasy character design**\n配 matte painting background 背景立刻有游戏立绘感。\n\n## 正反例要点\n- 加 concept art, painterly 的图有「设定集」质感；纯写实词会把原画参考画成 cosplay 照片\n- 一张图一个角色的完整设计；多角色会平均化细节\n- 武器/持物是原画感强项：holding ornate staff, glowing crystal 这类 fantasy prop 词常备\n\n## 本站配套工具\nnikki 图鉴（奇迹/闪耀/无限暖暖 2000+ 套装结构化图库，BWIKI+Fandom 双源）就是为此准备的——按套装浏览，每套部件图可直接做参考帧。",
+ "looks": [],
+ "faq": [
+  [
+   "生成的图能标注「参考暖暖XX套装」发布吗？",
+   "标注灵感的同人发布是社区惯例，但别用原画本身做拼贴素材。"
+  ],
+  [
+   "高质量游戏时装参考去哪找？",
+   "本站 nikki 图鉴按套装浏览，部件图可直接当参考帧。"
+  ]
+ ]
+}

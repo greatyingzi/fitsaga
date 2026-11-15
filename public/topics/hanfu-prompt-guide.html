@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>汉服 AI 生成完全指南：形制关键词的英文映射 · FitSaga AI 画法研究所</title>
+<meta name="description" content="汉服是 AI 生图里最难写对的中式品类——「hanfu」一词模型理解宽泛，形制细节全靠关键词精度。这篇把齐胸/齐腰/马面/交领的形制词逐个翻译成模型听得懂的英文，配社区高分生成图做对照。">
+<link rel="canonical" href="https://fitsaga.pages.dev/topics/hanfu-prompt-guide">
+<style>:root{--gold:#f5c76e;--bg:#141018;--fg:#f5eef7;}
+*{margin:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--fg);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.hero{min-height:70vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:3rem 1.5rem;background:radial-gradient(1200px 600px at 20% 10%,rgba(255,126,179,.25),transparent 60%),radial-gradient(1000px 500px at 80% 20%,rgba(181,84,140,.3),transparent 60%),radial-gradient(900px 500px at 50% 90%,rgba(63,111,216,.18),transparent 60%),var(--bg)}
+.hero.small{min-height:38vh}
+.hero h1{font-size:clamp(1.8rem,5vw,3.4rem);font-weight:800;line-height:1.3;background:linear-gradient(90deg,#ffd9a8,#ff7eb3,#c793ff,#8ec5ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{margin-top:.8rem;color:#cbb8d4;letter-spacing:.12em;font-size:clamp(.9rem,2vw,1.05rem)}
+.stylechips{display:flex;flex-wrap:wrap;gap:.55rem;justify-content:center;margin-top:1.8rem}
+.chip{display:inline-block;padding:.6rem 1.05rem;border-radius:999px;font-size:.9rem;font-weight:600;color:#fff;box-shadow:0 4px 12px rgba(0,0,0,.35);transition:transform .2s;opacity:.85}
+.chip:hover{transform:translateY(-2px);opacity:1}
+.chip.on{outline:2px solid #fff5;opacity:1}
+.sec{padding:2.5rem 1.5rem;max-width:1100px;margin:0 auto}
+.sec-head h2{font-size:clamp(1.3rem,3vw,1.9rem);font-weight:800}
+.sec-head p{width:100%;margin-top:.4rem;opacity:.85;font-size:.95rem}
+.intro{max-width:640px;color:#cbb8d4;line-height:1.8;font-size:.95rem;margin-bottom:1.4rem}
+.masonry{columns:3 240px;column-gap:14px}
+@media(max-width:640px){.masonry{columns:2 140px}}
+.shot{break-inside:avoid;margin-bottom:14px;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 6px 20px rgba(0,0,0,.4);background:#241b2c}
+.shot img{width:100%;display:block;transition:transform .35s}
+.shot:hover img{transform:scale(1.04)}
+.shot .cap{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:.5rem;padding:1.5rem .7rem .55rem;font-size:.78rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+.shot .cap em{font-style:normal;opacity:.75;white-space:nowrap;font-size:.78rem}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(160px,100%),1fr));gap:14px}
+.scard{background:#241b2c;border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+.scard img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.sname{padding:.6rem .7rem .1rem;font-weight:700;font-size:.9rem}
+.smeta{padding:0 .7rem .7rem;font-size:.78rem;color:#9d8fa8}
+footer{padding:2.5rem 1.5rem;text-align:center;color:#9d8fa8;font-size:.9rem;background:#0f0c13;margin-top:2rem}
+footer .links{margin-top:.7rem;display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+footer .links a{display:inline-block;padding:.55rem .9rem;border-radius:10px;background:#241b2c;font-size:.9rem;min-height:44px;line-height:1.4}
+footer .source{opacity:.6;font-size:.78rem;margin-top:.6rem;line-height:1.7}
+.sec-head a{display:inline-block;padding:.6rem .1rem;min-height:44px;line-height:1.7;font-size:.92rem}
+/* flywheel round3 fixes */
+.hero.small{min-height:26vh}
+.hero .sub{letter-spacing:.05em;max-width:22em;line-height:1.8}
+.collection-cap{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:.15rem;padding:2.2rem .8rem .6rem;font-size:.85rem;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+.shot .cap{font-size:.85rem}
+.shot .cap .view{font-size:.78rem;opacity:.8}
+.masonry .shot img{max-height:520px;object-fit:cover}
+</style><style>.twrap{max-width:760px;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+.twrap h1{font-size:clamp(1.5rem,4vw,2.1rem);font-weight:800;line-height:1.4;color:#fff}
+.twrap .badge{display:inline-block;padding:.3rem .8rem;border-radius:999px;background:linear-gradient(135deg,#ff7eb3,#a855f7);color:#fff;font-size:.78rem;font-weight:700;margin-bottom:1rem}
+.twrap .lede{font-size:1.02rem;line-height:2;color:#f0e8f3;border-left:3px solid #a855f7;padding-left:1rem;margin:1.4rem 0}
+.twrap h2{font-size:1.25rem;color:#ffd9a8;margin:2rem 0 .7rem;font-weight:800}
+.twrap h3{font-size:1.02rem;color:#c793ff;margin:1.4rem 0 .5rem}
+.twrap p{line-height:2;color:#e8dff0;margin:.7rem 0;font-size:.95rem}
+.twrap p b{color:#ff9ec7}
+.twrap pre{background:#0f0c13;border:1px solid #3a2a44;border-radius:12px;padding:1rem 1.1rem;overflow-x:auto;margin:1rem 0}
+.twrap pre code{color:#8ec5ff;font-size:.82rem;line-height:1.9;font-family:ui-monospace,Menlo,monospace}
+.twrap details{background:#1a1420;border-radius:12px;margin:.6rem 0;padding:.9rem 1rem;border:1px solid #3a2a44}
+.twrap summary{cursor:pointer;font-weight:700;color:#ffd9a8}
+.twrap details p{margin:.5rem 0 0;font-size:.92rem}
+.twrap .chase{background:linear-gradient(135deg,#2a1832,#4a1f45);border-radius:14px;padding:1rem 1.1rem;margin:1.5rem 0;border-left:3px solid #ff7eb3}
+.twrap .chase b{color:#ff7eb3}
+.twrap .meta{color:#9d8fa8;font-size:.85rem;margin:.6rem 0}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "汉服 AI 生成完全指南：形制关键词的英文映射", "description": "汉服是 AI 生图里最难写对的中式品类——「hanfu」一词模型理解宽泛，形制细节全靠关键词精度。这篇把齐胸/齐腰/马面/交领的形制词逐个翻译成模型听得懂的英文，配社区高分生成图做对照。", "datePublished": "2026-11-15", "author": {"@type": "Organization", "name": "FitSaga"}}</script>
+</head><body>
+<div class="twrap"><article>
+<span class="badge">EVERGREEN</span>
+<h1>汉服 AI 生成完全指南：形制关键词的英文映射</h1>
+<div class="meta">FitSaga AI 画法研究所 · 2026-11-15</div>
+<div class="lede">汉服是 AI 生图里最难写对的中式品类——「hanfu」一词模型理解宽泛，形制细节全靠关键词精度。这篇把齐胸/齐腰/马面/交领的形制词逐个翻译成模型听得懂的英文，配社区高分生成图做对照。</div>
+<h2>一句话结论</h2>
+<p>生成汉服图的成败在<b>形制词的分层</b>：朝代打底（ming dynasty / song dynasty）+ 品类词（mamian skirt / ruqun）+ 细节词（cross-collar / waist-high）——三层齐了形制才对，只写 hanfu 会出「影楼混搭风」。</p>
+<h2>形制 → 英文映射表</h2>
+<h3>马面裙（明制）</h3>
+<p><b>mamian skirt / horse-face skirt, pleated sides, flat front panel with golden brocade</b></p>
+<p style='padding-left:1.2rem'>· 必加 pleated sides：马面的辨识度在两侧打褶</p>
+<p style='padding-left:1.2rem'>· 织金写 golden brocade patterns，别写 gold（会变成金裙）</p>
+<h3>齐胸襦裙（唐制）</h3>
+<p><b>chest-high ruqun, tang dynasty, flowing wide sleeves, high-waisted</b></p>
+<p style='padding-left:1.2rem'>· chest-high 比 high-waisted 更准——齐胸的位置是胸下</p>
+<p style='padding-left:1.2rem'>· 加 ribbon sash（披帛）唐韵立现</p>
+<h3>交领右衽（通用）</h3>
+<p><b>cross-collar, right lapel over left, wrapped front</b></p>
+<p style='padding-left:1.2rem'>· right over left 是形制圈死规矩（左衽是寿衣）——模型默认常画错，显式写出</p>
+<h3>宋制裤装（日常化首选）</h3>
+<p><b>song dynasty, beizi jacket, wide-leg trousers, minimal embroidery</b></p>
+<p style='padding-left:1.2rem'>· 宋制最日常，配现代外套就是「汉元素通勤」</p>
+<h2>场景与光线公式</h2>
+<p style='padding-left:1.2rem'>· 庭院：<b>chinese classical garden, moon gate, bamboo, koi pond</b></p>
+<p style='padding-left:1.2rem'>· 室内：<b>traditional chinese interior, wooden lattice windows, warm lantern light</b></p>
+<p style='padding-left:1.2rem'>· 雪景：<b>snow on red walls, plum blossom, cold blue shadows + warm red dress</b>（红衣雪景是流量密码）</p>
+<h2>发型与配饰（隐藏难点）</h2>
+<p><b>traditional chinese hairstyle, hairpins (buyao), long black hair, hair ribbon</b></p>
+<p>不写发型必出问题：AI 默认给现代发型。发簪写 buyao（步摇）比 hairpin 更有形态感。</p>
+<h2>正反例要点</h2>
+<p style='padding-left:1.2rem'>· 加了朝代词的图，剪裁与层次立刻不同（明制收身 vs 唐制飘逸）</p>
+<p style='padding-left:1.2rem'>· hanfu dress 是错误写法——dress 会触发西式裙剪裁，写 hanfu outfit 或具体品类</p>
+<p style='padding-left:1.2rem'>· 多人图形制更容易崩：n≥2 时加 matching dynasty outfits</p>
+<h2>模型参数卡</h2>
+<p style='padding-left:1.2rem'>· <b>Midjourney v7</b>：--ar 3:4，--style raw；niji 出的是古风插画不是汉服摄影感</p>
+<p style='padding-left:1.2rem'>· <b>FLUX</b>：自然句 a woman wearing a ming dynasty mamian skirt with golden brocade, standing in a chinese garden</p>
+<p style='padding-left:1.2rem'>· <b>即梦</b>：中文直写「明制马面裙 织金 交领上襦 古典庭院」命中率极高</p>
+<h2>避坑</h2>
+<p style='padding-left:1.2rem'>· 别混 kimono（和服）——花瓣领与腰带系法完全不同</p>
+<p style='padding-left:1.2rem'>· cheongsam/qipao 与汉服是两个品类，混写必出错</p>
+<p style='padding-left:1.2rem'>· 首饰堆砌会变戏曲风——一件步摇 + 一对耳坠是上限</p>
+
+
+<h2>常见问题</h2><div><details><summary>AI 生成的汉服形制会被同袍挑错吗？</summary><p>会，但标注「AI 生成，形制参考」即可。形制词写对（尤其右衽）能把吐槽降到最少。</p></details><details><summary>哪个模型生成汉服最准？</summary><p>中文形制词用国产模型（即梦/可灵）命中率最高；英文工作流用 FLUX + 具体朝代词。</p></details></div>
+<p style="margin-top:2.5rem"><a href="/topics.html">← 全部专题</a> · <a href="/">Home</a></p>
+</article></div>
+<script src="/lightbox.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/theme.js" defer></script>
+</body></html>

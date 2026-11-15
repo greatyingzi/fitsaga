@@ -146,6 +146,7 @@ def gen_item_collections():
 <div class="masonry">{"".join(cards)}</div>
 </main>
 <footer><div><b style="color:#f5c76e">FitSaga</b> · 策展合集</div>
+<p style="margin-top:1.5rem"><a style="color:#c793ff" href="/topics.html">🎨 想用 AI 生成这种风格？进画法研究所看 prompt 方案 →</a></p>
 <div class="source">图片版权归原创作者所有 · 点击来源↗访问原帖 · © 2026 FitSaga</div></footer>
 <script src="/lightbox.js" defer></script>
 <script src="/search.js" defer></script>

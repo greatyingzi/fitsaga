@@ -42,6 +42,7 @@ def main(cap=300):
 <p class="sub">{html.escape(game)} · {n} 张图 · 数据来自 BWIKI</p></header>
 <main class="sec">
 <div class="masonry">{cards}</div>
+<div style="margin-top:2rem;background:linear-gradient(135deg,#2a1832,#4a1f45);border-radius:14px;padding:1rem 1.1rem;border-left:3px solid #c793ff"><b style="color:#c793ff">🎨 AI 画法推荐</b><p style="margin:.4rem 0 0;font-size:.85rem;color:#d8c9de;line-height:1.8">想用 AI 画这种风格？看<a style="color:#ff9ec7" href="/topics/hanfu-prompt-guide">汉服形制 prompt 指南</a>与<a style="color:#ff9ec7" href="/topics/nikki-art-reference">游戏时装借色方法论</a>。</p></div>
 <p style="margin-top:1.5rem;color:#9d8fa8;font-size:.85rem">相关套装：</p>
 <nav class="stylechips" style="margin-top:.4rem">{rel_html}</nav>
 </main>

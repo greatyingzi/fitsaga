@@ -139,6 +139,7 @@ def style_page(s):
   {nav_html(s["key"])}
   <div class="masonry">{cards}</div>
   {faq_html}
+  <p style="margin-top:1.5rem"><a style="color:#c793ff" href="/topics/hanfu-prompt-guide">🎨 想用 AI 生成这种风格？看画法研究所的 prompt 方案 →</a></p>
 </main>
 <footer>
   <div><b style="color:#f5c76e">FitSaga</b> · 每一套时装，都是一个故事</div>
@@ -158,6 +159,17 @@ def today_cards_html(limit=14):
         cards.append(f'<figure class="shot"><img src="{htmlMod.escape(img)}" alt="今日精选搭配灵感{i+1}" loading="lazy"><figcaption class="cap"><span>{htmlMod.escape(kw or "精选")}</span><em>查看 ↗</em></figcaption></figure>')
     return "\n".join(cards)
 
+def topic_cards_html():
+    import json as _json
+    cards = []
+    for f in sorted((ROOT / "collector").glob("_topic_*.json")):
+        t = _json.loads(f.read_text(encoding="utf-8"))
+        if t.get("lang") == "en": continue
+        sub = "en/topics" if t.get("lang") == "en" else "topics"
+        emoji = "🔥" if t.get("type") == "hot" else "📚"
+        cards.append("<a class='scard' style='padding:1rem;display:block' href=/" + sub + "/" + t["slug"] + "'><div class='sname'>" + emoji + " " + htmlMod.escape(t["title"]) + "</div><div class='smeta' style='margin-top:.4rem;line-height:1.7'>" + htmlMod.escape(t["lede"][:60]) + "…</div></a>")
+    return chr(10).join(cards)
+
 def home():
     secs = []
     for s in STYLES:
@@ -173,11 +185,15 @@ def home():
 </section>''')
     chips = "".join(f'<a class="chip" style="background:linear-gradient(135deg,#2a1832,{s["accent"]}66)" href="/style/{s["key"]}.html">{s["zh"]}</a>' for s in STYLES)
     today_cards = today_cards_html()
+    topic_cards = topic_cards_html()
     body = f'''
 <section class="hero">
   <h1>每一种美，<br>都值得一场时装冒险 ✦</h1>
-  <p class="sub">古风 · 优雅 · 甜美 · 性感 · 青春 · 潮流<br>美妆 · 变美 · 每日灵感</p>
-  <nav class="stylechips">{chips}</nav>
+  <p class="sub">穿搭图鉴 × AI 画法<br>古风 · 汉服 · 辣妹 · 婚纱 · 游戏时装 · prompt 灵感</p>
+  <nav class="stylechips">
+    <a class="chip" style="background:linear-gradient(135deg,#3a2a44,#c793ff66)" href="/topics.html">🎨 AI 画法研究所</a>
+    {chips}
+  </nav>
   <nav class="stylechips" style="margin-top:.8rem">
     <a class="chip" style="background:linear-gradient(135deg,#3a2a44,#ffd9a866)" href="/guide.html">📖 穿搭研究所</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#a855f766)" href="/ai.html">✦ AI 灵感图鉴</a>
@@ -186,6 +202,14 @@ def home():
   </nav>
 </section>
 {"".join(secs)}
+<section class="sec" id="ailab" style="padding-top:2.5rem">
+  <div class="sec-head" style="color:#c793ff">
+    <h2>🎨 AI 画法研究所</h2>
+    <p style="color:#d8c9de">把游戏、影视、流行文化的美学翻译成可直接复制的 prompt —— 热点追更 + 常青风格库</p>
+  </div>
+  <div class="sgrid" style="grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr))">{topic_cards}</div>
+  <p style="margin-top:1rem"><a style="color:#c793ff" href="/topics.html">进入研究所查看全部专题 →</a></p>
+</section>
 <section class="sec" id="today" style="padding-top:1rem">
   <div class="sec-head" style="color:#ffd9a8">
     <h2>今日精选 🔥</h2>
