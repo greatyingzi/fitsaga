@@ -3,6 +3,7 @@
 生成: index.html, /style/<key>.html(xN), sitemap.xml, robots.txt
 """
 import sqlite3, json, pathlib, html, datetime
+from style_content import STYLE_CONTENT
 import html as htmlMod
 
 ROOT = pathlib.Path(__file__).resolve().parent
@@ -112,15 +113,23 @@ def nav_html(active):
 def style_page(s):
     items = fetch_items(s.get("kws"), s.get("musinsa"))
     cards = "\n".join(card(it,i,s["zh"].split(" · ")[0]) for i,it in enumerate(items))
+    sc = STYLE_CONTENT.get(s["key"], {})
+    deep_html = f'<p class="intro">{esc(sc["deep"])}</p>' if sc.get("deep") else f'<p class="intro">{esc(s["intro"])}</p>'
+    faq_html = ""
+    if sc.get("faq"):
+        faq_items = "".join(
+            f'<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for q, a in sc["faq"])
+        faq_html = f'<div class="sec-head" style="color:{s["accent"]}"><h2>常见问题</h2></div><div class="faq">{faq_items}</div>'
     body = f'''
 <header class="hero small" style="background:radial-gradient(900px 400px at 70% 10%,{s["accent"]}33,transparent 60%),#141018">
   <h1><span style="color:{s["accent"]}">{s["zh"]}</span></h1>
   <p class="sub">{esc(s["desc"])}</p>
 </header>
 <main class="sec">
-  <p class="intro">{esc(s["intro"])}</p>
+  {deep_html}'
   {nav_html(s["key"])}
   <div class="masonry">{cards}</div>
+  {faq_html}
 </main>
 <footer>
   <div><b style="color:#f5c76e">FitSaga</b> · 每一套时装，都是一个故事</div>
