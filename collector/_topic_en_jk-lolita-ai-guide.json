@@ -1,0 +1,19 @@
+{
+ "slug": "jk-lolita-ai-guide",
+ "title": "JK Uniform & Lolita AI Guide: Mapping Subculture Terms to Prompts",
+ "lede": "JK and Lolita are the two Chinese fashion subcultures most strict about terminology — plaid skirts, box pleats, petticoats, sweet vs classic. These words belong in your prompt or the community won't recognize the result.",
+ "type": "evergreen",
+ "lang": "en",
+ "body_md": "## One-line takeaway\nSubculture style = **terminology density**: 'school uniform' gives American-teen vibes; **japanese school uniform, pleated skirt, sailor collar** gives JK. 'lolita dress' gives Halloween; **sweet lolita, bell-shaped silhouette, petticoat** gives what the community accepts.\n\n## JK vocabulary\n- Base: **japanese school uniform, sailor collar (seifuku), pleated skirt**\n- Plaid: **tartan plaid skirt** + color (navy/gray/brown)\n- Western style: **blazer uniform**\n- Sailor: **sailor fuku, neckerchief** (neckie color = grade color)\n- Classic scenes: **classroom afternoon light / rooftop / sakura street**\n- Skirt length: 45cm mainstream — 'above-knee pleated skirt'\n\n## Lolita three branches\n- Sweet: **sweet lolita, pastel colors, candy prints, big ribbon bow, bell-shaped petticoat silhouette**\n- Classic (Cla): **classic lolita, muted elegant colors, A-line silhouette, delicate lace, mature**\n- Qi (Chinese) lolita: **qi lolita, mandarin collar, chinese brocade, tassel accessories**\n- Hard rule: **petticoat** mandatory — no petticoat, no lolita (just a puffy skirt)\n\n## Shared by both circles\n- **knee high socks / mary jane shoes** standard footwear\n- Scenes: **old town street, cafe window**\n- Hair: **twin tails** (JK) / **curls with bonnet** (lolita)\n\n## Good vs bad notes\n- lolita without petticoat = Halloween costume (most common mistake)\n- JK + mature face = 'uniform photoshoot' not JK — balance with 'youthful, schoolgirl aura'\n- Qi lolita + hanfu words = form confusion — qi lolita is its own category word",
+ "looks": [],
+ "faq": [
+  [
+   "Do JK fans complain about replica patterns on AI images?",
+   "AI-generated tartan is original, so no replica (shan/zheng) issue — an actual advantage of AI in this circle."
+  ],
+  [
+   "Where does lolita generation fail most?",
+   "Petticoat silhouette and sleeve shapes. Write 'petticoat' + 'bell-shaped silhouette' as double insurance."
+  ]
+ ]
+}

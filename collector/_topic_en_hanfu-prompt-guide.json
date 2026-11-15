@@ -1,0 +1,19 @@
+{
+ "slug": "hanfu-prompt-guide",
+ "title": "Hanfu AI Generation Guide: Mapping Chinese Garment Terms to English Prompts",
+ "lede": "Hanfu is the hardest Chinese fashion category to prompt correctly — the bare word 'hanfu' gives the model a vague costume-drama blend. This guide translates each garment form (mamian skirt, ruqun, cross-collar) into the exact English keywords the models understand, referencing 73 community high-score generations.",
+ "type": "evergreen",
+ "lang": "en",
+ "body_md": "## One-line takeaway\nSuccess in hanfu generation depends on **layered form words**: dynasty base (ming dynasty / song dynasty) + garment type (mamian skirt / ruqun) + detail words (cross-collar / waist-high). Three layers give correct form; bare 'hanfu' gives a photo-studio mashup.\n\n## Form-to-English mapping\n### Mamian skirt (Ming dynasty)\n**mamian skirt / horse-face skirt, pleated sides, flat front panel with golden brocade**\n- 'pleated sides' is mandatory — the signature is side pleating with a flat decorated panel\n- For gold weaving write 'golden brocade patterns', not 'gold' (which turns the whole skirt golden)\n### Chest-high ruqun (Tang dynasty)\n**chest-high ruqun, tang dynasty, flowing wide sleeves, high-waisted, ribbon sash**\n- 'chest-high' beats 'high-waisted' — the waistline sits below the bust\n- The ribbon sash (pibo) instantly adds Tang elegance\n### Cross-collar (universal rule)\n**cross-collar, right lapel over left, wrapped front**\n- Right-over-left is a hard cultural rule (left-over-right is for burial clothes) — models get this wrong by default, so state it explicitly\n### Song dynasty casual (best for daily-wear look)\n**song dynasty, beizi jacket, wide-leg trousers, minimal embroidery**\n- Song forms are the most wearable — pair with a modern coat for 'hanfu-element commute'\n\n## Scene & light formulas\n- Garden: **chinese classical garden, moon gate, bamboo, koi pond**\n- Interior: **traditional chinese interior, wooden lattice windows, warm lantern light**\n- Snow: **snow on red walls, plum blossom, cold blue shadows + warm red dress** (red-on-snow contrast is a traffic magnet)\n\n## Hair & accessories (the hidden difficulty)\n**traditional chinese hairstyle, hairpins (buyao), long black hair, hair ribbon**\nWithout hair words the model defaults to modern hairstyles. 'Buyao' (dangling hairpin) gives better shapes than generic 'hairpin'.\n\n## Good vs bad generation notes\n- Dynasty words change silhouette immediately (Ming fitted vs Tang flowing)\n- 'hanfu dress' is wrong — 'dress' triggers Western cutting. Use 'hanfu outfit' or the specific garment\n- Multi-person shots break form easier: add 'matching dynasty outfits' when n≥2\n\n## Model cheat sheet\n- **Midjourney v7**: --ar 3:4, --style raw. Skip niji (gives guofeng illustration, not photographic hanfu)\n- **FLUX**: natural sentence — 'a woman wearing a ming dynasty mamian skirt with golden brocade, standing in a chinese garden'\n- **Chinese models (Jimeng/Kling)**: they parse Chinese form terms natively — '明制马面裙 织金 交领上襦 古典庭院' hits remarkably well\n\n## Pitfalls\n- Don't mix 'kimono' — collar overlap and belt systems are completely different\n- 'cheongsam/qipao' is a different category from hanfu; mixing breaks both\n- Accessory stacking turns images into Chinese-opera costume — one buyao + one pair of earrings is the cap",
+ "looks": [],
+ "faq": [
+  [
+   "Will hanfu enthusiasts criticize AI-generated forms?",
+   "Sometimes, but a 'AI-generated, form-for-reference' disclaimer plus correct layer words (especially right-over-left collar) minimizes it."
+  ],
+  [
+   "Which model is best for hanfu?",
+   "Chinese models parse Chinese form terms natively; for English workflows use FLUX with specific dynasty words."
+  ]
+ ]
+}

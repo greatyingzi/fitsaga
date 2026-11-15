@@ -1,0 +1,19 @@
+{
+ "slug": "cyberpunk-vs-miami",
+ "title": "Cyberpunk vs Miami Aesthetic: One Table to Tell Two Neons Apart",
+ "lede": "The two most-confused neon styles — one from Blade Runner's dense future city, one from GTA6's Miami dusk. One wrong word and the mood completely drifts.",
+ "type": "evergreen",
+ "lang": "en",
+ "body_md": "## One-line takeaway\nIn cyberpunk, neon is the **world rule** (the city itself is a light source); in Miami aesthetics, neon is **decoration** (accents at sunset). The 'status' of neon in your prompt decides the style.\n\n## The core comparison\n| Dimension | Cyberpunk | Miami (GTA6) |\n| Sky | permanent haze / purple-green pollution | natural pink-orange-purple sunset |\n| Light source |全域 neon + holographic ads | neon signs + sunset glow |\n| Streets | wet, high-reflective, steam | damp but natural reflections |\n| People | cyberware / techwear | fashionable realism / resort |\n| Mood | dystopian pressure | crime-and-freedom romance |\n\n## Keyword differences\n- Cyberpunk only: **cyberpunk city, holographic ads, neon everywhere, dystopian, blade runner atmosphere, techwear**\n- Miami only: **Miami aesthetic, art deco, golden hour, tropical, pastel neon signs, resort vibe**\n- Shared: **wet street reflections, night city, cinematic**\n\n## Mixing warnings\n- cyberpunk + sunset gradient = 'sunset cyberpunk' (actually a great style — but not GTA6)\n- Miami + dystopian = mood tearing, avoid\n- Want 'cyberpunk at dusk' with visible sky: write 'cyberpunk city at dusk, natural sky visible'\n\n## Decision flow\n1. Main light from the sky? → Miami direction\n2. Main light from man-made sources (billboards/holo)? → Cyberpunk\n3. Both? → name the dominant source explicitly",
+ "looks": [],
+ "faq": [
+  [
+   "Is GTA6 cyberpunk?",
+   "No. It's modern-crime-romance aesthetics; neon is decoration. Blade Runner / Ghost in the Shell are the canon."
+  ],
+  [
+   "Can the two styles merge?",
+   "Yes with explicit dominance — 'dominant light source'. Fusion often yields unique results."
+  ]
+ ]
+}

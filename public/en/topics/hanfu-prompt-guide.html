@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Hanfu AI Generation Guide: Mapping Chinese Garment Terms to English Prompts · FitSaga AI Reference</title>
+<meta name="description" content="Hanfu is the hardest Chinese fashion category to prompt correctly — the bare word &#x27;hanfu&#x27; gives the model a vague costum">
+<link rel="canonical" href="https://fitsaga.pages.dev/en/topics/hanfu-prompt-guide">
+<style>:root{--gold:#f5c76e;--bg:#141018;--fg:#f5eef7;}
+*{margin:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--fg);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.hero{min-height:70vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:3rem 1.5rem;background:radial-gradient(1200px 600px at 20% 10%,rgba(255,126,179,.25),transparent 60%),radial-gradient(1000px 500px at 80% 20%,rgba(181,84,140,.3),transparent 60%),radial-gradient(900px 500px at 50% 90%,rgba(63,111,216,.18),transparent 60%),var(--bg)}
+.hero.small{min-height:38vh}
+.hero h1{font-size:clamp(1.8rem,5vw,3.4rem);font-weight:800;line-height:1.3;background:linear-gradient(90deg,#ffd9a8,#ff7eb3,#c793ff,#8ec5ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{margin-top:.8rem;color:#cbb8d4;letter-spacing:.12em;font-size:clamp(.9rem,2vw,1.05rem)}
+.stylechips{display:flex;flex-wrap:wrap;gap:.55rem;justify-content:center;margin-top:1.8rem}
+.chip{display:inline-block;padding:.6rem 1.05rem;border-radius:999px;font-size:.9rem;font-weight:600;color:#fff;box-shadow:0 4px 12px rgba(0,0,0,.35);transition:transform .2s;opacity:.85}
+.chip:hover{transform:translateY(-2px);opacity:1}
+.chip.on{outline:2px solid #fff5;opacity:1}
+.sec{padding:2.5rem 1.5rem;max-width:1100px;margin:0 auto}
+.sec-head h2{font-size:clamp(1.3rem,3vw,1.9rem);font-weight:800}
+.sec-head p{width:100%;margin-top:.4rem;opacity:.85;font-size:.95rem}
+.intro{max-width:640px;color:#cbb8d4;line-height:1.8;font-size:.95rem;margin-bottom:1.4rem}
+.masonry{columns:3 240px;column-gap:14px}
+@media(max-width:640px){.masonry{columns:2 140px}}
+.shot{break-inside:avoid;margin-bottom:14px;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 6px 20px rgba(0,0,0,.4);background:#241b2c}
+.shot img{width:100%;display:block;transition:transform .35s}
+.shot:hover img{transform:scale(1.04)}
+.shot .cap{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:.5rem;padding:1.5rem .7rem .55rem;font-size:.78rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+.shot .cap em{font-style:normal;opacity:.75;white-space:nowrap;font-size:.78rem}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(160px,100%),1fr));gap:14px}
+.scard{background:#241b2c;border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+.scard img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.sname{padding:.6rem .7rem .1rem;font-weight:700;font-size:.9rem}
+.smeta{padding:0 .7rem .7rem;font-size:.78rem;color:#9d8fa8}
+footer{padding:2.5rem 1.5rem;text-align:center;color:#9d8fa8;font-size:.9rem;background:#0f0c13;margin-top:2rem}
+footer .links{margin-top:.7rem;display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+footer .links a{display:inline-block;padding:.55rem .9rem;border-radius:10px;background:#241b2c;font-size:.9rem;min-height:44px;line-height:1.4}
+footer .source{opacity:.6;font-size:.78rem;margin-top:.6rem;line-height:1.7}
+.sec-head a{display:inline-block;padding:.6rem .1rem;min-height:44px;line-height:1.7;font-size:.92rem}
+/* flywheel round3 fixes */
+.hero.small{min-height:26vh}
+.hero .sub{letter-spacing:.05em;max-width:22em;line-height:1.8}
+.collection-cap{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:.15rem;padding:2.2rem .8rem .6rem;font-size:.85rem;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+.shot .cap{font-size:.85rem}
+.shot .cap .view{font-size:.78rem;opacity:.8}
+.masonry .shot img{max-height:520px;object-fit:cover}
+</style><style>.twrap{max-width:760px;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+.twrap h1{font-size:clamp(1.5rem,4vw,2.1rem);font-weight:800;line-height:1.4;color:#fff}
+.twrap .badge{display:inline-block;padding:.3rem .8rem;border-radius:999px;background:linear-gradient(135deg,#ff7eb3,#a855f7);color:#fff;font-size:.78rem;font-weight:700;margin-bottom:1rem}
+.twrap .lede{font-size:1.02rem;line-height:2;color:#f0e8f3;border-left:3px solid #a855f7;padding-left:1rem;margin:1.4rem 0}
+.twrap h2{font-size:1.25rem;color:#ffd9a8;margin:2rem 0 .7rem;font-weight:800}
+.twrap h3{font-size:1.02rem;color:#c793ff;margin:1.4rem 0 .5rem}
+.twrap p{line-height:2;color:#e8dff0;margin:.7rem 0;font-size:.95rem}
+.twrap p b{color:#ff9ec7}
+.twrap pre{background:#0f0c13;border:1px solid #3a2a44;border-radius:12px;padding:1rem 1.1rem;overflow-x:auto;margin:1rem 0}
+.twrap pre code{color:#8ec5ff;font-size:.82rem;line-height:1.9;font-family:ui-monospace,Menlo,monospace}
+.twrap details{background:#1a1420;border-radius:12px;margin:.6rem 0;padding:.9rem 1rem;border:1px solid #3a2a44}
+.twrap summary{cursor:pointer;font-weight:700;color:#ffd9a8}
+.twrap details p{margin:.5rem 0 0;font-size:.92rem}
+.twrap .chase{background:linear-gradient(135deg,#2a1832,#4a1f45);border-radius:14px;padding:1rem 1.1rem;margin:1.5rem 0;border-left:3px solid #ff7eb3}
+.twrap .chase b{color:#ff7eb3}
+.twrap .meta{color:#9d8fa8;font-size:.85rem;margin:.6rem 0}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Hanfu AI Generation Guide: Mapping Chinese Garment Terms to English Prompts", "description": "Hanfu is the hardest Chinese fashion category to prompt correctly — the bare word 'hanfu' gives the model a vague costume-drama blend. This guide tran", "datePublished": "2026-11-16", "author": {"@type": "Organization", "name": "FitSaga"}}</script>
+</head><body>
+<div class="twrap"><article>
+<span class="badge">EVERGREEN</span>
+<h1>Hanfu AI Generation Guide: Mapping Chinese Garment Terms to English Prompts</h1>
+<div class="meta">FitSaga AI Reference · 2026-11-16</div>
+<div class="lede">Hanfu is the hardest Chinese fashion category to prompt correctly — the bare word &#x27;hanfu&#x27; gives the model a vague costume-drama blend. This guide translates each garment form (mamian skirt, ruqun, cross-collar) into the exact English keywords the models understand, referencing 73 community high-score generations.</div>
+<h2>One-line takeaway</h2>
+<p>Success in hanfu generation depends on <b>layered form words</b>: dynasty base (ming dynasty / song dynasty) + garment type (mamian skirt / ruqun) + detail words (cross-collar / waist-high). Three layers give correct form; bare &#x27;hanfu&#x27; gives a photo-studio mashup.</p>
+<h2>Form-to-English mapping</h2>
+<h3>Mamian skirt (Ming dynasty)</h3>
+<p><b>mamian skirt / horse-face skirt, pleated sides, flat front panel with golden brocade</b></p>
+<p style='padding-left:1.2rem'>· &#x27;pleated sides&#x27; is mandatory — the signature is side pleating with a flat decorated panel</p>
+<p style='padding-left:1.2rem'>· For gold weaving write &#x27;golden brocade patterns&#x27;, not &#x27;gold&#x27; (which turns the whole skirt golden)</p>
+<h3>Chest-high ruqun (Tang dynasty)</h3>
+<p><b>chest-high ruqun, tang dynasty, flowing wide sleeves, high-waisted, ribbon sash</b></p>
+<p style='padding-left:1.2rem'>· &#x27;chest-high&#x27; beats &#x27;high-waisted&#x27; — the waistline sits below the bust</p>
+<p style='padding-left:1.2rem'>· The ribbon sash (pibo) instantly adds Tang elegance</p>
+<h3>Cross-collar (universal rule)</h3>
+<p><b>cross-collar, right lapel over left, wrapped front</b></p>
+<p style='padding-left:1.2rem'>· Right-over-left is a hard cultural rule (left-over-right is for burial clothes) — models get this wrong by default, so state it explicitly</p>
+<h3>Song dynasty casual (best for daily-wear look)</h3>
+<p><b>song dynasty, beizi jacket, wide-leg trousers, minimal embroidery</b></p>
+<p style='padding-left:1.2rem'>· Song forms are the most wearable — pair with a modern coat for &#x27;hanfu-element commute&#x27;</p>
+<h2>Scene &amp; light formulas</h2>
+<p style='padding-left:1.2rem'>· Garden: <b>chinese classical garden, moon gate, bamboo, koi pond</b></p>
+<p style='padding-left:1.2rem'>· Interior: <b>traditional chinese interior, wooden lattice windows, warm lantern light</b></p>
+<p style='padding-left:1.2rem'>· Snow: <b>snow on red walls, plum blossom, cold blue shadows + warm red dress</b> (red-on-snow contrast is a traffic magnet)</p>
+<h2>Hair &amp; accessories (the hidden difficulty)</h2>
+<p><b>traditional chinese hairstyle, hairpins (buyao), long black hair, hair ribbon</b></p>
+<p>Without hair words the model defaults to modern hairstyles. &#x27;Buyao&#x27; (dangling hairpin) gives better shapes than generic &#x27;hairpin&#x27;.</p>
+<h2>Good vs bad generation notes</h2>
+<p style='padding-left:1.2rem'>· Dynasty words change silhouette immediately (Ming fitted vs Tang flowing)</p>
+<p style='padding-left:1.2rem'>· &#x27;hanfu dress&#x27; is wrong — &#x27;dress&#x27; triggers Western cutting. Use &#x27;hanfu outfit&#x27; or the specific garment</p>
+<p style='padding-left:1.2rem'>· Multi-person shots break form easier: add &#x27;matching dynasty outfits&#x27; when n≥2</p>
+<h2>Model cheat sheet</h2>
+<p style='padding-left:1.2rem'>· <b>Midjourney v7</b>: --ar 3:4, --style raw. Skip niji (gives guofeng illustration, not photographic hanfu)</p>
+<p style='padding-left:1.2rem'>· <b>FLUX</b>: natural sentence — &#x27;a woman wearing a ming dynasty mamian skirt with golden brocade, standing in a chinese garden&#x27;</p>
+<p style='padding-left:1.2rem'>· <b>Chinese models (Jimeng/Kling)</b>: they parse Chinese form terms natively — &#x27;明制马面裙 织金 交领上襦 古典庭院&#x27; hits remarkably well</p>
+<h2>Pitfalls</h2>
+<p style='padding-left:1.2rem'>· Don&#x27;t mix &#x27;kimono&#x27; — collar overlap and belt systems are completely different</p>
+<p style='padding-left:1.2rem'>· &#x27;cheongsam/qipao&#x27; is a different category from hanfu; mixing breaks both</p>
+<p style='padding-left:1.2rem'>· Accessory stacking turns images into Chinese-opera costume — one buyao + one pair of earrings is the cap</p>
+
+
+<h2>FAQ</h2><div><details><summary>Will hanfu enthusiasts criticize AI-generated forms?</summary><p>Sometimes, but a &#x27;AI-generated, form-for-reference&#x27; disclaimer plus correct layer words (especially right-over-left collar) minimizes it.</p></details><details><summary>Which model is best for hanfu?</summary><p>Chinese models parse Chinese form terms natively; for English workflows use FLUX with specific dynasty words.</p></details></div>
+<p style="margin-top:2.5rem"><a href="/en/topics.html">← All topics</a> · <a href="/">Home</a></p>
+</article></div>
+<script src="/lightbox.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/theme.js" defer></script>
+</body></html>

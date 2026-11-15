@@ -1,0 +1,20 @@
+{
+ "slug": "cny-hanfu-ai",
+ "title": "Chinese New Year AI Images: From New-Year Outfits to Neo-Chinese Editorial",
+ "lede": "CNY is the annual traffic peak for Chinese-style visuals (family looks, ancient-town shoots, neo-Chinese fashion). Three scene recipes with prompt formulas, pitfalls and model params — bookmark before the holidays.",
+ "type": "evergreen",
+ "lang": "en",
+ "updated": "Chase log: refreshes before each CNY with that year's trending drama costumes and popular red tones",
+ "body_md": "## One-line takeaway\nThe viral CNY formula = **red-dominant palette × scene symbols (lanterns/couplets/snow) × human narrative (looking back / holding lantern / holding fan)**. All three make a festival editorial; without scene symbols it's just 'a woman in red'.\n\n## Three scenes\n### 1 · New-year family look (indoor warmth)\n**Chinese New Year outfit, red traditional dress, lanterns, spring couplets, warm indoor lighting**\n- Warm indoor light is the soul — red outdoors reads costume, red indoors reads reunion\n### 2 · Ancient-town travel shoot (grand outdoor)\n**ancient Chinese town, snow, red lanterns hanging, cobblestone street, hanfu flowing**\n- Add snow: red-on-snow contrast explodes; without snow you get the grey-blue Jiangnan school\n### 3 · Neo-Chinese daily (modern fusion)\n**modern chinese fashion, mandarin collar, red accent outfit, minimalist, editorial**\n- Red only as accent (one piece or accessory) — the prompt-ified version of viral RED posts\n\n## Pose vocabulary (the hardest part)\n- Looking back: **looking back over shoulder, graceful turn**\n- Lantern: **holding a red lantern, soft glow on face**\n- Fan: **holding a round silk fan, half-covering face**\n- Sparkler: **holding sparkler, sparkler light on face** (night-scene finishing touch)\n- Greeting: **cupped hands greeting gesture, slight bow** (don't write 'praying')\n\n## Good vs bad notes\n- 'chinese new year' alone generates cartoon red-envelope piles — pair with 'editorial photography' or 'cinematic still'\n- Red overload: write 'deep red dominant, other colors muted'\n- Hair is the hidden failure: **traditional chinese hairstyle, hairpins** mandatory, or you get modern hair mixing in\n\n## Model params\n- **Midjourney v7**: --ar 3:4 (portrait) or 16:9 (scene), --style raw\n- **FLUX**: natural sentences, guidance 3.2 — best hand details\n- **Jimeng**: Chinese keywords '春节 国风 古镇 雪 红灯笼 回眸' hit directly",
+ "looks": [],
+ "faq": [
+  [
+   "Do CNY AI images perform well on social media?",
+   "Red+snow+lantern compositions historically get top save-rates in CNY windows; AI versions are safe if no logos, with an AI-generated label."
+  ],
+  [
+   "Will hanfu forms get criticized?",
+   "Some — the 'AI-generated, form for reference' disclaimer plus correct collar direction handles it."
+  ]
+ ]
+}

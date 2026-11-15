@@ -1,0 +1,19 @@
+{
+ "slug": "wedding-dress-ai-guide",
+ "title": "Wedding Dress AI Guide: From Bridal Photography to Couture",
+ "lede": "Wedding imagery is AI generation's highest-commercial-value subject (photographers, planners, designers all use it). Three dress genres, three scene matches.",
+ "type": "evergreen",
+ "lang": "en",
+ "body_md": "## One-line takeaway\nThe tier of a wedding image = **fabric × scene match**: lace with gardens (romantic), satin with studio (couture), tulle with beaches (destination). Mismatches downgrade instantly.\n\n## Three genres precisely\n### Lace romantic (garden wedding)\n**lace wedding dress with floral embroidery, cathedral veil, garden ceremony, soft golden light, bokeh flowers**\n### Satin couture (fashion editorial)\n**satin wedding gown, minimalist couture, studio lighting, seamless ivory backdrop, Vogue editorial**\n- Satin speaks through cut — the background must be minimal\n### Tulle destination (beach elopement)\n**flowy tulle wedding dress, beach destination wedding, wind-blown veil, sunset backlight, barefoot**\n- 'wind-blown' is the soul — beach bridal without wind looks like pajamas\n\n## Universal boosters\n**train trailing elegantly / delicate beadwork / off-shoulder neckline**\n\n## Good vs bad notes\n- 'wedding photography, professional' reads as candid wedding photo; 'editorial' reads as magazine — two different commercial uses\n- Bridal makeup: 'natural bridal makeup, soft glow' — heavy-makeup words break purity\n- Full-ceremony crowd shots have high hand-failure rates — generate solo or couple close-ups first",
+ "looks": [],
+ "faq": [
+  [
+   "Can generated wedding images be used in planning proposals?",
+   "Yes as mood reference with an AI-generated label; real weddings still need real photography."
+  ],
+  [
+   "Fabric or light first?",
+   "Fabric decides the tier; light then matches the scene."
+  ]
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "slug": "lighting-prompt-guide",
+ "title": "AI Lighting Prompt Guide: Four Types of Light and How They Differ",
+ "lede": "Lighting is the watershed between 'photographic' and 'plastic' AI images — and the most transferable knowledge across styles. Four light recipes, any subject, instant quality lift.",
+ "type": "evergreen",
+ "lang": "en",
+ "body_md": "## One-line takeaway\nThe 'expensive look' is 80% lighting precision: **direction (backlit/side) + time (golden/blue hour) + quality (diffused/hard)** — a 3-axis coordinate beats vague words like 'beautiful lighting' by an order of magnitude.\n\n## The four workhorse lights\n### 1 · Golden Hour (universal for portraits)\n**golden hour, warm rim light, sun flare, long soft shadows, glowing backlight on hair**\n- Rim light is what makes hair glow — without it subjects look pasted onto backgrounds\n### 2 · Blue Hour (pre-night city)\n**blue hour, city lights just turned on, deep blue sky, cool ambient light**\n- The 20 minutes after sunset: deep blue sky + fresh lights = peak urban mood\n### 3 · Window Light (indoor portraits)\n**soft window light, diffused daylight, light falloff, gentle shadows, Rembrandt lighting**\n- Rembrandt lighting (triangle on the cheek) is a one-word quality upgrade\n### 4 · Studio (commercial look)\n**studio lighting, softbox, seamless backdrop, high key / low key**\n- High key suits sweet styles; low key suits goth/power looks\n\n## Light × style quick table\n| Style | Best light | Bonus words |\n| Hanfu | window / golden side-back | dust motes |\n| Baddie | hard low-angle | harsh shadows |\n| Sweet | high-key soft | pastel tones, airy |\n| Goth | low-key single lamp | chiaroscuro |\n| Street | overcast diffused | even light |\n\n## Good vs bad notes\n- 'dramatic lighting' alone is empty — 'single window light from left, dramatic falloff' is controllable\n- Don't mix 'natural light' with studio words\n- Backlit portraits need 'backlight on hair' or faces go black\n\n## Pitfalls\n- 'cinematic lighting' does nothing alone; pair with direction words\n- Night portrait two-light trick: **neon sign as key light, streetlamp as rim** — naming concrete sources is the secret",
+ "looks": [],
+ "faq": [
+  [
+   "Why do my images look plastic?",
+   "Missing or vague light words 90% of the time. Add diffusion/direction/falloff words immediately."
+  ],
+  [
+   "Do light words behave the same across models?",
+   "Midjourney is direction-sensitive; FLUX obeys natural sentences; SDXL often needs LoRA help."
+  ]
+ ]
+}

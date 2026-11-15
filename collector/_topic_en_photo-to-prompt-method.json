@@ -1,0 +1,19 @@
+{
+ "slug": "photo-to-prompt-method",
+ "title": "Photo-to-Prompt: Turning Real Outfit Photos into Generative Descriptions",
+ "lede": "The most underrated AI skill: reverse-engineering a real styling photo into a prompt. Every one of this site's 4,700+ real outfit images is practice material for this method.",
+ "type": "evergreen",
+ "lang": "en",
+ "body_md": "## One-line takeaway\nPhoto-to-prompt order = **subject → outfit (type+fabric+color) → pose → scene → light → medium**, six layers inside-out. Skip a layer and you get 'roughly right, totally wrong mood'.\n\n## Six-layer demo (a street snap)\nOriginal: a woman in a camel coat + white straight trousers, evening street, looking back.\n- L1 Subject: a young asian woman\n- L2 Outfit: wearing a camel wool coat over white straight-leg trousers\n- L3 Pose: walking, looking back over her shoulder, candid\n- L4 Scene: on a city street in the evening, storefront lights\n- L5 Light: dusk ambient light, warm street lamps\n- L6 Medium: street style photography, 35mm, film grain\nCombined: a young asian woman in a camel wool coat and white straight-leg trousers, walking on a city street at dusk, looking back over her shoulder, warm street lamp light, street style photography, 35mm film grain\n\n## Three translation principles\n1. **Color precision**: camel ≠ brown; cream white ≠ white\n2. **Behavior beats state**: walking > standing; mid-laugh > smiling\n3. **Cut what AI paints badly**: complex patterns / text / pets in the original — evaluate before prompting\n\n## The reverse-validation loop\nTranslate → generate → compare against the original → fix missing layers → regenerate. Two iterations and your prompt starts looking like the photo.\n\n## Practice field on this site\nEvery high-favorite image in our style channels and Today's Picks works as an exercise — decompose it yourself, then check against our caption and tags.",
+ "looks": [],
+ "faq": [
+  [
+   "Can translated prompts be used directly?",
+   "Yes — but keeping the six-layer habit pays off more long-term than copying others' prompts."
+  ],
+  [
+   "How to increase likeness for portraits?",
+   "Add ethnicity/hairstyle/age-range words (asian woman, long black hair, early 20s) — the three-word locator."
+  ]
+ ]
+}

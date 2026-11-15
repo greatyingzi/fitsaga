@@ -1,0 +1,19 @@
+{
+ "slug": "fabric-texture-prompt",
+ "title": "Fabric Texture Prompt Guide: Make Cloth You Can Almost Touch",
+ "lede": "Fabric is AI image generation's acknowledged weak spot — velvet must be matte with deep folds, chiffon must be layered transparency, satin must flow with light. Here is the precise vocabulary.",
+ "type": "evergreen",
+ "lang": "en",
+ "body_md": "## One-line takeaway\nThe secret is **physical behavior words**: not 'silk' (gives you a color) but 'silk with liquid drape' (gives you motion) — behavior brings material alive.\n\n## The high-frequency fabric vocabulary\n### Velvet (autumn/goth/luxe)\n**velvet with soft matte pile, light-absorbing folds, crushed velvet texture**\n- Light absorption IS velvet — 'light-absorbing' stops the model from painting it shiny\n### Chiffon/Tulle (fairy/fairy-tale/hanfu sash)\n**sheer chiffon layers, translucent tulle, fabric floating in wind, layered transparency**\n- 'layered transparency' is the key for multi-layer gauze; bare 'sheer' looks like plastic wrap\n### Satin (qipao/gown/old-money)\n**satin with liquid sheen, flowing drape, soft highlights following the folds**\n### Knit (commute/cozy)\n**chunky knit sweater, visible stitch texture, soft wool fibers, cozy oversized fit**\n### Denim (street/retro)\n**raw denim texture, natural fading, selvedge detail, worn-in look**\n### Leather (goth/moto)\n**matte leather with natural creases, subtle sheen on edges, grain texture**\n\n## The combination formula\nA premium outfit = **three contrasting fabrics**: matte (velvet/knit) + flowing (satin) + sheer (tulle). Write all three explicitly — this is the AI-side mapping of 'material dialogue' from styling theory.\n\n## Good vs bad notes\n- 'elegant fabric' is an empty phrase — use concrete material + behavior\n- Three fabrics per image is the cap; more mutual-interfere\n- Fabric close-ups: add 'macro detail, thread visible' for stunning results\n\n## Position rule\nFabric words go right after the garment word (a velvet hanfu jacket / a satin qipao) — proximity equals weight.",
+ "looks": [],
+ "faq": [
+  [
+   "Why does my velvet look shiny?",
+   "Missing 'light-absorbing' and 'matte pile' — velvet physically absorbs light and models default to generic cloth."
+  ],
+  [
+   "Do multiple fabrics interfere?",
+   "Up to three, structured as matte+flowing+sheer; beyond that they average out."
+  ]
+ ]
+}
