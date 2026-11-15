@@ -24,11 +24,14 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Run collectors (duitang + musinsa)
+      - name: Run collectors
         run: |
           cd collector
           python3 duitang.py --pages 3 --limit 24
           python3 musinsa.py
+          python3 civitai.py
+          python3 atlas_backfill.py
+          python3 topic_miner.py || true
 
       - name: Generate site
         run: |
@@ -36,6 +39,9 @@ jobs:
           python3 gen_nikki.py
           python3 gen_nikki_detail.py
           python3 gen_collections.py
+          python3 gen_ai.py
+          python3 gen_zara.py
+          python3 gen_guide.py
           python3 gen_sitemap.py
 
       - name: Deploy to Cloudflare Pages
