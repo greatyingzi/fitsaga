@@ -1,0 +1,18 @@
+{
+ "slug": "hanfu-prompt-guide",
+ "title": "汉服 AI 生成完全指南：形制关键词的英文映射",
+ "lede": "汉服是 AI 生图里最难写对的中式品类——「hanfu」一词模型理解宽泛，形制细节全靠关键词精度。这篇把齐胸/齐腰/马面/交领的形制词逐个翻译成模型听得懂的英文，配社区高分生成图做对照。",
+ "type": "evergreen",
+ "body_md": "## 一句话结论\n生成汉服图的成败在**形制词的分层**：朝代打底（ming dynasty / song dynasty）+ 品类词（mamian skirt / ruqun）+ 细节词（cross-collar / waist-high）——三层齐了形制才对，只写 hanfu 会出「影楼混搭风」。\n\n## 形制 → 英文映射表\n### 马面裙（明制）\n**mamian skirt / horse-face skirt, pleated sides, flat front panel with golden brocade**\n- 必加 pleated sides：马面的辨识度在两侧打褶\n- 织金写 golden brocade patterns，别写 gold（会变成金裙）\n### 齐胸襦裙（唐制）\n**chest-high ruqun, tang dynasty, flowing wide sleeves, high-waisted**\n- chest-high 比 high-waisted 更准——齐胸的位置是胸下\n- 加 ribbon sash（披帛）唐韵立现\n### 交领右衽（通用）\n**cross-collar, right lapel over left, wrapped front**\n- right over left 是形制圈死规矩（左衽是寿衣）——模型默认常画错，显式写出\n### 宋制裤装（日常化首选）\n**song dynasty, beizi jacket, wide-leg trousers, minimal embroidery**\n- 宋制最日常，配现代外套就是「汉元素通勤」\n\n## 场景与光线公式\n- 庭院：**chinese classical garden, moon gate, bamboo, koi pond**\n- 室内：**traditional chinese interior, wooden lattice windows, warm lantern light**\n- 雪景：**snow on red walls, plum blossom, cold blue shadows + warm red dress**（红衣雪景是流量密码）\n\n## 发型与配饰（隐藏难点）\n**traditional chinese hairstyle, hairpins (buyao), long black hair, hair ribbon**\n不写发型必出问题：AI 默认给现代发型。发簪写 buyao（步摇）比 hairpin 更有形态感。\n\n## 正反例要点\n- 加了朝代词的图，剪裁与层次立刻不同（明制收身 vs 唐制飘逸）\n- hanfu dress 是错误写法——dress 会触发西式裙剪裁，写 hanfu outfit 或具体品类\n- 多人图形制更容易崩：n≥2 时加 matching dynasty outfits\n\n## 模型参数卡\n- **Midjourney v7**：--ar 3:4，--style raw；niji 出的是古风插画不是汉服摄影感\n- **FLUX**：自然句 a woman wearing a ming dynasty mamian skirt with golden brocade, standing in a chinese garden\n- **即梦**：中文直写「明制马面裙 织金 交领上襦 古典庭院」命中率极高\n\n## 避坑\n- 别混 kimono（和服）——花瓣领与腰带系法完全不同\n- cheongsam/qipao 与汉服是两个品类，混写必出错\n- 首饰堆砌会变戏曲风——一件步摇 + 一对耳坠是上限",
+ "looks": [],
+ "faq": [
+  [
+   "AI 生成的汉服形制会被同袍挑错吗？",
+   "会，但标注「AI 生成，形制参考」即可。形制词写对（尤其右衽）能把吐槽降到最少。"
+  ],
+  [
+   "哪个模型生成汉服最准？",
+   "中文形制词用国产模型（即梦/可灵）命中率最高；英文工作流用 FLUX + 具体朝代词。"
+  ]
+ ]
+}
