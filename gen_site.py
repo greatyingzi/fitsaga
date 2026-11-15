@@ -115,6 +115,9 @@ def style_page(s):
     cards = "\n".join(card(it,i,s["zh"].split(" · ")[0]) for i,it in enumerate(items))
     sc = STYLE_CONTENT.get(s["key"], {})
     deep_html = f'<p class="intro">{esc(sc["deep"])}</p>' if sc.get("deep") else f'<p class="intro">{esc(s["intro"])}</p>'
+    ld = ""
+    if items:
+        ld = f'<script type="application/ld+json">{json.dumps({"@context":"https://schema.org","@type":"ItemList","name":s["zh"],"itemListElement":[{"@type":"ImageObject","contentUrl":it["img"],"name":f"{s[chr(122)+chr(104)]}搭配灵感{i+1}","url":it["origin"]} for i,it in enumerate(items[:20])]}, ensure_ascii=False)}</script>'
     faq_html = ""
     if sc.get("faq"):
         faq_items = "".join(
@@ -126,7 +129,8 @@ def style_page(s):
   <p class="sub">{esc(s["desc"])}</p>
 </header>
 <main class="sec">
-  {deep_html}'
+  {deep_html}
+  {ld}'
   {nav_html(s["key"])}
   <div class="masonry">{cards}</div>
   {faq_html}

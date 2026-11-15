@@ -58,7 +58,9 @@ def article_html(a, body_html, looks_html):
 <title>{html.escape(a["title"])} · FitSaga 穿搭研究所</title>
 <meta name="description" content="{html.escape(a["lede"][:80])}">
 <link rel="canonical" href="https://fitsaga.pages.dev/guide/{a["slug"]}">
-<style>{CSS}</style><style>{ARTICLE_CSS}</style></head><body>
+<style>{CSS}</style><style>{ARTICLE_CSS}</style>
+<script type="application/ld+json">{json.dumps({"@context":"https://schema.org","@type":"Article","headline":a["title"],"description":a["lede"][:150],"datePublished":a.get("published_at","")[:10],"author":{"@type":"Organization","name":"FitSaga"},"publisher":{"@type":"Organization","name":"FitSaga"},"mainEntityOfPage":f"https://fitsaga.pages.dev/guide/{a['slug']}"}, ensure_ascii=False)}</script>
+</head><body>
 <div class="gwrap">
 <article>
 <h1>{html.escape(a["title"])}</h1>
