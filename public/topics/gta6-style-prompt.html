@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>如何用 AI 生成 GTA6 风格画面：迈阿密霓虹美学完整指南 · FitSaga AI 画法研究所</title>
+<meta name="description" content="GTA6（2026-05-26 发售，Leonida 州 / Vice City）把「迈阿密霓虹美学」推回全球视野——粉橙紫渐变天空、黄昏逆光、水汽氤氲的棕榈剪影、R 级写实人物。这篇把这套视觉语言拆成可复制的 prompt 公式，任何模型">
+<link rel="canonical" href="https://fitsaga.pages.dev/topics/gta6-style-prompt">
+<style>:root{--gold:#f5c76e;--bg:#141018;--fg:#f5eef7;}
+*{margin:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--fg);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.hero{min-height:70vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:3rem 1.5rem;background:radial-gradient(1200px 600px at 20% 10%,rgba(255,126,179,.25),transparent 60%),radial-gradient(1000px 500px at 80% 20%,rgba(181,84,140,.3),transparent 60%),radial-gradient(900px 500px at 50% 90%,rgba(63,111,216,.18),transparent 60%),var(--bg)}
+.hero.small{min-height:38vh}
+.hero h1{font-size:clamp(1.8rem,5vw,3.4rem);font-weight:800;line-height:1.3;background:linear-gradient(90deg,#ffd9a8,#ff7eb3,#c793ff,#8ec5ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{margin-top:.8rem;color:#cbb8d4;letter-spacing:.12em;font-size:clamp(.9rem,2vw,1.05rem)}
+.stylechips{display:flex;flex-wrap:wrap;gap:.55rem;justify-content:center;margin-top:1.8rem}
+.chip{display:inline-block;padding:.6rem 1.05rem;border-radius:999px;font-size:.9rem;font-weight:600;color:#fff;box-shadow:0 4px 12px rgba(0,0,0,.35);transition:transform .2s;opacity:.85}
+.chip:hover{transform:translateY(-2px);opacity:1}
+.chip.on{outline:2px solid #fff5;opacity:1}
+.sec{padding:2.5rem 1.5rem;max-width:1100px;margin:0 auto}
+.sec-head h2{font-size:clamp(1.3rem,3vw,1.9rem);font-weight:800}
+.sec-head p{width:100%;margin-top:.4rem;opacity:.85;font-size:.95rem}
+.intro{max-width:640px;color:#cbb8d4;line-height:1.8;font-size:.95rem;margin-bottom:1.4rem}
+.masonry{columns:3 240px;column-gap:14px}
+@media(max-width:640px){.masonry{columns:2 140px}}
+.shot{break-inside:avoid;margin-bottom:14px;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 6px 20px rgba(0,0,0,.4);background:#241b2c}
+.shot img{width:100%;display:block;transition:transform .35s}
+.shot:hover img{transform:scale(1.04)}
+.shot .cap{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:.5rem;padding:1.5rem .7rem .55rem;font-size:.78rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+.shot .cap em{font-style:normal;opacity:.75;white-space:nowrap;font-size:.78rem}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(160px,100%),1fr));gap:14px}
+.scard{background:#241b2c;border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+.scard img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.sname{padding:.6rem .7rem .1rem;font-weight:700;font-size:.9rem}
+.smeta{padding:0 .7rem .7rem;font-size:.78rem;color:#9d8fa8}
+footer{padding:2.5rem 1.5rem;text-align:center;color:#9d8fa8;font-size:.9rem;background:#0f0c13;margin-top:2rem}
+footer .links{margin-top:.7rem;display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+footer .links a{display:inline-block;padding:.55rem .9rem;border-radius:10px;background:#241b2c;font-size:.9rem;min-height:44px;line-height:1.4}
+footer .source{opacity:.6;font-size:.78rem;margin-top:.6rem;line-height:1.7}
+.sec-head a{display:inline-block;padding:.6rem .1rem;min-height:44px;line-height:1.7;font-size:.92rem}
+/* flywheel round3 fixes */
+.hero.small{min-height:26vh}
+.hero .sub{letter-spacing:.05em;max-width:22em;line-height:1.8}
+.collection-cap{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:.15rem;padding:2.2rem .8rem .6rem;font-size:.85rem;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+.shot .cap{font-size:.85rem}
+.shot .cap .view{font-size:.78rem;opacity:.8}
+.masonry .shot img{max-height:520px;object-fit:cover}
+</style><style>.twrap{max-width:760px;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+.twrap h1{font-size:clamp(1.5rem,4vw,2.1rem);font-weight:800;line-height:1.4;color:#fff}
+.twrap .badge{display:inline-block;padding:.3rem .8rem;border-radius:999px;background:linear-gradient(135deg,#ff7eb3,#a855f7);color:#fff;font-size:.78rem;font-weight:700;margin-bottom:1rem}
+.twrap .lede{font-size:1.02rem;line-height:2;color:#f0e8f3;border-left:3px solid #a855f7;padding-left:1rem;margin:1.4rem 0}
+.twrap h2{font-size:1.25rem;color:#ffd9a8;margin:2rem 0 .7rem;font-weight:800}
+.twrap h3{font-size:1.02rem;color:#c793ff;margin:1.4rem 0 .5rem}
+.twrap p{line-height:2;color:#e8dff0;margin:.7rem 0;font-size:.95rem}
+.twrap p b{color:#ff9ec7}
+.twrap pre{background:#0f0c13;border:1px solid #3a2a44;border-radius:12px;padding:1rem 1.1rem;overflow-x:auto;margin:1rem 0}
+.twrap pre code{color:#8ec5ff;font-size:.82rem;line-height:1.9;font-family:ui-monospace,Menlo,monospace}
+.twrap details{background:#1a1420;border-radius:12px;margin:.6rem 0;padding:.9rem 1rem;border:1px solid #3a2a44}
+.twrap summary{cursor:pointer;font-weight:700;color:#ffd9a8}
+.twrap details p{margin:.5rem 0 0;font-size:.92rem}
+.twrap .chase{background:linear-gradient(135deg,#2a1832,#4a1f45);border-radius:14px;padding:1rem 1.1rem;margin:1.5rem 0;border-left:3px solid #ff7eb3}
+.twrap .chase b{color:#ff7eb3}
+.twrap .meta{color:#9d8fa8;font-size:.85rem;margin:.6rem 0}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "如何用 AI 生成 GTA6 风格画面：迈阿密霓虹美学完整指南", "description": "GTA6（2026-05-26 发售，Leonida 州 / Vice City）把「迈阿密霓虹美学」推回全球视野——粉橙紫渐变天空、黄昏逆光、水汽氤氲的棕榈剪影、R 级写实人物。这篇把这套视觉语言拆成可复制的 prompt 公式，任何模型都能直接抄。", "datePublished": "2026-11-15", "author": {"@type": "Organization", "name": "FitSaga"}}</script>
+</head><body>
+<div class="twrap"><article>
+<span class="badge">热点专题</span>
+<h1>如何用 AI 生成 GTA6 风格画面：迈阿密霓虹美学完整指南</h1>
+<div class="meta">AI 画法研究所 · 更新 2026-11-15</div>
+<div class="lede">GTA6（2026-05-26 发售，Leonida 州 / Vice City）把「迈阿密霓虹美学」推回全球视野——粉橙紫渐变天空、黄昏逆光、水汽氤氲的棕榈剪影、R 级写实人物。这篇把这套视觉语言拆成可复制的 prompt 公式，任何模型都能直接抄。</div>
+<h2>一句话结论</h2>
+<p>GTA6 风格 = <b>迈阿密黄昏渐变 × 电影级写实 × 水汽氛围</b>。prompt 里必须同时出现「时间（golden hour/dusk）+ 地理（Miami/Florida/vaporwave 城市天际线）+ 媒介感（cinematic still, film grain, anamorphic lens）」三层，缺一层就滑向普通赛博朋克或普通写实。</p>
+<h2>视觉五要素拆解（对照预告片美学）</h2>
+<h3>1 · 天空即调色盘</h3>
+<p>预告片的招牌是「粉→橙→紫的三段渐变天空」。prompt 关键词：<b>pink orange purple gradient sky, sunset gradient, dusk sky</b>。注意：一定要加 &quot;natural sky gradient&quot;，否则模型会画成横条纹。</p>
+<h3>2 · 迈阿密地理符号</h3>
+<p>棕榈树、装饰艺术建筑（art deco buildings）、跨海大桥、低层霓虹公寓。关键词：<b>Miami Beach, palm trees, art deco architecture, coastal highway</b>。Leonida 是虚构州，直接写 Florida 的地理词模型识别度更高。</p>
+<h3>3 · 水汽与空气感</h3>
+<p>迈阿密的湿气让远景发虚、霓虹晕开——这是 GTA6 与普通黄昏照的分水岭。关键词：<b>humid haze, atmospheric perspective, neon glow reflecting on wet streets</b>。</p>
+<h3>4 · 人物写实度（R 级质感）</h3>
+<p>GTA 系人物的「写实但略夸张」。关键词：<b>realistic character render, detailed skin texture, cinematic character portrait</b>。避开 &quot;anime&quot; 和 &quot;photorealistic 8k&quot;（后者会滑向假人感）。</p>
+<h3>5 · 电影媒介感</h3>
+<p><b>cinematic still, film grain, anamorphic lens flare, shallow depth of field</b>——这组词把「游戏截图感」变成「电影帧感」，是 prompt 的最后一块拼图。</p>
+<h2>可直接复制的完整公式</h2>
+<pre><code>主体: {a young woman leaning on a muscle car / a man in hawaiian shirt at dusk}
+场景: {Miami Beach coastal highway / art deco district / marina at golden hour}
+光线: {dusk, pink orange purple gradient sky, golden hour rim light}
+氛围: {humid haze, neon glow, atmospheric perspective}
+媒介: {cinematic still, film grain, anamorphic lens, shallow depth of field, 35mm}
+参数: --ar 16:9 --style raw (Midjourney) / flux: guidance 3.5, steps 28</code></pre>
+<h2>正反例对照（生成要点）</h2>
+<p style='padding-left:1.2rem'>· 加了 &quot;atmospheric perspective&quot; 的图远景有空气感，没加的图像「贴纸拼贴」。</p>
+<p style='padding-left:1.2rem'>· &quot;film grain&quot; 不能过量（grainy, heavy grain 会脏），standard grain 刚好。</p>
+<p style='padding-left:1.2rem'>· 人物加 &quot;candid pose, mid-motion&quot; 比 &quot;standing pose&quot; 的 GTA 感强——Rockstar 的角色永远在「做事」。</p>
+<h2>各模型适配卡</h2>
+<p style='padding-left:1.2rem'>· <b>Midjourney v7</b>: --style raw + --ar 16:9，niji 模式不适合（太二次元）</p>
+<p style='padding-left:1.2rem'>· <b>FLUX.1</b>: guidance 3.5，prompt 写自然句（不用逗号堆砌），写实度最高</p>
+<p style='padding-left:1.2rem'>· <b>SDXL + 写实 checkpoint</b>: 需要 haze/bokeh 的 LORA 辅助</p>
+<p style='padding-left:1.2rem'>· <b>即梦/国产模型</b>: 中文 prompt 直接写「迈阿密黄昏，霓虹渐变天空，电影感」，地理词保留英文</p>
+<h2>避坑</h2>
+<p style='padding-left:1.2rem'>· 别写 &quot;GTA 6&quot; 进 prompt——版权词可能触发风格漂移，写 &quot;Miami aesthetic&quot; 更稳</p>
+<p style='padding-left:1.2rem'>· &quot;cyberpunk&quot; 一词会让紫色过量、霓虹失控，GTA6 不是赛博朋克</p>
+<p style='padding-left:1.2rem'>· 水面反光写 &quot;wet street reflection&quot;，不要写 &quot;water&quot;（会画成海景）</p>
+<div class="chase"><b>追更</b> · 追更区：GTA6 预告片 3 与实机演示情报持续更新（发售日 2026-05-26 已官宣）</div>
+<h2>常见问题</h2><div><details><summary>GTA6 什么时候发售？</summary><p>官方已宣布 2026 年 5 月 26 日发售（原 2025 秋延期），平台 PS5/Xbox Series X|S，PC 待官宣。</p></details><details><summary>用 GTA6 风格生成的图能商用吗？</summary><p>风格本身不受版权保护（美学不可版权化），但不要使用 Rockstar 的角色形象、logo 与商标。生成「迈阿密美学」场景是安全的。</p></details><details><summary>为什么我生成的像赛博朋克？</summary><p>大概率是 prompt 里出现了 cyberpunk/neon city 这类词。GTA6 的霓虹是「装饰」不是「世界规则」——把 neon 限定在 &#x27;neon signs&#x27; 这种局部词。</p></details></div>
+<p style="margin-top:2.5rem"><a href="/topics.html">← 全部专题</a> · <a href="/">首页</a></p>
+</article></div>
+<script src="/lightbox.js" defer></script>
+</body></html>

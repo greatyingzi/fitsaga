@@ -1,0 +1,23 @@
+{
+ "slug": "gta6-style-prompt",
+ "title": "如何用 AI 生成 GTA6 风格画面：迈阿密霓虹美学完整指南",
+ "lede": "GTA6（2026-05-26 发售，Leonida 州 / Vice City）把「迈阿密霓虹美学」推回全球视野——粉橙紫渐变天空、黄昏逆光、水汽氤氲的棕榈剪影、R 级写实人物。这篇把这套视觉语言拆成可复制的 prompt 公式，任何模型都能直接抄。",
+ "type": "hot",
+ "updated": "追更区：GTA6 预告片 3 与实机演示情报持续更新（发售日 2026-05-26 已官宣）",
+ "body_md": "## 一句话结论\nGTA6 风格 = **迈阿密黄昏渐变 × 电影级写实 × 水汽氛围**。prompt 里必须同时出现「时间（golden hour/dusk）+ 地理（Miami/Florida/vaporwave 城市天际线）+ 媒介感（cinematic still, film grain, anamorphic lens）」三层，缺一层就滑向普通赛博朋克或普通写实。\n\n## 视觉五要素拆解（对照预告片美学）\n### 1 · 天空即调色盘\n预告片的招牌是「粉→橙→紫的三段渐变天空」。prompt 关键词：**pink orange purple gradient sky, sunset gradient, dusk sky**。注意：一定要加 \"natural sky gradient\"，否则模型会画成横条纹。\n### 2 · 迈阿密地理符号\n棕榈树、装饰艺术建筑（art deco buildings）、跨海大桥、低层霓虹公寓。关键词：**Miami Beach, palm trees, art deco architecture, coastal highway**。Leonida 是虚构州，直接写 Florida 的地理词模型识别度更高。\n### 3 · 水汽与空气感\n迈阿密的湿气让远景发虚、霓虹晕开——这是 GTA6 与普通黄昏照的分水岭。关键词：**humid haze, atmospheric perspective, neon glow reflecting on wet streets**。\n### 4 · 人物写实度（R 级质感）\nGTA 系人物的「写实但略夸张」。关键词：**realistic character render, detailed skin texture, cinematic character portrait**。避开 \"anime\" 和 \"photorealistic 8k\"（后者会滑向假人感）。\n### 5 · 电影媒介感\n**cinematic still, film grain, anamorphic lens flare, shallow depth of field**——这组词把「游戏截图感」变成「电影帧感」，是 prompt 的最后一块拼图。\n\n## 可直接复制的完整公式\n```\n主体: {a young woman leaning on a muscle car / a man in hawaiian shirt at dusk}\n场景: {Miami Beach coastal highway / art deco district / marina at golden hour}\n光线: {dusk, pink orange purple gradient sky, golden hour rim light}\n氛围: {humid haze, neon glow, atmospheric perspective}\n媒介: {cinematic still, film grain, anamorphic lens, shallow depth of field, 35mm}\n参数: --ar 16:9 --style raw (Midjourney) / flux: guidance 3.5, steps 28\n```\n\n## 正反例对照（生成要点）\n- 加了 \"atmospheric perspective\" 的图远景有空气感，没加的图像「贴纸拼贴」。\n- \"film grain\" 不能过量（grainy, heavy grain 会脏），standard grain 刚好。\n- 人物加 \"candid pose, mid-motion\" 比 \"standing pose\" 的 GTA 感强——Rockstar 的角色永远在「做事」。\n\n## 各模型适配卡\n- **Midjourney v7**: --style raw + --ar 16:9，niji 模式不适合（太二次元）\n- **FLUX.1**: guidance 3.5，prompt 写自然句（不用逗号堆砌），写实度最高\n- **SDXL + 写实 checkpoint**: 需要 haze/bokeh 的 LORA 辅助\n- **即梦/国产模型**: 中文 prompt 直接写「迈阿密黄昏，霓虹渐变天空，电影感」，地理词保留英文\n\n## 避坑\n- 别写 \"GTA 6\" 进 prompt——版权词可能触发风格漂移，写 \"Miami aesthetic\" 更稳\n- \"cyberpunk\" 一词会让紫色过量、霓虹失控，GTA6 不是赛博朋克\n- 水面反光写 \"wet street reflection\"，不要写 \"water\"（会画成海景）",
+ "looks": [],
+ "faq": [
+  [
+   "GTA6 什么时候发售？",
+   "官方已宣布 2026 年 5 月 26 日发售（原 2025 秋延期），平台 PS5/Xbox Series X|S，PC 待官宣。"
+  ],
+  [
+   "用 GTA6 风格生成的图能商用吗？",
+   "风格本身不受版权保护（美学不可版权化），但不要使用 Rockstar 的角色形象、logo 与商标。生成「迈阿密美学」场景是安全的。"
+  ],
+  [
+   "为什么我生成的像赛博朋克？",
+   "大概率是 prompt 里出现了 cyberpunk/neon city 这类词。GTA6 的霓虹是「装饰」不是「世界规则」——把 neon 限定在 'neon signs' 这种局部词。"
+  ]
+ ]
+}
