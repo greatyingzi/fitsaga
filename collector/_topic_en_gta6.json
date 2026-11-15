@@ -1,0 +1,24 @@
+{
+ "slug": "gta6-style-prompt",
+ "title": "How to Generate GTA6-Style Images with AI: The Complete Miami Neon Aesthetic Guide",
+ "lede": "GTA6 (May 26, 2026, Leonida / Vice City) puts Miami neon aesthetics back in the global spotlight — pink-orange-purple gradient skies, golden-hour backlight, humid palm silhouettes, R-rated realistic characters. This guide breaks that visual language into copy-paste prompt formulas that work in any model.",
+ "type": "hot",
+ "lang": "en",
+ "updated": "Chase log: updated continuously through Trailer 3 and gameplay reveals (release date May 26, 2026 confirmed)",
+ "body_md": "## One-line takeaway\nGTA6 style = **Miami dusk gradient × cinematic realism × humid atmosphere**. Your prompt must carry all three layers at once: time (golden hour / dusk), place (Miami / Florida / coastal skyline), and medium (cinematic still, film grain, anamorphic lens). Miss one layer and you drift into generic cyberpunk or plain photorealism.\n\n## The five visual elements (mapped from the trailers)\n### 1 · The sky is the palette\nThe signature is a three-band pink → orange → purple gradient. Keywords: **pink orange purple gradient sky, sunset gradient, dusk sky**. Always add \"natural sky gradient\" or the model draws horizontal stripes.\n### 2 · Miami geography\nPalm trees, art deco buildings, causeway bridges, low-rise neon apartments. Keywords: **Miami Beach, palm trees, art deco architecture, coastal highway**. Leonida is fictional — real Florida keywords give the model more to work with.\n### 3 · Humidity and air\nMiami's moisture blurs the distance and blooms the neon. This is what separates GTA6 from a regular sunset photo. Keywords: **humid haze, atmospheric perspective, neon glow reflecting on wet streets**.\n### 4 · Character realism (the R-rated texture)\nRealistic but slightly exaggerated. Keywords: **realistic character render, detailed skin texture, cinematic character portrait**. Avoid \"anime\" and avoid \"photorealistic 8k\" (the latter drifts into uncanny mannequin faces).\n### 5 · The film medium layer\n**cinematic still, film grain, anamorphic lens flare, shallow depth of field** — this turns \"game screenshot\" into \"movie frame\". It's the final piece of the puzzle.\n\n## Copy-paste formula\n```\nSubject: {a young woman leaning on a muscle car / a man in hawaiian shirt at dusk}\nScene: {Miami Beach coastal highway / art deco district / marina at golden hour}\nLight: {dusk, pink orange purple gradient sky, golden hour rim light}\nAir: {humid haze, neon glow, atmospheric perspective}\nMedium: {cinematic still, film grain, anamorphic lens, shallow depth of field, 35mm}\nParams: --ar 16:9 --style raw (Midjourney) / FLUX: guidance 3.5, steps 28\n```\n\n## Good vs bad generations (live examples)\n- With \"atmospheric perspective\": distance softens, image gains depth. Without it: sticker-collage look.\n- \"film grain\" in moderation — \"grainy, heavy grain\" turns muddy.\n- \"candid pose, mid-motion\" beats \"standing pose\" every time. Rockstar characters are always doing something.\n\n## Model cheat sheet\n- **Midjourney v7**: --style raw + --ar 16:9. Skip niji (too anime).\n- **FLUX.1**: guidance 3.5, write natural sentences instead of comma soup. Best skin realism.\n- **SDXL + realistic checkpoint**: add a haze/bokeh LoRA.\n- **Others**: keep geography words in English regardless of the UI language.\n\n## Pitfalls\n- Don't put \"GTA 6\" in the prompt — trademark terms cause style drift. \"Miami aesthetic\" is safer.\n- \"cyberpunk\" oversaturates purple and blows out neon. GTA6 is not cyberpunk — restrict neon to \"neon signs\".\n- For wet reflections write \"wet street reflection\", not \"water\" (you'll get ocean scenes).",
+ "looks": [],
+ "faq": [
+  [
+   "When does GTA6 release?",
+   "May 26, 2026 (delayed from fall 2025), on PS5 and Xbox Series X|S. PC version TBA."
+  ],
+  [
+   "Can I commercially use GTA6-style images?",
+   "The aesthetic itself is not copyrightable, but avoid Rockstar characters, logos and trademarks. Generating 'Miami aesthetic' scenes is safe."
+  ],
+  [
+   "Why does my render look like cyberpunk?",
+   "Probably the words cyberpunk or neon city. GTA6 neon is decoration, not world rule — restrict it to 'neon signs'."
+  ]
+ ]
+}

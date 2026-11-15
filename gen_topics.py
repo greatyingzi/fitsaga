@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""gen_topics.py - topic pages generator (final)"""
+"""gen_topics.py - topic pages generator, bilingual (zh + en)"""
 import sqlite3, pathlib, html, re, json, datetime
 
 ROOT = pathlib.Path(__file__).resolve().parent
@@ -24,13 +24,14 @@ TOPIC_CSS = """.twrap{max-width:760px;margin:0 auto;padding:2.5rem 1.25rem 4rem}
 .twrap .meta{color:#9d8fa8;font-size:.85rem;margin:.6rem 0}"""
 
 FENCE = chr(96) * 3
+NL = chr(10)
 
 def md2html(md):
     out, in_code, buf = [], False, []
-    for line in md.split(chr(10)):
+    for line in md.split(NL):
         if line.strip().startswith(FENCE):
             if in_code:
-                out.append("<pre><code>" + html.escape(chr(10).join(buf)) + "</code></pre>")
+                out.append("<pre><code>" + html.escape(NL.join(buf)) + "</code></pre>")
                 buf, in_code = [], False
             else:
                 in_code = True
@@ -48,73 +49,86 @@ def md2html(md):
         elif line.strip():
             t = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", html.escape(line))
             out.append("<p>" + t + "</p>")
-    return chr(10).join(out)
+    return NL.join(out)
 
 def main():
-    (PUB / "topics").mkdir(parents=True, exist_ok=True)
     topics = [json.loads(f.read_text(encoding="utf-8")) for f in sorted((ROOT / "collector").glob("_topic_*.json"))]
-    cards, today = [], datetime.date.today().isoformat()
+    zh_cards, en_cards = [], []
+    today = datetime.date.today().isoformat()
     for t in topics:
+        is_en = t.get("lang") == "en"
+        sub = "en/topics" if is_en else "topics"
+        (PUB / sub).mkdir(parents=True, exist_ok=True)
         body = md2html(t["body_md"])
-        faq = "<h2>常见问题</h2><div>" + "".join(
-            "<details><summary>" + html.escape(q) + "</summary><p>" + html.escape(a) + "</p></details>"
-            for q, a in t.get("faq", [])) + "</div>" if t.get("faq") else ""
+        faq = ""
+        if t.get("faq"):
+            faq = "<h2>" + ("FAQ" if is_en else "常见问题") + "</h2><div>" + "".join(
+                "<details><summary>" + html.escape(q) + "</summary><p>" + html.escape(a) + "</p></details>"
+                for q, a in t["faq"]) + "</div>"
         ex_html = ""
         for ex2 in t.get("examples", []):
             s2 = ex2["slug"]
+            base = "/topics/gta6/"  # images shared across languages
             ex_html += "<h3>" + html.escape(ex2["title"]) + "</h3>"
             ex_html += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">'
-            ex_html += '<figure style="margin:0"><img src=" /topics/gta6/" + s2 + "-good.jpg" loading="lazy">'
-            ex_html += '<figcaption style="font-size:.75rem;color:#8ec5ff">OK ' + html.escape(ex2["good_cap"]) + '</figcaption>'
-
-            ex_html += '<figure style="margin:0"><img src=" /topics/gta6/" + s2 + "-bad.jpg" loading="lazy">'
-            ex_html += '<figcaption style="font-size:.75rem;color:#cbb8d4">X ' + html.escape(ex2["bad_cap"]) + '</figcaption>'
-
-            ex_html += '</figure>'
+            ex_html += '<figure style="margin:0"><img src="' + base + s2 + '-good.jpg" loading="lazy" style="width:100%;border-radius:10px"><figcaption style="font-size:.75rem;color:#8ec5ff;line-height:1.7">OK ' + html.escape(ex2["good_cap"]) + '</figcaption></figure>'
+            ex_html += '<figure style="margin:0"><img src="' + base + s2 + '-bad.jpg" loading="lazy" style="width:100%;border-radius:10px;opacity:.85"><figcaption style="font-size:.75rem;color:#cbb8d4;line-height:1.7">X ' + html.escape(ex2["bad_cap"]) + '</figcaption></figure>'
             ex_html += '</div>'
-        chase = '<div class="chase"><b>追更</b> · ' + html.escape(t["updated"]) + "</div>" if t.get("updated") else ""
-        badge = '<span class="badge">热点专题</span>' if t.get("type") == "hot" else '<span class="badge">常青专题</span>'
+        chase = ('<div class="chase"><b>Chase</b> · ' if is_en else '<div class="chase"><b>追更</b> · ') + html.escape(t["updated"]) + "</div>" if t.get("updated") else ""
+        badge = '<span class="badge">HOT</span>' if t.get("type") == "hot" else '<span class="badge">EVERGREEN</span>'
         ld = json.dumps({"@context": "https://schema.org", "@type": "Article", "headline": t["title"],
                          "description": t["lede"][:150], "datePublished": today,
                          "author": {"@type": "Organization", "name": "FitSaga"}}, ensure_ascii=False)
-        parts = ["<!doctype html>", '<html lang="zh-CN"><head><meta charset="utf-8">',
+        home_link = "/en/topics.html" if is_en else "/topics.html"
+        brand = "FitSaga AI Reference" if is_en else "FitSaga AI 画法研究所"
+        parts = ["<!doctype html>", '<html lang="en"><head><meta charset="utf-8">' if is_en else '<html lang="zh-CN"><head><meta charset="utf-8">',
                  '<meta name="viewport" content="width=device-width,initial-scale=1">',
                  '<meta name="referrer" content="no-referrer">',
-                 "<title>" + html.escape(t["title"]) + " · FitSaga AI 画法研究所</title>",
+                 "<title>" + html.escape(t["title"]) + " · " + brand + "</title>",
                  '<meta name="description" content="' + html.escape(t["lede"][:120]) + '">',
-                 '<link rel="canonical" href="https://fitsaga.pages.dev/topics/' + t["slug"] + '">',
+                 '<link rel="canonical" href="https://fitsaga.pages.dev/' + sub + '/' + t["slug"] + '">',
                  "<style>" + CSS + "</style><style>" + TOPIC_CSS + "</style>",
                  '<script type="application/ld+json">' + ld + "</script>", "</head><body>",
                  '<div class="twrap"><article>', badge,
                  "<h1>" + html.escape(t["title"]) + "</h1>",
-                 '<div class="meta">AI 画法研究所 · 更新 ' + today + "</div>",
+                 '<div class="meta">' + brand + " · " + today + "</div>",
                  '<div class="lede">' + html.escape(t["lede"]) + "</div>",
                  body, ex_html, chase, faq,
-                 '<p style="margin-top:2.5rem"><a href="/topics.html">← 全部专题</a> · <a href="/">首页</a></p>',
-                 '</article></div>',
-                 '<script src="/lightbox.js" defer></script>',
-                 '<script src="/search.js" defer></script>',
-                 '</body></html>']
-
-        (PUB / ("topics/" + t["slug"] + ".html")).write_text(chr(10).join(parts), encoding="utf-8")
-        cards.append('<a class="scard" href="/topics/' + t["slug"] + '" style="padding:1rem;display:block"><div class="sname">'
-                     + ("🔥 " if t.get("type") == "hot" else "📚 ") + html.escape(t["title"])
-                     + '</div><div class="smeta" style="margin-top:.4rem;line-height:1.7">'
-                     + html.escape(t["lede"][:70]) + '…</div></a>')
-        print("topic:", t["slug"])
-    idx_parts = ["<!doctype html>", '<html lang="zh-CN"><head><meta charset="utf-8">',
-                 '<meta name="viewport" content="width=device-width,initial-scale=1">',
-                 "<title>AI 画法研究所 · FitSaga</title>",
-                 '<meta name="description" content="热点与常青专题：把游戏、影视、流行文化的视觉风格翻译成可复制的 AI prompt 方案。">',
-                 "<style>" + CSS + "</style><style>" + TOPIC_CSS + "</style></head><body>",
-                 '<header class="hero small"><h1><span style="color:#c793ff">AI 画法研究所</span></h1>',
-                 "<p class='sub'>热点专题 × 常青风格 — 把任何美学翻译成 prompt</p></header>",
-                 '<main class="sec"><div class="sgrid">' + "".join(cards) + "</div></main>",
-                 '<footer><div><b style="color:#f5c76e">FitSaga</b> · AI 画法研究所</div>',
-                 "<div class='source'>prompt 方案与视觉拆解为原创内容 · © 2026 FitSaga</div></footer>",
-                 "</body></html>"]
-    (PUB / "topics.html").write_text(chr(10).join(idx_parts), encoding="utf-8")
-    print("index done,", len(topics), "topics")
+                 '<p style="margin-top:2.5rem"><a href="' + home_link + '">← ' + ("All topics" if is_en else "全部专题") + '</a> · <a href="/">Home</a></p>',
+                 "</article></div>", '<script src="/lightbox.js" defer></script>',
+                 '<script src="/search.js" defer></script>', "</body></html>"]
+        (PUB / (sub + "/" + t["slug"] + ".html")).write_text(NL.join(parts), encoding="utf-8")
+        card = '<a class="scard" href="/' + sub + '/' + t["slug"] + '" style="padding:1rem;display:block"><div class="sname">' + ("🔥 " if t.get("type") == "hot" else "📚 ") + html.escape(t["title"]) + '</div><div class="smeta" style="margin-top:.4rem;line-height:1.7">' + html.escape(t["lede"][:70]) + '…</div></a>'
+        (en_cards if is_en else zh_cards).append(card)
+        print(("en:" if is_en else "zh:") + t["slug"])
+    # 中文索引
+    idx = ["<!doctype html>", '<html lang="zh-CN"><head><meta charset="utf-8">',
+           '<meta name="viewport" content="width=device-width,initial-scale=1">',
+           "<title>AI 画法研究所 · FitSaga</title>",
+           '<meta name="description" content="热点与常青专题：把游戏、影视、流行文化的视觉风格翻译成可复制的 AI prompt 方案。">',
+           "<style>" + CSS + "</style><style>" + TOPIC_CSS + "</style></head><body>",
+           '<header class="hero small"><h1><span style="color:#c793ff">AI 画法研究所</span></h1>',
+           "<p class='sub'>热点专题 × 常青风格 — 把任何美学翻译成 prompt</p></header>",
+           '<main class="sec"><div class="sgrid">' + "".join(zh_cards) + "</div></main>",
+           '<footer><div><b style="color:#f5c76e">FitSaga</b> · AI 画法研究所</div>',
+           "<div class='source'>prompt 方案与视觉拆解为原创内容 · © 2026 FitSaga</div></footer>",
+           "</body></html>"]
+    (PUB / "topics.html").write_text(NL.join(idx), encoding="utf-8")
+    # 英文索引
+    idx_en = ["<!doctype html>", '<html lang="en"><head><meta charset="utf-8">',
+              '<meta name="viewport" content="width=device-width,initial-scale=1">',
+              "<title>AI Reference Topics · FitSaga</title>",
+              '<meta name="description" content="Hot and evergreen topics: translating game, film and pop-culture aesthetics into copy-paste AI prompt formulas.">',
+              "<style>" + CSS + "</style><style>" + TOPIC_CSS + "</style></head><body>",
+              '<header class="hero small"><h1><span style="color:#c793ff">AI Reference Topics</span></h1>',
+              "<p class='sub'>Hot topics x evergreen styles — turn any aesthetic into prompts</p></header>",
+              '<main class="sec"><div class="sgrid">' + "".join(en_cards) + "</div></main>",
+              '<footer><div><b style="color:#f5c76e">FitSaga</b> · AI Reference</div>',
+              "<div class='source'>Prompt formulas and visual breakdowns are original content · © 2026 FitSaga</div></footer>",
+              "</body></html>"]
+    (PUB / "en").mkdir(parents=True, exist_ok=True)
+    (PUB / "en/topics.html").write_text(NL.join(idx_en), encoding="utf-8")
+    print("zh topics:", len(zh_cards), "| en topics:", len(en_cards))
 
 if __name__ == "__main__":
     main()
