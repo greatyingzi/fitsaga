@@ -173,6 +173,12 @@ def home():
   <h1>每一种美，<br>都值得一场时装冒险 ✦</h1>
   <p class="sub">古风 · 优雅 · 甜美 · 性感 · 青春 · 潮流<br>美妆 · 变美 · 每日灵感</p>
   <nav class="stylechips">{chips}</nav>
+  <nav class="stylechips" style="margin-top:.8rem">
+    <a class="chip" style="background:linear-gradient(135deg,#3a2a44,#ffd9a866)" href="/guide.html">📖 穿搭研究所</a>
+    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#a855f766)" href="/ai.html">✦ AI 灵感图鉴</a>
+    <a class="chip" style="background:linear-gradient(135deg,#3a2a44,#c793ff66)" href="/topics.html">🎨 AI 画法研究所</a>
+    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#8ec5ff66)" href="/zara.html">ZARA 大片</a>
+  </nav>
 </section>
 {"".join(secs)}
 <section class="sec" id="today" style="padding-top:1rem">
