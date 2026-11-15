@@ -1,0 +1,19 @@
+{
+ "slug": "cny-hanfu-ai",
+ "title": "春节 AI 生成国风大片：从拜年服到新中式的完整 prompt 方案",
+ "lede": "每年春节是汉服与国风视觉的流量峰值（拜年服、全家福、古镇旅拍三场景）。这篇把春节国风的三大场景拆成可复制的 prompt 公式，附避坑与模型参数——提前收藏，过节直接用。",
+ "type": "evergreen",
+ "updated": "追更区：2027 春节（2 月上旬）前更新当年流行色与热门剧集国风元素",
+ "body_md": "## 一句话结论\n春节国风图的爆款公式 = **红色主视觉 × 场景符号（灯笼/春联/雪）× 人物叙事（回眸/持扇/提灯）**。三要素齐了是\"节日大片\"，缺场景符号就只是\"红衣服照片\"。\n\n## 三大场景拆解\n### 场景 1 · 拜年服（室内家庭感）\n关键词：**Chinese New Year outfit, red traditional dress, lanterns, spring couplets, warm indoor lighting**。\n要点：室内暖光（warm indoor lighting）是灵魂——户外红衣显突兀，室内红衣显团圆。\n### 场景 2 · 古镇旅拍（户外大气感）\n关键词：**ancient Chinese town, snow, red lanterns hanging, cobblestone street, hanfu flowing**。\n要点：加 snow 让红色对比度暴涨；不加雪则是江南水乡的青灰调，另一个流派。\n### 场景 3 · 新中式日常（现代融合）\n关键词：**modern Chinese fashion, mandarin collar, red accent outfit, minimalist, editorial**。\n要点：红色只做 accent（一件单品或配饰），整张图是现代 editorial——这是小红书爆款的 prompt 化。\n\n## 人物动作词库（AI 生成最难的环节）\n- **回眸**：looking back over shoulder, graceful turn\n- **提灯**：holding a red lantern, soft glow on face\n- **持扇**：holding a round silk fan, half-covering face\n- **放烟花**：holding sparkler, sparkler light on face（夜场景的点睛）\n- **拜年**：cupped hands greeting gesture, slight bow（动作别写成 praying）\n\n## 正反例要点\n- \"chinese new year\" 单独用会生成卡通红包堆——必须配 \"editorial photography\" 或 \"cinematic still\" 拉媒介感。\n- 红色过量写 \"deep red dominant, other colors muted\"，否则模型会全身大红。\n- 发型是国风图的隐藏难点：**traditional chinese hairstyle, hairpins** 必写，否则会出现代发型混搭。\n\n## 模型参数卡\n- **Midjourney v7**：--ar 3:4（人像）或 16:9（场景），--style raw 保写实\n- **FLUX**：自然句描述，guidance 3.2，人物手部细节最稳\n- **即梦**：中文直写「春节 国风 古镇 雪 红灯笼 回眸」命中率最高\n\n## 避坑\n- 别写 \"chinese dress\"（会出旗袍混搭），写 \"hanfu\" 或 \"ruqun/aoqun\" 才是汉服。\n- 春联上的字必然乱码——prompt 写 \"spring couplets with unreadable calligraphy\" 提前管理预期。\n- 多人全家福手部易崩：n>2 人时加 \"simple poses, hands visible\"。",
+ "looks": [],
+ "faq": [
+  [
+   "春节国风图发小红书/朋友圈会受欢迎吗？",
+   "红+雪+灯笼三要素的构图在小红书春节档历年的收藏率都极高，AI 生成版本只要不加 logo 属于安全区。"
+  ],
+  [
+   "生成的汉服形制不对会被同袍吐槽吗？",
+   "会。发图时标注「AI 生成，形制仅供参考」即可——AI 圈与汉服圈都接受这个 disclaimer。"
+  ]
+ ]
+}
