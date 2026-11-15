@@ -91,8 +91,11 @@ def main():
                  '<div class="lede">' + html.escape(t["lede"]) + "</div>",
                  body, ex_html, chase, faq,
                  '<p style="margin-top:2.5rem"><a href="/topics.html">← 全部专题</a> · <a href="/">首页</a></p>',
-                 "</article></div>", '<script src="/lightbox.js" defer></script>
-<script src="/search.js" defer></script>', "</body></html>"]
+                 '</article></div>',
+                 '<script src="/lightbox.js" defer></script>',
+                 '<script src="/search.js" defer></script>',
+                 '</body></html>']
+
         (PUB / ("topics/" + t["slug"] + ".html")).write_text(chr(10).join(parts), encoding="utf-8")
         cards.append('<a class="scard" href="/topics/' + t["slug"] + '" style="padding:1rem;display:block"><div class="sname">'
                      + ("🔥 " if t.get("type") == "hot" else "📚 ") + html.escape(t["title"])
