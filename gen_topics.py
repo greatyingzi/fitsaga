@@ -80,6 +80,7 @@ def main():
                             '<summary style="cursor:pointer;color:#8ec5ff;font-size:.82rem">📋 正例 prompt（点击展开复制）</summary>'
                             '<pre style="white-space:pre-wrap;color:#cbb8d4;font-size:.78rem;line-height:1.8;margin:.5rem 0 0">' + gp + '</pre></details>')
         dl_btn = ""
+        themes_html = ""
         try:
             _mf = json.loads((PUB / "downloads/manifest.json").read_text(encoding="utf-8"))
             for _m in _mf:
@@ -88,6 +89,28 @@ def main():
                     break
         except Exception:
             pass
+        if t.get("slug") == "infinity-nikki-outfit-ideas":
+            import sqlite3 as _sq
+            _c2 = _sq.connect(ROOT / 'data' / 'fitsaga.db')
+            THEMES = [('Dreamy', ['梦', '夜']), ('Floral', ['花']), ('Starlit', ['星', '月']), ('Snowy', ['雪']), ('Oceanic', ['海'])]
+            themes_html = ''
+            for tname, kws in THEMES:
+                cards2 = []
+                seen2 = set()
+                for kw2 in kws:
+                    for (nm,) in _c2.execute('SELECT name FROM suits WHERE game=? AND name LIKE ? AND EXISTS(SELECT 1 FROM suit_imgs WHERE suit_id=suits.id) LIMIT 10', ('无限暖暖', '%' + kw2 + '%')):
+                        if nm not in seen2:
+                            seen2.add(nm)
+                            _sid = _c2.execute('SELECT id FROM suits WHERE game=? AND name=?', ('无限暖暖', nm)).fetchone()[0]
+                            _img = _c2.execute('SELECT img_url FROM suit_imgs WHERE suit_id=? LIMIT 1', (_sid,)).fetchone()
+                            if _img: cards2.append((_img[0], nm))
+                cards2 = cards2[:8]
+                themes_html += '<h3>' + tname + ' (' + str(len(cards2)) + ')</h3>'
+                themes_html += '<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:.6rem 0 1rem">'
+                for u2, nm2 in cards2:
+                    themes_html += '<figure style="margin:0"><img src="' + u2 + '" loading="lazy" style="width:100%;border-radius:8px"><figcaption style="font-size:.7rem;color:#9d8fa8;margin-top:.2rem">' + nm2 + '</figcaption></figure>'
+                themes_html += '</div>'
+            _c2.close()
 
         _rel_lab = "Related topics" if is_en else "相关专题"
         rel_html = '<p style="margin-top:2rem;color:#9d8fa8;font-size:.85rem">' + _rel_lab + '：</p><nav class="stylechips" style="margin-top:.4rem;justify-content:flex-start">'
@@ -133,7 +156,7 @@ def main():
                  "<h1>" + html.escape(t["title"]) + "</h1>",
                  '<div class="meta">' + brand + " · " + today + "</div>",
                  '<div class="lede">' + html.escape(t["lede"]) + "</div>",
-                 body, ex_html, rel_html, chase, dl_btn, faq,
+                 body, ex_html, rel_html, themes_html, chase, dl_btn, faq,
                  '<p style="margin-top:2.5rem"><a href="' + home_link + '">← ' + ("All topics" if is_en else "全部专题") + '</a> · <a href="/">Home</a></p>',
                  '</article></div>',
                  '<script src="/lightbox.js" defer></script>',

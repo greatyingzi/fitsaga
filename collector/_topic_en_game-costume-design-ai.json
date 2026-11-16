@@ -1,0 +1,15 @@
+{
+ "slug": "game-costume-design-ai",
+ "title": "Game Character Costume Design with AI: The Concept-Art Workflow",
+ "lede": "How concept artists actually use AI for costume design — from mood board to palette sheet to final render, with the three-level reference ladder that keeps you copyright-safe.",
+ "type": "evergreen",
+ "lang": "en",
+ "body_md": "## The professional workflow\nMood board (10 refs) → palette sheet (3 colors + accent) → silhouette sketch → AI generation for variants → hand-polish. AI sits at the variants stage: it multiplies your iterations, not replaces your eye.\n\n## Prompt skeleton for costume concepts\nBase: 'fantasy character design, concept art, official art style, painterly rendering'. Then per-layer: silhouette words → fabric words → palette sentence → prop words.\n\n## The three-level reference ladder\nL1 Palette only (commercial-safe) → L2 Silhouette borrowing (fan-art convention) → L3 Frame recreation (personal appreciation, label as fan art). Most 'inspired by' posts online are actually L2 without credit — credit yours.\n\n## Where AI fails in costume design\nSymmetry enforcement, consistent fastenings across angles, and cultural garment rules (collar directions, layering order). Fix these in hand-polish, or constrain with explicit words.",
+ "looks": [],
+ "faq": [
+  [
+   "Do I need to draw to use AI for costume design?",
+   "No — but you need vocabulary. Our fabric, lighting and palette guides give you the words that replace drawing skills at the concept stage."
+  ]
+ ]
+}

@@ -1,0 +1,15 @@
+{
+ "slug": "image-prompt-techniques",
+ "title": "Image Prompt Techniques: From Reference Photo to Generation",
+ "lede": "The complete prompt-engineering field manual for fashion imagery — six-layer decomposition, palette-first reference borrowing, and the two-iteration validation loop. Written from 4,700 real outfit references.",
+ "type": "evergreen",
+ "lang": "en",
+ "body_md": "## The six-layer decomposition\nEvery great fashion prompt is six layers inside-out: subject → outfit (type+fabric+color) → pose → scene → light → medium. Skip one and you get 'roughly right, totally wrong mood'.\n\n## Layer 2 deep-dive: the outfit sentence\nFormula: garment type + fabric behavior + precise color. 'a camel wool coat over white straight-leg trousers' beats 'nice coat and pants' by an order of magnitude.\n\n## The palette-first method\nWhen referencing a photo or game costume: extract palette → silhouette → material trio, never copy frames. Palette borrowing is the copyright-safe creativity.\n\n## The two-iteration loop\nTranslate → generate → diff against the reference → fix the weakest layer → regenerate. Two cycles is usually enough; more means your reference was ambiguous.\n\n## Medium words that actually matter\n'street style photography, 35mm, film grain' ≠ 'professional photo'. Medium words set the render engine's entire texture bias — treat them as a layer, not garnish.",
+ "looks": [],
+ "faq": [
+  [
+   "How long should a fashion prompt be?",
+   "40-80 words. Under 30 loses the mood layers; over 120 makes models average everything out."
+  ]
+ ]
+}

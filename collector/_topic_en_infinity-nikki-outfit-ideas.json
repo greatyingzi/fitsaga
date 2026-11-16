@@ -1,0 +1,19 @@
+{
+ "slug": "infinity-nikki-outfit-ideas",
+ "title": "Infinity Nikki Outfit Ideas: 800+ Suits Browsed by Theme",
+ "lede": "Every style theme in Infinity Nikki — starlit, floral, oceanic, dreamy, snowy — mapped to actual in-game suits with reference images. Use them as palette and silhouette references for your own AI generations or fan designs.",
+ "type": "evergreen",
+ "lang": "en",
+ "body_md": "## How to use this database\nEach theme below pulls real suits from the game (structured data from BWIKI + Fandom). For AI reference work: pick a suit, extract its palette and silhouette, then rebuild it as a prompt using our other guides (Hanfu guide for Chinese forms, Fabric guide for textures).\n\n## Theme index\nThemes are auto-clustered from suit names. The strongest clusters: dream/night (118+77), floral (76), star (60), snow (15), ocean (11).\n\n## Reference workflow\n1. Browse a theme below and screenshot 2-3 suits whose palette speaks to you\n2. Name the colors precisely (deep blue, silver, hint of gold)\n3. Add silhouette words (asymmetric hem, layered sleeves)\n4. Generate with our lighting + fabric formulas\n\n## Why palette-first\nCopying a full outfit pixel-by-pixel is Level-3 fan art (limited commercial use). Borrowing only the palette is Level-1 (fully safe). See our game-costume guide for the full copyright ladder.",
+ "looks": [],
+ "faq": [
+  [
+   "How many suits does Infinity Nikki have?",
+   "Our database tracks 800+ obtainable suits with images, auto-clustered by theme."
+  ],
+  [
+   "Can I use these suit images commercially?",
+   "Game assets belong to Papergames. Palette inspiration is safe; full recreation is fan-art territory."
+  ]
+ ]
+}
