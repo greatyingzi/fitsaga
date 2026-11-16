@@ -20,13 +20,17 @@
    "slug": "lace",
    "title": "对照 1 · 蕾丝花园",
    "good_cap": "✓ 刺绣+头纱+金色 bokeh",
-   "bad_cap": "✗ 泛写 wedding dress"
+   "bad_cap": "✗ 泛写 wedding dress",
+   "good_prompt": "lace wedding dress with floral embroidery, cathedral veil, garden ceremony, golden bokeh, romantic",
+   "bad_prompt": "wedding dress, garden, photo"
   },
   {
    "slug": "tullewind",
    "title": "对照 2 · 海边轻纱",
    "good_cap": "✓ wind-blown 头纱+逆光",
-   "bad_cap": "✗ 无风的海边婚纱"
+   "bad_cap": "✗ 无风的海边婚纱",
+   "good_prompt": "flowy tulle wedding dress, beach destination, wind-blown veil, sunset backlight, barefoot",
+   "bad_prompt": "wedding dress on beach, photo"
   }
  ]
 }

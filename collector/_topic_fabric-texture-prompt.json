@@ -20,19 +20,25 @@
    "slug": "velvet",
    "title": "对照 1 · 丝绒哑光",
    "good_cap": "✓ light-absorbing folds 微距质感",
-   "bad_cap": "✗ 泛写 velvet 的亮面"
+   "bad_cap": "✗ 泛写 velvet 的亮面",
+   "good_prompt": "close-up of deep green velvet fabric with soft matte pile, light-absorbing folds, macro detail",
+   "bad_prompt": "close-up of green velvet fabric, macro"
   },
   {
    "slug": "satin",
    "title": "对照 2 · 缎面流光",
    "good_cap": "✓ liquid sheen 顺褶流光",
-   "bad_cap": "✗ 泛写 satin"
+   "bad_cap": "✗ 泛写 satin",
+   "good_prompt": "satin qipao with liquid sheen, highlights flowing along the folds, soft studio light",
+   "bad_prompt": "satin qipao, studio photo"
   },
   {
    "slug": "tulle",
    "title": "对照 3 · 纱的分层",
    "good_cap": "✓ layered transparency+逆光",
-   "bad_cap": "✗ 单写 sheer 的塑料感"
+   "bad_cap": "✗ 单写 sheer 的塑料感",
+   "good_prompt": "layered translucent tulle skirt, fabric floating in wind, layered transparency, backlight",
+   "bad_prompt": "tulle skirt, photo"
   }
  ]
 }

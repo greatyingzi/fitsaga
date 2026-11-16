@@ -20,13 +20,17 @@
    "slug": "concept",
    "title": "对照 1 · 原画感",
    "good_cap": "✓ concept art+painterly+matte backdrop",
-   "bad_cap": "✗ 泛写 digital art"
+   "bad_cap": "✗ 泛写 digital art",
+   "good_prompt": "fantasy character concept art, official art style, painterly rendering, ornate staff with glowing crystal, matte painting backdrop",
+   "bad_prompt": "fantasy character, pretty dress, digital art"
   },
   {
    "slug": "palette",
    "title": "对照 2 · 借色法",
    "good_cap": "✓ 深蓝银金+不对称剪裁——设计血脉",
-   "bad_cap": "✗ 只说 blue and silver dress"
+   "bad_cap": "✗ 只说 blue and silver dress",
+   "good_prompt": "character design, deep blue and silver palette with subtle gold accents, asymmetric hemline, layered sleeves, concept art",
+   "bad_prompt": "character design, blue and silver dress, digital art"
   }
  ]
 }

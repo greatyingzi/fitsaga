@@ -20,19 +20,25 @@
    "slug": "golden",
    "title": "对照 1 · 黄金时刻",
    "good_cap": "✓ rim light 发丝光+长软影",
-   "bad_cap": "✗ nice lighting 废词出图"
+   "bad_cap": "✗ nice lighting 废词出图",
+   "good_prompt": "portrait of a young woman, golden hour, warm rim light, glowing backlight on hair, sun flare, long soft shadows",
+   "bad_prompt": "portrait of a young woman, nice lighting, photo"
   },
   {
    "slug": "window",
    "title": "对照 2 · 窗光",
    "good_cap": "✓ Rembrandt 三角光+光尘+衰减",
-   "bad_cap": "✗ indoor lighting 泛词"
+   "bad_cap": "✗ indoor lighting 泛词",
+   "good_prompt": "indoor portrait, soft window light from left, Rembrandt lighting, gentle light falloff, dust motes in air",
+   "bad_prompt": "indoor portrait, indoor lighting, photo"
   },
   {
    "slug": "blue",
    "title": "对照 3 · 蓝调时刻",
    "good_cap": "✓ 深蓝天+灯初亮的城市",
-   "bad_cap": "✗ 夜晚+霓虹(缺蓝调时段)"
+   "bad_cap": "✗ 夜晚+霓虹(缺蓝调时段)",
+   "good_prompt": "city street at blue hour, lights just turned on, deep blue sky, neon signs starting to glow, cinematic",
+   "bad_prompt": "city street at night, neon lights, photo"
   }
  ]
 }

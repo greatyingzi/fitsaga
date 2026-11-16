@@ -20,7 +20,9 @@
    "slug": "layered",
    "title": "对照 1 · 六层转译",
    "good_cap": "✓ 六层齐(主体/服装/姿态/场景/光/媒介)",
-   "bad_cap": "✗ 一句话直译——气质全无"
+   "bad_cap": "✗ 一句话直译——气质全无",
+   "good_prompt": "a young asian woman in a camel wool coat over white straight-leg trousers, walking on a city street at dusk, looking back over her shoulder, warm street lamp light, street style photography, 35mm film grain",
+   "bad_prompt": "a woman in a coat on a street, photo"
   }
  ]
 }

@@ -74,6 +74,11 @@ def main():
             ex_html += '<figure style="margin:0"><div style="background:#1d4d2b;color:#a8e6a3;font-size:.72rem;padding:.3rem .6rem;border-radius:8px 8px 0 0;font-weight:700">OK PROMPT</div><img src="' + base + s2 + '-good.jpg" loading="lazy" style="width:100%;border-radius:10px"><figcaption style="font-size:.75rem;color:#8ec5ff;line-height:1.7">OK ' + html.escape(ex2["good_cap"]) + '</figcaption></figure>'
             ex_html += '<figure style="margin:0"><div style="background:#4d1d1d;color:#e6a8a8;font-size:.72rem;padding:.3rem .6rem;border-radius:8px 8px 0 0;font-weight:700">WEAK</div><img src="' + base + s2 + '-bad.jpg" loading="lazy" style="width:100%;border-radius:10px;opacity:.85"><figcaption style="font-size:.75rem;color:#cbb8d4;line-height:1.7">X ' + html.escape(ex2["bad_cap"]) + '</figcaption></figure>'
             ex_html += '</div>'
+            if ex2.get("good_prompt"):
+                gp = html.escape(ex2["good_prompt"])
+                ex_html += ('<details style="background:#0f0c13;border-radius:10px;margin:.5rem 0;padding:.7rem .9rem">'
+                            '<summary style="cursor:pointer;color:#8ec5ff;font-size:.82rem">📋 正例 prompt（点击展开复制）</summary>'
+                            '<pre style="white-space:pre-wrap;color:#cbb8d4;font-size:.78rem;line-height:1.8;margin:.5rem 0 0">' + gp + '</pre></details>')
         dl_btn = ""
         try:
             _mf = json.loads((PUB / "downloads/manifest.json").read_text(encoding="utf-8"))

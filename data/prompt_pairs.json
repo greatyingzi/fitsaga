@@ -1,0 +1,121 @@
+{
+ "hanfu-prompt-guide": [
+  {
+   "slug": "form",
+   "good_prompt": "a woman wearing a ming dynasty mamian skirt with golden brocade, cross-collar right lapel over left top, buyao hairpins, chinese classical garden, soft window light, cinematic still",
+   "bad_prompt": "a woman wearing hanfu dress, chinese garden, photo"
+  },
+  {
+   "slug": "dynasty",
+   "good_prompt": "tang dynasty chest-high ruqun, flowing wide sleeves, ribbon sash, dancing pose, fabric floating in wind, golden hour backlight",
+   "bad_prompt": "tang dynasty costume, standing pose, photo"
+  },
+  {
+   "slug": "snow",
+   "good_prompt": "hanfu woman in red cloak, snow on red walls, plum blossom, cold blue shadows, warm red dress contrast, cinematic still",
+   "bad_prompt": "hanfu woman, red dress, snow, photo"
+  }
+ ],
+ "lighting-prompt-guide": [
+  {
+   "slug": "golden",
+   "good_prompt": "portrait of a young woman, golden hour, warm rim light, glowing backlight on hair, sun flare, long soft shadows",
+   "bad_prompt": "portrait of a young woman, nice lighting, photo"
+  },
+  {
+   "slug": "window",
+   "good_prompt": "indoor portrait, soft window light from left, Rembrandt lighting, gentle light falloff, dust motes in air",
+   "bad_prompt": "indoor portrait, indoor lighting, photo"
+  },
+  {
+   "slug": "blue",
+   "good_prompt": "city street at blue hour, lights just turned on, deep blue sky, neon signs starting to glow, cinematic",
+   "bad_prompt": "city street at night, neon lights, photo"
+  }
+ ],
+ "fabric-texture-prompt": [
+  {
+   "slug": "velvet",
+   "good_prompt": "close-up of deep green velvet fabric with soft matte pile, light-absorbing folds, macro detail",
+   "bad_prompt": "close-up of green velvet fabric, macro"
+  },
+  {
+   "slug": "satin",
+   "good_prompt": "satin qipao with liquid sheen, highlights flowing along the folds, soft studio light",
+   "bad_prompt": "satin qipao, studio photo"
+  },
+  {
+   "slug": "tulle",
+   "good_prompt": "layered translucent tulle skirt, fabric floating in wind, layered transparency, backlight",
+   "bad_prompt": "tulle skirt, photo"
+  }
+ ],
+ "nikki-art-reference": [
+  {
+   "slug": "concept",
+   "good_prompt": "fantasy character concept art, official art style, painterly rendering, ornate staff with glowing crystal, matte painting backdrop",
+   "bad_prompt": "fantasy character, pretty dress, digital art"
+  },
+  {
+   "slug": "palette",
+   "good_prompt": "character design, deep blue and silver palette with subtle gold accents, asymmetric hemline, layered sleeves, concept art",
+   "bad_prompt": "character design, blue and silver dress, digital art"
+  }
+ ],
+ "cyberpunk-vs-miami": [
+  {
+   "slug": "neon",
+   "good_prompt": "cyberpunk street at night, holographic ads, neon everywhere, dystopian, wet high-reflective street, steam",
+   "bad_prompt": "miami street at night, neon signs, wet street, photo"
+  },
+  {
+   "slug": "miami",
+   "good_prompt": "miami beach at dusk, pink orange purple gradient sky, palm trees, pastel neon signs, resort vibe, cinematic",
+   "bad_prompt": "miami beach at night, neon everywhere, cyberpunk"
+  }
+ ],
+ "jk-lolita-ai-guide": [
+  {
+   "slug": "petticoat",
+   "good_prompt": "sweet lolita with bell-shaped petticoat silhouette, pastel candy prints, big ribbon bow, cafe window light",
+   "bad_prompt": "lolita dress without petticoat, flat skirt, photo"
+  },
+  {
+   "slug": "jk",
+   "good_prompt": "japanese school uniform, sailor collar, tartan plaid skirt, sakura street, afternoon light, youthful",
+   "bad_prompt": "school uniform girl, photo"
+  }
+ ],
+ "wedding-dress-ai-guide": [
+  {
+   "slug": "lace",
+   "good_prompt": "lace wedding dress with floral embroidery, cathedral veil, garden ceremony, golden bokeh, romantic",
+   "bad_prompt": "wedding dress, garden, photo"
+  },
+  {
+   "slug": "tullewind",
+   "good_prompt": "flowy tulle wedding dress, beach destination, wind-blown veil, sunset backlight, barefoot",
+   "bad_prompt": "wedding dress on beach, photo"
+  }
+ ],
+ "photo-to-prompt-method": [
+  {
+   "slug": "layered",
+   "good_prompt": "a young asian woman in a camel wool coat over white straight-leg trousers, walking on a city street at dusk, looking back over her shoulder, warm street lamp light, street style photography, 35mm film grain",
+   "bad_prompt": "a woman in a coat on a street, photo"
+  }
+ ],
+ "cny-hanfu-ai": [
+  {
+   "slug": "scene",
+   "good_prompt": "hanfu woman holding red lantern, soft glow on face, ancient chinese town, snow, red lanterns hanging, cobblestone street, cinematic still",
+   "bad_prompt": "chinese new year, red lanterns, hanfu woman, photo"
+  },
+  {
+   "slug": "modern",
+   "good_prompt": "neo-chinese fashion editorial, mandarin collar blouse, red accent outfit, minimalist studio, high key",
+   "bad_prompt": "chinese new year fashion, red dress, photo"
+  }
+ ],
+ "gta6-style-prompt": []
+}

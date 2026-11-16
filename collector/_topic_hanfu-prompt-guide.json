@@ -20,19 +20,25 @@
    "slug": "form",
    "title": "对照 1 · 形制分层",
    "good_cap": "✓ 明制马面+交领右衽+步摇+园林窗光——形制三层齐",
-   "bad_cap": "✗ 只写 hanfu dress——影楼混搭感"
+   "bad_cap": "✗ 只写 hanfu dress——影楼混搭感",
+   "good_prompt": "a woman wearing a ming dynasty mamian skirt with golden brocade, cross-collar right lapel over left top, buyao hairpins, chinese classical garden, soft window light, cinematic still",
+   "bad_prompt": "a woman wearing hanfu dress, chinese garden, photo"
   },
   {
    "slug": "dynasty",
    "title": "对照 2 · 朝代差异",
    "good_cap": "✓ 唐制齐胸+披帛+舞姿+风吹布料——唐制飘逸",
-   "bad_cap": "✗ 只写 tang costume——影楼租赁感"
+   "bad_cap": "✗ 只写 tang costume——影楼租赁感",
+   "good_prompt": "tang dynasty chest-high ruqun, flowing wide sleeves, ribbon sash, dancing pose, fabric floating in wind, golden hour backlight",
+   "bad_prompt": "tang dynasty costume, standing pose, photo"
   },
   {
    "slug": "snow",
    "title": "对照 3 · 红衣雪景",
    "good_cap": "✓ 红墙雪+梅+冷暖对比——流量密码构图",
-   "bad_cap": "✗ 平铺直叙的红衣雪景"
+   "bad_cap": "✗ 平铺直叙的红衣雪景",
+   "good_prompt": "hanfu woman in red cloak, snow on red walls, plum blossom, cold blue shadows, warm red dress contrast, cinematic still",
+   "bad_prompt": "hanfu woman, red dress, snow, photo"
   }
  ]
 }

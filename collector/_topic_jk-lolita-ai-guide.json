@@ -20,13 +20,17 @@
    "slug": "petticoat",
    "title": "对照 1 · 裙撑铁律",
    "good_cap": "✓ 钟形轮廓+糖果印花+咖啡馆窗光",
-   "bad_cap": "✗ 无裙撑=蓬蓬裙万圣感"
+   "bad_cap": "✗ 无裙撑=蓬蓬裙万圣感",
+   "good_prompt": "sweet lolita with bell-shaped petticoat silhouette, pastel candy prints, big ribbon bow, cafe window light",
+   "bad_prompt": "lolita dress without petticoat, flat skirt, photo"
   },
   {
    "slug": "jk",
    "title": "对照 2 · JK 场景",
    "good_cap": "✓ 水手领+格裙+樱花街+午后光",
-   "bad_cap": "✗ 泛写 school uniform"
+   "bad_cap": "✗ 泛写 school uniform",
+   "good_prompt": "japanese school uniform, sailor collar, tartan plaid skirt, sakura street, afternoon light, youthful",
+   "bad_prompt": "school uniform girl, photo"
   }
  ]
 }
