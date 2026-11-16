@@ -24,6 +24,7 @@ def main():
         t = _json.loads(f.read_text(encoding="utf-8"))
         entries.append((BASE + "/en/topics/" + t["slug"], "0.8"))
     entries.append((BASE + "/en/topics.html", "0.8"))
+    entries.append((BASE + "/en/nikki-outfits", "0.8"))
     entries.append((BASE + "/downloads.html", "0.7"))
     for f in ["infinity","shining","miracle"]:
         entries.append((f"{BASE}/nikki/{f}.html", "0.8"))
@@ -33,7 +34,7 @@ def main():
     for c in ["starry-night","fairytale-dream","spring-floral","ocean-rain","dark-gothic",
               "jk-uniform","sweet-girl","quiet-luxury","dopamine","millard","american-retro",
               "french-style","new-chinese","commute","knitwear","coat-season","qipao-modern",
-              "lolita-picks","hanfu-daily","travel-hanfu","eye-makeup","skincare","pseudo-nude","old-money","minimalist","y2k","petite","pear-shape","hoodie","dress-styles"]:
+              "lolita-picks","hanfu-daily","travel-hanfu","eye-makeup","skincare","pseudo-nude","old-money","minimalist","y2k","petite","pear-shape","hoodie","dress-styles","nail-art","first-love","milk-style","heiress","baddie","office","travel-outfit","korean-style","qipao","mamian"]:
         entries.append((f"{BASE}/collection/{c}", "0.9"))
     # 全部详情页(有图的)
     con = sqlite3.connect(DB)

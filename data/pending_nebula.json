@@ -8,5 +8,10 @@
   "scope": "fitsaga",
   "tags": "收尾轮交付,全覆盖",
   "content": "fitsaga 收尾轮交付(2026-11-16 晚)：1)新3篇EN专题对照图6张(palette/silhouette/sixlayer/fabric-layer/concept/materials)+prompt复制块；2)prompt复制块全专题覆盖达成——zh10专题24组+en10专题21组全部有📋点击展开复制(slug别名坑修复：en-hanfu的examples slug=hanfu-form而prompt_pairs键=form，需ALIAS映射；en-gta6文件名_topic_en_gta6.json特判；cny文件名_topic_cny.json特判)；3)b2十合集进首页导航(首页合集chips 7→17)；4)Nikki主题网格40张图全部带alt(套装名)；5)移动端390px验收——EN专题页排版优秀(EVERGREEN徽章/标题/lede引用块)、主题网格4列高清套图完美。最终站点：30合集+23双语专题(全对照图+全复制块+下载包)+4文章+追更流水线，飞轮绿。"
+ },
+ {
+  "scope": "fitsaga",
+  "tags": "终验轮,回顾补漏",
+  "content": "fitsaga 终验轮(2026-11-16 深夜, 主人质疑未完成触发全面回顾)：审计发现**最近几轮的索引/新专题没有最终部署**(线上en索引12卡旧版缺gta6, zh索引9链接旧版)——教训：每轮生成后必须立刻部署并**下载文件法验证**(curl管道grep会因引号转义抖动报0, 下载到文件再grep是唯一可靠姿势)；全量重部署后线上en索引15卡13专题全+zh 12卡10专题全+ai.html补脚本+终检矩阵全绿；飞轮39/40(hanfu页1图环境慢加载已知项)；git db循环冲突标准解=checkout --theirs+rebase continue。终验后站点：30合集+23双语专题+4文章全最新版线上。"
  }
 ]

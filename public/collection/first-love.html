@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>初恋感精选 · 清透的少年气 · FitSaga</title>
+<meta name="description" content="初恋感的配方：清透底妆、柔和配色、不刻意的松弛。">
+<link rel="canonical" href="https://fitsaga.pages.dev/collection/first-love">
+<style>:root{--gold:#f5c76e;--bg:#141018;--fg:#f5eef7;}
+*{margin:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--fg);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.hero{min-height:70vh;
+/* appended below */display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:3rem 1.5rem;background:radial-gradient(1200px 600px at 20% 10%,rgba(255,126,179,.25),transparent 60%),radial-gradient(1000px 500px at 80% 20%,rgba(181,84,140,.3),transparent 60%),radial-gradient(900px 500px at 50% 90%,rgba(63,111,216,.18),transparent 60%),var(--bg)}
+.hero.small{min-height:38vh}
+.hero h1{font-size:clamp(1.8rem,5vw,3.4rem);font-weight:800;line-height:1.3;background:linear-gradient(90deg,#ffd9a8,#ff7eb3,#c793ff,#8ec5ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{margin-top:.8rem;color:#cbb8d4;letter-spacing:.12em;font-size:clamp(.9rem,2vw,1.05rem)}
+.stylechips{display:flex;flex-wrap:wrap;gap:.55rem;justify-content:center;margin-top:1.8rem}
+.chip{display:inline-block;padding:.6rem 1.05rem;border-radius:999px;font-size:.9rem;font-weight:600;color:#fff;box-shadow:0 4px 12px rgba(0,0,0,.35);transition:transform .2s;opacity:.85}
+.chip:hover{transform:translateY(-2px);opacity:1}
+.chip.on{outline:2px solid #fff5;opacity:1}
+.sec{padding:2.5rem 1.5rem;max-width:1100px;margin:0 auto}
+.sec-head h2{font-size:clamp(1.3rem,3vw,1.9rem);font-weight:800}
+.sec-head p{width:100%;margin-top:.4rem;opacity:.85;font-size:.95rem}
+.intro{max-width:640px;color:#cbb8d4;line-height:1.8;font-size:.95rem;margin-bottom:1.4rem}
+.masonry{columns:3 240px;column-gap:14px}
+@media(max-width:640px){.masonry{columns:2 140px}}
+.shot{break-inside:avoid;margin-bottom:14px;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 6px 20px rgba(0,0,0,.4);background:#241b2c}
+.shot img{width:100%;display:block;transition:transform .35s}
+.shot:hover img{transform:scale(1.04)}
+.shot .cap{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:.5rem;padding:1.5rem .7rem .55rem;font-size:.78rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+.shot .cap em{font-style:normal;opacity:.75;white-space:nowrap;font-size:.78rem}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(160px,100%),1fr));gap:14px}
+.scard{background:#241b2c;border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+.scard img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.sname{padding:.6rem .7rem .1rem;font-weight:700;font-size:.9rem}
+.smeta{padding:0 .7rem .7rem;font-size:.78rem;color:#9d8fa8}
+footer{padding:2.5rem 1.5rem;text-align:center;color:#9d8fa8;font-size:.9rem;background:#0f0c13;margin-top:2rem}
+footer .links{margin-top:.7rem;display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+footer .links a{display:inline-block;padding:.55rem .9rem;border-radius:10px;background:#241b2c;font-size:.9rem;min-height:44px;line-height:1.4}
+footer .source{opacity:.6;font-size:.78rem;margin-top:.6rem;line-height:1.7}
+.sec-head a{display:inline-block;padding:.6rem .1rem;min-height:44px;line-height:1.7;font-size:.92rem}
+/* flywheel round3 fixes */
+.hero.small{min-height:26vh}
+.hero .sub{letter-spacing:.05em;max-width:22em;line-height:1.8}
+.collection-cap{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:.15rem;padding:2.2rem .8rem .6rem;font-size:.85rem;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+.shot .cap{font-size:.85rem}
+.shot .cap .view{font-size:.78rem;opacity:.8}
+.masonry .shot img{max-height:520px;object-fit:cover}
+
+/* home v3 components */
+.hero.hero2{min-height:52vh}
+.chip-hero{font-size:1rem;padding:.7rem 1.3rem;box-shadow:0 6px 20px rgba(199,147,255,.35)}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:14px}
+.srow{margin-bottom:1.6rem}
+.srow-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;font-size:1.05rem}
+.srow-h .more{font-size:.85rem;opacity:.75}
+.minirow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media(max-width:640px){.minirow{grid-template-columns:repeat(2,1fr)}}
+.mini{display:block;border-radius:12px;overflow:hidden;aspect-ratio:3/4;background:#241b2c}
+.mini img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.mini:hover img{transform:scale(1.05)}
+
+</style></head><body>
+<header class="hero small"><h1><span style="color:#ff7eb3">初恋感精选 · 清透的少年气</span></h1>
+<p class="sub">18 套 · 按收藏热度排序 · 每日更新</p></header>
+<main class="sec">
+<p class="intro">初恋感的配方：清透底妆、柔和配色、不刻意的松弛。</p>
+<nav class="stylechips" style="margin-bottom:1.5rem"><a class="chip" style="background:linear-gradient(135deg,#2a1832,#ff7eb355)" href="/collection/nail-art">美甲精选</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#ff7eb355)" href="/collection/milk-style">奶系穿搭精选</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#ff7eb355)" href="/collection/heiress">千金风精选</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#ff7eb355)" href="/collection/baddie">御姐风精选</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#ff7eb355)" href="/collection/office">职场穿搭精选</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#ff7eb355)" href="/collection/travel-outfit">出游穿搭精选</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#ff7eb355)" href="/collection/korean-style">韩系穿搭精选</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#ff7eb355)" href="/collection/qipao">旗袍精选</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#ff7eb355)" href="/collection/mamian">马面裙精选</a></nav>
+<div class="masonry"><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/blog/202503/19/vDS9P9gNhdZoA17.jpg" alt="初恋感精选 · 清透的少年气 1" loading="lazy"><figcaption class="cap"><span>初恋感 · 收藏675</span><a href="https://www.duitang.com/blog/?id=1550636628" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/blog/202503/19/WXSzez93TQdzq0E.jpg" alt="初恋感精选 · 清透的少年气 2" loading="lazy"><figcaption class="cap"><span>初恋感 · 收藏531</span><a href="https://www.duitang.com/blog/?id=1550636621" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/blog/202503/19/6zS4o4nVtq64MEd.jpg" alt="初恋感精选 · 清透的少年气 3" loading="lazy"><figcaption class="cap"><span>初恋感 · 收藏495</span><a href="https://www.duitang.com/blog/?id=1550636625" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/blog/202503/19/xDSnPn4yS21q971.jpg" alt="初恋感精选 · 清透的少年气 4" loading="lazy"><figcaption class="cap"><span>初恋感 · 收藏494</span><a href="https://www.duitang.com/blog/?id=1550636623" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/blog/202503/19/oVSp3pNZtglY9XG.jpg" alt="初恋感精选 · 清透的少年气 5" loading="lazy"><figcaption class="cap"><span>初恋感 · 收藏493</span><a href="https://www.duitang.com/blog/?id=1550636626" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/blog/202503/19/4ESbXbznHoNbdnd.jpg" alt="初恋感精选 · 清透的少年气 6" loading="lazy"><figcaption class="cap"><span>初恋感 · 收藏485</span><a href="https://www.duitang.com/blog/?id=1550636622" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/blog/202503/19/gVSLNLvYSQoezZ0.jpg" alt="初恋感精选 · 清透的少年气 7" loading="lazy"><figcaption class="cap"><span>初恋感 · 收藏475</span><a href="https://www.duitang.com/blog/?id=1550636624" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/blog/202503/19/0GSPAP2Wi0n5dxJ.jpg" alt="初恋感精选 · 清透的少年气 8" loading="lazy"><figcaption class="cap"><span>初恋感 · 收藏473</span><a href="https://www.duitang.com/blog/?id=1550636620" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/blog/202503/19/pGSm4mYXsBoGY2z.jpg" alt="初恋感精选 · 清透的少年气 9" loading="lazy"><figcaption class="cap"><span>初恋感 · 收藏432</span><a href="https://www.duitang.com/blog/?id=1550636627" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/blog/202402/23/V2S9BwgqtmgLPDq.jpeg" alt="初恋感精选 · 清透的少年气 10" loading="lazy"><figcaption class="cap"><span>初恋感 · 收藏301</span><a href="https://www.duitang.com/blog/?id=1514689412" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/blog/202402/23/B8SqA862hlJLzAQ.jpeg" alt="初恋感精选 · 清透的少年气 11" loading="lazy"><figcaption class="cap"><span>初恋感 · 收藏293</span><a href="https://www.duitang.com/blog/?id=1514689413" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/blog/202402/23/YxSPN9omsqAV3lW.jpeg" alt="初恋感精选 · 清透的少年气 12" loading="lazy"><figcaption class="cap"><span>初恋感 · 收藏292</span><a href="https://www.duitang.com/blog/?id=1514689410" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/blog/202402/23/N5SeJWQGtPyMxl9.jpeg" alt="初恋感精选 · 清透的少年气 13" loading="lazy"><figcaption class="cap"><span>初恋感 · 收藏289</span><a href="https://www.duitang.com/blog/?id=1514689411" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/blog/202402/23/JOSbOVGpTWDJG5q.jpeg" alt="初恋感精选 · 清透的少年气 14" loading="lazy"><figcaption class="cap"><span>初恋感 · 收藏288</span><a href="https://www.duitang.com/blog/?id=1514689409" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/blog/202402/23/EWSMe2y6sVqngOe.jpeg" alt="初恋感精选 · 清透的少年气 15" loading="lazy"><figcaption class="cap"><span>初恋感 · 收藏287</span><a href="https://www.duitang.com/blog/?id=1514689414" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/blog/202402/23/xDS98aM5t2pEMDv.jpeg" alt="初恋感精选 · 清透的少年气 16" loading="lazy"><figcaption class="cap"><span>初恋感 · 收藏275</span><a href="https://www.duitang.com/blog/?id=1514689416" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/blog/202402/23/0GSV7xGoS0q678w.jpeg" alt="初恋感精选 · 清透的少年气 17" loading="lazy"><figcaption class="cap"><span>初恋感 · 收藏275</span><a href="https://www.duitang.com/blog/?id=1514689408" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/blog/202402/23/WXSqWQnMhQ3Zey0.jpeg" alt="初恋感精选 · 清透的少年气 18" loading="lazy"><figcaption class="cap"><span>初恋感 · 收藏274</span><a href="https://www.duitang.com/blog/?id=1514689415" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure></div>
+<p style="margin-top:1.5rem"><a style="color:#c793ff" href="/topics.html">🎨 想用 AI 生成这种风格？进画法研究所 →</a></p>
+</main>
+<footer><div><b style="color:#f5c76e">FitSaga</b> · 策展合集</div>
+<div class="source">图片版权归原创作者所有 · 点击来源↗访问原帖 · © 2026 FitSaga</div></footer>
+<script src="/lightbox.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/theme.js" defer></script>
+</body></html>
