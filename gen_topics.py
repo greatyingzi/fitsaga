@@ -84,7 +84,19 @@ def main():
         except Exception:
             pass
 
-        chase = ('<div class="chase"><b>Chase</b> · ' if is_en else '<div class="chase"><b>追更</b> · ') + html.escape(t["updated"]) + "</div>" if t.get("updated") else ""
+        chase = ""
+        try:
+            _cl = json.loads((ROOT / "data" / "changelog.json").read_text(encoding="utf-8"))
+            _my = [c for c in _cl if c.get("slug") == t["slug"]]
+            if _my:
+                _lab = "Chase log" if is_en else "追更日志"
+                _items = "".join("<div style=\"margin:.25rem 0\"><b style=\"color:#ffd9a8\">" + c["date"] + "</b> — " + html.escape(c["note"]) + "</div>" for c in _my[-3:])
+                chase = '<div class="chase"><b>🔄 ' + _lab + '</b>' + _items + '</div>'
+            elif t.get("updated"):
+                chase = '<div class="chase"><b>追更</b> · ' + html.escape(t["updated"]) + '</div>'
+        except Exception:
+            if t.get("updated"):
+                chase = '<div class="chase"><b>追更</b> · ' + html.escape(t["updated"]) + '</div>'
         badge = '<span class="badge">HOT</span>' if t.get("type") == "hot" else '<span class="badge">EVERGREEN</span>'
         ld = json.dumps({"@context": "https://schema.org", "@type": "Article", "headline": t["title"],
                          "description": t["lede"][:150], "datePublished": today,
