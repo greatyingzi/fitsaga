@@ -26,19 +26,37 @@
     if (DATA) return cb();
     fetch('/search-index.json').then(r => r.json()).then(d => { DATA = d; cb(); });
   }
+  var _lastQ = "";
+  function hl(t) {
+    if (!_lastQ) return t;
+    var words = _lastQ.toLowerCase().split(/\s+/).filter(function (w) { return w; });
+    var out = t;
+    for (var i = 0; i < words.length; i++) {
+      var rx = new RegExp("(" + words[i].replace(/[.*+?^${}()|[\]\\]/g, "\\\$&") + ")", "gi");
+      out = out.replace(rx, "<mark style=\"background:#a855f7;color:#fff;border-radius:3px\">$1</mark>");
+    }
+    return out;
+  }
   function render(items) {
     cur = items.slice(0, 12); sel = 0;
     res.innerHTML = cur.map((it, i) =>
-      '<a class="fs-sb-item' + (i === 0 ? ' sel' : '') + '" href="' + it.u + '"><span class="sc">' + it.c + '</span><span class="st">' + it.t + '</span></a>').join('');
+      '<a class="fs-sb-item' + (i === 0 ? ' sel' : '') + '" href="' + it.u + '"><span class="sc">' + it.c + '</span><span class="st">' + hl(it.t) + '</span></a>').join('');
   }
   function query(q) {
     if (!q) return render([]);
-    q = q.toLowerCase();
+    var words = q.toLowerCase().split(/\s+/).filter(function (w) { return w; });
     var scored = [];
     for (var i = 0; i < DATA.length; i++) {
       var t = DATA[i].t.toLowerCase();
-      var idx = t.indexOf(q);
-      if (idx >= 0) scored.push([idx === 0 ? 0 : 1, i]);
+      var c = (DATA[i].c || "").toLowerCase();
+      var all = t + " " + c;
+      var ok = true, firstAt = 99;
+      for (var j = 0; j < words.length; j++) {
+        var idx = all.indexOf(words[j]);
+        if (idx < 0) { ok = false; break; }
+        if (idx < firstAt) firstAt = idx;
+      }
+      if (ok) scored.push([firstAt === 0 ? 0 : 1, i]);
     }
     scored.sort(function (a, b) { return a[0] - b[0]; });
     render(scored.slice(0, 12).map(function (x) { return DATA[x[1]]; }));
@@ -64,5 +82,5 @@
     var els = res.querySelectorAll('.fs-sb-item');
     els.forEach(function (el, i) { el.classList.toggle('sel', i === sel); });
   }
-  input.addEventListener('input', function () { query(input.value.trim()); });
+  input.addEventListener('input', function () { _lastQ = input.value.trim(); query(_lastQ); });
 })();
