@@ -18,6 +18,13 @@ def main():
     for k in ["hanfu","qipao","sweet","sexy","jk","street","winter","beauty","korean"]:
         entries.append((f"{BASE}/style/{k}.html", "0.8"))
     # 图鉴索引
+    # EN 专题页
+    import json as _json
+    for f in sorted(pathlib.Path(".").glob("collector/_topic_en_*.json")):
+        t = _json.loads(f.read_text(encoding="utf-8"))
+        entries.append((BASE + "/en/topics/" + t["slug"], "0.8"))
+    entries.append((BASE + "/en/topics.html", "0.8"))
+    entries.append((BASE + "/downloads.html", "0.7"))
     for f in ["infinity","shining","miracle"]:
         entries.append((f"{BASE}/nikki/{f}.html", "0.8"))
     for p in [2,3,4,5]:

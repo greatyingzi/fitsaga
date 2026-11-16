@@ -14,7 +14,12 @@ BOARDS = ["apparel", "beauty", "modeling_hair"]  # 女装搭配/美女/造型美
 
 def fetch_board(board):
     url = f"https://huaban.com/favorite/{board}"
-    r = subprocess.run(["curl","-s","-A",UA,"-H","Accept-Language: zh-CN","--compressed",url,"--max-time","30"], capture_output=True, text=True, timeout=40)
+    cookie_file = ROOT / "data" / "huaban_cookie.txt"
+    extra = []
+    if cookie_file.exists():
+        ck = cookie_file.read_text(encoding="utf-8").strip()
+        if ck: extra = ["-H", "Cookie: " + ck]
+    r = subprocess.run(["curl","-s","-A",UA,"-H","Accept-Language: zh-CN"] + extra + ["--compressed", url,"--max-time","30"], capture_output=True, text=True, timeout=40)
     h = r.stdout or ""
     m = re.search(r'id="__NEXT_DATA__"[^>]*>(.*?)</script>', h, re.S)
     if not m:
