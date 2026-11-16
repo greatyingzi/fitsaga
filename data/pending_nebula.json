@@ -18,5 +18,10 @@
   "scope": "fitsaga",
   "tags": "十期交付,合集40,EN套装hub",
   "content": "fitsaga 十期交付(2026-11-16 深夜)：1)合集第三批10个(美甲/初恋感/奶系/千金风/御姐/职场/出游/韩系/旗袍/马面裙各18图)——总量40合集；2)/en/nikki-outfits英文套装总览页——103套真套装按10个EN主题聚类(Dreamy&Night/Floral/Star&Moon/Snow/Ocean/Spring/Royal/Sweet/Fantasy/Retro)，海外Nikki流量落地hub(链到ideas指南+版权阶梯文)；3)首页导航合集chips 17→25；4)**sitemap覆盖坑固化**：gen_site.py与gen_sitemap.py都写public/sitemap.xml——gen_site输出10条旧版会覆盖全量1004条版，必须gen_sitemap最后跑(workflow顺序本来就对, 本轮手动跑反了)；线上修复验证1004 URL(nikki-outfits+nail-art均在)。"
+ },
+ {
+  "scope": "fitsaga",
+  "tags": "十一期交付,hreflang",
+  "content": "fitsaga 十一期交付(2026-11-17凌晨)：1)专题页hreflang双语互指(en/zh alternate双向20专题)——引号定界坑：python行内HTML属性含双引号时外层必须单引号定界(三重转义必炸)；2)今日精选alt带风格词(化妆教程搭配灵感等——kw变量本来就在作用域, alt语义从编号变关键词)；3)Nikki英文名映射判定不可行(无限暖暖与HD套装名零重合,HD alias_zh 75个), caption保留中文名作为原汁信号；4)R2五试仍500。主人确认：pending_nebula.json由星云插件自动补发队列消费, 无需人工判定。"
  }
 ]
