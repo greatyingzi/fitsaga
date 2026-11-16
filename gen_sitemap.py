@@ -33,7 +33,7 @@ def main():
     for c in ["starry-night","fairytale-dream","spring-floral","ocean-rain","dark-gothic",
               "jk-uniform","sweet-girl","quiet-luxury","dopamine","millard","american-retro",
               "french-style","new-chinese","commute","knitwear","coat-season","qipao-modern",
-              "lolita-picks","hanfu-daily","travel-hanfu"]:
+              "lolita-picks","hanfu-daily","travel-hanfu","eye-makeup","skincare","pseudo-nude","old-money","minimalist","y2k","petite","pear-shape","hoodie","dress-styles"]:
         entries.append((f"{BASE}/collection/{c}", "0.9"))
     # 全部详情页(有图的)
     con = sqlite3.connect(DB)
