@@ -149,6 +149,8 @@ def main():
                  '<meta property="og:type" content="article">',
                  '<meta property="og:url" content="https://fitsaga.pages.dev/' + sub + '/' + t["slug"] + '">',
                  '<meta name="twitter:card" content="summary">',
+                 '<link rel="alternate" hreflang="en" href="https://fitsaga.pages.dev/en/topics/" + t["slug"] + "">',
+                 '<link rel="alternate" hreflang="zh" href="https://fitsaga.pages.dev/topics/" + t["slug"] + "">',
                  '<link rel="canonical" href="https://fitsaga.pages.dev/' + sub + '/' + t["slug"] + '">',
                  "<style>" + CSS + "</style><style>" + TOPIC_CSS + "</style>",
                  '<script type="application/ld+json">' + ld + "</script>", "</head><body>",
