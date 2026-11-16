@@ -84,6 +84,14 @@ def main():
         except Exception:
             pass
 
+        _rel_lab = "Related topics" if is_en else "相关专题"
+        rel_html = '<p style="margin-top:2rem;color:#9d8fa8;font-size:.85rem">' + _rel_lab + '：</p><nav class="stylechips" style="margin-top:.4rem;justify-content:flex-start">'
+        _others = [t2 for t2 in topics if t2["slug"] != t["slug"] and (t2.get("lang", "zh") == t.get("lang", "zh"))]
+        for t2 in _others[:3]:
+            _sub2 = 'en/topics' if t2.get("lang") == "en" else 'topics'
+            rel_html += '<a class="chip" style="background:linear-gradient(135deg,#2a1832,#a855f766)" href=/' + _sub2 + '/' + t2["slug"] + '>' + html.escape(t2["title"][:20]) + '</a>'
+            rel_html += '</nav>'
+
         chase = ""
         try:
             _cl = json.loads((ROOT / "data" / "changelog.json").read_text(encoding="utf-8"))
@@ -115,7 +123,7 @@ def main():
                  "<h1>" + html.escape(t["title"]) + "</h1>",
                  '<div class="meta">' + brand + " · " + today + "</div>",
                  '<div class="lede">' + html.escape(t["lede"]) + "</div>",
-                 body, ex_html, chase, dl_btn, faq,
+                 body, ex_html, rel_html, chase, dl_btn, faq,
                  '<p style="margin-top:2.5rem"><a href="' + home_link + '">← ' + ("All topics" if is_en else "全部专题") + '</a> · <a href="/">Home</a></p>',
                  '</article></div>',
                  '<script src="/lightbox.js" defer></script>',

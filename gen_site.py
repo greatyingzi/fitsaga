@@ -86,6 +86,7 @@ def card(it, i, style):
 
 CSS = open(ROOT/"site.css", encoding="utf-8").read() if (ROOT/"site.css").exists() else ""
 
+GSC_META = ""  # 主人在 GSC 选「HTML 标记」法后, 把整段 meta 贴到这里, 形如: <meta name="google-site-verification" content="token">
 OG_TAGS = '<meta property="og:title" content="FitSaga · 每一种美，都值得一场时装冒险"><meta property="og:description" content="古风汉服、旗袍、甜美、辣妹、JK、街拍——真实搭配灵感与AI画法专题"><meta property="og:type" content="website"><meta property="og:url" content="https://fitsaga.pages.dev/"><meta name="twitter:card" content="summary"'
 
 def page(title, desc, body, accent, path="/"):
@@ -95,7 +96,7 @@ def page(title, desc, body, accent, path="/"):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
-{OG_TAGS}
+{OG_TAGS}{GSC_META}
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{BASE}{esc(path)}">
