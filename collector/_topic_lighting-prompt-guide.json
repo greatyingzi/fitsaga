@@ -14,5 +14,25 @@
    "光线词对不同模型效果一致吗？",
    "Midjourney 对光向词敏感；FLUX 对自然句描述最听话；SDXL 需要 LoRA 辅助特殊光。"
   ]
+ ],
+ "examples": [
+  {
+   "slug": "golden",
+   "title": "对照 1 · 黄金时刻",
+   "good_cap": "✓ rim light 发丝光+长软影",
+   "bad_cap": "✗ nice lighting 废词出图"
+  },
+  {
+   "slug": "window",
+   "title": "对照 2 · 窗光",
+   "good_cap": "✓ Rembrandt 三角光+光尘+衰减",
+   "bad_cap": "✗ indoor lighting 泛词"
+  },
+  {
+   "slug": "blue",
+   "title": "对照 3 · 蓝调时刻",
+   "good_cap": "✓ 深蓝天+灯初亮的城市",
+   "bad_cap": "✗ 夜晚+霓虹(缺蓝调时段)"
+  }
  ]
 }

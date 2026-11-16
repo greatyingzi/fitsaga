@@ -14,5 +14,19 @@
    "高质量游戏时装参考去哪找？",
    "本站 nikki 图鉴按套装浏览，部件图可直接当参考帧。"
   ]
+ ],
+ "examples": [
+  {
+   "slug": "concept",
+   "title": "对照 1 · 原画感",
+   "good_cap": "✓ concept art+painterly+matte backdrop",
+   "bad_cap": "✗ 泛写 digital art"
+  },
+  {
+   "slug": "palette",
+   "title": "对照 2 · 借色法",
+   "good_cap": "✓ 深蓝银金+不对称剪裁——设计血脉",
+   "bad_cap": "✗ 只说 blue and silver dress"
+  }
  ]
 }

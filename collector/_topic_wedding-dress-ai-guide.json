@@ -14,5 +14,19 @@
    "面料词和光线词哪个优先？",
    "婚纱先定面料（决定档次感），光线再匹配场景（决定氛围）。"
   ]
+ ],
+ "examples": [
+  {
+   "slug": "lace",
+   "title": "对照 1 · 蕾丝花园",
+   "good_cap": "✓ 刺绣+头纱+金色 bokeh",
+   "bad_cap": "✗ 泛写 wedding dress"
+  },
+  {
+   "slug": "tullewind",
+   "title": "对照 2 · 海边轻纱",
+   "good_cap": "✓ wind-blown 头纱+逆光",
+   "bad_cap": "✗ 无风的海边婚纱"
+  }
  ]
 }

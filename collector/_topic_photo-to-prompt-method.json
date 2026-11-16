@@ -14,5 +14,13 @@
    "人像相似度怎么提高？",
    "加种族/发型/年龄区间词（asian woman, long black hair, early 20s）——三词定位法。"
   ]
+ ],
+ "examples": [
+  {
+   "slug": "layered",
+   "title": "对照 1 · 六层转译",
+   "good_cap": "✓ 六层齐(主体/服装/姿态/场景/光/媒介)",
+   "bad_cap": "✗ 一句话直译——气质全无"
+  }
  ]
 }

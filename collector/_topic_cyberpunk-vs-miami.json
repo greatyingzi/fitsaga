@@ -14,5 +14,19 @@
    "两种风格可以融合吗？",
    "可以但要有主次——显式写 dominant light source。融合风格反而更容易出独特画面。"
   ]
+ ],
+ "examples": [
+  {
+   "slug": "neon",
+   "title": "对照 1 · 赛博霓虹",
+   "good_cap": "✓ 全域霓虹+全息+蒸汽——世界规则",
+   "bad_cap": "✗ 用 miami 词却想赛博"
+  },
+  {
+   "slug": "miami",
+   "title": "对照 2 · 迈阿密",
+   "good_cap": "✓ 渐变天+棕榈+pastel 霓虹点缀",
+   "bad_cap": "✗ cyberpunk 词入镜跑偏"
+  }
  ]
 }

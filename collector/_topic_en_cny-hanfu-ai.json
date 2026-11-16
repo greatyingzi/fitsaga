@@ -16,5 +16,19 @@
    "Will hanfu forms get criticized?",
    "Some — the 'AI-generated, form for reference' disclaimer plus correct collar direction handles it."
   ]
+ ],
+ "examples": [
+  {
+   "slug": "scene",
+   "title": "Compare 1 - Scene symbols",
+   "good_cap": "OK lanterns + snow + cobblestone - all three present",
+   "bad_cap": "X lanterns only (no scene narrative)"
+  },
+  {
+   "slug": "modern",
+   "title": "Compare 2 - Neo-Chinese",
+   "good_cap": "OK mandarin collar + red accent + minimal studio",
+   "bad_cap": "X red pile-up"
+  }
  ]
 }

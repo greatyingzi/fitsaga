@@ -14,5 +14,19 @@
    "Lolita 生成图最常翻车的部位？",
    "裙撑轮廓与袖型。petticoat 显式写 + bell-shaped silhouette 双保险。"
   ]
+ ],
+ "examples": [
+  {
+   "slug": "petticoat",
+   "title": "对照 1 · 裙撑铁律",
+   "good_cap": "✓ 钟形轮廓+糖果印花+咖啡馆窗光",
+   "bad_cap": "✗ 无裙撑=蓬蓬裙万圣感"
+  },
+  {
+   "slug": "jk",
+   "title": "对照 2 · JK 场景",
+   "good_cap": "✓ 水手领+格裙+樱花街+午后光",
+   "bad_cap": "✗ 泛写 school uniform"
+  }
  ]
 }
