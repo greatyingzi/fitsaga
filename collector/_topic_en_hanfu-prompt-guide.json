@@ -15,5 +15,19 @@
    "Which model is best for hanfu?",
    "Chinese models parse Chinese form terms natively; for English workflows use FLUX with specific dynasty words."
   ]
+ ],
+ "examples": [
+  {
+   "slug": "hanfu-form",
+   "title": "Compare 1 · Form layers",
+   "good_cap": "OK: ming dynasty mamian skirt + cross-collar right-over-left + buyao hairpins + garden — form layers all present",
+   "bad_cap": "X: bare 'hanfu dress' — photo-studio mashup, no dynasty identity"
+  },
+  {
+   "slug": "hanfu-dynasty",
+   "title": "Compare 2 · Dynasty difference",
+   "good_cap": "OK: tang chest-high ruqun + ribbon sash + dancing + fabric floating — Tang flowing silhouette",
+   "bad_cap": "X: bare 'tang costume' — static, costume-rental look"
+  }
  ]
 }

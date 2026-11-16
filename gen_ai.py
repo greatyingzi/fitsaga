@@ -45,6 +45,8 @@ def main():
 <p class="sub">{total} 张 · 生成式时尚视觉 · 持续扩充</p></header>
 {"".join(sections)}
 <footer><div><b style="color:#f5c76e">FitSaga</b> · AI 视觉实验室</div>
+  <script src="/search.js" defer></script>
+  <script src="/theme.js" defer></script>
 <div class="source">图片由社区模型生成，版权归各模型作者所有 · 来源 Civitai · © 2026 FitSaga</div></footer>
 <script src="/lightbox.js" defer></script>
 </body></html>'''

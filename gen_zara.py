@@ -27,6 +27,8 @@ def main():
 <p class="sub">{len(rows)} 张官方大片 · 每周上新</p></header>
 <main class="sec"><div class="masonry">{cards}</div></main>
 <footer><div><b style="color:#f5c76e">FitSaga</b> · 品牌大片图鉴</div>
+  <script src="/search.js" defer></script>
+  <script src="/theme.js" defer></script>
 <div class="source">图片版权归 ZARA (Inditex) 所有 · 来源 zara.com 官方新品页 · © 2026 FitSaga</div></footer>
 <script src="/lightbox.js" defer></script>
 </body></html>'''

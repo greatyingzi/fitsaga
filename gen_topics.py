@@ -68,7 +68,7 @@ def main():
         ex_html = ""
         for ex2 in t.get("examples", []):
             s2 = ex2["slug"]
-            base = "/topics/gta6/"  # images shared across languages
+            base = "/topics/en-ex/" if (t.get("lang") == "en" and t.get("slug") == "hanfu-prompt-guide") else "/topics/gta6/"
             ex_html += "<h3>" + html.escape(ex2["title"]) + "</h3>"
             ex_html += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">'
             ex_html += '<figure style="margin:0"><img src="' + base + s2 + '-good.jpg" loading="lazy" style="width:100%;border-radius:10px"><figcaption style="font-size:.75rem;color:#8ec5ff;line-height:1.7">OK ' + html.escape(ex2["good_cap"]) + '</figcaption></figure>'
@@ -115,7 +115,7 @@ def main():
            '<main class="sec"><div class="sgrid">' + "".join(zh_cards) + "</div></main>",
            '<footer><div><b style="color:#f5c76e">FitSaga</b> · AI 画法研究所</div>',
            "<div class='source'>prompt 方案与视觉拆解为原创内容 · © 2026 FitSaga</div></footer>",
-           "</body></html>"]
+           '<script src="/lightbox.js" defer></script><script src="/search.js" defer></script><script src="/theme.js" defer></script>']
     (PUB / "topics.html").write_text(NL.join(idx), encoding="utf-8")
     # 英文索引
     idx_en = ["<!doctype html>", '<html lang="en"><head><meta charset="utf-8">',
@@ -128,7 +128,7 @@ def main():
               '<main class="sec"><div class="sgrid">' + "".join(en_cards) + "</div></main>",
               '<footer><div><b style="color:#f5c76e">FitSaga</b> · AI Reference</div>',
               "<div class='source'>Prompt formulas and visual breakdowns are original content · © 2026 FitSaga</div></footer>",
-              "</body></html>"]
+              '<script src="/lightbox.js" defer></script><script src="/search.js" defer></script><script src="/theme.js" defer></script>']
     (PUB / "en").mkdir(parents=True, exist_ok=True)
     (PUB / "en/topics.html").write_text(NL.join(idx_en), encoding="utf-8")
     print("zh topics:", len(zh_cards), "| en topics:", len(en_cards))

@@ -120,6 +120,8 @@ def main():
 <p class="sub">怎么穿 · 怎么选 · 怎么排 — 把灵感变成决策</p></header>
 <main class="sec"><div class="sgrid">{cards}</div></main>
 <footer><div><b style="color:#f5c76e">FitSaga</b> · 穿搭研究所</div>
+  <script src="/search.js" defer></script>
+  <script src="/theme.js" defer></script>
 <div class="source">文章基于站内图片库与搜索词证据生成 · © 2026 FitSaga</div></footer>
 </body></html>'''
     (PUB / "guide.html").write_text(idx, encoding="utf-8")
