@@ -15,5 +15,13 @@
    "How to increase likeness for portraits?",
    "Add ethnicity/hairstyle/age-range words (asian woman, long black hair, early 20s) — the three-word locator."
   ]
+ ],
+ "examples": [
+  {
+   "slug": "layered",
+   "title": "Compare 1 - Six layers",
+   "good_cap": "OK all six layers present",
+   "bad_cap": "X one-line translation loses the mood"
+  }
  ]
 }

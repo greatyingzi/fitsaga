@@ -15,5 +15,25 @@
    "Do multiple fabrics interfere?",
    "Up to three, structured as matte+flowing+sheer; beyond that they average out."
   ]
+ ],
+ "examples": [
+  {
+   "slug": "velvet",
+   "title": "Compare 1 - Velvet matte",
+   "good_cap": "OK light-absorbing folds macro",
+   "bad_cap": "X generic velvet turns shiny"
+  },
+  {
+   "slug": "satin",
+   "title": "Compare 2 - Satin sheen",
+   "good_cap": "OK liquid sheen following folds",
+   "bad_cap": "X generic satin"
+  },
+  {
+   "slug": "tulle",
+   "title": "Compare 3 - Layered tulle",
+   "good_cap": "OK layered transparency + backlight",
+   "bad_cap": "X plastic-wrap sheer"
+  }
  ]
 }

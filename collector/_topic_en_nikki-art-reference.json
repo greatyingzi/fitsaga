@@ -15,5 +15,19 @@
    "Where to find quality game costume references?",
    "This site's Nikki gallery — structured by suit, part images usable as reference frames."
   ]
+ ],
+ "examples": [
+  {
+   "slug": "concept",
+   "title": "Compare 1 - Concept-art look",
+   "good_cap": "OK concept art + painterly + matte backdrop",
+   "bad_cap": "X generic digital art"
+  },
+  {
+   "slug": "palette",
+   "title": "Compare 2 - Palette borrowing",
+   "good_cap": "OK deep blue silver gold + asymmetric cut",
+   "bad_cap": "X just 'blue and silver dress'"
+  }
  ]
 }

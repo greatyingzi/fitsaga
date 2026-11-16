@@ -20,5 +20,25 @@
    "Why does my render look like cyberpunk?",
    "Probably the words cyberpunk or neon city. GTA6 neon is decoration, not world rule — restrict it to 'neon signs'."
   ]
+ ],
+ "examples": [
+  {
+   "slug": "sky",
+   "title": "Compare 1 - Sky gradient",
+   "good_cap": "OK pink-orange-purple gradient + natural sky - cinematic bands",
+   "bad_cap": "X bare sunset - ordinary tourist shot"
+  },
+  {
+   "slug": "haze",
+   "title": "Compare 2 - Humid air",
+   "good_cap": "OK atmospheric perspective + wet reflections - depth",
+   "bad_cap": "X sticker-collage flatness"
+  },
+  {
+   "slug": "motion",
+   "title": "Compare 3 - Character motion",
+   "good_cap": "OK candid mid-motion - Rockstar energy",
+   "bad_cap": "X standing pose - zero GTA feel"
+  }
  ]
 }

@@ -15,5 +15,19 @@
    "Fabric or light first?",
    "Fabric decides the tier; light then matches the scene."
   ]
+ ],
+ "examples": [
+  {
+   "slug": "lace",
+   "title": "Compare 1 - Lace garden",
+   "good_cap": "OK embroidery + veil + golden bokeh",
+   "bad_cap": "X generic wedding dress"
+  },
+  {
+   "slug": "tullewind",
+   "title": "Compare 2 - Beach tulle",
+   "good_cap": "OK wind-blown veil + sunset backlight",
+   "bad_cap": "X windless beach bridal"
+  }
  ]
 }

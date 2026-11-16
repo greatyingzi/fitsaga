@@ -5,14 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
 <meta property="og:title" content="FitSaga · 每一种美，都值得一场时装冒险"><meta property="og:description" content="古风汉服、旗袍、甜美、辣妹、JK、街拍——真实搭配灵感与AI画法专题"><meta property="og:type" content="website"><meta property="og:url" content="https://fitsaga.pages.dev/"><meta name="twitter:card" content="summary"
-<title>FitSaga · 每一种美，都值得一场时装冒险</title>
-<meta name="description" content="FitSaga 穿搭图鉴：古风汉服、旗袍、甜美、辣妹、JK、街拍、韩系、美妆——真实搭配灵感，逐张标注来源。">
+<title>FitSaga · 真实穿搭图鉴 × AI 画法研究所</title>
+<meta name="description" content="FitSaga：真实穿搭灵感图鉴与 AI 画法专题——把每一种美变成可复制的灵感与 prompt。">
 <link rel="canonical" href="https://fitsaga.pages.dev/">
 <style>:root{--gold:#f5c76e;--bg:#141018;--fg:#f5eef7;}
 *{margin:0;box-sizing:border-box}
 body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--fg);overflow-x:hidden}
 a{color:inherit;text-decoration:none}
-.hero{min-height:70vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:3rem 1.5rem;background:radial-gradient(1200px 600px at 20% 10%,rgba(255,126,179,.25),transparent 60%),radial-gradient(1000px 500px at 80% 20%,rgba(181,84,140,.3),transparent 60%),radial-gradient(900px 500px at 50% 90%,rgba(63,111,216,.18),transparent 60%),var(--bg)}
+.hero{min-height:70vh;
+/* appended below */display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:3rem 1.5rem;background:radial-gradient(1200px 600px at 20% 10%,rgba(255,126,179,.25),transparent 60%),radial-gradient(1000px 500px at 80% 20%,rgba(181,84,140,.3),transparent 60%),radial-gradient(900px 500px at 50% 90%,rgba(63,111,216,.18),transparent 60%),var(--bg)}
 .hero.small{min-height:38vh}
 .hero h1{font-size:clamp(1.8rem,5vw,3.4rem);font-weight:800;line-height:1.3;background:linear-gradient(90deg,#ffd9a8,#ff7eb3,#c793ff,#8ec5ff);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero .sub{margin-top:.8rem;color:#cbb8d4;letter-spacing:.12em;font-size:clamp(.9rem,2vw,1.05rem)}
@@ -48,625 +49,40 @@ footer .source{opacity:.6;font-size:.78rem;margin-top:.6rem;line-height:1.7}
 .shot .cap{font-size:.85rem}
 .shot .cap .view{font-size:.78rem;opacity:.8}
 .masonry .shot img{max-height:520px;object-fit:cover}
+
+/* home v3 components */
+.hero.hero2{min-height:52vh}
+.chip-hero{font-size:1rem;padding:.7rem 1.3rem;box-shadow:0 6px 20px rgba(199,147,255,.35)}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:14px}
+.srow{margin-bottom:1.6rem}
+.srow-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;font-size:1.05rem}
+.srow-h .more{font-size:.85rem;opacity:.75}
+.minirow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media(max-width:640px){.minirow{grid-template-columns:repeat(2,1fr)}}
+.mini{display:block;border-radius:12px;overflow:hidden;aspect-ratio:3/4;background:#241b2c}
+.mini img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.mini:hover img{transform:scale(1.05)}
+
 </style>
 </head>
 <body>
 
-<section class="hero">
-  <h1>每一种美，<br>都值得一场时装冒险 ✦</h1>
-  <p class="sub">穿搭图鉴 × AI 画法<br>古风 · 汉服 · 辣妹 · 婚纱 · 游戏时装 · prompt 灵感</p>
+<section class="hero hero2">
+  <h1>真实穿搭图鉴 <span style="color:#c793ff">×</span> AI 画法研究所</h1>
+  <p class="sub">每一种美，都值得一场时装冒险 —— 图鉴用来找灵感，画法用来做创作</p>
   <nav class="stylechips">
-    <a class="chip" style="background:linear-gradient(135deg,#3a2a44,#c793ff66)" href="/topics.html">🎨 AI 画法研究所</a>
-    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#b5548c66)" href="/style/hanfu.html">古风 · 汉服</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#c23a5266)" href="/style/qipao.html">旗袍 · 优雅</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#e0609e66)" href="/style/sweet.html">甜美 · 少女</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#e0475f66)" href="/style/sexy.html">辣妹 · 性感</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#3f6fd866)" href="/style/jk.html">JK · 制服</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#0ea5a566)" href="/style/street.html">街头 · 潮流</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#8a6d3b66)" href="/style/winter.html">秋冬 · 叠穿</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#a855f766)" href="/style/beauty.html">美妆 · 变美</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#3b82f666)" href="/style/korean.html">韩系 · 街拍</a>
-  </nav>
-  <nav class="stylechips" style="margin-top:.8rem">
-    <a class="chip" style="background:linear-gradient(135deg,#3a2a44,#ffd9a866)" href="/guide.html">📖 穿搭研究所</a>
+    <a class="chip chip-hero" style="background:linear-gradient(135deg,#3a2a44,#c793ff)" href="/topics.html">🎨 AI 画法研究所</a>
+    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#ffd9a866)" href="/guide.html">📖 穿搭研究所</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#a855f766)" href="/ai.html">✦ AI 灵感图鉴</a>
-    <a class="chip" style="background:linear-gradient(135deg,#3a2a44,#c793ff66)" href="/topics.html">🎨 AI 画法研究所</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#8ec5ff66)" href="/zara.html">ZARA 大片</a>
   </nav>
 </section>
-
-<section class="sec" id="hanfu" style="background:radial-gradient(900px 400px at 70% 0%,#b5548c22,transparent 65%)">
-  <div class="sec-head" style="color:#b5548c">
-    <h2>古风 · 汉服</h2>
-    <p style="color:#d8c9de">广袖流仙裙，一梦入华夏。从齐胸襦裙到马面裙，收集最打动人的国风搭配。 —— <a style="color:#b5548c" href="/style/hanfu.html">进入完整图鉴 →</a></p>
-  </div>
-  <div class="masonry"><figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202402/27/d3SJ5exmFqa0Qp4.jpg" alt="古风搭配灵感图1 · 来自堆糖" width="1179" height="1560" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1515203498" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>古风</span><em>© 创作者22746174 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202402/27/AvSL6Qo0Fw8Zzlv.jpg" alt="古风搭配灵感图2 · 来自堆糖" width="1179" height="1589" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1515203496" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>古风</span><em>© 创作者22746174 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202402/27/Q2SZD9wPH85eGn0.jpg" alt="古风搭配灵感图3 · 来自堆糖" width="1154" height="1600" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1515203499" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>古风</span><em>© 创作者22746174 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202402/27/DWSV7OlgFdlqGbg.jpg" alt="古风搭配灵感图4 · 来自堆糖" width="1179" height="1519" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1515203497" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>古风</span><em>© 创作者22746174 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202402/27/aLSAd7Zyt0BYG6o.jpg" alt="古风搭配灵感图5 · 来自堆糖" width="1046" height="1600" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1515203495" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>古风</span><em>© 创作者22746174 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202402/27/ZOS5PJ6QFmVg2ex.jpg" alt="古风搭配灵感图6 · 来自堆糖" width="1053" height="1600" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1515203494" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>古风</span><em>© 创作者22746174 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://imglf4.lf127.net/img/ab8c5d5b4e415b69/Vlc2a3dGL2hNT0VkZCtxVENEc0NONUFHUWx2ekRZcnp0MFJGRTc5Z0daUT0.jpg?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg%7Cwatermark&amp;type=2&amp;text=QCBDaGlhcmHvvIjpmL_pm4XvvIkgIExPRlRFUiBJRDogY2hpYXJhYXlh&amp;font=bXN5aA==&amp;gravity=southwest&amp;dissolve=100&amp;fontsize=680&amp;dx=32&amp;dy=36&amp;stripmeta=0" alt="古风搭配灵感图7 · 来自Lofter"  loading="lazy">
-  <a class="src-link" href="1f57141b_34fa935c0" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>古风</span><em>© Chiara（阿雅） · Lofter</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://imglf5.lf127.net/img/2171cf2dbf6620a1/K3YvVThlSEFSOXJtaVBTWmllZm9VUFljZTFmZVFQdGJsNS9la0gvejJ6OD0.jpg?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg%7Cwatermark&amp;type=2&amp;text=QCDmiJHpm7fnlLfpk5zvvIjmnYLpo5_lhZrli7_lhbPvvIkgIExPRlRFUiBJRDogd2FuZ25pbWFkZWdlbmc=&amp;font=bXN5aA==&amp;gravity=southwest&amp;dissolve=100&amp;fontsize=340&amp;dx=16&amp;dy=20&amp;stripmeta=0" alt="古风搭配灵感图8 · 来自Lofter"  loading="lazy">
-  <a class="src-link" href="1def78fd_34f948a05" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>古风</span><em>© 我雷男铜（杂食党勿关） · Lofter</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://imglf6.lf127.net/img/80705d516bac03ef/RjJoNTZ6WEZYdU1rOS9uQUpDTmFheEQyZEcxWllGL1U0Y2dwWnZyZ3Vnaz0.jpg?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg%7Cwatermark&amp;type=2&amp;text=QCDmmKDlsbHnuqLmmKDmu6HlsbHnuqIgIExPRlRFUiBJRDogYXphbGVhNzc0NjMyMDUyMTU0&amp;font=bXN5aA==&amp;gravity=southwest&amp;dissolve=100&amp;fontsize=680&amp;dx=32&amp;dy=36&amp;stripmeta=0" alt="古风搭配灵感图9 · 来自Lofter"  loading="lazy">
-  <a class="src-link" href="b03cdf5c_34f9f4c25" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>古风</span><em>© 映山红映满山红 · Lofter</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://imglf3.lf127.net/img/14833de5cb298966/RjJoNTZ6WEZYdU84clRqNlZzTzFYV09Sdld2T21mckRwTTVXVFF0UlBNND0.jpg?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg%7Cwatermark&amp;type=2&amp;text=QCDmmKDlsbHnuqLmmKDmu6HlsbHnuqIgIExPRlRFUiBJRDogYXphbGVhNzc0NjMyMDUyMTU0&amp;font=bXN5aA==&amp;gravity=southwest&amp;dissolve=100&amp;fontsize=680&amp;dx=32&amp;dy=36&amp;stripmeta=0" alt="古风搭配灵感图10 · 来自Lofter"  loading="lazy">
-  <a class="src-link" href="b03cdf5c_34f856938" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>古风</span><em>© 映山红映满山红 · Lofter</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://imglf4.lf127.net/img/5fe46b023579262d/bzZGZUtzcjBwUmVLNWFxN09NWkFBb2I1WEtJRkNhYjE2bU1sdWlPc3BLcz0.jpg?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="古风搭配灵感图11 · 来自Lofter"  loading="lazy">
-  <a class="src-link" href="2003b9c0_34f9d077c" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>古风</span><em>© 奶酪狗修图 · Lofter</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://imglf4.lf127.net/img/92a95cef2cda688c/c2cxeXVTL2ZLV3ZRQTRnVXdUZUdQLy82bGU4S3kwbVhISUxkcTU2ZnFuST0.jpg?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg%7Cwatermark&amp;type=2&amp;text=QCDogqXkuobkuKrpuK0gIExPRlRFUiBJRDogaGg3OTkyNzQ3NTA=&amp;font=bXN5aA==&amp;gravity=southwest&amp;dissolve=100&amp;fontsize=680&amp;dx=32&amp;dy=36&amp;stripmeta=0" alt="古风搭配灵感图12 · 来自Lofter"  loading="lazy">
-  <a class="src-link" href="1da3dd1d_34fa2dfdf" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>古风</span><em>© 肥了个鸭 · Lofter</em></figcaption>
-</figure></div>
-</section>
-<section class="sec" id="qipao" style="background:radial-gradient(900px 400px at 70% 0%,#c23a5222,transparent 65%)">
-  <div class="sec-head" style="color:#c23a52">
-    <h2>旗袍 · 优雅</h2>
-    <p style="color:#d8c9de">东方美的极致剪裁。 —— <a style="color:#c23a52" href="/style/qipao.html">进入完整图鉴 →</a></p>
-  </div>
-  <div class="masonry"><figure class="shot">
-  <img src="https://imglf5.lf127.net/img/2a301209f7887d43/NUx4Z0t6eTBKaUM0b1l5Rk9SZGZINTE5WHMrTG5yTW03eisxb2RYcGZaQT0.png?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0" alt="旗袍搭配灵感图1 · 来自Lofter"  loading="lazy">
-  <a class="src-link" href="1f0230b1_34f83265b" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>旗袍</span><em>© 旗袍集 · Lofter</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://imglf6.lf127.net/img/c490b93bc3198184/NUx4Z0t6eTBKaUJHRmVtTnFsMzFwRzlJOExDV0JBR3E2dDJrb00xVC9JMD0.jpg?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="旗袍搭配灵感图2 · 来自Lofter"  loading="lazy">
-  <a class="src-link" href="1f0230b1_34f921ce7" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>旗袍</span><em>© 旗袍集 · Lofter</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://imglf3.lf127.net/img/70e19a78dce36b14/MDhxSWN0YmNJb0FHWFdsYkl1RW0vd0szbWJ0TzdHbUd1QnkvTTV6Y0N2ST0.jpg" alt="旗袍搭配灵感图3 · 来自Lofter"  loading="lazy">
-  <a class="src-link" href="7afec2bf_34f9f344c" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>旗袍</span><em>© 氨铨 · Lofter</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://imglf5.lf127.net/img/5185628e808aa4d2/WFpxT0hDdk9tUDFJMXludXQ4cDkydWtKZG1nSEJmbUZhQkFpSnlnNHlrbz0.jpg?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="旗袍搭配灵感图4 · 来自Lofter"  loading="lazy">
-  <a class="src-link" href="457bcb_34fa82d2a" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>旗袍</span><em>© Adelaina · Lofter</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://imglf4.lf127.net/img/47bb663f759d8b00/QmxleTk1RGVLeEhSYzFRYnVORkJ4cisvT0x4cXJVWGJPcUYvaS9GN2J5ND0.jpg?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="旗袍搭配灵感图5 · 来自Lofter"  loading="lazy">
-  <a class="src-link" href="4c0155f7_34f8027c5" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>旗袍</span><em>© Citizen. · Lofter</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://imglf5.lf127.net/img/80811a6943050d02/Sy9jalloMUtxaE54anBpcVg4UWNJM3BoM2FLK01BZ2tTZTlWOVBzODF0MD0.jpg?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="旗袍搭配灵感图6 · 来自Lofter"  loading="lazy">
-  <a class="src-link" href="3ac575_34f828e0b" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>旗袍</span><em>© 落叶而已~ · Lofter</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://imglf6.lf127.net/img/e098239e6336b540/NUx4Z0t6eTBKaUM0b1l5Rk9SZGZINFJjWkhnMExCRUdwcXV0aTVKbFd6Yz0.png?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0" alt="旗袍搭配灵感图7 · 来自Lofter"  loading="lazy">
-  <a class="src-link" href="1f0230b1_34f83536c" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>旗袍</span><em>© 旗袍集 · Lofter</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://imglf4.lf127.net/img/727188df61eafe0c/NUx4Z0t6eTBKaUJFbWRBWDMzYkVURjkvcDRVMXp3ZHNZVGZtOUxGWTY5QT0.png?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0" alt="旗袍搭配灵感图8 · 来自Lofter"  loading="lazy">
-  <a class="src-link" href="1f0230b1_34f8709e4" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>旗袍</span><em>© 旗袍集 · Lofter</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://imglf5.lf127.net/img/de46e47a55c4d17c/NUx4Z0t6eTBKaUJuQ0pUZmZ2SWtFWEUrWmR6QVpaVEdqb3pRcGhMZjF4MD0.png?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0" alt="旗袍搭配灵感图9 · 来自Lofter"  loading="lazy">
-  <a class="src-link" href="1f0230b1_34f8353f3" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>旗袍</span><em>© 旗袍集 · Lofter</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://imglf6.lf127.net/img/76e57c5dec8f733f/NUx4Z0t6eTBKaUJGa0pKNTE5Q2U0QkZob1FEaHUwZFBPNXF1a1BkY0dkZz0.jpg?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="旗袍搭配灵感图10 · 来自Lofter"  loading="lazy">
-  <a class="src-link" href="1f0230b1_34f85b2d9" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>旗袍</span><em>© 旗袍集 · Lofter</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://imglf4.lf127.net/img/e43be10bcabc389b/MUhHVWJLU0dHaWNIam9mRTFoZ1huWnllYVFwbDRnVmY4MHBTRVplcWVaRT0.jpg?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="旗袍搭配灵感图11 · 来自Lofter"  loading="lazy">
-  <a class="src-link" href="ad6a5296_34f7e14cc" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>旗袍</span><em>© 老迪and小安 · Lofter</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://imglf4.lf127.net/img/30107604b218b5a6/NUx4Z0t6eTBKaUJGa0pKNTE5Q2U0TTdrRm9iM0FweEY3QXMrUWFEVi9VST0.jpg?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="旗袍搭配灵感图12 · 来自Lofter"  loading="lazy">
-  <a class="src-link" href="1f0230b1_34f85babd" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>旗袍</span><em>© 旗袍集 · Lofter</em></figcaption>
-</figure></div>
-</section>
-<section class="sec" id="sweet" style="background:radial-gradient(900px 400px at 70% 0%,#e0609e22,transparent 65%)">
-  <div class="sec-head" style="color:#e0609e">
-    <h2>甜美 · 少女</h2>
-    <p style="color:#d8c9de">马卡龙色的心动日常。 —— <a style="color:#e0609e" href="/style/sweet.html">进入完整图鉴 →</a></p>
-  </div>
-  <div class="masonry"><figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202205/25/20220525133152_8257b.jpeg" alt="甜美搭配灵感图1 · 来自堆糖" width="700" height="700" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1402100472" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>甜美</span><em>© 创作者15132108 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/item/202002/28/20200228120935_xxxuw.jpg" alt="甜美搭配灵感图2 · 来自堆糖" width="1024" height="1024" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1198462390" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>甜美</span><em>© 创作者19936398 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202205/25/20220525133154_ec360.jpeg" alt="甜美搭配灵感图3 · 来自堆糖" width="700" height="700" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1402100468" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>甜美</span><em>© 创作者15132108 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/item/202002/28/20200228120938_gdpfe.jpg" alt="甜美搭配灵感图4 · 来自堆糖" width="1024" height="1024" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1198462387" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>甜美</span><em>© 创作者19936398 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202205/25/20220525133153_d343c.jpeg" alt="甜美搭配灵感图5 · 来自堆糖" width="700" height="700" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1402100470" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>甜美</span><em>© 创作者15132108 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/item/201806/16/20180616194946_uwX8R.jpeg" alt="甜美搭配灵感图6 · 来自堆糖" width="690" height="1380" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=941313045" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>甜美</span><em>© 创作者2827426 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/item/202001/07/20200107025417_ihWuJ.jpeg" alt="甜美搭配灵感图7 · 来自堆糖" width="1000" height="2000" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1171811889" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>甜美</span><em>© 创作者17720060 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202403/25/6zSdgqqeHqL4vab.jpg" alt="甜美搭配灵感图8 · 来自堆糖" width="1080" height="1040" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1518466643" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>甜美</span><em>© 创作者17177446 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202412/09/XxSY26XosQXBOx8.jpeg" alt="甜美搭配灵感图9 · 来自堆糖" width="1440" height="1440" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1543770060" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>甜美</span><em>© 创作者20929796 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202412/09/aLSj9bBWf0PXmdv.jpeg" alt="甜美搭配灵感图10 · 来自堆糖" width="1290" height="1290" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1543770061" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>甜美</span><em>© 创作者20929796 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202412/09/lGS2OyXjixd18yy.png" alt="甜美搭配灵感图11 · 来自堆糖" width="700" height="700" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1543770059" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>甜美</span><em>© 创作者20929796 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/item/202102/22/20210222104754_wEni4.jpeg" alt="甜美搭配灵感图12 · 来自堆糖" width="1600" height="2133" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1324679044" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>甜美</span><em>© 创作者1976638 · 堆糖</em></figcaption>
-</figure></div>
-</section>
-<section class="sec" id="sexy" style="background:radial-gradient(900px 400px at 70% 0%,#e0475f22,transparent 65%)">
-  <div class="sec-head" style="color:#e0475f">
-    <h2>辣妹 · 性感</h2>
-    <p style="color:#d8c9de">自信张扬，锋芒万丈。 —— <a style="color:#e0475f" href="/style/sexy.html">进入完整图鉴 →</a></p>
-  </div>
-  <div class="masonry"><figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202111/13/20211113230443_d7694.jpg" alt="辣妹搭配灵感图1 · 来自堆糖" width="1080" height="1080" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1373965825" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>辣妹</span><em>© 创作者25868676 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202111/13/20211113230442_9cf9a.jpg" alt="辣妹搭配灵感图2 · 来自堆糖" width="1080" height="1080" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1373965826" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>辣妹</span><em>© 创作者25868676 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202111/13/20211113230449_ba94f.jpg" alt="辣妹搭配灵感图3 · 来自堆糖" width="1080" height="1080" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1373965821" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>辣妹</span><em>© 创作者25868676 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202111/13/20211113230440_5e7d9.jpg" alt="辣妹搭配灵感图4 · 来自堆糖" width="1080" height="1080" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1373965828" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>辣妹</span><em>© 创作者25868676 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202111/13/20211113230441_b3bbc.jpg" alt="辣妹搭配灵感图5 · 来自堆糖" width="1080" height="1080" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1373965827" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>辣妹</span><em>© 创作者25868676 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202111/13/20211113230444_d8040.jpg" alt="辣妹搭配灵感图6 · 来自堆糖" width="1080" height="1080" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1373965824" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>辣妹</span><em>© 创作者25868676 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202111/13/20211113230438_0ec5e.jpg" alt="辣妹搭配灵感图7 · 来自堆糖" width="1080" height="1080" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1373965829" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>辣妹</span><em>© 创作者25868676 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202111/13/20211113230446_4444a.jpg" alt="辣妹搭配灵感图8 · 来自堆糖" width="1080" height="1080" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1373965823" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>辣妹</span><em>© 创作者25868676 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202111/13/20211113230446_0832a.jpg" alt="辣妹搭配灵感图9 · 来自堆糖" width="1080" height="1080" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1373965822" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>辣妹</span><em>© 创作者25868676 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202208/25/20220825200248_4ceab.png" alt="辣妹搭配灵感图10 · 来自堆糖" width="700" height="700" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1421787542" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>辣妹</span><em>© 创作者27255079 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202208/25/20220825200201_18db2.png" alt="辣妹搭配灵感图11 · 来自堆糖" width="700" height="699" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1421787371" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>辣妹</span><em>© 创作者27255079 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202402/29/2YSZm9Q0S6gl5g9.png" alt="辣妹搭配灵感图12 · 来自堆糖" width="1202" height="1599" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1515394561" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>辣妹</span><em>© 创作者37359456 · 堆糖</em></figcaption>
-</figure></div>
-</section>
-<section class="sec" id="jk" style="background:radial-gradient(900px 400px at 70% 0%,#3f6fd822,transparent 65%)">
-  <div class="sec-head" style="color:#3f6fd8">
-    <h2>JK · 制服</h2>
-    <p style="color:#d8c9de">青春感拉满的学院风。 —— <a style="color:#3f6fd8" href="/style/jk.html">进入完整图鉴 →</a></p>
-  </div>
-  <div class="masonry"><figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/item/201503/14/20150314141211_Mz3sx.jpeg" alt="JK搭配灵感图1 · 来自堆糖" width="440" height="791" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=324260089" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>JK</span><em>© 创作者6877671 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://imglf6.lf127.net/img/dc87687e8a283c22/a20zMWFZbExrM2dNbjRlSEJmaUpaYVFzWFYxQWtrdGN0TmVXcUd5VnFCST0.jpg?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="JK搭配灵感图2 · 来自Lofter"  loading="lazy">
-  <a class="src-link" href="75d62c6f_34f82f534" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>JK</span><em>© 转运桃桃 · Lofter</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/item/201611/02/20161102032317_FWkwZ.jpeg" alt="JK搭配灵感图3 · 来自堆糖" width="549" height="960" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=662383863" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>JK</span><em>© 创作者2305497 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/item/201611/19/20161119203022_kRZuM.jpeg" alt="JK搭配灵感图4 · 来自堆糖" width="750" height="5500" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=670097792" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>JK</span><em>© 创作者9201245 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202108/11/20210811001357_da17c.jpg" alt="JK搭配灵感图5 · 来自堆糖" width="1080" height="1080" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1359147964" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>JK</span><em>© 创作者10652420 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202108/11/20210811001358_35ede.jpg" alt="JK搭配灵感图6 · 来自堆糖" width="1080" height="1080" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1359147962" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>JK</span><em>© 创作者10652420 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/item/201912/07/20191207172636_iloql.png" alt="JK搭配灵感图7 · 来自堆糖" width="1079" height="1074" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1161972045" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>JK</span><em>© 创作者12480468 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202108/11/20210811001254_fdd37.jpg" alt="JK搭配灵感图8 · 来自堆糖" width="1080" height="1080" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1359147716" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>JK</span><em>© 创作者10652420 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202108/11/20210811001253_98701.jpg" alt="JK搭配灵感图9 · 来自堆糖" width="1080" height="1080" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1359147718" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>JK</span><em>© 创作者10652420 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202108/11/20210811001253_be106.jpg" alt="JK搭配灵感图10 · 来自堆糖" width="1080" height="1080" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1359147720" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>JK</span><em>© 创作者10652420 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202108/11/20210811001253_d238e.jpg" alt="JK搭配灵感图11 · 来自堆糖" width="1080" height="1080" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1359147719" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>JK</span><em>© 创作者10652420 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202108/11/20210811001251_911d7.jpg" alt="JK搭配灵感图12 · 来自堆糖" width="1080" height="1080" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1359147724" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>JK</span><em>© 创作者10652420 · 堆糖</em></figcaption>
-</figure></div>
-</section>
-<section class="sec" id="street" style="background:radial-gradient(900px 400px at 70% 0%,#0ea5a522,transparent 65%)">
-  <div class="sec-head" style="color:#0ea5a5">
-    <h2>街头 · 潮流</h2>
-    <p style="color:#d8c9de">都市酷感，随性出街。 —— <a style="color:#0ea5a5" href="/style/street.html">进入完整图鉴 →</a></p>
-  </div>
-  <div class="masonry"><figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202207/15/20220715152421_d090e.jpg" alt="街头搭配灵感图1 · 来自堆糖" width="1080" height="1439" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1412335308" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>街头</span><em>© 创作者2508660 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202411/13/bYSXp4BiLy69l6.jpeg" alt="街头搭配灵感图2 · 来自堆糖" width="543" height="746" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1542037349" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202411/13/bYSXp4BiLy69Qe.jpeg" alt="街头搭配灵感图3 · 来自堆糖" width="690" height="857" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1542037341" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202411/13/ZOSN9gvSm64nZ1.jpeg" alt="街头搭配灵感图4 · 来自堆糖" width="665" height="843" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1542037343" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202411/13/M6SAjGOFBY5jOY.jpeg" alt="街头搭配灵感图5 · 来自堆糖" width="677" height="817" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1542037344" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202411/13/n6SVm56h93d5mV.jpeg" alt="街头搭配灵感图6 · 来自堆糖" width="690" height="857" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1542037339" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202411/13/DWSQo3Mtd0XMY3.jpeg" alt="街头搭配灵感图7 · 来自堆糖" width="583" height="737" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1542037338" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202411/13/d3S7OXNhq4V67B.jpeg" alt="街头搭配灵感图8 · 来自堆糖" width="690" height="839" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1542037336" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202411/13/z2SGpb8uxBaqzj.jpeg" alt="街头搭配灵感图9 · 来自堆糖" width="595" height="770" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1542037342" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202507/31/V2Sa7zJhm0plpB.jpeg" alt="街头搭配灵感图10 · 来自堆糖" width="1109" height="1667" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1558488124" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202505/16/bYSXp4BiLoE2ae.jpeg" alt="街头搭配灵感图11 · 来自堆糖" width="532" height="772" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1553960428" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202309/24/n6S1woqF9AqAN8.jpg" alt="街头搭配灵感图12 · 来自堆糖" width="1148" height="1405" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1493815574" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>街头</span><em>© 创作者2508660 · 堆糖</em></figcaption>
-</figure></div>
-</section>
-<section class="sec" id="winter" style="background:radial-gradient(900px 400px at 70% 0%,#8a6d3b22,transparent 65%)">
-  <div class="sec-head" style="color:#8a6d3b">
-    <h2>秋冬 · 叠穿</h2>
-    <p style="color:#d8c9de">降温天的高级感解法。 —— <a style="color:#8a6d3b" href="/style/winter.html">进入完整图鉴 →</a></p>
-  </div>
-  <div class="masonry"><figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202412/16/V2SAJeACm42Alg.jpg" alt="秋冬搭配灵感图1 · 来自堆糖" width="1440" height="1920" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1544260395" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>秋冬</span><em>© 创作者999515 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202412/05/GgSnJNnSdMZjEl.jpg" alt="秋冬搭配灵感图2 · 来自堆糖" width="1080" height="1444" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1543545369" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>秋冬</span><em>© 创作者999515 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202412/05/DWSqM0qTdZ58AD.jpg" alt="秋冬搭配灵感图3 · 来自堆糖" width="1080" height="1440" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1543545162" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>秋冬</span><em>© 创作者999515 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202412/05/M6S7Oy7IBNXVz4.jpg" alt="秋冬搭配灵感图4 · 来自堆糖" width="1440" height="1920" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1543545163" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>秋冬</span><em>© 创作者999515 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202412/16/gVSm3NmIQPBNMo.jpg" alt="秋冬搭配灵感图5 · 来自堆糖" width="1080" height="1440" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1544260682" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>秋冬</span><em>© 创作者999515 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202412/16/8gS0Pb0Igw3Ywe.jpg" alt="秋冬搭配灵感图6 · 来自堆糖" width="1273" height="1625" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1544261146" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>秋冬</span><em>© 创作者999515 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202412/16/1mSPJ5PtQXgj1E.jpg" alt="秋冬搭配灵感图7 · 来自堆糖" width="1080" height="1440" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1544261100" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>秋冬</span><em>© 创作者999515 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202412/16/B8SDyBDilenNGa.jpg" alt="秋冬搭配灵感图8 · 来自堆糖" width="1440" height="1920" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1544261140" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>秋冬</span><em>© 创作者999515 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202412/16/lGS4zp4Ixd3YBx.jpg" alt="秋冬搭配灵感图9 · 来自堆糖" width="1080" height="1414" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1544261105" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>秋冬</span><em>© 创作者999515 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202501/08/eASXa2XHMBNlDb.jpg" alt="秋冬搭配灵感图10 · 来自堆糖" width="1440" height="1920" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1545785646" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>秋冬</span><em>© 创作者999515 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202501/08/y9SvP6vhb2ZJ9D.jpg" alt="秋冬搭配灵感图11 · 来自堆糖" width="900" height="1200" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1545786050" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>秋冬</span><em>© 创作者999515 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202501/08/V2SAJeACm4xYnM.jpg" alt="秋冬搭配灵感图12 · 来自堆糖" width="1080" height="1440" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1545785541" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>秋冬</span><em>© 创作者999515 · 堆糖</em></figcaption>
-</figure></div>
-</section>
-<section class="sec" id="beauty" style="background:radial-gradient(900px 400px at 70% 0%,#a855f722,transparent 65%)">
-  <div class="sec-head" style="color:#a855f7">
-    <h2>美妆 · 变美</h2>
-    <p style="color:#d8c9de">妆容灵感与技巧参考。 —— <a style="color:#a855f7" href="/style/beauty.html">进入完整图鉴 →</a></p>
-  </div>
-  <div class="masonry"><figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/item/201806/28/20180628183448_cX2RF.jpeg" alt="美妆搭配灵感图1 · 来自堆糖" width="1600" height="2049" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=947394957" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>美妆</span><em>© 创作者1558219 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/item/201811/09/20181109105112_Jn5tR.jpeg" alt="美妆搭配灵感图2 · 来自堆糖" width="1600" height="2049" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1016322928" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>美妆</span><em>© 创作者1558219 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/item/201901/29/20190129085928_yqhyf.jpg" alt="美妆搭配灵感图3 · 来自堆糖" width="960" height="954" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1050545774" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>美妆</span><em>© 创作者9568178 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/item/201811/09/20181109105114_BAGJL.jpeg" alt="美妆搭配灵感图4 · 来自堆糖" width="1600" height="2049" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1016322926" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>美妆</span><em>© 创作者1558219 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/item/201801/27/20180127231016_ocfir.jpg" alt="美妆搭配灵感图5 · 来自堆糖" width="750" height="750" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=876930897" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>美妆</span><em>© 创作者9568178 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202012/04/20201204151041_90c5c.jpg" alt="美妆搭配灵感图6 · 来自堆糖" width="1079" height="1325" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1309956943" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>美妆</span><em>© 创作者17712787 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/item/201912/12/20191212102230_bwrjo.jpg" alt="美妆搭配灵感图7 · 来自堆糖" width="1080" height="1080" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1163404694" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>美妆</span><em>© 创作者9568178 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/item/202003/04/20200304121050_djqbp.jpg" alt="美妆搭配灵感图8 · 来自堆糖" width="988" height="988" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1201597157" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>美妆</span><em>© 创作者9568178 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/item/201912/12/20191212102231_qermi.jpg" alt="美妆搭配灵感图9 · 来自堆糖" width="1080" height="1080" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1163404693" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>美妆</span><em>© 创作者9568178 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/item/201804/17/20180417175843_8iNaY.jpeg" alt="美妆搭配灵感图10 · 来自堆糖" width="1600" height="2049" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=914315703" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>美妆</span><em>© 创作者1558219 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/item/201901/29/20190129085913_pbgiv.jpg" alt="美妆搭配灵感图11 · 来自堆糖" width="900" height="900" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1050545685" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>美妆</span><em>© 创作者9568178 · 堆糖</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://a-ho-img.dtstatic.com/uploads/item/201904/22/20190422231711_gqgyo.jpg" alt="美妆搭配灵感图12 · 来自堆糖" width="1125" height="2790" loading="lazy">
-  <a class="src-link" href="https://www.duitang.com/blog/?id=1081042162" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>美妆</span><em>© 创作者9568178 · 堆糖</em></figcaption>
-</figure></div>
-</section>
-<section class="sec" id="korean" style="background:radial-gradient(900px 400px at 70% 0%,#3b82f622,transparent 65%)">
-  <div class="sec-head" style="color:#3b82f6">
-    <h2>韩系 · 街拍</h2>
-    <p style="color:#d8c9de">首尔街头的心动瞬间。 —— <a style="color:#3b82f6" href="/style/korean.html">进入完整图鉴 →</a></p>
-  </div>
-  <div class="masonry"><figure class="shot">
-  <img src="https://image.msscdn.net/thumbnails/snap/images/2026/11/14/d5143e3cf7cd452089f7eb479733727b.jpg?w=700" alt="韩系搭配灵感图1 · 来自Musinsa"  loading="lazy">
-  <a class="src-link" href="https://www.musinsa.comhttps://www.musinsa.com/snap/1571017904933404227" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>韩系</span><em>© 스냅创作者 · Musinsa</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://image.msscdn.net/thumbnails/snap/images/2026/11/14/e500e2c3908a407189046fa7c1f51484.jpg?w=700" alt="韩系搭配灵感图2 · 来自Musinsa"  loading="lazy">
-  <a class="src-link" href="https://www.musinsa.comhttps://www.musinsa.com/snap/1571017904933404227" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>韩系</span><em>© 스냅创作者 · Musinsa</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://image.msscdn.net/thumbnails/snap/images/2026/11/14/e4a51b334aa8492a80e2d0dca4724f18.jpg?w=700" alt="韩系搭配灵感图3 · 来自Musinsa"  loading="lazy">
-  <a class="src-link" href="https://www.musinsa.comhttps://www.musinsa.com/snap/1571017904933404227" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>韩系</span><em>© 스냅创作者 · Musinsa</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://image.msscdn.net/thumbnails/snap/images/2026/11/14/f399db469bf941c18caaeb871dc1c93b.jpg?w=700" alt="韩系搭配灵感图4 · 来自Musinsa"  loading="lazy">
-  <a class="src-link" href="https://www.musinsa.comhttps://www.musinsa.com/snap/1571017904933404227" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>韩系</span><em>© 스냅创作者 · Musinsa</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://image.msscdn.net/thumbnails/snap/images/2026/11/14/8e8718b1ea4c4494abd4762587924f15.jpg?w=700" alt="韩系搭配灵感图5 · 来自Musinsa"  loading="lazy">
-  <a class="src-link" href="https://www.musinsa.comhttps://www.musinsa.com/snap/1571017904933404227" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>韩系</span><em>© 스냅创作者 · Musinsa</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://image.msscdn.net/thumbnails/snap/images/2026/11/14/5717ff4fcf8b4a66975eb5d8003940f9.jpg?w=700" alt="韩系搭配灵感图6 · 来自Musinsa"  loading="lazy">
-  <a class="src-link" href="https://www.musinsa.comhttps://www.musinsa.com/snap/1570857492773592517" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>韩系</span><em>© 스냅创作者 · Musinsa</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://image.msscdn.net/thumbnails/snap/images/2026/11/14/9b4fcd00fcfa479083314a9ace5d5068.jpg?w=700" alt="韩系搭配灵感图7 · 来自Musinsa"  loading="lazy">
-  <a class="src-link" href="https://www.musinsa.comhttps://www.musinsa.com/snap/1570857492773592517" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>韩系</span><em>© 스냅创作者 · Musinsa</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://image.msscdn.net/thumbnails/snap/images/2026/11/14/eb69418392b7430a8876262715b17475.jpg?w=700" alt="韩系搭配灵感图8 · 来自Musinsa"  loading="lazy">
-  <a class="src-link" href="https://www.musinsa.comhttps://www.musinsa.com/snap/1570857492773592517" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>韩系</span><em>© 스냅创作者 · Musinsa</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://image.msscdn.net/thumbnails/snap/images/2026/11/14/40d2e22c066c47c18b551d62775e6c74.jpg?w=700" alt="韩系搭配灵感图9 · 来自Musinsa"  loading="lazy">
-  <a class="src-link" href="https://www.musinsa.comhttps://www.musinsa.com/snap/1570857492773592517" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>韩系</span><em>© 스냅创作者 · Musinsa</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://image.msscdn.net/thumbnails/snap/images/2026/11/14/84d85108e379445c867a519c78754200.jpg?w=700" alt="韩系搭配灵感图10 · 来自Musinsa"  loading="lazy">
-  <a class="src-link" href="https://www.musinsa.comhttps://www.musinsa.com/snap/1570857492773592517" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>韩系</span><em>© 스냅创作者 · Musinsa</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://image.msscdn.net/thumbnails/snap/images/2026/11/12/cd90b2c86a2c491c94873baa36bf0338.jpg?w=700" alt="韩系搭配灵感图11 · 来自Musinsa"  loading="lazy">
-  <a class="src-link" href="https://www.musinsa.comhttps://www.musinsa.com/snap/1570451207594349453" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>韩系</span><em>© 스냅创作者 · Musinsa</em></figcaption>
-</figure>
-<figure class="shot">
-  <img src="https://image.msscdn.net/thumbnails/snap/images/2026/11/12/d9080fdb3498454788118b39f297bafc.jpg?w=700" alt="韩系搭配灵感图12 · 来自Musinsa"  loading="lazy">
-  <a class="src-link" href="https://www.musinsa.comhttps://www.musinsa.com/snap/1570272140555360989" target="_blank" rel="nofollow noopener">来源↗</a>
-  <figcaption class="cap"><span>韩系</span><em>© 스냅创作者 · Musinsa</em></figcaption>
-</figure></div>
-</section>
-<section class="sec" id="ailab" style="padding-top:2.5rem">
+<section class="sec" id="ailab" style="padding-top:1.5rem">
   <div class="sec-head" style="color:#c793ff">
     <h2>🎨 AI 画法研究所</h2>
     <p style="color:#d8c9de">把游戏、影视、流行文化的美学翻译成可直接复制的 prompt —— 热点追更 + 常青风格库</p>
   </div>
-  <div class="sgrid" style="grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr))"><a class='scard' style='padding:1rem;display:block' href=/topics/cny-hanfu-ai'><div class='sname'>📚 春节 AI 生成国风大片：从拜年服到新中式的完整 prompt 方案</div><div class='smeta' style='margin-top:.4rem;line-height:1.7'>每年春节是汉服与国风视觉的流量峰值（拜年服、全家福、古镇旅拍三场景）。这篇把春节国风的三大场景拆成可复制的 prompt…</div></a>
+  <div class="tgrid"><a class='scard' style='padding:1rem;display:block' href=/topics/cny-hanfu-ai'><div class='sname'>📚 春节 AI 生成国风大片：从拜年服到新中式的完整 prompt 方案</div><div class='smeta' style='margin-top:.4rem;line-height:1.7'>每年春节是汉服与国风视觉的流量峰值（拜年服、全家福、古镇旅拍三场景）。这篇把春节国风的三大场景拆成可复制的 prompt…</div></a>
 <a class='scard' style='padding:1rem;display:block' href=/topics/cyberpunk-vs-miami'><div class='sname'>📚 赛博朋克 vs 迈阿密美学：一张表分清两种霓虹</div><div class='smeta' style='margin-top:.4rem;line-height:1.7'>两种最容易混淆的霓虹风格——一个来自银翼杀手的高密度未来城市，一个来自 GTA6 的迈阿密黄昏。写错一个词，画面气质完全…</div></a>
 <a class='scard' style='padding:1rem;display:block' href=/topics/fabric-texture-prompt'><div class='sname'>📚 面料质感 AI prompt 指南：让布料「可以被摸到」</div><div class='smeta' style='margin-top:.4rem;line-height:1.7'>面料是 AI 生图的公认难点（the fabric problem）——丝绒要哑光堆褶、纱要半透分层、缎要流光。这篇给出…</div></a>
 <a class='scard' style='padding:1rem;display:block' href=/topics/gta6-style-prompt'><div class='sname'>🔥 如何用 AI 生成 GTA6 风格画面：迈阿密霓虹美学完整指南</div><div class='smeta' style='margin-top:.4rem;line-height:1.7'>GTA6（2026-05-26 发售，Leonida 州 / Vice City）把「迈阿密霓虹美学」推回全球视野——粉…</div></a>
@@ -676,7 +92,6 @@ footer .source{opacity:.6;font-size:.78rem;margin-top:.6rem;line-height:1.7}
 <a class='scard' style='padding:1rem;display:block' href=/topics/nikki-art-reference'><div class='sname'>📚 游戏时装 AI 参考：暖暖系原画的借色与再创作</div><div class='smeta' style='margin-top:.4rem;line-height:1.7'>游戏原画师与同人画师的真实工作流：找设定参考 → 拆配色与剪裁 → 再创作。暖暖系 2000+ 套装是最全的「中式幻想时…</div></a>
 <a class='scard' style='padding:1rem;display:block' href=/topics/photo-to-prompt-method'><div class='sname'>📚 真人照片转 AI prompt：把穿搭图变成可生成描述的方法论</div><div class='smeta' style='margin-top:.4rem;line-height:1.7'>AI 创作者最被低估的技能：把一张真实穿搭照片反向拆解成 prompt。本站 4700 张真实穿搭图的每一张，都是这个方…</div></a>
 <a class='scard' style='padding:1rem;display:block' href=/topics/wedding-dress-ai-guide'><div class='sname'>📚 婚纱礼服 AI 生成指南：从婚纱摄影感到高定感</div><div class='smeta' style='margin-top:.4rem;line-height:1.7'>婚纱是 AI 生图里客单价最高的题材（写真/婚礼策划/礼服设计都在用）。三种婚纱质感的 prompt 分野与场景光线配方…</div></a></div>
-  <p style="margin-top:1rem"><a style="color:#c793ff" href="/topics.html">进入研究所查看全部专题 →</a></p>
 </section>
 <section class="sec" id="today" style="padding-top:1rem">
   <div class="sec-head" style="color:#ffd9a8">
@@ -698,6 +113,13 @@ footer .source{opacity:.6;font-size:.78rem;margin-top:.6rem;line-height:1.7}
 <figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/item/201510/06/20151006151748_k2Vxu.jpeg" alt="今日精选搭配灵感13" loading="lazy"><figcaption class="cap"><span>化妆教程</span><em>查看 ↗</em></figcaption></figure>
 <figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/item/201902/17/20190217232013_oexcg.jpg" alt="今日精选搭配灵感14" loading="lazy"><figcaption class="cap"><span>化妆教程</span><em>查看 ↗</em></figcaption></figure></div>
 </section>
+<section class="sec" id="styles-quick">
+  <div class="sec-head" style="color:#ff7eb3">
+    <h2>风格图鉴速览</h2>
+    <p style="color:#d8c9de">九种风格 · 每种都有完整图鉴页 ——</p>
+  </div>
+  " + chr(10).join(style_rows) + "
+</section>
 <section class="sec" id="collections">
   <div class="sec-head" style="color:#ff7eb3">
     <h2>策展合集</h2>
@@ -705,24 +127,17 @@ footer .source{opacity:.6;font-size:.78rem;margin-top:.6rem;line-height:1.7}
   </div>
   <nav class="stylechips" style="margin-top:.5rem;justify-content:flex-start">
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#e8608a66)" href="/collection/starry-night">星夜漫游</a>
-    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#c793ff66)" href="/collection/fairytale-dream">童话与梦</a>
-    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#ffd9a866)" href="/collection/spring-floral">花开时节</a>
-    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#8ec5ff66)" href="/collection/ocean-rain">海洋与雨</a>
-    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#b5548c66)" href="/collection/dark-gothic">暗夜哥特</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#3f6fd866)" href="/collection/jk-uniform">JK 制服</a>
-    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#e0609e66)" href="/collection/sweet-girl">甜妹精选</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#cbb8d466)" href="/collection/quiet-luxury">静奢风</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#e0475f66)" href="/collection/dopamine">多巴胺</a>
-    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#8a6d3b66)" href="/collection/millard">美拉德</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#0ea5a566)" href="/collection/new-chinese">新中式</a>
-    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#c23a5266)" href="/collection/qipao-modern">旗袍现代</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#b5548c66)" href="/collection/hanfu-daily">汉服日常</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#ffd9a866)" href="/collection/travel-hanfu">古镇旅拍</a>
   </nav>
 </section>
 <footer>
   <div><b style="color:#f5c76e">FitSaga</b> · 每一套时装，都是一个故事</div>
-  <div class="links"><a href="/style/hanfu.html">风格图鉴</a><a href="/nikki/infinity.html">无限暖暖</a><a href="/nikki/miracle.html">奇迹暖暖</a><a href="/zara.html">ZARA大片</a></div>
+  <div class="links"><a href="/style/hanfu.html">风格图鉴</a><a href="/guide.html">穿搭研究所</a><a href="/topics.html">画法研究所</a><a href="/ai.html">AI 灵感</a><a href="/zara.html">ZARA</a></div>
   <div class="source">图片版权归原创作者所有，点击图片访问原始分享页 · © 2026 FitSaga</div>
 </footer>
 <script src="/lightbox.js" defer></script>

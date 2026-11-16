@@ -15,5 +15,25 @@
    "Do light words behave the same across models?",
    "Midjourney is direction-sensitive; FLUX obeys natural sentences; SDXL often needs LoRA help."
   ]
+ ],
+ "examples": [
+  {
+   "slug": "golden",
+   "title": "Compare 1 - Golden hour",
+   "good_cap": "OK rim light + glowing hair + long soft shadows",
+   "bad_cap": "X vague 'nice lighting'"
+  },
+  {
+   "slug": "window",
+   "title": "Compare 2 - Window light",
+   "good_cap": "OK Rembrandt triangle + dust motes + falloff",
+   "bad_cap": "X generic indoor lighting"
+  },
+  {
+   "slug": "blue",
+   "title": "Compare 3 - Blue hour",
+   "good_cap": "OK deep blue sky + first lights",
+   "bad_cap": "X night+neon without the blue-hour window"
+  }
  ]
 }

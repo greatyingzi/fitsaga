@@ -171,44 +171,37 @@ def topic_cards_html():
     return chr(10).join(cards)
 
 def home():
-    secs = []
-    for s in STYLES:
-        items = fetch_items(s.get("kws"), s.get("musinsa"), limit=12)
-        cards = "\n".join(card(it,i,s["zh"].split(" · ")[0]) for i,it in enumerate(items))
-        secs.append(f'''
-<section class="sec" id="{s["key"]}" style="background:radial-gradient(900px 400px at 70% 0%,{s["accent"]}22,transparent 65%)">
-  <div class="sec-head" style="color:{s["accent"]}">
-    <h2>{s["zh"]}</h2>
-    <p style="color:#d8c9de">{esc(s["desc"])} —— <a style="color:{s["accent"]}" href="/style/{s["key"]}.html">进入完整图鉴 →</a></p>
-  </div>
-  <div class="masonry">{cards}</div>
-</section>''')
-    chips = "".join(f'<a class="chip" style="background:linear-gradient(135deg,#2a1832,{s["accent"]}66)" href="/style/{s["key"]}.html">{s["zh"]}</a>' for s in STYLES)
-    today_cards = today_cards_html()
     topic_cards = topic_cards_html()
+    today_cards = today_cards_html()
+    style_rows = []
+    for s in STYLES:
+        items = fetch_items(s.get("kws"), s.get("musinsa"), limit=4)
+        mini_parts = []
+        for it in items:
+            mini_parts.append('<a class="mini" href="/style/' + s["key"] + '.html"><img src="' + esc(it["img"]) + '" loading="lazy"></a>')
+        mini = chr(10).join(mini_parts)
+        style_rows.append(
+            '<div class="srow">' +
+            '<div class="srow-h" style="color:' + s["accent"] + '"><b>' + esc(s["zh"]) + '</b><a href="/style/' + s["key"] + '.html" class="more">全部 →</a></div>' +
+            '<div class="minirow">' + mini + '</div></div>')
+    chips = ''.join('<a class="chip" style="background:linear-gradient(135deg,#2a1832,' + s["accent"] + '66)" href="/style/' + s["key"] + '.html">' + s["zh"] + '</a>' for s in STYLES)
     body = f'''
-<section class="hero">
-  <h1>每一种美，<br>都值得一场时装冒险 ✦</h1>
-  <p class="sub">穿搭图鉴 × AI 画法<br>古风 · 汉服 · 辣妹 · 婚纱 · 游戏时装 · prompt 灵感</p>
+<section class="hero hero2">
+  <h1>真实穿搭图鉴 <span style="color:#c793ff">×</span> AI 画法研究所</h1>
+  <p class="sub">每一种美，都值得一场时装冒险 —— 图鉴用来找灵感，画法用来做创作</p>
   <nav class="stylechips">
-    <a class="chip" style="background:linear-gradient(135deg,#3a2a44,#c793ff66)" href="/topics.html">🎨 AI 画法研究所</a>
-    {chips}
-  </nav>
-  <nav class="stylechips" style="margin-top:.8rem">
-    <a class="chip" style="background:linear-gradient(135deg,#3a2a44,#ffd9a866)" href="/guide.html">📖 穿搭研究所</a>
+    <a class="chip chip-hero" style="background:linear-gradient(135deg,#3a2a44,#c793ff)" href="/topics.html">🎨 AI 画法研究所</a>
+    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#ffd9a866)" href="/guide.html">📖 穿搭研究所</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#a855f766)" href="/ai.html">✦ AI 灵感图鉴</a>
-    <a class="chip" style="background:linear-gradient(135deg,#3a2a44,#c793ff66)" href="/topics.html">🎨 AI 画法研究所</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#8ec5ff66)" href="/zara.html">ZARA 大片</a>
   </nav>
 </section>
-{"".join(secs)}
-<section class="sec" id="ailab" style="padding-top:2.5rem">
+<section class="sec" id="ailab" style="padding-top:1.5rem">
   <div class="sec-head" style="color:#c793ff">
     <h2>🎨 AI 画法研究所</h2>
     <p style="color:#d8c9de">把游戏、影视、流行文化的美学翻译成可直接复制的 prompt —— 热点追更 + 常青风格库</p>
   </div>
-  <div class="sgrid" style="grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr))">{topic_cards}</div>
-  <p style="margin-top:1rem"><a style="color:#c793ff" href="/topics.html">进入研究所查看全部专题 →</a></p>
+  <div class="tgrid">{topic_cards}</div>
 </section>
 <section class="sec" id="today" style="padding-top:1rem">
   <div class="sec-head" style="color:#ffd9a8">
@@ -217,6 +210,13 @@ def home():
   </div>
   <div class="masonry">{today_cards}</div>
 </section>
+<section class="sec" id="styles-quick">
+  <div class="sec-head" style="color:#ff7eb3">
+    <h2>风格图鉴速览</h2>
+    <p style="color:#d8c9de">九种风格 · 每种都有完整图鉴页 ——</p>
+  </div>
+  " + chr(10).join(style_rows) + "
+</section>
 <section class="sec" id="collections">
   <div class="sec-head" style="color:#ff7eb3">
     <h2>策展合集</h2>
@@ -224,27 +224,20 @@ def home():
   </div>
   <nav class="stylechips" style="margin-top:.5rem;justify-content:flex-start">
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#e8608a66)" href="/collection/starry-night">星夜漫游</a>
-    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#c793ff66)" href="/collection/fairytale-dream">童话与梦</a>
-    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#ffd9a866)" href="/collection/spring-floral">花开时节</a>
-    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#8ec5ff66)" href="/collection/ocean-rain">海洋与雨</a>
-    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#b5548c66)" href="/collection/dark-gothic">暗夜哥特</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#3f6fd866)" href="/collection/jk-uniform">JK 制服</a>
-    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#e0609e66)" href="/collection/sweet-girl">甜妹精选</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#cbb8d466)" href="/collection/quiet-luxury">静奢风</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#e0475f66)" href="/collection/dopamine">多巴胺</a>
-    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#8a6d3b66)" href="/collection/millard">美拉德</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#0ea5a566)" href="/collection/new-chinese">新中式</a>
-    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#c23a5266)" href="/collection/qipao-modern">旗袍现代</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#b5548c66)" href="/collection/hanfu-daily">汉服日常</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#ffd9a866)" href="/collection/travel-hanfu">古镇旅拍</a>
   </nav>
 </section>
 <footer>
   <div><b style="color:#f5c76e">FitSaga</b> · 每一套时装，都是一个故事</div>
-  <div class="links"><a href="/style/hanfu.html">风格图鉴</a><a href="/nikki/infinity.html">无限暖暖</a><a href="/nikki/miracle.html">奇迹暖暖</a><a href="/zara.html">ZARA大片</a></div>
+  <div class="links"><a href="/style/hanfu.html">风格图鉴</a><a href="/guide.html">穿搭研究所</a><a href="/topics.html">画法研究所</a><a href="/ai.html">AI 灵感</a><a href="/zara.html">ZARA</a></div>
   <div class="source">图片版权归原创作者所有，点击图片访问原始分享页 · © 2026 FitSaga</div>
 </footer>'''
-    return page("FitSaga · 每一种美，都值得一场时装冒险", "FitSaga 穿搭图鉴：古风汉服、旗袍、甜美、辣妹、JK、街拍、韩系、美妆——真实搭配灵感，逐张标注来源。", body, "#e8608a")
+    return page("FitSaga · 真实穿搭图鉴 × AI 画法研究所", "FitSaga：真实穿搭灵感图鉴与 AI 画法专题——把每一种美变成可复制的灵感与 prompt。", body, "#e8608a")
 
 def sitemap():
     today = datetime.date.today().isoformat()

@@ -15,5 +15,19 @@
    "Where does lolita generation fail most?",
    "Petticoat silhouette and sleeve shapes. Write 'petticoat' + 'bell-shaped silhouette' as double insurance."
   ]
+ ],
+ "examples": [
+  {
+   "slug": "petticoat",
+   "title": "Compare 1 - Petticoat rule",
+   "good_cap": "OK bell silhouette + candy prints + cafe window",
+   "bad_cap": "X no petticoat = puffy skirt"
+  },
+  {
+   "slug": "jk",
+   "title": "Compare 2 - JK scene",
+   "good_cap": "OK sailor collar + tartan + sakura street",
+   "bad_cap": "X generic school uniform"
+  }
  ]
 }

@@ -15,5 +15,19 @@
    "Can the two styles merge?",
    "Yes with explicit dominance — 'dominant light source'. Fusion often yields unique results."
   ]
+ ],
+ "examples": [
+  {
+   "slug": "neon",
+   "title": "Compare 1 - Cyberpunk neon",
+   "good_cap": "OK neon everywhere + holo + steam = world rule",
+   "bad_cap": "X miami words trying cyberpunk"
+  },
+  {
+   "slug": "miami",
+   "title": "Compare 2 - Miami",
+   "good_cap": "OK gradient sky + palms + pastel accents",
+   "bad_cap": "X cyberpunk words drift"
+  }
  ]
 }
