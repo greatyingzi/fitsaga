@@ -49,6 +49,8 @@ def main():
   <script src="/theme.js" defer></script>
 <div class="source">图片由社区模型生成，版权归各模型作者所有 · 来源 Civitai · © 2026 FitSaga</div></footer>
 <script src="/lightbox.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/theme.js" defer></script>
 </body></html>'''
     (PUB / "ai.html").write_text(page, encoding="utf-8")
     print("ai.html:", total, "imgs")
