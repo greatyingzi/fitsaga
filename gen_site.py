@@ -157,7 +157,7 @@ def today_cards_html(limit=14):
     cards = []
     for i, (img, origin, author, lic, w, h, tags) in enumerate(rows):
         kw = json.loads(tags).get("kw", "") if tags else ""
-        cards.append(f'<figure class="shot"><img src="{htmlMod.escape(img)}" alt="今日精选搭配灵感{i+1}" loading="lazy"><figcaption class="cap"><span>{htmlMod.escape(kw or "精选")}</span><em>查看 ↗</em></figcaption></figure>')
+        cards.append(f'<figure class="shot"><img src="{htmlMod.escape(img)}" alt="{kw or "精选"}搭配灵感{i+1} · FitSaga今日精选" loading="lazy"><figcaption class="cap"><span>{htmlMod.escape(kw or "精选")}</span><em>查看 ↗</em></figcaption></figure>')
     return "\n".join(cards)
 
 def topic_cards_html():

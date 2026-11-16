@@ -1,0 +1,7 @@
+{
+  "pass": 39,
+  "fail": 1,
+  "fails": [
+    "m390__style_hanfu_html:brokenImgs {\"broken\":1,\"hOverflow\":false,\"smallText\":0,\"tapSmall\":0,\"visImgs\":61,\"err\":0} err=0"
+  ]
+}
