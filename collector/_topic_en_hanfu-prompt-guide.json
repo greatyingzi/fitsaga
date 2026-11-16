@@ -21,13 +21,17 @@
    "slug": "hanfu-form",
    "title": "Compare 1 · Form layers",
    "good_cap": "OK: ming dynasty mamian skirt + cross-collar right-over-left + buyao hairpins + garden — form layers all present",
-   "bad_cap": "X: bare 'hanfu dress' — photo-studio mashup, no dynasty identity"
+   "bad_cap": "X: bare 'hanfu dress' — photo-studio mashup, no dynasty identity",
+   "good_prompt": "a woman wearing a ming dynasty mamian skirt with golden brocade, cross-collar right lapel over left top, buyao hairpins, chinese classical garden, soft window light, cinematic still",
+   "bad_prompt": "a woman wearing hanfu dress, chinese garden, photo"
   },
   {
    "slug": "hanfu-dynasty",
    "title": "Compare 2 · Dynasty difference",
    "good_cap": "OK: tang chest-high ruqun + ribbon sash + dancing + fabric floating — Tang flowing silhouette",
-   "bad_cap": "X: bare 'tang costume' — static, costume-rental look"
+   "bad_cap": "X: bare 'tang costume' — static, costume-rental look",
+   "good_prompt": "tang dynasty chest-high ruqun, flowing wide sleeves, ribbon sash, dancing pose, fabric floating in wind, golden hour backlight",
+   "bad_prompt": "tang dynasty costume, standing pose, photo"
   }
  ]
 }

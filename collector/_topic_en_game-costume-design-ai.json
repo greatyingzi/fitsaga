@@ -11,5 +11,23 @@
    "Do I need to draw to use AI for costume design?",
    "No — but you need vocabulary. Our fabric, lighting and palette guides give you the words that replace drawing skills at the concept stage."
   ]
+ ],
+ "examples": [
+  {
+   "slug": "concept",
+   "title": "Compare 1 - Concept sheet look",
+   "good_cap": "OK ornate armor + palette sentence + painterly",
+   "bad_cap": "X 'cool design' - empty words",
+   "good_prompt": "fantasy character costume concept sheet, ornate armor with flowing sash, gold and deep teal palette, painterly concept art, official art style",
+   "bad_prompt": "fantasy character armor, cool design, digital art"
+  },
+  {
+   "slug": "materials",
+   "title": "Compare 2 - Material contrast study",
+   "good_cap": "OK velvet x brushed metal macro study",
+   "bad_cap": "X generic shiny metal",
+   "good_prompt": "costume detail study, velvet and brushed metal contrast, embroidered trim, macro concept art rendering",
+   "bad_prompt": "armor detail, shiny metal, art"
+  }
  ]
 }

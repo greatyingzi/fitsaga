@@ -108,7 +108,7 @@ def main():
                 themes_html += '<h3>' + tname + ' (' + str(len(cards2)) + ')</h3>'
                 themes_html += '<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:.6rem 0 1rem">'
                 for u2, nm2 in cards2:
-                    themes_html += '<figure style="margin:0"><img src="' + u2 + '" loading="lazy" style="width:100%;border-radius:8px"><figcaption style="font-size:.7rem;color:#9d8fa8;margin-top:.2rem">' + nm2 + '</figcaption></figure>'
+                    themes_html += '<figure style="margin:0"><img src="' + u2 + '" alt="' + nm2 + '" loading="lazy" style="width:100%;border-radius:8px"><figcaption style="font-size:.7rem;color:#9d8fa8;margin-top:.2rem">' + nm2 + '</figcaption></figure>'
                 themes_html += '</div>'
             _c2.close()
 

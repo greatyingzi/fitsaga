@@ -21,19 +21,25 @@
    "slug": "golden",
    "title": "Compare 1 - Golden hour",
    "good_cap": "OK rim light + glowing hair + long soft shadows",
-   "bad_cap": "X vague 'nice lighting'"
+   "bad_cap": "X vague 'nice lighting'",
+   "good_prompt": "portrait of a young woman, golden hour, warm rim light, glowing backlight on hair, sun flare, long soft shadows",
+   "bad_prompt": "portrait of a young woman, nice lighting, photo"
   },
   {
    "slug": "window",
    "title": "Compare 2 - Window light",
    "good_cap": "OK Rembrandt triangle + dust motes + falloff",
-   "bad_cap": "X generic indoor lighting"
+   "bad_cap": "X generic indoor lighting",
+   "good_prompt": "indoor portrait, soft window light from left, Rembrandt lighting, gentle light falloff, dust motes in air",
+   "bad_prompt": "indoor portrait, indoor lighting, photo"
   },
   {
    "slug": "blue",
    "title": "Compare 3 - Blue hour",
    "good_cap": "OK deep blue sky + first lights",
-   "bad_cap": "X night+neon without the blue-hour window"
+   "bad_cap": "X night+neon without the blue-hour window",
+   "good_prompt": "city street at blue hour, lights just turned on, deep blue sky, neon signs starting to glow, cinematic",
+   "bad_prompt": "city street at night, neon lights, photo"
   }
  ]
 }

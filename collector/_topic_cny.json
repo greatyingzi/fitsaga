@@ -21,13 +21,17 @@
    "slug": "scene",
    "title": "对照 1 · 场景符号",
    "good_cap": "OK 灯笼+雪+石板街——三要素齐",
-   "bad_cap": "X 只有红灯笼(缺场景叙事)"
+   "bad_cap": "X 只有红灯笼(缺场景叙事)",
+   "good_prompt": "hanfu woman holding red lantern, soft glow on face, ancient chinese town, snow, red lanterns hanging, cobblestone street, cinematic still",
+   "bad_prompt": "chinese new year, red lanterns, hanfu woman, photo"
   },
   {
    "slug": "modern",
    "title": "对照 2 · 新中式",
    "good_cap": "OK 立领+红色点缀+极简棚拍",
-   "bad_cap": "X 红裙堆砌"
+   "bad_cap": "X 红裙堆砌",
+   "good_prompt": "neo-chinese fashion editorial, mandarin collar blouse, red accent outfit, minimalist studio, high key",
+   "bad_prompt": "chinese new year fashion, red dress, photo"
   }
  ]
 }

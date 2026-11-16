@@ -22,13 +22,17 @@
    "slug": "scene",
    "title": "Compare 1 - Scene symbols",
    "good_cap": "OK lanterns + snow + cobblestone - all three present",
-   "bad_cap": "X lanterns only (no scene narrative)"
+   "bad_cap": "X lanterns only (no scene narrative)",
+   "good_prompt": "hanfu woman holding red lantern, soft glow on face, ancient chinese town, snow, red lanterns hanging, cobblestone street, cinematic still",
+   "bad_prompt": "chinese new year, red lanterns, hanfu woman, photo"
   },
   {
    "slug": "modern",
    "title": "Compare 2 - Neo-Chinese",
    "good_cap": "OK mandarin collar + red accent + minimal studio",
-   "bad_cap": "X red pile-up"
+   "bad_cap": "X red pile-up",
+   "good_prompt": "neo-chinese fashion editorial, mandarin collar blouse, red accent outfit, minimalist studio, high key",
+   "bad_prompt": "chinese new year fashion, red dress, photo"
   }
  ]
 }

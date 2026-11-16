@@ -21,7 +21,9 @@
    "slug": "layered",
    "title": "Compare 1 - Six layers",
    "good_cap": "OK all six layers present",
-   "bad_cap": "X one-line translation loses the mood"
+   "bad_cap": "X one-line translation loses the mood",
+   "good_prompt": "a young asian woman in a camel wool coat over white straight-leg trousers, walking on a city street at dusk, looking back over her shoulder, warm street lamp light, street style photography, 35mm film grain",
+   "bad_prompt": "a woman in a coat on a street, photo"
   }
  ]
 }

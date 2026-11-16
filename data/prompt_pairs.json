@@ -117,5 +117,21 @@
    "bad_prompt": "chinese new year fashion, red dress, photo"
   }
  ],
- "gta6-style-prompt": []
+ "gta6-style-prompt": [
+  {
+   "slug": "sky",
+   "good_prompt": "Miami Beach at dusk, pink orange purple gradient sky, natural sky gradient, palm trees, ocean, cinematic still",
+   "bad_prompt": "Miami Beach at dusk, sunset, palm trees, ocean, photo"
+  },
+  {
+   "slug": "haze",
+   "good_prompt": "Miami coastal highway at golden hour, humid haze, atmospheric perspective, neon glow reflecting on wet streets, art deco buildings, cinematic still, film grain",
+   "bad_prompt": "Miami coastal highway at golden hour, art deco buildings, cinematic"
+  },
+  {
+   "slug": "motion",
+   "good_prompt": "a young woman in hawaiian shirt leaning on a muscle car, candid pose, mid-motion, Miami dusk, pink orange sky, cinematic still",
+   "bad_prompt": "a young woman in hawaiian shirt standing pose, Miami dusk, cinematic still"
+  }
+ ]
 }

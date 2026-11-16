@@ -15,5 +15,23 @@
    "Can I use these suit images commercially?",
    "Game assets belong to Papergames. Palette inspiration is safe; full recreation is fan-art territory."
   ]
+ ],
+ "examples": [
+  {
+   "slug": "palette",
+   "title": "Compare 1 - Palette-first borrowing",
+   "good_cap": "OK deep blue silver gold + asymmetric hem - palette Level-1 safe",
+   "bad_cap": "X 'pretty blue dress' - no design bloodline",
+   "good_prompt": "fantasy dress design, deep blue and silver palette with subtle gold accents, asymmetric hemline, layered sleeves, concept art, painterly rendering",
+   "bad_prompt": "pretty blue dress, digital art"
+  },
+  {
+   "slug": "silhouette",
+   "title": "Compare 2 - Silhouette statement",
+   "good_cap": "OK bell-shaped layered skirt + dramatic shoulder - silhouette words work",
+   "bad_cap": "X generic long skirt",
+   "good_prompt": "character outfit design, bell-shaped layered skirt, dramatic shoulder silhouette, silver embroidery, official game art style",
+   "bad_prompt": "fantasy dress, long skirt, art"
+  }
  ]
 }

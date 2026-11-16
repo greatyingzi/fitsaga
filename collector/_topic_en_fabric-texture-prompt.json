@@ -21,19 +21,25 @@
    "slug": "velvet",
    "title": "Compare 1 - Velvet matte",
    "good_cap": "OK light-absorbing folds macro",
-   "bad_cap": "X generic velvet turns shiny"
+   "bad_cap": "X generic velvet turns shiny",
+   "good_prompt": "close-up of deep green velvet fabric with soft matte pile, light-absorbing folds, macro detail",
+   "bad_prompt": "close-up of green velvet fabric, macro"
   },
   {
    "slug": "satin",
    "title": "Compare 2 - Satin sheen",
    "good_cap": "OK liquid sheen following folds",
-   "bad_cap": "X generic satin"
+   "bad_cap": "X generic satin",
+   "good_prompt": "satin qipao with liquid sheen, highlights flowing along the folds, soft studio light",
+   "bad_prompt": "satin qipao, studio photo"
   },
   {
    "slug": "tulle",
    "title": "Compare 3 - Layered tulle",
    "good_cap": "OK layered transparency + backlight",
-   "bad_cap": "X plastic-wrap sheer"
+   "bad_cap": "X plastic-wrap sheer",
+   "good_prompt": "layered translucent tulle skirt, fabric floating in wind, layered transparency, backlight",
+   "bad_prompt": "tulle skirt, photo"
   }
  ]
 }

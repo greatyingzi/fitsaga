@@ -26,19 +26,25 @@
    "slug": "sky",
    "title": "Compare 1 - Sky gradient",
    "good_cap": "OK pink-orange-purple gradient + natural sky - cinematic bands",
-   "bad_cap": "X bare sunset - ordinary tourist shot"
+   "bad_cap": "X bare sunset - ordinary tourist shot",
+   "good_prompt": "Miami Beach at dusk, pink orange purple gradient sky, natural sky gradient, palm trees, ocean, cinematic still",
+   "bad_prompt": "Miami Beach at dusk, sunset, palm trees, ocean, photo"
   },
   {
    "slug": "haze",
    "title": "Compare 2 - Humid air",
    "good_cap": "OK atmospheric perspective + wet reflections - depth",
-   "bad_cap": "X sticker-collage flatness"
+   "bad_cap": "X sticker-collage flatness",
+   "good_prompt": "Miami coastal highway at golden hour, humid haze, atmospheric perspective, neon glow reflecting on wet streets, art deco buildings, cinematic still, film grain",
+   "bad_prompt": "Miami coastal highway at golden hour, art deco buildings, cinematic"
   },
   {
    "slug": "motion",
    "title": "Compare 3 - Character motion",
    "good_cap": "OK candid mid-motion - Rockstar energy",
-   "bad_cap": "X standing pose - zero GTA feel"
+   "bad_cap": "X standing pose - zero GTA feel",
+   "good_prompt": "a young woman in hawaiian shirt leaning on a muscle car, candid pose, mid-motion, Miami dusk, pink orange sky, cinematic still",
+   "bad_prompt": "a young woman in hawaiian shirt standing pose, Miami dusk, cinematic still"
   }
  ]
 }

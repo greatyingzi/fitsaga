@@ -21,13 +21,17 @@
    "slug": "neon",
    "title": "Compare 1 - Cyberpunk neon",
    "good_cap": "OK neon everywhere + holo + steam = world rule",
-   "bad_cap": "X miami words trying cyberpunk"
+   "bad_cap": "X miami words trying cyberpunk",
+   "good_prompt": "cyberpunk street at night, holographic ads, neon everywhere, dystopian, wet high-reflective street, steam",
+   "bad_prompt": "miami street at night, neon signs, wet street, photo"
   },
   {
    "slug": "miami",
    "title": "Compare 2 - Miami",
    "good_cap": "OK gradient sky + palms + pastel accents",
-   "bad_cap": "X cyberpunk words drift"
+   "bad_cap": "X cyberpunk words drift",
+   "good_prompt": "miami beach at dusk, pink orange purple gradient sky, palm trees, pastel neon signs, resort vibe, cinematic",
+   "bad_prompt": "miami beach at night, neon everywhere, cyberpunk"
   }
  ]
 }

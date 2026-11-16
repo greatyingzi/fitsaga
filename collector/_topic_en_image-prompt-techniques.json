@@ -11,5 +11,23 @@
    "How long should a fashion prompt be?",
    "40-80 words. Under 30 loses the mood layers; over 120 makes models average everything out."
   ]
+ ],
+ "examples": [
+  {
+   "slug": "sixlayer",
+   "title": "Compare 1 - Six layers vs one line",
+   "good_cap": "OK all six layers - the mood survives",
+   "bad_cap": "X one-liner - mood collapsed",
+   "good_prompt": "a young asian woman in a camel wool coat over white straight-leg trousers, walking on a city street at dusk, looking back over her shoulder, warm street lamp light, street style photography, 35mm film grain",
+   "bad_prompt": "a woman in a coat on a street, photo"
+  },
+  {
+   "slug": "fabric-layer",
+   "title": "Compare 2 - Fabric behavior words",
+   "good_cap": "OK visible stitch texture + window light",
+   "bad_cap": "X bare close-up",
+   "good_prompt": "close-up fashion detail, chunky knit sweater with visible stitch texture, soft window light, cozy",
+   "bad_prompt": "sweater close-up, photo"
+  }
  ]
 }

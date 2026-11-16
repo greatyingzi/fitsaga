@@ -21,13 +21,17 @@
    "slug": "petticoat",
    "title": "Compare 1 - Petticoat rule",
    "good_cap": "OK bell silhouette + candy prints + cafe window",
-   "bad_cap": "X no petticoat = puffy skirt"
+   "bad_cap": "X no petticoat = puffy skirt",
+   "good_prompt": "sweet lolita with bell-shaped petticoat silhouette, pastel candy prints, big ribbon bow, cafe window light",
+   "bad_prompt": "lolita dress without petticoat, flat skirt, photo"
   },
   {
    "slug": "jk",
    "title": "Compare 2 - JK scene",
    "good_cap": "OK sailor collar + tartan + sakura street",
-   "bad_cap": "X generic school uniform"
+   "bad_cap": "X generic school uniform",
+   "good_prompt": "japanese school uniform, sailor collar, tartan plaid skirt, sakura street, afternoon light, youthful",
+   "bad_prompt": "school uniform girl, photo"
   }
  ]
 }

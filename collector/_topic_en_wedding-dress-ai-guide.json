@@ -21,13 +21,17 @@
    "slug": "lace",
    "title": "Compare 1 - Lace garden",
    "good_cap": "OK embroidery + veil + golden bokeh",
-   "bad_cap": "X generic wedding dress"
+   "bad_cap": "X generic wedding dress",
+   "good_prompt": "lace wedding dress with floral embroidery, cathedral veil, garden ceremony, golden bokeh, romantic",
+   "bad_prompt": "wedding dress, garden, photo"
   },
   {
    "slug": "tullewind",
    "title": "Compare 2 - Beach tulle",
    "good_cap": "OK wind-blown veil + sunset backlight",
-   "bad_cap": "X windless beach bridal"
+   "bad_cap": "X windless beach bridal",
+   "good_prompt": "flowy tulle wedding dress, beach destination, wind-blown veil, sunset backlight, barefoot",
+   "bad_prompt": "wedding dress on beach, photo"
   }
  ]
 }

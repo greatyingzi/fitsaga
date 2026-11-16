@@ -21,13 +21,17 @@
    "slug": "concept",
    "title": "Compare 1 - Concept-art look",
    "good_cap": "OK concept art + painterly + matte backdrop",
-   "bad_cap": "X generic digital art"
+   "bad_cap": "X generic digital art",
+   "good_prompt": "fantasy character concept art, official art style, painterly rendering, ornate staff with glowing crystal, matte painting backdrop",
+   "bad_prompt": "fantasy character, pretty dress, digital art"
   },
   {
    "slug": "palette",
    "title": "Compare 2 - Palette borrowing",
    "good_cap": "OK deep blue silver gold + asymmetric cut",
-   "bad_cap": "X just 'blue and silver dress'"
+   "bad_cap": "X just 'blue and silver dress'",
+   "good_prompt": "character design, deep blue and silver palette with subtle gold accents, asymmetric hemline, layered sleeves, concept art",
+   "bad_prompt": "character design, blue and silver dress, digital art"
   }
  ]
 }

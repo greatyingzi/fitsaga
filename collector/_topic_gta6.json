@@ -25,19 +25,25 @@
    "slug": "sky",
    "title": "对照 1 · 天空渐变",
    "good_cap": "正例：pink orange purple gradient sky + natural sky gradient — 三段渐变+电影构图",
-   "bad_cap": "反例：只写 sunset — 普通旅游黄昏照，无 GTA 感"
+   "bad_cap": "反例：只写 sunset — 普通旅游黄昏照，无 GTA 感",
+   "good_prompt": "Miami Beach at dusk, pink orange purple gradient sky, natural sky gradient, palm trees, ocean, cinematic still",
+   "bad_prompt": "Miami Beach at dusk, sunset, palm trees, ocean, photo"
   },
   {
    "slug": "haze",
    "title": "对照 2 · 水汽空气感",
    "good_cap": "正例：humid haze + atmospheric perspective + wet street reflection — 远景发虚霓虹晕开",
-   "bad_cap": "反例：缺失氛围词 — 像贴纸拼贴，远景生硬"
+   "bad_cap": "反例：缺失氛围词 — 像贴纸拼贴，远景生硬",
+   "good_prompt": "Miami coastal highway at golden hour, humid haze, atmospheric perspective, neon glow reflecting on wet streets, art deco buildings, cinematic still, film grain",
+   "bad_prompt": "Miami coastal highway at golden hour, art deco buildings, cinematic"
   },
   {
    "slug": "motion",
    "title": "对照 3 · 人物动态",
    "good_cap": "正例：candid pose, mid-motion — Rockstar 式「正在做事」的人物",
-   "bad_cap": "反例：standing pose — 摆拍感，GTA 愨全无"
+   "bad_cap": "反例：standing pose — 摆拍感，GTA 愨全无",
+   "good_prompt": "a young woman in hawaiian shirt leaning on a muscle car, candid pose, mid-motion, Miami dusk, pink orange sky, cinematic still",
+   "bad_prompt": "a young woman in hawaiian shirt standing pose, Miami dusk, cinematic still"
   }
  ]
 }
