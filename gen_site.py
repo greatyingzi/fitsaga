@@ -194,6 +194,7 @@ def home():
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#ffd9a866)" href="/guide.html">📖 穿搭研究所</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#a855f766)" href="/ai.html">✦ AI 灵感图鉴</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#8ec5ff66)" href="/zara.html">ZARA 大片</a>
+    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#8ec5ff66)" href="/downloads.html">⬇ 参考图包</a>
   </nav>
 </section>
 <section class="sec" id="ailab" style="padding-top:1.5rem">

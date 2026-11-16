@@ -74,6 +74,16 @@ def main():
             ex_html += '<figure style="margin:0"><div style="background:#1d4d2b;color:#a8e6a3;font-size:.72rem;padding:.3rem .6rem;border-radius:8px 8px 0 0;font-weight:700">OK PROMPT</div><img src="' + base + s2 + '-good.jpg" loading="lazy" style="width:100%;border-radius:10px"><figcaption style="font-size:.75rem;color:#8ec5ff;line-height:1.7">OK ' + html.escape(ex2["good_cap"]) + '</figcaption></figure>'
             ex_html += '<figure style="margin:0"><div style="background:#4d1d1d;color:#e6a8a8;font-size:.72rem;padding:.3rem .6rem;border-radius:8px 8px 0 0;font-weight:700">WEAK</div><img src="' + base + s2 + '-bad.jpg" loading="lazy" style="width:100%;border-radius:10px;opacity:.85"><figcaption style="font-size:.75rem;color:#cbb8d4;line-height:1.7">X ' + html.escape(ex2["bad_cap"]) + '</figcaption></figure>'
             ex_html += '</div>'
+        dl_btn = ""
+        try:
+            _mf = json.loads((PUB / "downloads/manifest.json").read_text(encoding="utf-8"))
+            for _m in _mf:
+                if _m["slug"] == t["slug"]:
+                    dl_btn = '<p style="margin-top:1rem"><a style="background:linear-gradient(135deg,#ff7eb3,#a855f7);color:#fff;padding:.7rem 1.2rem;border-radius:10px;text-decoration:none;font-weight:700" href="' + _m["zip"] + '" download>⬇ 下载本专题参考图包（' + str(_m["count"]) + ' 张）</a></p>'
+                    break
+        except Exception:
+            pass
+
         chase = ('<div class="chase"><b>Chase</b> · ' if is_en else '<div class="chase"><b>追更</b> · ') + html.escape(t["updated"]) + "</div>" if t.get("updated") else ""
         badge = '<span class="badge">HOT</span>' if t.get("type") == "hot" else '<span class="badge">EVERGREEN</span>'
         ld = json.dumps({"@context": "https://schema.org", "@type": "Article", "headline": t["title"],
@@ -93,7 +103,7 @@ def main():
                  "<h1>" + html.escape(t["title"]) + "</h1>",
                  '<div class="meta">' + brand + " · " + today + "</div>",
                  '<div class="lede">' + html.escape(t["lede"]) + "</div>",
-                 body, ex_html, chase, faq,
+                 body, ex_html, chase, dl_btn, faq,
                  '<p style="margin-top:2.5rem"><a href="' + home_link + '">← ' + ("All topics" if is_en else "全部专题") + '</a> · <a href="/">Home</a></p>',
                  '</article></div>',
                  '<script src="/lightbox.js" defer></script>',
