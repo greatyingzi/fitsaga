@@ -1,0 +1,142 @@
+[
+ {
+  "slug": "gta6-style-prompt",
+  "title": "GTA6 迈阿密美学",
+  "zip": "/downloads/gta6-style-prompt-reference-pack.zip",
+  "count": 6,
+  "size_kb": 765,
+  "images": [
+   "/topics/gta6-style-prompt/haze-bad.jpg",
+   "/topics/gta6-style-prompt/haze-good.jpg",
+   "/topics/gta6-style-prompt/motion-bad.jpg",
+   "/topics/gta6-style-prompt/motion-good.jpg",
+   "/topics/gta6-style-prompt/sky-bad.jpg",
+   "/topics/gta6-style-prompt/sky-good.jpg"
+  ]
+ },
+ {
+  "slug": "hanfu-prompt-guide",
+  "title": "汉服形制",
+  "zip": "/downloads/hanfu-prompt-guide-reference-pack.zip",
+  "count": 10,
+  "size_kb": 2013,
+  "images": [
+   "/topics/hanfu-prompt-guide/dynasty-bad.jpg",
+   "/topics/hanfu-prompt-guide/dynasty-good.jpg",
+   "/topics/hanfu-prompt-guide/form-bad.jpg",
+   "/topics/hanfu-prompt-guide/form-good.jpg",
+   "/topics/hanfu-prompt-guide/hanfu-dynasty-bad.jpg",
+   "/topics/hanfu-prompt-guide/hanfu-dynasty-good.jpg",
+   "/topics/hanfu-prompt-guide/hanfu-form-bad.jpg",
+   "/topics/hanfu-prompt-guide/hanfu-form-good.jpg",
+   "/topics/hanfu-prompt-guide/snow-bad.jpg",
+   "/topics/hanfu-prompt-guide/snow-good.jpg"
+  ]
+ },
+ {
+  "slug": "lighting-prompt-guide",
+  "title": "光线氛围",
+  "zip": "/downloads/lighting-prompt-guide-reference-pack.zip",
+  "count": 6,
+  "size_kb": 1079,
+  "images": [
+   "/topics/lighting-prompt-guide/blue-bad.jpg",
+   "/topics/lighting-prompt-guide/blue-good.jpg",
+   "/topics/lighting-prompt-guide/golden-bad.jpg",
+   "/topics/lighting-prompt-guide/golden-good.jpg",
+   "/topics/lighting-prompt-guide/window-bad.jpg",
+   "/topics/lighting-prompt-guide/window-good.jpg"
+  ]
+ },
+ {
+  "slug": "fabric-texture-prompt",
+  "title": "面料质感",
+  "zip": "/downloads/fabric-texture-prompt-reference-pack.zip",
+  "count": 6,
+  "size_kb": 895,
+  "images": [
+   "/topics/fabric-texture-prompt/satin-bad.jpg",
+   "/topics/fabric-texture-prompt/satin-good.jpg",
+   "/topics/fabric-texture-prompt/tulle-bad.jpg",
+   "/topics/fabric-texture-prompt/tulle-good.jpg",
+   "/topics/fabric-texture-prompt/velvet-bad.jpg",
+   "/topics/fabric-texture-prompt/velvet-good.jpg"
+  ]
+ },
+ {
+  "slug": "nikki-art-reference",
+  "title": "游戏时装参考",
+  "zip": "/downloads/nikki-art-reference-reference-pack.zip",
+  "count": 4,
+  "size_kb": 758,
+  "images": [
+   "/topics/nikki-art-reference/concept-bad.jpg",
+   "/topics/nikki-art-reference/concept-good.jpg",
+   "/topics/nikki-art-reference/palette-bad.jpg",
+   "/topics/nikki-art-reference/palette-good.jpg"
+  ]
+ },
+ {
+  "slug": "cyberpunk-vs-miami",
+  "title": "赛博 vs 迈阿密",
+  "zip": "/downloads/cyberpunk-vs-miami-reference-pack.zip",
+  "count": 4,
+  "size_kb": 1124,
+  "images": [
+   "/topics/cyberpunk-vs-miami/miami-bad.jpg",
+   "/topics/cyberpunk-vs-miami/miami-good.jpg",
+   "/topics/cyberpunk-vs-miami/neon-bad.jpg",
+   "/topics/cyberpunk-vs-miami/neon-good.jpg"
+  ]
+ },
+ {
+  "slug": "jk-lolita-ai-guide",
+  "title": "JK 与 Lolita",
+  "zip": "/downloads/jk-lolita-ai-guide-reference-pack.zip",
+  "count": 4,
+  "size_kb": 680,
+  "images": [
+   "/topics/jk-lolita-ai-guide/jk-bad.jpg",
+   "/topics/jk-lolita-ai-guide/jk-good.jpg",
+   "/topics/jk-lolita-ai-guide/petticoat-bad.jpg",
+   "/topics/jk-lolita-ai-guide/petticoat-good.jpg"
+  ]
+ },
+ {
+  "slug": "wedding-dress-ai-guide",
+  "title": "婚纱礼服",
+  "zip": "/downloads/wedding-dress-ai-guide-reference-pack.zip",
+  "count": 4,
+  "size_kb": 689,
+  "images": [
+   "/topics/wedding-dress-ai-guide/lace-bad.jpg",
+   "/topics/wedding-dress-ai-guide/lace-good.jpg",
+   "/topics/wedding-dress-ai-guide/tullewind-bad.jpg",
+   "/topics/wedding-dress-ai-guide/tullewind-good.jpg"
+  ]
+ },
+ {
+  "slug": "photo-to-prompt-method",
+  "title": "照片转 prompt",
+  "zip": "/downloads/photo-to-prompt-method-reference-pack.zip",
+  "count": 2,
+  "size_kb": 223,
+  "images": [
+   "/topics/photo-to-prompt-method/layered-bad.jpg",
+   "/topics/photo-to-prompt-method/layered-good.jpg"
+  ]
+ },
+ {
+  "slug": "cny-hanfu-ai",
+  "title": "春节国风",
+  "zip": "/downloads/cny-hanfu-ai-reference-pack.zip",
+  "count": 4,
+  "size_kb": 659,
+  "images": [
+   "/topics/cny-hanfu-ai/modern-bad.jpg",
+   "/topics/cny-hanfu-ai/modern-good.jpg",
+   "/topics/cny-hanfu-ai/scene-bad.jpg",
+   "/topics/cny-hanfu-ai/scene-good.jpg"
+  ]
+ }
+]

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>星夜漫游 · 套装精选 · FitSaga</title>
+<meta name="description" content="把星空穿在身上的 20 套精选。从咏月到银河，适合想拥有静谧氛围感的你。共 20 套，数据来自无限暖暖套装库。">
+<link rel="canonical" href="https://fitsaga.pages.dev/collection/starry-night">
+<style>:root{--gold:#f5c76e;--bg:#141018;--fg:#f5eef7;}
+*{margin:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--fg);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.hero{min-height:70vh;
+/* appended below */display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:3rem 1.5rem;background:radial-gradient(1200px 600px at 20% 10%,rgba(255,126,179,.25),transparent 60%),radial-gradient(1000px 500px at 80% 20%,rgba(181,84,140,.3),transparent 60%),radial-gradient(900px 500px at 50% 90%,rgba(63,111,216,.18),transparent 60%),var(--bg)}
+.hero.small{min-height:38vh}
+.hero h1{font-size:clamp(1.8rem,5vw,3.4rem);font-weight:800;line-height:1.3;background:linear-gradient(90deg,#ffd9a8,#ff7eb3,#c793ff,#8ec5ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{margin-top:.8rem;color:#cbb8d4;letter-spacing:.12em;font-size:clamp(.9rem,2vw,1.05rem)}
+.stylechips{display:flex;flex-wrap:wrap;gap:.55rem;justify-content:center;margin-top:1.8rem}
+.chip{display:inline-block;padding:.6rem 1.05rem;border-radius:999px;font-size:.9rem;font-weight:600;color:#fff;box-shadow:0 4px 12px rgba(0,0,0,.35);transition:transform .2s;opacity:.85}
+.chip:hover{transform:translateY(-2px);opacity:1}
+.chip.on{outline:2px solid #fff5;opacity:1}
+.sec{padding:2.5rem 1.5rem;max-width:1100px;margin:0 auto}
+.sec-head h2{font-size:clamp(1.3rem,3vw,1.9rem);font-weight:800}
+.sec-head p{width:100%;margin-top:.4rem;opacity:.85;font-size:.95rem}
+.intro{max-width:640px;color:#cbb8d4;line-height:1.8;font-size:.95rem;margin-bottom:1.4rem}
+.masonry{columns:3 240px;column-gap:14px}
+@media(max-width:640px){.masonry{columns:2 140px}}
+.shot{break-inside:avoid;margin-bottom:14px;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 6px 20px rgba(0,0,0,.4);background:#241b2c}
+.shot img{width:100%;display:block;transition:transform .35s}
+.shot:hover img{transform:scale(1.04)}
+.shot .cap{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:.5rem;padding:1.5rem .7rem .55rem;font-size:.78rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+.shot .cap em{font-style:normal;opacity:.75;white-space:nowrap;font-size:.78rem}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(160px,100%),1fr));gap:14px}
+.scard{background:#241b2c;border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+.scard img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.sname{padding:.6rem .7rem .1rem;font-weight:700;font-size:.9rem}
+.smeta{padding:0 .7rem .7rem;font-size:.78rem;color:#9d8fa8}
+footer{padding:2.5rem 1.5rem;text-align:center;color:#9d8fa8;font-size:.9rem;background:#0f0c13;margin-top:2rem}
+footer .links{margin-top:.7rem;display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+footer .links a{display:inline-block;padding:.55rem .9rem;border-radius:10px;background:#241b2c;font-size:.9rem;min-height:44px;line-height:1.4}
+footer .source{opacity:.6;font-size:.78rem;margin-top:.6rem;line-height:1.7}
+.sec-head a{display:inline-block;padding:.6rem .1rem;min-height:44px;line-height:1.7;font-size:.92rem}
+/* flywheel round3 fixes */
+.hero.small{min-height:26vh}
+.hero .sub{letter-spacing:.05em;max-width:22em;line-height:1.8}
+.collection-cap{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:.15rem;padding:2.2rem .8rem .6rem;font-size:.85rem;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+.shot .cap{font-size:.85rem}
+.shot .cap .view{font-size:.78rem;opacity:.8}
+.masonry .shot img{max-height:520px;object-fit:cover}
+
+/* home v3 components */
+.hero.hero2{min-height:52vh}
+.chip-hero{font-size:1rem;padding:.7rem 1.3rem;box-shadow:0 6px 20px rgba(199,147,255,.35)}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:14px}
+.srow{margin-bottom:1.6rem}
+.srow-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;font-size:1.05rem}
+.srow-h .more{font-size:.85rem;opacity:.75}
+.minirow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media(max-width:640px){.minirow{grid-template-columns:repeat(2,1fr)}}
+.mini{display:block;border-radius:12px;overflow:hidden;aspect-ratio:3/4;background:#241b2c}
+.mini img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.mini:hover img{transform:scale(1.05)}
+
+</style></head><body>
+<header class="hero small"><h1><span style="color:#ff7eb3">星夜漫游 · 套装精选</span></h1>
+<p class="sub">20 套 · 无限暖暖 · BWIKI 数据</p></header>
+<main class="sec">
+<p class="intro">把星空穿在身上的 20 套精选。从咏月到银河，适合想拥有静谧氛围感的你。</p>
+<p class="intro" style="font-size:.8rem;opacity:.7">策展逻辑：按「天体意象」筛出套装名含星/月/夜/宵的款式，人工剔除了纯黑礼服类，保留氛围更梦幻的。</p>
+<nav class="stylechips" style="margin-bottom:1.5rem"><a class="chip" style="background:linear-gradient(135deg,#2a1832,#e8608a55)" href="/collection/fairytale-dream">童话与梦</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#e8608a55)" href="/collection/spring-floral">花开时节</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#e8608a55)" href="/collection/ocean-rain">海洋与雨</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#e8608a55)" href="/collection/dark-gothic">暗夜哥特</a></nav>
+<div class="masonry"><figure class="shot">
+  <a href="/nikki/s/丰饶之赞-星光"><img src="https://patchwiki.biligame.com/images/wxnn/a/ae/e8lkua67i8fwnaeo1gvfi9nfhsy65ug.png" alt="丰饶之赞·星光 无限暖暖套装展示图" loading="lazy"></a>
+  <figcaption class="cap"><span>丰饶之赞·星光</span><em class="view">静谧蓝调，夜色的第一步</em></figcaption>
+</figure><figure class="shot">
+  <a href="/nikki/s/夜宴明星"><img src="https://patchwiki.biligame.com/images/wxnn/d/dd/n58uhh4dvo7dwjxvmqkkkzldtzpmkze.png" alt="夜宴明星 无限暖暖套装展示图" loading="lazy"></a>
+  <figcaption class="cap"><span>夜宴明星</span><em class="view">星光落在肩线的位置刚好</em></figcaption>
+</figure><figure class="shot">
+  <a href="/nikki/s/帷幕与星色"><img src="https://patchwiki.biligame.com/images/wxnn/d/d9/fyzb0ohf4txoc4qf16raze4hjlw3rvj.png" alt="帷幕与星色 无限暖暖套装展示图" loading="lazy"></a>
+  <figcaption class="cap"><span>帷幕与星色</span><em class="view">月白的克制版，日常可穿</em></figcaption>
+</figure><figure class="shot">
+  <a href="/nikki/s/帷幕与星色-绽"><img src="https://patchwiki.biligame.com/images/wxnn/5/56/5r6k0t1by7v2ry9oiigk73kmedgkqbp.png" alt="帷幕与星色·绽 无限暖暖套装展示图" loading="lazy"></a>
+  <figcaption class="cap"><span>帷幕与星色·绽</span><em class="view">丝绒反光让深色活起来</em></figcaption>
+</figure><figure class="shot">
+  <a href="/nikki/s/帷幕与星色-萦"><img src="https://patchwiki.biligame.com/images/wxnn/3/3f/qwoy998mm14elel420wcbn4rgeuyfxo.png" alt="帷幕与星色·萦 无限暖暖套装展示图" loading="lazy"></a>
+  <figcaption class="cap"><span>帷幕与星色·萦</span><em class="view">适合正式夜场的叙事感</em></figcaption>
+</figure><figure class="shot">
+  <a href="/nikki/s/应援的心跳-星衍"><img src="https://patchwiki.biligame.com/images/wxnn/b/be/bk6sc56e7fl7z6wmx48u19zzt5igl4k.png" alt="应援的心跳·星衍 无限暖暖套装展示图" loading="lazy"></a>
+  <figcaption class="cap"><span>应援的心跳·星衍</span><em class="view">静谧蓝调，夜色的第一步</em></figcaption>
+</figure><figure class="shot">
+  <a href="/nikki/s/愿笔生花-星舞"><img src="https://patchwiki.biligame.com/images/wxnn/b/b8/sgp3pqb73888r2ph96bzbj14ynex2jh.png" alt="愿笔生花·星舞 无限暖暖套装展示图" loading="lazy"></a>
+  <figcaption class="cap"><span>愿笔生花·星舞</span><em class="view">星光落在肩线的位置刚好</em></figcaption>
+</figure><figure class="shot">
+  <a href="/nikki/s/拾星引渡"><img src="https://patchwiki.biligame.com/images/wxnn/2/23/5njn2a90t9pwyn6kfobo64dnrtwei9m.png" alt="拾星引渡 无限暖暖套装展示图" loading="lazy"></a>
+  <figcaption class="cap"><span>拾星引渡</span><em class="view">月白的克制版，日常可穿</em></figcaption>
+</figure><figure class="shot">
+  <a href="/nikki/s/揽星入梦"><img src="https://patchwiki.biligame.com/images/wxnn/6/61/861ntjh06rlluv1v2ht5wgzdochd771.png" alt="揽星入梦 无限暖暖套装展示图" loading="lazy"></a>
+  <figcaption class="cap"><span>揽星入梦</span><em class="view">丝绒反光让深色活起来</em></figcaption>
+</figure><figure class="shot">
+  <a href="/nikki/s/揽星入梦-云霞"><img src="https://patchwiki.biligame.com/images/wxnn/f/f4/oh0cgzvfdnhs9zs8xufiwuuu66t6o08.png" alt="揽星入梦·云霞 无限暖暖套装展示图" loading="lazy"></a>
+  <figcaption class="cap"><span>揽星入梦·云霞</span><em class="view">适合正式夜场的叙事感</em></figcaption>
+</figure><figure class="shot">
+  <a href="/nikki/s/揽星入梦-鎏夜"><img src="https://patchwiki.biligame.com/images/wxnn/8/82/41qwy91cirf9kkwvcfwyjphyk8ps9dz.png" alt="揽星入梦·鎏夜 无限暖暖套装展示图" loading="lazy"></a>
+  <figcaption class="cap"><span>揽星入梦·鎏夜</span><em class="view">静谧蓝调，夜色的第一步</em></figcaption>
+</figure><figure class="shot">
+  <a href="/nikki/s/摇醒星与月"><img src="https://patchwiki.biligame.com/images/wxnn/6/6a/inmdmhqni0calm1iifixf8v5m4j2qmg.png" alt="摇醒星与月 无限暖暖套装展示图" loading="lazy"></a>
+  <figcaption class="cap"><span>摇醒星与月</span><em class="view">星光落在肩线的位置刚好</em></figcaption>
+</figure><figure class="shot">
+  <a href="/nikki/s/摇醒星与月-云歌"><img src="https://patchwiki.biligame.com/images/wxnn/a/ad/d5ex2n95t9b7awn6jjx4mi0jffvfzjm.png" alt="摇醒星与月·云歌 无限暖暖套装展示图" loading="lazy"></a>
+  <figcaption class="cap"><span>摇醒星与月·云歌</span><em class="view">月白的克制版，日常可穿</em></figcaption>
+</figure><figure class="shot">
+  <a href="/nikki/s/摇醒星与月-夜游"><img src="https://patchwiki.biligame.com/images/wxnn/e/e2/aonv3k71hq6mdhjd87vsgoiwh5ik4d5.png" alt="摇醒星与月·夜游 无限暖暖套装展示图" loading="lazy"></a>
+  <figcaption class="cap"><span>摇醒星与月·夜游</span><em class="view">丝绒反光让深色活起来</em></figcaption>
+</figure><figure class="shot">
+  <a href="/nikki/s/星之海"><img src="https://patchwiki.biligame.com/images/wxnn/e/ea/kgdfv9eyg7q9nzfimdooqywb54augnb.png" alt="星之海 无限暖暖套装展示图" loading="lazy"></a>
+  <figcaption class="cap"><span>星之海</span><em class="view">适合正式夜场的叙事感</em></figcaption>
+</figure><figure class="shot">
+  <a href="/nikki/s/星之海-启明"><img src="https://patchwiki.biligame.com/images/wxnn/2/23/pm6wxq7effvbwgearyqmndt459ib5ft.png" alt="星之海·启明 无限暖暖套装展示图" loading="lazy"></a>
+  <figcaption class="cap"><span>星之海·启明</span><em class="view">静谧蓝调，夜色的第一步</em></figcaption>
+</figure><figure class="shot">
+  <a href="/nikki/s/星之海-无垠"><img src="https://patchwiki.biligame.com/images/wxnn/a/a0/nklx703y4if3knhjbwjudzvgi6j3wpn.png" alt="星之海·无垠 无限暖暖套装展示图" loading="lazy"></a>
+  <figcaption class="cap"><span>星之海·无垠</span><em class="view">星光落在肩线的位置刚好</em></figcaption>
+</figure><figure class="shot">
+  <a href="/nikki/s/星之海-极境"><img src="https://patchwiki.biligame.com/images/wxnn/0/0b/6ek2muynaj9wkvufvyuvnf5trv1zgin.png" alt="星之海·极境 无限暖暖套装展示图" loading="lazy"></a>
+  <figcaption class="cap"><span>星之海·极境</span><em class="view">月白的克制版，日常可穿</em></figcaption>
+</figure><figure class="shot">
+  <a href="/nikki/s/星之海-梦谕"><img src="https://patchwiki.biligame.com/images/wxnn/b/b3/0g1qem4ebszexo3jm4i8gpxayi5hm86.png" alt="星之海·梦谕 无限暖暖套装展示图" loading="lazy"></a>
+  <figcaption class="cap"><span>星之海·梦谕</span><em class="view">丝绒反光让深色活起来</em></figcaption>
+</figure><figure class="shot">
+  <a href="/nikki/s/星夜归途"><img src="https://patchwiki.biligame.com/images/wxnn/0/03/sgv63wq7s35olq9vgux2ro89mokundu.png" alt="星夜归途 无限暖暖套装展示图" loading="lazy"></a>
+  <figcaption class="cap"><span>星夜归途</span><em class="view">适合正式夜场的叙事感</em></figcaption>
+</figure></div>
+</main>
+<footer><div><b style="color:#f5c76e">FitSaga</b> · 每一套时装，都是一个故事</div>
+<div class="source">游戏素材版权归叠纸网络所有 · 数据整理自 BWIKI · <a style="color:#9d8fa8" href="/nikki/infinity">全部套装图鉴</a> · © 2026 FitSaga</div></footer>
+<script src="/lightbox.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/theme.js" defer></script>
+</body></html>

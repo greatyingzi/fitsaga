@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>AI 灵感图鉴 · FitSaga</title>
+<meta name="description" content="AI 生成的女性穿搭灵感图鉴：汉服、旗袍、婚纱、礼服等人像大片，来自 Civitai 社区，高分辨率可商用参考。">
+<link rel="canonical" href="https://fitsaga.pages.dev/ai.html">
+<style>:root{--gold:#f5c76e;--bg:#141018;--fg:#f5eef7;}
+*{margin:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--fg);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.hero{min-height:70vh;
+/* appended below */display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:3rem 1.5rem;background:radial-gradient(1200px 600px at 20% 10%,rgba(255,126,179,.25),transparent 60%),radial-gradient(1000px 500px at 80% 20%,rgba(181,84,140,.3),transparent 60%),radial-gradient(900px 500px at 50% 90%,rgba(63,111,216,.18),transparent 60%),var(--bg)}
+.hero.small{min-height:38vh}
+.hero h1{font-size:clamp(1.8rem,5vw,3.4rem);font-weight:800;line-height:1.3;background:linear-gradient(90deg,#ffd9a8,#ff7eb3,#c793ff,#8ec5ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{margin-top:.8rem;color:#cbb8d4;letter-spacing:.12em;font-size:clamp(.9rem,2vw,1.05rem)}
+.stylechips{display:flex;flex-wrap:wrap;gap:.55rem;justify-content:center;margin-top:1.8rem}
+.chip{display:inline-block;padding:.6rem 1.05rem;border-radius:999px;font-size:.9rem;font-weight:600;color:#fff;box-shadow:0 4px 12px rgba(0,0,0,.35);transition:transform .2s;opacity:.85}
+.chip:hover{transform:translateY(-2px);opacity:1}
+.chip.on{outline:2px solid #fff5;opacity:1}
+.sec{padding:2.5rem 1.5rem;max-width:1100px;margin:0 auto}
+.sec-head h2{font-size:clamp(1.3rem,3vw,1.9rem);font-weight:800}
+.sec-head p{width:100%;margin-top:.4rem;opacity:.85;font-size:.95rem}
+.intro{max-width:640px;color:#cbb8d4;line-height:1.8;font-size:.95rem;margin-bottom:1.4rem}
+.masonry{columns:3 240px;column-gap:14px}
+@media(max-width:640px){.masonry{columns:2 140px}}
+.shot{break-inside:avoid;margin-bottom:14px;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 6px 20px rgba(0,0,0,.4);background:#241b2c}
+.shot img{width:100%;display:block;transition:transform .35s}
+.shot:hover img{transform:scale(1.04)}
+.shot .cap{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:.5rem;padding:1.5rem .7rem .55rem;font-size:.78rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+.shot .cap em{font-style:normal;opacity:.75;white-space:nowrap;font-size:.78rem}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(160px,100%),1fr));gap:14px}
+.scard{background:#241b2c;border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+.scard img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.sname{padding:.6rem .7rem .1rem;font-weight:700;font-size:.9rem}
+.smeta{padding:0 .7rem .7rem;font-size:.78rem;color:#9d8fa8}
+footer{padding:2.5rem 1.5rem;text-align:center;color:#9d8fa8;font-size:.9rem;background:#0f0c13;margin-top:2rem}
+footer .links{margin-top:.7rem;display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+footer .links a{display:inline-block;padding:.55rem .9rem;border-radius:10px;background:#241b2c;font-size:.9rem;min-height:44px;line-height:1.4}
+footer .source{opacity:.6;font-size:.78rem;margin-top:.6rem;line-height:1.7}
+.sec-head a{display:inline-block;padding:.6rem .1rem;min-height:44px;line-height:1.7;font-size:.92rem}
+/* flywheel round3 fixes */
+.hero.small{min-height:26vh}
+.hero .sub{letter-spacing:.05em;max-width:22em;line-height:1.8}
+.collection-cap{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:.15rem;padding:2.2rem .8rem .6rem;font-size:.85rem;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+.shot .cap{font-size:.85rem}
+.shot .cap .view{font-size:.78rem;opacity:.8}
+.masonry .shot img{max-height:520px;object-fit:cover}
+
+/* home v3 components */
+.hero.hero2{min-height:52vh}
+.chip-hero{font-size:1rem;padding:.7rem 1.3rem;box-shadow:0 6px 20px rgba(199,147,255,.35)}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:14px}
+.srow{margin-bottom:1.6rem}
+.srow-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;font-size:1.05rem}
+.srow-h .more{font-size:.85rem;opacity:.75}
+.minirow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media(max-width:640px){.minirow{grid-template-columns:repeat(2,1fr)}}
+.mini{display:block;border-radius:12px;overflow:hidden;aspect-ratio:3/4;background:#241b2c}
+.mini img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.mini:hover img{transform:scale(1.05)}
+
+</style></head><body>
+<header class="hero small"><h1><span style="color:#a855f7">AI 灵感图鉴</span></h1>
+<p class="sub">96 张 · 生成式时尚视觉 · 持续扩充</p></header>
+
+<section class="sec" id="ai-fashion">
+  <div class="sec-head" style="color:#a855f7">
+    <h2>时尚人像 <span class="en" style="font-size:.75rem;opacity:.6">AI·12</span></h2>
+    <p style="color:#cbb8d4">AI 生成的时尚人像灵感，高分辨率，可作为搭配参考与AI创作底图。</p>
+  </div>
+  <div class="masonry"><figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/70efc886-dc88-4643-8e04-711c53f6ea64/original=true/23816845.jpeg" alt="AI灵感图 · 时尚人像 1" loading="lazy">
+  <figcaption class="cap"><span>AI · 时尚人像</span><a href="https://civitai.com/models/147720" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/f9fd9fcf-4f40-4406-8f23-293d51274e41/original=true/23972019.jpeg" alt="AI灵感图 · 时尚人像 2" loading="lazy">
+  <figcaption class="cap"><span>AI · 时尚人像</span><a href="https://civitai.com/models/147720" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a7ee9afc-1f0b-4f0b-a263-e74398f3ef01/original=true/23972449.jpeg" alt="AI灵感图 · 时尚人像 3" loading="lazy">
+  <figcaption class="cap"><span>AI · 时尚人像</span><a href="https://civitai.com/models/147720" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/271d62b6-0f49-4ae3-84e7-60a9d2e81cfc/original=true/23973682.jpeg" alt="AI灵感图 · 时尚人像 4" loading="lazy">
+  <figcaption class="cap"><span>AI · 时尚人像</span><a href="https://civitai.com/models/147720" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/5be4f7eb-7618-406e-8889-0abc966bf4f0/original=true/5be4f7eb-7618-406e-8889-0abc966bf4f0.jpeg" alt="AI灵感图 · 时尚人像 5" loading="lazy">
+  <figcaption class="cap"><span>AI · 时尚人像</span><a href="https://civitai.com/images/23526611" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/ee7a0193-193f-4065-f003-bbf2e5784d00/original=true/636840.jpeg" alt="AI灵感图 · 时尚人像 6" loading="lazy">
+  <figcaption class="cap"><span>AI · 时尚人像</span><a href="https://civitai.com/models/10540" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/77ecff70-04c2-4143-ace0-4098e2fb8e00/original=true/636841.jpeg" alt="AI灵感图 · 时尚人像 7" loading="lazy">
+  <figcaption class="cap"><span>AI · 时尚人像</span><a href="https://civitai.com/models/10540" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/8f35818d-acd9-4581-f5e9-529f94598500/original=true/636829.jpeg" alt="AI灵感图 · 时尚人像 8" loading="lazy">
+  <figcaption class="cap"><span>AI · 时尚人像</span><a href="https://civitai.com/models/10540" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/d2cf2d81-92de-4b3b-8fe0-492ae1044d34/original=true/d2cf2d81-92de-4b3b-8fe0-492ae1044d34.jpeg" alt="AI灵感图 · 时尚人像 9" loading="lazy">
+  <figcaption class="cap"><span>AI · 时尚人像</span><a href="https://civitai.com/images/65653762" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/152bc6b3-6231-48f8-9726-88ab685d89bd/original=true/23817443.jpeg" alt="AI灵感图 · 时尚人像 10" loading="lazy">
+  <figcaption class="cap"><span>AI · 时尚人像</span><a href="https://civitai.com/models/147720" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/d4656a83-5d41-4055-a1a8-5b6c584e3236/original=true/23967696.jpeg" alt="AI灵感图 · 时尚人像 11" loading="lazy">
+  <figcaption class="cap"><span>AI · 时尚人像</span><a href="https://civitai.com/models/147720" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/980c7e60-f633-485a-9cb1-b535ff1a9d0f/original=true/23967983.jpeg" alt="AI灵感图 · 时尚人像 12" loading="lazy">
+  <figcaption class="cap"><span>AI · 时尚人像</span><a href="https://civitai.com/models/147720" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure></div>
+</section>
+<section class="sec" id="ai-hanfu">
+  <div class="sec-head" style="color:#a855f7">
+    <h2>汉服国风 <span class="en" style="font-size:.75rem;opacity:.6">AI·12</span></h2>
+    <p style="color:#cbb8d4">AI 生成的汉服国风灵感，高分辨率，可作为搭配参考与AI创作底图。</p>
+  </div>
+  <div class="masonry"><figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/8e17593e-a4d0-4b21-75b8-d17300fca400/original=true/457929.jpeg" alt="AI灵感图 · 汉服国风 1" loading="lazy">
+  <figcaption class="cap"><span>AI · 汉服国风</span><a href="https://civitai.com/models/35339" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9035515d-34fd-4993-5941-05f3eaf60e00/original=true/457986.jpeg" alt="AI灵感图 · 汉服国风 2" loading="lazy">
+  <figcaption class="cap"><span>AI · 汉服国风</span><a href="https://civitai.com/models/35339" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/cf873fe5-98d9-4787-4c66-1bdac487bf00/original=true/458117.jpeg" alt="AI灵感图 · 汉服国风 3" loading="lazy">
+  <figcaption class="cap"><span>AI · 汉服国风</span><a href="https://civitai.com/models/35339" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/915c95f7-1acf-42fb-c67f-c5172fc4a100/original=true/457995.jpeg" alt="AI灵感图 · 汉服国风 4" loading="lazy">
+  <figcaption class="cap"><span>AI · 汉服国风</span><a href="https://civitai.com/models/35339" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a2c4d344-9435-4499-5620-ef0af9bf9f00/original=true/457918.jpeg" alt="AI灵感图 · 汉服国风 5" loading="lazy">
+  <figcaption class="cap"><span>AI · 汉服国风</span><a href="https://civitai.com/models/35339" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/cbc651bc-e547-415e-48d2-f48eb294eb00/original=true/458109.jpeg" alt="AI灵感图 · 汉服国风 6" loading="lazy">
+  <figcaption class="cap"><span>AI · 汉服国风</span><a href="https://civitai.com/models/35339" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/029b9c42-35cc-4700-8bb6-2c6d240a8100/original=true/458125.jpeg" alt="AI灵感图 · 汉服国风 7" loading="lazy">
+  <figcaption class="cap"><span>AI · 汉服国风</span><a href="https://civitai.com/models/35339" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/e4f09988-30ab-4b79-017d-3c2e8a3ce200/original=true/457919.jpeg" alt="AI灵感图 · 汉服国风 8" loading="lazy">
+  <figcaption class="cap"><span>AI · 汉服国风</span><a href="https://civitai.com/models/35339" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/d53740fb-b9cc-494b-8d8f-eb4af5b8a01c/original=true/1463566.jpeg" alt="AI灵感图 · 汉服国风 9" loading="lazy">
+  <figcaption class="cap"><span>AI · 汉服国风</span><a href="https://civitai.com/models/44395" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/73eb3439-49ad-450c-b67e-2365d0f72be8/original=true/1463569.jpeg" alt="AI灵感图 · 汉服国风 10" loading="lazy">
+  <figcaption class="cap"><span>AI · 汉服国风</span><a href="https://civitai.com/models/44395" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/8e70ed4e-c64f-402b-40b4-0d438d7aa000/original=true/418246.jpeg" alt="AI灵感图 · 汉服国风 11" loading="lazy">
+  <figcaption class="cap"><span>AI · 汉服国风</span><a href="https://civitai.com/models/20330" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/cac0ff78-bfb1-43a0-6c63-21fa8b5db100/original=true/418201.jpeg" alt="AI灵感图 · 汉服国风 12" loading="lazy">
+  <figcaption class="cap"><span>AI · 汉服国风</span><a href="https://civitai.com/models/20330" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure></div>
+</section>
+<section class="sec" id="ai-qipao">
+  <div class="sec-head" style="color:#a855f7">
+    <h2>旗袍东方 <span class="en" style="font-size:.75rem;opacity:.6">AI·12</span></h2>
+    <p style="color:#cbb8d4">AI 生成的旗袍东方灵感，高分辨率，可作为搭配参考与AI创作底图。</p>
+  </div>
+  <div class="masonry"><figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9db96091-4e7f-4f58-6a8f-6f4635e39100/original=true/592257.jpeg" alt="AI灵感图 · 旗袍东方 1" loading="lazy">
+  <figcaption class="cap"><span>AI · 旗袍东方</span><a href="https://civitai.com/models/50211" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/8ef04122-ce8d-4f50-25f7-541e3afbf400/original=true/592260.jpeg" alt="AI灵感图 · 旗袍东方 2" loading="lazy">
+  <figcaption class="cap"><span>AI · 旗袍东方</span><a href="https://civitai.com/models/50211" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/66a53d70-e5c0-4c78-a93e-2ef4e81164b8/original=true/785183.jpeg" alt="AI灵感图 · 旗袍东方 3" loading="lazy">
+  <figcaption class="cap"><span>AI · 旗袍东方</span><a href="https://civitai.com/models/65651" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/c53124e6-7ecf-4995-9b0a-1af20faa6963/original=true/64056870.jpeg" alt="AI灵感图 · 旗袍东方 4" loading="lazy">
+  <figcaption class="cap"><span>AI · 旗袍东方</span><a href="https://civitai.com/models/1367860" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/6c66a249-5e5b-40cf-9dd2-58ee5c45b80c/original=true/64056731.jpeg" alt="AI灵感图 · 旗袍东方 5" loading="lazy">
+  <figcaption class="cap"><span>AI · 旗袍东方</span><a href="https://civitai.com/models/1367860" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/49d404b1-b0ea-4320-8407-0e41279e8488/original=true/64056724.jpeg" alt="AI灵感图 · 旗袍东方 6" loading="lazy">
+  <figcaption class="cap"><span>AI · 旗袍东方</span><a href="https://civitai.com/models/1367860" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/4d8e4ffd-9dcd-4bd0-91fc-2588372ddabc/original=true/64056759.jpeg" alt="AI灵感图 · 旗袍东方 7" loading="lazy">
+  <figcaption class="cap"><span>AI · 旗袍东方</span><a href="https://civitai.com/models/1367860" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/294ed064-7f80-4f76-b996-014f69b490b6/original=true/64056938.jpeg" alt="AI灵感图 · 旗袍东方 8" loading="lazy">
+  <figcaption class="cap"><span>AI · 旗袍东方</span><a href="https://civitai.com/models/1367860" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/5261903e-a0b4-4f1e-bac1-f104006c8a22/original=true/64056881.jpeg" alt="AI灵感图 · 旗袍东方 9" loading="lazy">
+  <figcaption class="cap"><span>AI · 旗袍东方</span><a href="https://civitai.com/models/1367860" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/ad3ba7ea-2032-4a1f-c734-0c8993882400/original=true/148965.jpeg" alt="AI灵感图 · 旗袍东方 10" loading="lazy">
+  <figcaption class="cap"><span>AI · 旗袍东方</span><a href="https://civitai.com/models/12849" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/209a8c3d-90ea-4d8a-bc80-3d3a14a08c00/original=true/148970.jpeg" alt="AI灵感图 · 旗袍东方 11" loading="lazy">
+  <figcaption class="cap"><span>AI · 旗袍东方</span><a href="https://civitai.com/models/12849" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/c6605a4b-79fa-401a-29e4-0ecb84b55500/original=true/148969.jpeg" alt="AI灵感图 · 旗袍东方 12" loading="lazy">
+  <figcaption class="cap"><span>AI · 旗袍东方</span><a href="https://civitai.com/models/12849" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure></div>
+</section>
+<section class="sec" id="ai-kimono">
+  <div class="sec-head" style="color:#a855f7">
+    <h2>和服和风 <span class="en" style="font-size:.75rem;opacity:.6">AI·12</span></h2>
+    <p style="color:#cbb8d4">AI 生成的和服和风灵感，高分辨率，可作为搭配参考与AI创作底图。</p>
+  </div>
+  <div class="masonry"><figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a662762b-ef3c-4569-9636-d681ab096369/original=true/10971631.jpeg" alt="AI灵感图 · 和服和风 1" loading="lazy">
+  <figcaption class="cap"><span>AI · 和服和风</span><a href="https://civitai.com/models/240229" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/0ced07f7-091d-4508-b649-10054bede53f/original=true/10971632.jpeg" alt="AI灵感图 · 和服和风 2" loading="lazy">
+  <figcaption class="cap"><span>AI · 和服和风</span><a href="https://civitai.com/models/240229" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/bb6f7863-ab77-4e95-b9fc-9db3289c4ff2/original=true/10971629.jpeg" alt="AI灵感图 · 和服和风 3" loading="lazy">
+  <figcaption class="cap"><span>AI · 和服和风</span><a href="https://civitai.com/models/240229" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a8354366-af34-4294-b82c-7509508a6052/original=true/10971630.jpeg" alt="AI灵感图 · 和服和风 4" loading="lazy">
+  <figcaption class="cap"><span>AI · 和服和风</span><a href="https://civitai.com/models/240229" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/55b4769b-c660-459d-a0ca-598112a15701/original=true/10971633.jpeg" alt="AI灵感图 · 和服和风 5" loading="lazy">
+  <figcaption class="cap"><span>AI · 和服和风</span><a href="https://civitai.com/models/240229" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/3ce2d7cd-1a31-4c95-8ec5-68c83f7b732d/original=true/10744568.jpeg" alt="AI灵感图 · 和服和风 6" loading="lazy">
+  <figcaption class="cap"><span>AI · 和服和风</span><a href="https://civitai.com/models/236942" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/267d449c-272e-4cb8-926f-e7a63aa44eed/original=true/10744566.jpeg" alt="AI灵感图 · 和服和风 7" loading="lazy">
+  <figcaption class="cap"><span>AI · 和服和风</span><a href="https://civitai.com/models/236942" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/0c1f724f-f94f-48d9-ae24-da33137416f3/original=true/10744567.jpeg" alt="AI灵感图 · 和服和风 8" loading="lazy">
+  <figcaption class="cap"><span>AI · 和服和风</span><a href="https://civitai.com/models/236942" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/23d28eac-d779-48de-b90c-02c7187353a6/original=true/10744570.jpeg" alt="AI灵感图 · 和服和风 9" loading="lazy">
+  <figcaption class="cap"><span>AI · 和服和风</span><a href="https://civitai.com/models/236942" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/b4db2146-d3bc-4a77-872c-894fc09bad43/original=true/118977012.jpeg" alt="AI灵感图 · 和服和风 10" loading="lazy">
+  <figcaption class="cap"><span>AI · 和服和风</span><a href="https://civitai.com/models/236942" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/4f4bec0a-c663-49aa-a6d8-892d7a1e2afd/original=true/118977010.jpeg" alt="AI灵感图 · 和服和风 11" loading="lazy">
+  <figcaption class="cap"><span>AI · 和服和风</span><a href="https://civitai.com/models/236942" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/592d0e8a-8e88-4c93-86b7-32043ae9c59e/original=true/118977025.jpeg" alt="AI灵感图 · 和服和风 12" loading="lazy">
+  <figcaption class="cap"><span>AI · 和服和风</span><a href="https://civitai.com/models/236942" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure></div>
+</section>
+<section class="sec" id="ai-dress">
+  <div class="sec-head" style="color:#a855f7">
+    <h2>裙装 <span class="en" style="font-size:.75rem;opacity:.6">AI·12</span></h2>
+    <p style="color:#cbb8d4">AI 生成的裙装灵感，高分辨率，可作为搭配参考与AI创作底图。</p>
+  </div>
+  <div class="masonry"><figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9aed5e9b-48c0-447b-9b69-8c25d38c241d/original=true/3038414.jpeg" alt="AI灵感图 · 裙装 1" loading="lazy">
+  <figcaption class="cap"><span>AI · 裙装</span><a href="https://civitai.com/models/65283" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/ec744b22-38d1-41ce-8ad3-9f6a290c2044/original=true/3038415.jpeg" alt="AI灵感图 · 裙装 2" loading="lazy">
+  <figcaption class="cap"><span>AI · 裙装</span><a href="https://civitai.com/models/65283" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/5f537a5d-119c-454e-a1b4-d7e32366140e/original=true/3038416.jpeg" alt="AI灵感图 · 裙装 3" loading="lazy">
+  <figcaption class="cap"><span>AI · 裙装</span><a href="https://civitai.com/models/65283" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/219081d5-be95-47c0-82ae-cca9e8fb9306/original=true/3038418.jpeg" alt="AI灵感图 · 裙装 4" loading="lazy">
+  <figcaption class="cap"><span>AI · 裙装</span><a href="https://civitai.com/models/65283" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/7bc6253d-06c4-46ad-9dca-4fe390576d0c/original=true/3038425.jpeg" alt="AI灵感图 · 裙装 5" loading="lazy">
+  <figcaption class="cap"><span>AI · 裙装</span><a href="https://civitai.com/models/65283" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/555825bc-df19-437c-a47b-531938d512dc/original=true/3038433.jpeg" alt="AI灵感图 · 裙装 6" loading="lazy">
+  <figcaption class="cap"><span>AI · 裙装</span><a href="https://civitai.com/models/65283" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/f9859ca9-3796-486f-9c74-2b5771fcc5e4/original=true/3038419.jpeg" alt="AI灵感图 · 裙装 7" loading="lazy">
+  <figcaption class="cap"><span>AI · 裙装</span><a href="https://civitai.com/models/65283" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/e226aa62-4942-4891-8205-5869fd1ce362/original=true/3038420.jpeg" alt="AI灵感图 · 裙装 8" loading="lazy">
+  <figcaption class="cap"><span>AI · 裙装</span><a href="https://civitai.com/models/65283" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/518fa40c-a327-4b61-b299-54e34ff824cb/original=true/10315837.jpeg" alt="AI灵感图 · 裙装 9" loading="lazy">
+  <figcaption class="cap"><span>AI · 裙装</span><a href="https://civitai.com/models/197727" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/2ec1bc24-ecd5-43c0-bd19-bb9b4a25ca6a/original=true/10315835.jpeg" alt="AI灵感图 · 裙装 10" loading="lazy">
+  <figcaption class="cap"><span>AI · 裙装</span><a href="https://civitai.com/models/197727" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/b0ef1024-ca8f-4f20-89a7-6ae8e20b014a/original=true/10315874.jpeg" alt="AI灵感图 · 裙装 11" loading="lazy">
+  <figcaption class="cap"><span>AI · 裙装</span><a href="https://civitai.com/models/197727" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/b354fe0a-3801-4877-8c03-fa8704304e81/original=true/12164566.jpeg" alt="AI灵感图 · 裙装 12" loading="lazy">
+  <figcaption class="cap"><span>AI · 裙装</span><a href="https://civitai.com/models/66527" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure></div>
+</section>
+<section class="sec" id="ai-gown">
+  <div class="sec-head" style="color:#a855f7">
+    <h2>礼服 <span class="en" style="font-size:.75rem;opacity:.6">AI·12</span></h2>
+    <p style="color:#cbb8d4">AI 生成的礼服灵感，高分辨率，可作为搭配参考与AI创作底图。</p>
+  </div>
+  <div class="masonry"><figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/1ad4ca86-89f0-42fb-b218-9d313a5927e0/original=true/2709593.jpeg" alt="AI灵感图 · 礼服 1" loading="lazy">
+  <figcaption class="cap"><span>AI · 礼服</span><a href="https://civitai.com/models/153594" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/d3c6f09f-08a7-4083-91f4-6e2f39c74845/original=true/15043856.jpeg" alt="AI灵感图 · 礼服 2" loading="lazy">
+  <figcaption class="cap"><span>AI · 礼服</span><a href="https://civitai.com/models/374001" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/b5e15672-2dfd-4739-bdbf-2799c28f83c6/original=true/2786164.jpeg" alt="AI灵感图 · 礼服 3" loading="lazy">
+  <figcaption class="cap"><span>AI · 礼服</span><a href="https://civitai.com/models/153594" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/e02e212b-4159-45d0-a99f-100d567cec20/original=true/9760208.jpeg" alt="AI灵感图 · 礼服 4" loading="lazy">
+  <figcaption class="cap"><span>AI · 礼服</span><a href="https://civitai.com/models/336240" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a274cac8-b361-4b39-b843-3b879ee682e2/original=true/9760335.jpeg" alt="AI灵感图 · 礼服 5" loading="lazy">
+  <figcaption class="cap"><span>AI · 礼服</span><a href="https://civitai.com/models/336240" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9ed5bcf4-c65f-4844-ab9b-66b3feb072c9/original=true/9760677.jpeg" alt="AI灵感图 · 礼服 6" loading="lazy">
+  <figcaption class="cap"><span>AI · 礼服</span><a href="https://civitai.com/models/336240" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/138de181-fd65-4288-9120-431fc372e1b0/original=true/9760210.jpeg" alt="AI灵感图 · 礼服 7" loading="lazy">
+  <figcaption class="cap"><span>AI · 礼服</span><a href="https://civitai.com/models/336240" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9d727c19-af9a-4040-a689-23c904b2a0a1/original=true/9760218.jpeg" alt="AI灵感图 · 礼服 8" loading="lazy">
+  <figcaption class="cap"><span>AI · 礼服</span><a href="https://civitai.com/models/336240" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/cb869607-150f-4886-9dcd-fe7f5a42a610/original=true/9760330.jpeg" alt="AI灵感图 · 礼服 9" loading="lazy">
+  <figcaption class="cap"><span>AI · 礼服</span><a href="https://civitai.com/models/336240" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/d64e8eae-d79e-4f91-8754-7e122c9db5f2/original=true/9760678.jpeg" alt="AI灵感图 · 礼服 10" loading="lazy">
+  <figcaption class="cap"><span>AI · 礼服</span><a href="https://civitai.com/models/336240" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/fcf43dfb-1093-44c2-ae7f-135daf1e45a5/original=true/9760685.jpeg" alt="AI灵感图 · 礼服 11" loading="lazy">
+  <figcaption class="cap"><span>AI · 礼服</span><a href="https://civitai.com/models/336240" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/22618224-dcc4-49c3-a9a4-9bf7870606f9/original=true/8431873.jpeg" alt="AI灵感图 · 礼服 12" loading="lazy">
+  <figcaption class="cap"><span>AI · 礼服</span><a href="https://civitai.com/models/200043" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure></div>
+</section>
+<section class="sec" id="ai-wedding-dress">
+  <div class="sec-head" style="color:#a855f7">
+    <h2>婚纱 <span class="en" style="font-size:.75rem;opacity:.6">AI·12</span></h2>
+    <p style="color:#cbb8d4">AI 生成的婚纱灵感，高分辨率，可作为搭配参考与AI创作底图。</p>
+  </div>
+  <div class="masonry"><figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/d1b034aa-3ffa-41f8-0d3e-9cd6f84f0000/original=true/450499.jpeg" alt="AI灵感图 · 婚纱 1" loading="lazy">
+  <figcaption class="cap"><span>AI · 婚纱</span><a href="https://civitai.com/models/26129" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a7cdd09f-a366-4875-a3d1-e2d9f1f54000/original=true/179848.jpeg" alt="AI灵感图 · 婚纱 2" loading="lazy">
+  <figcaption class="cap"><span>AI · 婚纱</span><a href="https://civitai.com/models/14903" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/011ed40e-9eaa-47ca-858c-77c50d3bb49b/original=true/24022794.jpeg" alt="AI灵感图 · 婚纱 3" loading="lazy">
+  <figcaption class="cap"><span>AI · 婚纱</span><a href="https://civitai.com/models/640200" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/4a401064-a707-40a0-8138-7d8da98ea748/original=true/1355906.jpeg" alt="AI灵感图 · 婚纱 4" loading="lazy">
+  <figcaption class="cap"><span>AI · 婚纱</span><a href="https://civitai.com/models/100754" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/c967bc4b-49e1-4468-9373-adf1c05471f3/original=true/6915257.jpeg" alt="AI灵感图 · 婚纱 5" loading="lazy">
+  <figcaption class="cap"><span>AI · 婚纱</span><a href="https://civitai.com/models/312906" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/cfbd42ba-ced7-42d1-95c8-6ee939cff4ba/original=true/6915259.jpeg" alt="AI灵感图 · 婚纱 6" loading="lazy">
+  <figcaption class="cap"><span>AI · 婚纱</span><a href="https://civitai.com/models/312906" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/8734803b-e285-4899-8b62-086cc0b06a8b/original=true/6879318.jpeg" alt="AI灵感图 · 婚纱 7" loading="lazy">
+  <figcaption class="cap"><span>AI · 婚纱</span><a href="https://civitai.com/models/312906" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/b96bb198-3ee2-4ca1-8f67-2781ef6a41ec/original=true/6879321.jpeg" alt="AI灵感图 · 婚纱 8" loading="lazy">
+  <figcaption class="cap"><span>AI · 婚纱</span><a href="https://civitai.com/models/312906" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/1ed79fb5-c7c1-4ea4-a056-425e9366fa15/original=true/6865799.jpeg" alt="AI灵感图 · 婚纱 9" loading="lazy">
+  <figcaption class="cap"><span>AI · 婚纱</span><a href="https://civitai.com/models/312906" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/6950094b-3521-4b24-9c56-7b666e03f2d0/original=true/6865800.jpeg" alt="AI灵感图 · 婚纱 10" loading="lazy">
+  <figcaption class="cap"><span>AI · 婚纱</span><a href="https://civitai.com/models/312906" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/6dc309a3-d20c-4534-b9d1-b41bf198117c/original=true/6865808.jpeg" alt="AI灵感图 · 婚纱 11" loading="lazy">
+  <figcaption class="cap"><span>AI · 婚纱</span><a href="https://civitai.com/models/312906" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/f23f5d07-a4f5-4a43-8e74-a9b186f9960c/original=true/6865805.jpeg" alt="AI灵感图 · 婚纱 12" loading="lazy">
+  <figcaption class="cap"><span>AI · 婚纱</span><a href="https://civitai.com/models/312906" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure></div>
+</section>
+<section class="sec" id="ai-portrait">
+  <div class="sec-head" style="color:#a855f7">
+    <h2>人像写真 <span class="en" style="font-size:.75rem;opacity:.6">AI·12</span></h2>
+    <p style="color:#cbb8d4">AI 生成的人像写真灵感，高分辨率，可作为搭配参考与AI创作底图。</p>
+  </div>
+  <div class="masonry"><figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/47142fed-2a0b-4fcb-b3b6-4f7067589cce/original=true/5717948.jpeg" alt="AI灵感图 · 人像写真 1" loading="lazy">
+  <figcaption class="cap"><span>AI · 人像写真</span><a href="https://civitai.com/models/28059" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/31105447-3d4f-4e30-b1ef-4dac831be891/original=true/71025708.jpeg" alt="AI灵感图 · 人像写真 2" loading="lazy">
+  <figcaption class="cap"><span>AI · 人像写真</span><a href="https://civitai.com/models/2220" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/df37070a-9ee1-4910-8e73-8d4e8ffdce5d/original=true/147843060.mp4" alt="AI灵感图 · 人像写真 3" loading="lazy">
+  <figcaption class="cap"><span>AI · 人像写真</span><a href="https://civitai.com/models/2220" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a58be1d2-89a7-458e-9f64-2d6f25ad0752/original=true/12606818.jpeg" alt="AI灵感图 · 人像写真 4" loading="lazy">
+  <figcaption class="cap"><span>AI · 人像写真</span><a href="https://civitai.com/models/9052" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/af41c481-f42a-46fe-beba-6b03954c4cbb/original=true/21094586.jpeg" alt="AI灵感图 · 人像写真 5" loading="lazy">
+  <figcaption class="cap"><span>AI · 人像写真</span><a href="https://civitai.com/models/28059" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/bfe4ba10-167a-4867-90ed-cea170222dcb/original=true/21094588.jpeg" alt="AI灵感图 · 人像写真 6" loading="lazy">
+  <figcaption class="cap"><span>AI · 人像写真</span><a href="https://civitai.com/models/28059" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/d5fbb50b-cee7-48e3-8882-544bfc0f6a68/original=true/146406437.mp4" alt="AI灵感图 · 人像写真 7" loading="lazy">
+  <figcaption class="cap"><span>AI · 人像写真</span><a href="https://civitai.com/models/2220" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/1aad8579-eed2-470a-b6c4-65d7133b8cc1/original=true/143710091.mp4" alt="AI灵感图 · 人像写真 8" loading="lazy">
+  <figcaption class="cap"><span>AI · 人像写真</span><a href="https://civitai.com/models/2220" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/734a8ca9-287e-41c4-808e-ea8ce91f4956/original=true/1858760.jpeg" alt="AI灵感图 · 人像写真 9" loading="lazy">
+  <figcaption class="cap"><span>AI · 人像写真</span><a href="https://civitai.com/models/81458" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/b00cc9d0-2087-40d7-afe6-85b88696077f/original=true/1858752.jpeg" alt="AI灵感图 · 人像写真 10" loading="lazy">
+  <figcaption class="cap"><span>AI · 人像写真</span><a href="https://civitai.com/models/81458" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9a5d19b8-27dc-4c66-b38e-31746d92970b/original=true/7273802.jpeg" alt="AI灵感图 · 人像写真 11" loading="lazy">
+  <figcaption class="cap"><span>AI · 人像写真</span><a href="https://civitai.com/models/33208" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/d0e85514-9da7-4778-9cd9-19931c46eefe/original=true/7273851.jpeg" alt="AI灵感图 · 人像写真 12" loading="lazy">
+  <figcaption class="cap"><span>AI · 人像写真</span><a href="https://civitai.com/models/33208" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption>
+</figure></div>
+</section>
+<footer><div><b style="color:#f5c76e">FitSaga</b> · AI 视觉实验室</div>
+  <script src="/search.js" defer></script>
+  <script src="/theme.js" defer></script>
+<div class="source">图片由社区模型生成，版权归各模型作者所有 · 来源 Civitai · © 2026 FitSaga</div></footer>
+<script src="/lightbox.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/theme.js" defer></script>
+</body></html>

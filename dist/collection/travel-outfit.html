@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>出游穿搭精选 · 上镜的松弛 · FitSaga</title>
+<meta name="description" content="出游穿搭配色随场景走：古镇、海边与草原的实拍示范。">
+<link rel="canonical" href="https://fitsaga.pages.dev/collection/travel-outfit">
+<style>:root{--gold:#f5c76e;--bg:#141018;--fg:#f5eef7;}
+*{margin:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--fg);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.hero{min-height:70vh;
+/* appended below */display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:3rem 1.5rem;background:radial-gradient(1200px 600px at 20% 10%,rgba(255,126,179,.25),transparent 60%),radial-gradient(1000px 500px at 80% 20%,rgba(181,84,140,.3),transparent 60%),radial-gradient(900px 500px at 50% 90%,rgba(63,111,216,.18),transparent 60%),var(--bg)}
+.hero.small{min-height:38vh}
+.hero h1{font-size:clamp(1.8rem,5vw,3.4rem);font-weight:800;line-height:1.3;background:linear-gradient(90deg,#ffd9a8,#ff7eb3,#c793ff,#8ec5ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{margin-top:.8rem;color:#cbb8d4;letter-spacing:.12em;font-size:clamp(.9rem,2vw,1.05rem)}
+.stylechips{display:flex;flex-wrap:wrap;gap:.55rem;justify-content:center;margin-top:1.8rem}
+.chip{display:inline-block;padding:.6rem 1.05rem;border-radius:999px;font-size:.9rem;font-weight:600;color:#fff;box-shadow:0 4px 12px rgba(0,0,0,.35);transition:transform .2s;opacity:.85}
+.chip:hover{transform:translateY(-2px);opacity:1}
+.chip.on{outline:2px solid #fff5;opacity:1}
+.sec{padding:2.5rem 1.5rem;max-width:1100px;margin:0 auto}
+.sec-head h2{font-size:clamp(1.3rem,3vw,1.9rem);font-weight:800}
+.sec-head p{width:100%;margin-top:.4rem;opacity:.85;font-size:.95rem}
+.intro{max-width:640px;color:#cbb8d4;line-height:1.8;font-size:.95rem;margin-bottom:1.4rem}
+.masonry{columns:3 240px;column-gap:14px}
+@media(max-width:640px){.masonry{columns:2 140px}}
+.shot{break-inside:avoid;margin-bottom:14px;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 6px 20px rgba(0,0,0,.4);background:#241b2c}
+.shot img{width:100%;display:block;transition:transform .35s}
+.shot:hover img{transform:scale(1.04)}
+.shot .cap{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:.5rem;padding:1.5rem .7rem .55rem;font-size:.78rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+.shot .cap em{font-style:normal;opacity:.75;white-space:nowrap;font-size:.78rem}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(160px,100%),1fr));gap:14px}
+.scard{background:#241b2c;border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+.scard img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.sname{padding:.6rem .7rem .1rem;font-weight:700;font-size:.9rem}
+.smeta{padding:0 .7rem .7rem;font-size:.78rem;color:#9d8fa8}
+footer{padding:2.5rem 1.5rem;text-align:center;color:#9d8fa8;font-size:.9rem;background:#0f0c13;margin-top:2rem}
+footer .links{margin-top:.7rem;display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+footer .links a{display:inline-block;padding:.55rem .9rem;border-radius:10px;background:#241b2c;font-size:.9rem;min-height:44px;line-height:1.4}
+footer .source{opacity:.6;font-size:.78rem;margin-top:.6rem;line-height:1.7}
+.sec-head a{display:inline-block;padding:.6rem .1rem;min-height:44px;line-height:1.7;font-size:.92rem}
+/* flywheel round3 fixes */
+.hero.small{min-height:26vh}
+.hero .sub{letter-spacing:.05em;max-width:22em;line-height:1.8}
+.collection-cap{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:.15rem;padding:2.2rem .8rem .6rem;font-size:.85rem;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+.shot .cap{font-size:.85rem}
+.shot .cap .view{font-size:.78rem;opacity:.8}
+.masonry .shot img{max-height:520px;object-fit:cover}
+
+/* home v3 components */
+.hero.hero2{min-height:52vh}
+.chip-hero{font-size:1rem;padding:.7rem 1.3rem;box-shadow:0 6px 20px rgba(199,147,255,.35)}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:14px}
+.srow{margin-bottom:1.6rem}
+.srow-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;font-size:1.05rem}
+.srow-h .more{font-size:.85rem;opacity:.75}
+.minirow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media(max-width:640px){.minirow{grid-template-columns:repeat(2,1fr)}}
+.mini{display:block;border-radius:12px;overflow:hidden;aspect-ratio:3/4;background:#241b2c}
+.mini img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.mini:hover img{transform:scale(1.05)}
+
+</style></head><body>
+<header class="hero small"><h1><span style="color:#ff7eb3">出游穿搭精选 · 上镜的松弛</span></h1>
+<p class="sub">18 套 · 按收藏热度排序 · 每日更新</p></header>
+<main class="sec">
+<p class="intro">出游穿搭配色随场景走：古镇、海边与草原的实拍示范。</p>
+<nav class="stylechips" style="margin-bottom:1.5rem"><a class="chip" style="background:linear-gradient(135deg,#2a1832,#ff7eb355)" href="/collection/nail-art">美甲精选</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#ff7eb355)" href="/collection/first-love">初恋感精选</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#ff7eb355)" href="/collection/milk-style">奶系穿搭精选</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#ff7eb355)" href="/collection/heiress">千金风精选</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#ff7eb355)" href="/collection/baddie">御姐风精选</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#ff7eb355)" href="/collection/office">职场穿搭精选</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#ff7eb355)" href="/collection/korean-style">韩系穿搭精选</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#ff7eb355)" href="/collection/qipao">旗袍精选</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#ff7eb355)" href="/collection/mamian">马面裙精选</a></nav>
+<div class="masonry"><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/item/201611/19/20161119091522_XW4QL.jpeg" alt="出游穿搭精选 · 上镜的松弛 1" loading="lazy"><figcaption class="cap"><span>出游穿搭 · 收藏156</span><a href="https://www.duitang.com/blog/?id=669722970" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/item/201807/11/20180711175959_vikck.jpg" alt="出游穿搭精选 · 上镜的松弛 2" loading="lazy"><figcaption class="cap"><span>出游穿搭 · 收藏150</span><a href="https://www.duitang.com/blog/?id=954753758" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/item/201908/11/20190811102644_nofzy.jpg" alt="出游穿搭精选 · 上镜的松弛 3" loading="lazy"><figcaption class="cap"><span>出游穿搭 · 收藏33</span><a href="https://www.duitang.com/blog/?id=1116201740" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/item/201910/29/20191029163850_bbpve.jpg" alt="出游穿搭精选 · 上镜的松弛 4" loading="lazy"><figcaption class="cap"><span>出游穿搭 · 收藏30</span><a href="https://www.duitang.com/blog/?id=1148464884" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/item/201910/29/20191029163858_ybzem.jpg" alt="出游穿搭精选 · 上镜的松弛 5" loading="lazy"><figcaption class="cap"><span>出游穿搭 · 收藏27</span><a href="https://www.duitang.com/blog/?id=1148464877" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/item/202002/28/20200228194642_sltlq.jpg" alt="出游穿搭精选 · 上镜的松弛 6" loading="lazy"><figcaption class="cap"><span>出游穿搭 · 收藏19</span><a href="https://www.duitang.com/blog/?id=1198740002" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/item/201910/29/20191029163855_igvgi.jpg" alt="出游穿搭精选 · 上镜的松弛 7" loading="lazy"><figcaption class="cap"><span>出游穿搭 · 收藏18</span><a href="https://www.duitang.com/blog/?id=1148464880" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/item/201801/28/20180128165910_j2HsM.png" alt="出游穿搭精选 · 上镜的松弛 8" loading="lazy"><figcaption class="cap"><span>出游穿搭 · 收藏18</span><a href="https://www.duitang.com/blog/?id=877281083" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/item/201910/29/20191029163856_scqqd.jpg" alt="出游穿搭精选 · 上镜的松弛 9" loading="lazy"><figcaption class="cap"><span>出游穿搭 · 收藏17</span><a href="https://www.duitang.com/blog/?id=1148464879" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/item/201908/11/20190811102645_dpxvb.jpg" alt="出游穿搭精选 · 上镜的松弛 10" loading="lazy"><figcaption class="cap"><span>出游穿搭 · 收藏16</span><a href="https://www.duitang.com/blog/?id=1116201739" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/item/201704/15/20170415231947_MHxLc.jpeg" alt="出游穿搭精选 · 上镜的松弛 11" loading="lazy"><figcaption class="cap"><span>出游穿搭 · 收藏15</span><a href="https://www.duitang.com/blog/?id=740136554" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/item/201910/29/20191029163854_jootk.jpg" alt="出游穿搭精选 · 上镜的松弛 12" loading="lazy"><figcaption class="cap"><span>出游穿搭 · 收藏15</span><a href="https://www.duitang.com/blog/?id=1148464881" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/item/201910/29/20191029163853_flvyn.jpg" alt="出游穿搭精选 · 上镜的松弛 13" loading="lazy"><figcaption class="cap"><span>出游穿搭 · 收藏14</span><a href="https://www.duitang.com/blog/?id=1148464882" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/item/201910/29/20191029163852_yqodf.jpg" alt="出游穿搭精选 · 上镜的松弛 14" loading="lazy"><figcaption class="cap"><span>出游穿搭 · 收藏12</span><a href="https://www.duitang.com/blog/?id=1148464883" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/item/201910/29/20191029163859_gpqti.jpg" alt="出游穿搭精选 · 上镜的松弛 15" loading="lazy"><figcaption class="cap"><span>出游穿搭 · 收藏12</span><a href="https://www.duitang.com/blog/?id=1148464876" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/item/201910/29/20191029163857_kpyxw.jpg" alt="出游穿搭精选 · 上镜的松弛 16" loading="lazy"><figcaption class="cap"><span>出游穿搭 · 收藏12</span><a href="https://www.duitang.com/blog/?id=1148464878" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/item/202003/14/20200314185301_gepfu.jpg" alt="出游穿搭精选 · 上镜的松弛 17" loading="lazy"><figcaption class="cap"><span>出游穿搭 · 收藏10</span><a href="https://www.duitang.com/blog/?id=1208204733" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure><figure class="shot"><img src="https://a-ho-img.dtstatic.com/uploads/blog/202108/02/20210802200806_f027a.jpg" alt="出游穿搭精选 · 上镜的松弛 18" loading="lazy"><figcaption class="cap"><span>出游穿搭 · 收藏10</span><a href="https://www.duitang.com/blog/?id=1357148838" target="_blank" rel="nofollow noopener"><em>来源↗</em></a></figcaption></figure></div>
+<p style="margin-top:1.5rem"><a style="color:#c793ff" href="/topics.html">🎨 想用 AI 生成这种风格？进画法研究所 →</a></p>
+</main>
+<footer><div><b style="color:#f5c76e">FitSaga</b> · 策展合集</div>
+<div class="source">图片版权归原创作者所有 · 点击来源↗访问原帖 · © 2026 FitSaga</div></footer>
+<script src="/lightbox.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/theme.js" defer></script>
+</body></html>

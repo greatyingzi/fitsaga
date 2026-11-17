@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>多巴胺穿搭配色公式：高饱和不翻车的比例 · FitSaga 穿搭研究所</title>
+<meta name="description" content="多巴胺穿搭的灵魂不是「颜色多」，是「颜色的秩序」——高收藏的多巴胺图都遵守 631 或 55 的配色纪律。">
+<link rel="canonical" href="https://fitsaga.pages.dev/guide/duobapei-secaigongshi">
+<style>:root{--gold:#f5c76e;--bg:#141018;--fg:#f5eef7;}
+*{margin:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--fg);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.hero{min-height:70vh;
+/* appended below */display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:3rem 1.5rem;background:radial-gradient(1200px 600px at 20% 10%,rgba(255,126,179,.25),transparent 60%),radial-gradient(1000px 500px at 80% 20%,rgba(181,84,140,.3),transparent 60%),radial-gradient(900px 500px at 50% 90%,rgba(63,111,216,.18),transparent 60%),var(--bg)}
+.hero.small{min-height:38vh}
+.hero h1{font-size:clamp(1.8rem,5vw,3.4rem);font-weight:800;line-height:1.3;background:linear-gradient(90deg,#ffd9a8,#ff7eb3,#c793ff,#8ec5ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{margin-top:.8rem;color:#cbb8d4;letter-spacing:.12em;font-size:clamp(.9rem,2vw,1.05rem)}
+.stylechips{display:flex;flex-wrap:wrap;gap:.55rem;justify-content:center;margin-top:1.8rem}
+.chip{display:inline-block;padding:.6rem 1.05rem;border-radius:999px;font-size:.9rem;font-weight:600;color:#fff;box-shadow:0 4px 12px rgba(0,0,0,.35);transition:transform .2s;opacity:.85}
+.chip:hover{transform:translateY(-2px);opacity:1}
+.chip.on{outline:2px solid #fff5;opacity:1}
+.sec{padding:2.5rem 1.5rem;max-width:1100px;margin:0 auto}
+.sec-head h2{font-size:clamp(1.3rem,3vw,1.9rem);font-weight:800}
+.sec-head p{width:100%;margin-top:.4rem;opacity:.85;font-size:.95rem}
+.intro{max-width:640px;color:#cbb8d4;line-height:1.8;font-size:.95rem;margin-bottom:1.4rem}
+.masonry{columns:3 240px;column-gap:14px}
+@media(max-width:640px){.masonry{columns:2 140px}}
+.shot{break-inside:avoid;margin-bottom:14px;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 6px 20px rgba(0,0,0,.4);background:#241b2c}
+.shot img{width:100%;display:block;transition:transform .35s}
+.shot:hover img{transform:scale(1.04)}
+.shot .cap{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:.5rem;padding:1.5rem .7rem .55rem;font-size:.78rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+.shot .cap em{font-style:normal;opacity:.75;white-space:nowrap;font-size:.78rem}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(160px,100%),1fr));gap:14px}
+.scard{background:#241b2c;border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+.scard img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.sname{padding:.6rem .7rem .1rem;font-weight:700;font-size:.9rem}
+.smeta{padding:0 .7rem .7rem;font-size:.78rem;color:#9d8fa8}
+footer{padding:2.5rem 1.5rem;text-align:center;color:#9d8fa8;font-size:.9rem;background:#0f0c13;margin-top:2rem}
+footer .links{margin-top:.7rem;display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+footer .links a{display:inline-block;padding:.55rem .9rem;border-radius:10px;background:#241b2c;font-size:.9rem;min-height:44px;line-height:1.4}
+footer .source{opacity:.6;font-size:.78rem;margin-top:.6rem;line-height:1.7}
+.sec-head a{display:inline-block;padding:.6rem .1rem;min-height:44px;line-height:1.7;font-size:.92rem}
+/* flywheel round3 fixes */
+.hero.small{min-height:26vh}
+.hero .sub{letter-spacing:.05em;max-width:22em;line-height:1.8}
+.collection-cap{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:.15rem;padding:2.2rem .8rem .6rem;font-size:.85rem;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+.shot .cap{font-size:.85rem}
+.shot .cap .view{font-size:.78rem;opacity:.8}
+.masonry .shot img{max-height:520px;object-fit:cover}
+
+/* home v3 components */
+.hero.hero2{min-height:52vh}
+.chip-hero{font-size:1rem;padding:.7rem 1.3rem;box-shadow:0 6px 20px rgba(199,147,255,.35)}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:14px}
+.srow{margin-bottom:1.6rem}
+.srow-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;font-size:1.05rem}
+.srow-h .more{font-size:.85rem;opacity:.75}
+.minirow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media(max-width:640px){.minirow{grid-template-columns:repeat(2,1fr)}}
+.mini{display:block;border-radius:12px;overflow:hidden;aspect-ratio:3/4;background:#241b2c}
+.mini img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.mini:hover img{transform:scale(1.05)}
+
+</style><style>
+.gwrap{max-width:680px;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+.gwrap h1{font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.4;font-weight:800;color:#fff}
+.gwrap .meta{color:#9d8fa8;font-size:.85rem;margin:.8rem 0 1.8rem}
+.gwrap .lede{font-size:1.05rem;line-height:2;color:#f0e8f3;border-left:3px solid #ff7eb3;padding-left:1rem;margin-bottom:1.8rem}
+.gwrap h2{font-size:1.25rem;color:#ffd9a8;margin:2rem 0 .8rem;font-weight:800}
+.gwrap p{line-height:2;color:#e8dff0;margin:.7rem 0;font-size:.98rem}
+.gwrap .formula{background:#241b2c;border-radius:14px;padding:1rem 1.1rem;margin:.9rem 0;border:1px solid #3a2a44}
+.gwrap .formula b{color:#ff9ec7}
+.gwrap .formula p{margin:0;font-size:.92rem;line-height:1.8}
+.gwrap .faq{margin:1.5rem 0}
+.gwrap details{background:#241b2c;border-radius:12px;margin:.6rem 0;padding:.9rem 1rem;border:1px solid #3a2a44}
+.gwrap summary{cursor:pointer;font-weight:700;color:#ffd9a8;font-size:.95rem}
+.gwrap details p{margin:.6rem 0 0;font-size:.92rem}
+.gwrap .looks{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(150px,100%),1fr));gap:12px;margin:1.2rem 0}
+.gwrap .looks img{width:100%;border-radius:10px;aspect-ratio:3/4;object-fit:cover;display:block}
+.gwrap .looks figure{margin:0;position:relative}
+.gwrap .looks figcaption{font-size:.72rem;color:#9d8fa8;margin-top:.3rem}
+.gwrap .tip{background:linear-gradient(135deg,#2a1832,#3a1f45);border-radius:14px;padding:1rem 1.1rem;margin:1.2rem 0}
+.gwrap .tip b{color:#c793ff}
+.gwrap a{color:#ff9ec7}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "多巴胺穿搭配色公式：高饱和不翻车的比例", "description": "多巴胺穿搭的灵魂不是「颜色多」，是「颜色的秩序」——高收藏的多巴胺图都遵守 631 或 55 的配色纪律。", "datePublished": "2026-11-17", "author": {"@type": "Organization", "name": "FitSaga"}, "publisher": {"@type": "Organization", "name": "FitSaga"}, "mainEntityOfPage": "https://fitsaga.pages.dev/guide/duobapei-secaigongshi"}</script>
+</head><body>
+<div class="gwrap">
+<article>
+<h1>多巴胺穿搭配色公式：高饱和不翻车的比例</h1>
+<div class="meta">2026-11-17 · 穿搭研究所 · 数据来源：站内图片库与搜索词分析</div>
+<div class="lede">多巴胺穿搭的灵魂不是「颜色多」，是「颜色的秩序」——高收藏的多巴胺图都遵守 631 或 55 的配色纪律。</div>
+<h2>两个保命公式</h2>
+<h3 style='color:#f5c76e;font-size:1.05rem;margin:1.2rem 0 .5rem'>631 比例（新手安全）</h3>
+<p>60% 主色（一件大面积单品）+ 30% 辅色（下装或外套）+ 10% 点缀（包/鞋/袜）。全身高饱和=幼儿园。</p>
+<h3 style='color:#f5c76e;font-size:1.05rem;margin:1.2rem 0 .5rem'>55 对撞（进阶）</h3>
+<p>五五开的互补色对撞：粉+绿、黄+紫、蓝+橙。撞色时两件都选「灰度版」（雾霾粉、芥末黄）避免刺眼。</p>
+<h2>显黑显白的色号选择</h2>
+<p style='padding-left:1.2rem'>· 黄黑皮避开荧光感：选带灰度的「奶油多巴胺」</p>
+<p style='padding-left:1.2rem'>· 冷白皮随便撞，但荧光绿仍是雷区</p>
+<h2>配件收口</h2>
+<p>多巴胺全身的颜色必须被「中性收口」：白鞋、裸色包、黑色腰带——没有收口的全身高饱和=调色盘。</p>
+<h2>FAQ</h2>
+<p><b>多巴胺适合上班吗？</b> 收敛版=一个高饱和单品+全身中性色（粉西装+白裤），职场安全。</p>
+<div class="looks"></div>
+</article>
+<p style="margin-top:2.5rem"><a href="/guide.html">← 返回穿搭研究所</a> · <a href="/">首页</a></p>
+</div>
+<script src="/lightbox.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/theme.js" defer></script>
+</body></html>

@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta property="og:title" content="FitSaga · 每一种美，都值得一场时装冒险"><meta property="og:description" content="古风汉服、旗袍、甜美、辣妹、JK、街拍——真实搭配灵感与AI画法专题"><meta property="og:type" content="website"><meta property="og:url" content="https://fitsaga.pages.dev/"><meta name="twitter:card" content="summary"
+<title>街头 · 潮流搭配图鉴 · FitSaga</title>
+<meta name="description" content="街头 · 潮流穿搭灵感图鉴：都市酷感，随性出街。海量真实搭配图片，逐张标注来源与作者。">
+<link rel="canonical" href="https://fitsaga.pages.dev/style/street.html">
+<style>:root{--gold:#f5c76e;--bg:#141018;--fg:#f5eef7;}
+*{margin:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--fg);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.hero{min-height:70vh;
+/* appended below */display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:3rem 1.5rem;background:radial-gradient(1200px 600px at 20% 10%,rgba(255,126,179,.25),transparent 60%),radial-gradient(1000px 500px at 80% 20%,rgba(181,84,140,.3),transparent 60%),radial-gradient(900px 500px at 50% 90%,rgba(63,111,216,.18),transparent 60%),var(--bg)}
+.hero.small{min-height:38vh}
+.hero h1{font-size:clamp(1.8rem,5vw,3.4rem);font-weight:800;line-height:1.3;background:linear-gradient(90deg,#ffd9a8,#ff7eb3,#c793ff,#8ec5ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{margin-top:.8rem;color:#cbb8d4;letter-spacing:.12em;font-size:clamp(.9rem,2vw,1.05rem)}
+.stylechips{display:flex;flex-wrap:wrap;gap:.55rem;justify-content:center;margin-top:1.8rem}
+.chip{display:inline-block;padding:.6rem 1.05rem;border-radius:999px;font-size:.9rem;font-weight:600;color:#fff;box-shadow:0 4px 12px rgba(0,0,0,.35);transition:transform .2s;opacity:.85}
+.chip:hover{transform:translateY(-2px);opacity:1}
+.chip.on{outline:2px solid #fff5;opacity:1}
+.sec{padding:2.5rem 1.5rem;max-width:1100px;margin:0 auto}
+.sec-head h2{font-size:clamp(1.3rem,3vw,1.9rem);font-weight:800}
+.sec-head p{width:100%;margin-top:.4rem;opacity:.85;font-size:.95rem}
+.intro{max-width:640px;color:#cbb8d4;line-height:1.8;font-size:.95rem;margin-bottom:1.4rem}
+.masonry{columns:3 240px;column-gap:14px}
+@media(max-width:640px){.masonry{columns:2 140px}}
+.shot{break-inside:avoid;margin-bottom:14px;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 6px 20px rgba(0,0,0,.4);background:#241b2c}
+.shot img{width:100%;display:block;transition:transform .35s}
+.shot:hover img{transform:scale(1.04)}
+.shot .cap{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:.5rem;padding:1.5rem .7rem .55rem;font-size:.78rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+.shot .cap em{font-style:normal;opacity:.75;white-space:nowrap;font-size:.78rem}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(160px,100%),1fr));gap:14px}
+.scard{background:#241b2c;border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+.scard img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.sname{padding:.6rem .7rem .1rem;font-weight:700;font-size:.9rem}
+.smeta{padding:0 .7rem .7rem;font-size:.78rem;color:#9d8fa8}
+footer{padding:2.5rem 1.5rem;text-align:center;color:#9d8fa8;font-size:.9rem;background:#0f0c13;margin-top:2rem}
+footer .links{margin-top:.7rem;display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+footer .links a{display:inline-block;padding:.55rem .9rem;border-radius:10px;background:#241b2c;font-size:.9rem;min-height:44px;line-height:1.4}
+footer .source{opacity:.6;font-size:.78rem;margin-top:.6rem;line-height:1.7}
+.sec-head a{display:inline-block;padding:.6rem .1rem;min-height:44px;line-height:1.7;font-size:.92rem}
+/* flywheel round3 fixes */
+.hero.small{min-height:26vh}
+.hero .sub{letter-spacing:.05em;max-width:22em;line-height:1.8}
+.collection-cap{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:.15rem;padding:2.2rem .8rem .6rem;font-size:.85rem;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+.shot .cap{font-size:.85rem}
+.shot .cap .view{font-size:.78rem;opacity:.8}
+.masonry .shot img{max-height:520px;object-fit:cover}
+
+/* home v3 components */
+.hero.hero2{min-height:52vh}
+.chip-hero{font-size:1rem;padding:.7rem 1.3rem;box-shadow:0 6px 20px rgba(199,147,255,.35)}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:14px}
+.srow{margin-bottom:1.6rem}
+.srow-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;font-size:1.05rem}
+.srow-h .more{font-size:.85rem;opacity:.75}
+.minirow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media(max-width:640px){.minirow{grid-template-columns:repeat(2,1fr)}}
+.mini{display:block;border-radius:12px;overflow:hidden;aspect-ratio:3/4;background:#241b2c}
+.mini img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.mini:hover img{transform:scale(1.05)}
+
+</style>
+</head>
+<body>
+
+<header class="hero small" style="background:radial-gradient(900px 400px at 70% 10%,#0ea5a533,transparent 60%),#141018">
+  <h1><span style="color:#0ea5a5">街头 · 潮流</span></h1>
+  <p class="sub">都市酷感，随性出街。</p>
+</header>
+<main class="sec">
+  <p class="intro">街拍感的本质是「未完成感」：衬衫多开一颗扣、裤脚随意堆叠、外套披着不穿袖——它反对「全套搭配好的精致」。城市街拍的色盘偏灰调（雾霾蓝、水泥灰、军绿），亮色只出现在一件单品上。街拍和潮流的区别：街拍是「像没打扮」，潮流是「故意反着穿」。</p>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "街头 · 潮流", "itemListElement": [{"@type": "ImageObject", "contentUrl": "https://a-ho-img.dtstatic.com/uploads/blog/202207/15/20220715152421_d090e.jpg", "name": "街头 · 潮流搭配灵感1", "url": "https://www.duitang.com/blog/?id=1412335308"}, {"@type": "ImageObject", "contentUrl": "https://a-ho-img.dtstatic.com/uploads/blog/202411/13/bYSXp4BiLy69l6.jpeg", "name": "街头 · 潮流搭配灵感2", "url": "https://www.duitang.com/blog/?id=1542037349"}, {"@type": "ImageObject", "contentUrl": "https://a-ho-img.dtstatic.com/uploads/blog/202411/13/bYSXp4BiLy69Qe.jpeg", "name": "街头 · 潮流搭配灵感3", "url": "https://www.duitang.com/blog/?id=1542037341"}, {"@type": "ImageObject", "contentUrl": "https://a-ho-img.dtstatic.com/uploads/blog/202411/13/ZOSN9gvSm64nZ1.jpeg", "name": "街头 · 潮流搭配灵感4", "url": "https://www.duitang.com/blog/?id=1542037343"}, {"@type": "ImageObject", "contentUrl": "https://a-ho-img.dtstatic.com/uploads/blog/202411/13/M6SAjGOFBY5jOY.jpeg", "name": "街头 · 潮流搭配灵感5", "url": "https://www.duitang.com/blog/?id=1542037344"}, {"@type": "ImageObject", "contentUrl": "https://a-ho-img.dtstatic.com/uploads/blog/202411/13/n6SVm56h93d5mV.jpeg", "name": "街头 · 潮流搭配灵感6", "url": "https://www.duitang.com/blog/?id=1542037339"}, {"@type": "ImageObject", "contentUrl": "https://a-ho-img.dtstatic.com/uploads/blog/202411/13/DWSQo3Mtd0XMY3.jpeg", "name": "街头 · 潮流搭配灵感7", "url": "https://www.duitang.com/blog/?id=1542037338"}, {"@type": "ImageObject", "contentUrl": "https://a-ho-img.dtstatic.com/uploads/blog/202411/13/d3S7OXNhq4V67B.jpeg", "name": "街头 · 潮流搭配灵感8", "url": "https://www.duitang.com/blog/?id=1542037336"}, {"@type": "ImageObject", "contentUrl": "https://a-ho-img.dtstatic.com/uploads/blog/202411/13/z2SGpb8uxBaqzj.jpeg", "name": "街头 · 潮流搭配灵感9", "url": "https://www.duitang.com/blog/?id=1542037342"}, {"@type": "ImageObject", "contentUrl": "https://a-ho-img.dtstatic.com/uploads/blog/202507/31/V2Sa7zJhm0plpB.jpeg", "name": "街头 · 潮流搭配灵感10", "url": "https://www.duitang.com/blog/?id=1558488124"}, {"@type": "ImageObject", "contentUrl": "https://a-ho-img.dtstatic.com/uploads/blog/202505/16/bYSXp4BiLoE2ae.jpeg", "name": "街头 · 潮流搭配灵感11", "url": "https://www.duitang.com/blog/?id=1553960428"}, {"@type": "ImageObject", "contentUrl": "https://a-ho-img.dtstatic.com/uploads/blog/202309/24/n6S1woqF9AqAN8.jpg", "name": "街头 · 潮流搭配灵感12", "url": "https://www.duitang.com/blog/?id=1493815574"}, {"@type": "ImageObject", "contentUrl": "https://a-ho-img.dtstatic.com/uploads/blog/202507/04/jJSGpnMueNvd3Q.jpeg", "name": "街头 · 潮流搭配灵感13", "url": "https://www.duitang.com/blog/?id=1556632855"}, {"@type": "ImageObject", "contentUrl": "https://a-ho-img.dtstatic.com/uploads/blog/202507/31/N5S7jZ5hPD2j2m.jpeg", "name": "街头 · 潮流搭配灵感14", "url": "https://www.duitang.com/blog/?id=1558488122"}, {"@type": "ImageObject", "contentUrl": "https://a-ho-img.dtstatic.com/uploads/blog/202405/31/AvSyaWPsw0QAXZ.jpg", "name": "街头 · 潮流搭配灵感15", "url": "https://www.duitang.com/blog/?id=1525940466"}, {"@type": "ImageObject", "contentUrl": "https://a-ho-img.dtstatic.com/uploads/blog/202506/28/GgSP03pcdNoV1n.jpg", "name": "街头 · 潮流搭配灵感16", "url": "https://www.duitang.com/blog/?id=1556271958"}, {"@type": "ImageObject", "contentUrl": "https://a-ho-img.dtstatic.com/uploads/blog/202405/10/XxS6o7luQO5aNp.jpeg", "name": "街头 · 潮流搭配灵感17", "url": "https://www.duitang.com/blog/?id=1523829802"}, {"@type": "ImageObject", "contentUrl": "https://a-ho-img.dtstatic.com/uploads/blog/202409/03/bYSXp4BiLb3j5a.jpeg", "name": "街头 · 潮流搭配灵感18", "url": "https://www.duitang.com/blog/?id=1536342438"}, {"@type": "ImageObject", "contentUrl": "https://a-ho-img.dtstatic.com/uploads/blog/202407/29/V2SM0mZFm2Lj24.jpg", "name": "街头 · 潮流搭配灵感19", "url": "https://www.duitang.com/blog/?id=1532373484"}, {"@type": "ImageObject", "contentUrl": "https://a-ho-img.dtstatic.com/uploads/blog/202407/15/V2Sa7zJhm2Jgzn.jpeg", "name": "街头 · 潮流搭配灵感20", "url": "https://www.duitang.com/blog/?id=1530757288"}]}</script>'
+  <nav class="stylechips"><a class="chip" style="background:linear-gradient(135deg,#2a1832,#b5548c66)" href="/style/hanfu.html">古风 · 汉服</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#c23a5266)" href="/style/qipao.html">旗袍 · 优雅</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#e0609e66)" href="/style/sweet.html">甜美 · 少女</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#e0475f66)" href="/style/sexy.html">辣妹 · 性感</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#3f6fd866)" href="/style/jk.html">JK · 制服</a><a class="chip on" style="background:linear-gradient(135deg,#2a1832,#0ea5a566)" href="/style/street.html">街头 · 潮流</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#8a6d3b66)" href="/style/winter.html">秋冬 · 叠穿</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#a855f766)" href="/style/beauty.html">美妆 · 变美</a><a class="chip" style="background:linear-gradient(135deg,#2a1832,#3b82f666)" href="/style/korean.html">韩系 · 街拍</a></nav>
+  <div class="masonry"><figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202207/15/20220715152421_d090e.jpg" alt="街头搭配灵感图1 · 来自堆糖" width="1080" height="1439" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1412335308" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2508660 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202411/13/bYSXp4BiLy69l6.jpeg" alt="街头搭配灵感图2 · 来自堆糖" width="543" height="746" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1542037349" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202411/13/bYSXp4BiLy69Qe.jpeg" alt="街头搭配灵感图3 · 来自堆糖" width="690" height="857" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1542037341" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202411/13/ZOSN9gvSm64nZ1.jpeg" alt="街头搭配灵感图4 · 来自堆糖" width="665" height="843" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1542037343" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202411/13/M6SAjGOFBY5jOY.jpeg" alt="街头搭配灵感图5 · 来自堆糖" width="677" height="817" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1542037344" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202411/13/n6SVm56h93d5mV.jpeg" alt="街头搭配灵感图6 · 来自堆糖" width="690" height="857" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1542037339" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202411/13/DWSQo3Mtd0XMY3.jpeg" alt="街头搭配灵感图7 · 来自堆糖" width="583" height="737" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1542037338" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202411/13/d3S7OXNhq4V67B.jpeg" alt="街头搭配灵感图8 · 来自堆糖" width="690" height="839" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1542037336" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202411/13/z2SGpb8uxBaqzj.jpeg" alt="街头搭配灵感图9 · 来自堆糖" width="595" height="770" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1542037342" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202507/31/V2Sa7zJhm0plpB.jpeg" alt="街头搭配灵感图10 · 来自堆糖" width="1109" height="1667" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1558488124" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202505/16/bYSXp4BiLoE2ae.jpeg" alt="街头搭配灵感图11 · 来自堆糖" width="532" height="772" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1553960428" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202309/24/n6S1woqF9AqAN8.jpg" alt="街头搭配灵感图12 · 来自堆糖" width="1148" height="1405" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1493815574" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2508660 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202507/04/jJSGpnMueNvd3Q.jpeg" alt="街头搭配灵感图13 · 来自堆糖" width="584" height="918" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1556632855" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202507/31/N5S7jZ5hPD2j2m.jpeg" alt="街头搭配灵感图14 · 来自堆糖" width="874" height="1194" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1558488122" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202405/31/AvSyaWPsw0QAXZ.jpg" alt="街头搭配灵感图15 · 来自堆糖" width="1017" height="1522" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1525940466" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2508660 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202506/28/GgSP03pcdNoV1n.jpg" alt="街头搭配灵感图16 · 来自堆糖" width="1280" height="1708" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1556271958" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2508660 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202405/10/XxS6o7luQO5aNp.jpeg" alt="街头搭配灵感图17 · 来自堆糖" width="591" height="812" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1523829802" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202409/03/bYSXp4BiLb3j5a.jpeg" alt="街头搭配灵感图18 · 来自堆糖" width="602" height="859" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1536342438" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202407/29/V2SM0mZFm2Lj24.jpg" alt="街头搭配灵感图19 · 来自堆糖" width="1148" height="1506" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1532373484" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2508660 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202407/15/V2Sa7zJhm2Jgzn.jpeg" alt="街头搭配灵感图20 · 来自堆糖" width="630" height="821" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1530757288" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202502/05/ZOSN9gvSmwNv79.jpeg" alt="街头搭配灵感图21 · 来自堆糖" width="686" height="835" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1547750919" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202507/04/z2SGpb8ux9NYZj.jpeg" alt="街头搭配灵感图22 · 来自堆糖" width="535" height="721" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1556632850" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202505/16/q4SJADGCxLE6VJ.jpeg" alt="街头搭配灵感图23 · 来自堆糖" width="537" height="829" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1553960388" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202504/20/AvSyaWPswagOQJ.jpg" alt="街头搭配灵感图24 · 来自堆糖" width="1167" height="1560" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1552528129" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2508660 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202507/04/3BSB4JAIz87yn6.jpeg" alt="街头搭配灵感图25 · 来自堆糖" width="622" height="834" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1556632246" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202405/22/73SZ80zTeBAadl.jpg" alt="街头搭配灵感图26 · 来自堆糖" width="1148" height="1520" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1525083631" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2508660 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202406/26/Q2Sm53Wt8y5nyW.jpg" alt="街头搭配灵感图27 · 来自堆糖" width="1148" height="1524" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1528587902" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2508660 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202504/18/jJSGpnMuel0m37.jpeg" alt="街头搭配灵感图28 · 来自堆糖" width="628" height="796" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1552405261" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202504/18/9WSxawJu8WYe6v.jpeg" alt="街头搭配灵感图29 · 来自堆糖" width="642" height="836" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1552405258" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202410/08/8gSavLPhgmmq8A.jpeg" alt="街头搭配灵感图30 · 来自堆糖" width="1012" height="1192" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1539312209" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202504/20/9WS65G7t8WXmom.jpg" alt="街头搭配灵感图31 · 来自堆糖" width="1440" height="1920" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1552528128" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2508660 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202504/18/z2SGpb8uxeonOV.jpeg" alt="街头搭配灵感图32 · 来自堆糖" width="513" height="721" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1552405352" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202504/30/jJS80BJfelwnwZ.jpg" alt="街头搭配灵感图33 · 来自堆糖" width="1162" height="1547" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1553053703" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2508660 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202409/27/XxS0abWTQWDvNp.jpg" alt="街头搭配灵感图34 · 来自堆糖" width="1173" height="1552" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1538335497" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2508660 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202504/18/LySgzW1Fq5X2Jx.jpeg" alt="街头搭配灵感图35 · 来自堆糖" width="517" height="809" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1552405350" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202407/15/WXS9V1xuQY43Wm.jpeg" alt="街头搭配灵感图36 · 来自堆糖" width="594" height="836" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1530757290" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202411/15/73SZ80zTe8vmGz.jpg" alt="街头搭配灵感图37 · 来自堆糖" width="1169" height="1468" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1542160082" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2508660 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202409/03/oVSNyJ1Sg195Zy.jpeg" alt="街头搭配灵感图38 · 来自堆糖" width="690" height="920" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1536342453" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202506/25/5zSJ7OnuOBZ7jX.jpg" alt="街头搭配灵感图39 · 来自堆糖" width="1280" height="1708" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1556132022" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2508660 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202507/31/z2SGpb8uxoA2AD.jpeg" alt="街头搭配灵感图40 · 来自堆糖" width="690" height="1035" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1558488102" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202507/31/GgS9dXJudYayPn.jpeg" alt="街头搭配灵感图41 · 来自堆糖" width="854" height="1450" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1558488125" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202507/31/5zSbN0ohOZgzBG.jpeg" alt="街头搭配灵感图42 · 来自堆糖" width="873" height="1212" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1558488098" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202507/31/bYSXp4BiLMjWjz.jpeg" alt="街头搭配灵感图43 · 来自堆糖" width="579" height="916" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1558488101" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202508/01/lGS0YoJTxBmaOd.jpg" alt="街头搭配灵感图44 · 来自堆糖" width="1170" height="1560" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1558575632" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2508660 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202507/04/N5S7jZ5hP43bDN.jpeg" alt="街头搭配灵感图45 · 来自堆糖" width="578" height="773" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1556632217" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202509/05/9WS65G7t8YNLJq.jpg" alt="街头搭配灵感图46 · 来自堆糖" width="600" height="900" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1560639202" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2508660 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202510/11/y9SWOoeUbDnzd9.jpg" alt="街头搭配灵感图47 · 来自堆糖" width="750" height="1126" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1562353367" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2508660 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202504/18/aLSbWx4h0oVB2y.jpeg" alt="街头搭配灵感图48 · 来自堆糖" width="570" height="792" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1552405353" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202504/18/GgS9dXJudGYBQL.jpeg" alt="街头搭配灵感图49 · 来自堆糖" width="576" height="788" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1552405354" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202504/18/y9S2dLPSbdaJw1.jpeg" alt="街头搭配灵感图50 · 来自堆糖" width="690" height="776" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1552405262" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202504/30/4ESZ1q7ToNL93A.jpg" alt="街头搭配灵感图51 · 来自堆糖" width="1240" height="1800" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1553053706" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2508660 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202505/16/ZOSN9gvSmdNvjl.jpeg" alt="街头搭配灵感图52 · 来自堆糖" width="552" height="761" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1553960292" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202504/18/Q2S2MvlS8Q45Wj.jpeg" alt="街头搭配灵感图53 · 来自堆糖" width="506" height="797" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1552405355" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202505/16/eAS8VvaCMoEazJ.jpeg" alt="街头搭配灵感图54 · 来自堆糖" width="672" height="821" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1553960252" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202411/13/z2SGpb8uxBaq9d.jpeg" alt="街头搭配灵感图55 · 来自堆糖" width="551" height="907" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1542037217" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202507/04/LySgzW1FqMzYaX.jpeg" alt="街头搭配灵感图56 · 来自堆糖" width="690" height="1035" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1556632256" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202508/01/y9SWOoeUbay0be.jpg" alt="街头搭配灵感图57 · 来自堆糖" width="1170" height="1560" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1558575630" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2508660 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202507/04/LySgzW1FqMzYz9.jpeg" alt="街头搭配灵感图58 · 来自堆糖" width="690" height="1035" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1556632257" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202507/04/z2SGpb8ux9N6v9.jpeg" alt="街头搭配灵感图59 · 来自堆糖" width="614" height="818" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1556632259" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure>
+<figure class="shot">
+  <img src="https://a-ho-img.dtstatic.com/uploads/blog/202509/11/q4SJADGCxpmPNP.jpg" alt="街头搭配灵感图60 · 来自堆糖" width="690" height="882" loading="lazy">
+  <a class="src-link" href="https://www.duitang.com/blog/?id=1560933354" target="_blank" rel="nofollow noopener">来源↗</a>
+  <figcaption class="cap"><span>街头</span><em>© 创作者2572492 · 堆糖</em></figcaption>
+</figure></div>
+  <div class="sec-head" style="color:#0ea5a5"><h2>常见问题</h2></div><div class="faq"><details><summary>街拍风显瘦吗？</summary><p>oversize 街拍对小个子不友好，用「上宽下窄」或「上窄下宽」保留轮廓对比。</p></details></div>
+  <p style="margin-top:1.5rem"><a style="color:#c793ff" href="/topics/hanfu-prompt-guide">🎨 想用 AI 生成这种风格？看画法研究所的 prompt 方案 →</a></p>
+</main>
+<footer>
+  <div><b style="color:#f5c76e">FitSaga</b> · 每一套时装，都是一个故事</div>
+  <div class="source">图片版权归原创作者所有，点击图片可访问原始分享页 · 侵权请联系删除 · © 2026 FitSaga</div>
+</footer>
+<script src="/lightbox.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/theme.js" defer></script>
+</body>
+</html>

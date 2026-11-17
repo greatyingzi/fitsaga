@@ -25,7 +25,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Run collectors
+      - name: Collect (source platforms, from collector/)
         run: |
           cd collector
           python3 duitang.py --pages 3 --limit 24
@@ -34,24 +34,33 @@ jobs:
           python3 lofter.py || true
           python3 atlas_backfill.py
           python3 topic_miner.py || true
-          python3 hot_radar.py || true
 
-      - name: Generate site (all generators)
+      - name: Radar & draft pool (root scripts)
+        run: |
+          python3 hot_radar.py || true
+          python3 topic_draft_gen.py || true
+
+      - name: Generate site (all generators, sitemap LAST)
         run: |
           python3 gen_site.py
           python3 gen_nikki.py
           NIKKI_PAGE=2 python3 gen_nikki.py
           NIKKI_PAGE=3 python3 gen_nikki.py
           python3 gen_nikki_detail.py
+          python3 gen_nikki_en.py
           python3 gen_collections.py
+          python3 gen_collections_b2.py
+          python3 gen_collections_b3.py
           python3 gen_ai.py
           python3 gen_zara.py
           python3 gen_guide.py
           python3 gen_topics.py
+          python3 gen_downloads.py
+          python3 gen_downloads_page.py
           python3 gen_search_index.py
           python3 gen_sitemap.py
 
-      - name: Deploy to PROD (fitsaga.pages.dev, main only)
+      - name: Deploy to PROD (fitsaga.pages.dev, master only)
         if: github.ref == 'refs/heads/master'
         uses: cloudflare/wrangler-action@v3
         with:

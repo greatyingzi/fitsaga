@@ -23,5 +23,10 @@
   "scope": "fitsaga",
   "tags": "十一期交付,hreflang",
   "content": "fitsaga 十一期交付(2026-11-17凌晨)：1)专题页hreflang双语互指(en/zh alternate双向20专题)——引号定界坑：python行内HTML属性含双引号时外层必须单引号定界(三重转义必炸)；2)今日精选alt带风格词(化妆教程搭配灵感等——kw变量本来就在作用域, alt语义从编号变关键词)；3)Nikki英文名映射判定不可行(无限暖暖与HD套装名零重合,HD alias_zh 75个), caption保留中文名作为原汁信号；4)R2五试仍500。主人确认：pending_nebula.json由星云插件自动补发队列消费, 无需人工判定。"
+ },
+ {
+  "scope": "fitsaga",
+  "tags": "十二期交付,决策文10",
+  "content": "fitsaga 十二期交付(2026-11-17)：决策文4→10篇(静奢怎么穿/针织衫选款/多巴胺配色公式/JK制服入圈/甜妹分寸感/Y2K回潮)——每篇三问对比表公式FAQ结构+词库高收藏词驱动(静奢526/针织508/多巴胺319/JK676/甜妹675/Y2K165收藏)。文章系统机制确认：collector/_article_*.json自动入库(gen_guide幂等注册,status默认draft但本批全published)+guide/<slug>.html。部署坑复现：CF边缘会在生成中途吃半成品快照(404)——重部署即愈, 大批量生成后部署前必须确认产物mtime。飞轮40/40。"
  }
 ]
