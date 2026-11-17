@@ -1,0 +1,23 @@
+{
+ "slug": "from-tips-to-science",
+ "title": "From Tips to Science: How Any Creator Can Build Their Own Prompt Research Practice",
+ "lede": "You do not need a lab to do controlled experiments. This is the distilled version of our method — a practical guide to turning your own prompt guesses into verified rules.",
+ "type": "deep",
+ "lang": "en",
+ "body_md": "## You do not need a lab coat\nControlled experiments sound academic, but the core is simple: change one thing, keep everything else fixed, and write down what happened. Anyone can do this with their own generator.\n\n## The five-step mini-method\n1. Pick one baseline prompt you return to.\n2. Write down a criterion BEFORE generating ('collar direction is correct').\n3. Change exactly one word.\n4. Generate both, judge against the criterion — not against 'which is prettier'.\n5. Record the result, including null results.\n\n## Why criteria beat taste\nTaste drifts. If your criterion is 'looks better', you will change your mind tomorrow and lose the data. If it is 'rim light visible on hair', the answer is binary and repeatable.\n\n## Building your own map\nAfter ten experiments you have ten verified rules. After fifty you have a personal style guide that is more valuable than any public cheat sheet — because it is calibrated to YOUR model and YOUR taste.\n\n## Share the negatives\nWhen a word does nothing, write that down too. The community expects success stories; a verified 'this did not work' is the most useful thing you can publish.\n\n## Our full method\nThe Prompt Lab Method article on this site is the expanded version of this guide.",
+ "looks": [],
+ "faq": [
+  [
+   "Will there be a follow-up?",
+   "Yes — timelines and observations are periodically updated."
+  ]
+ ],
+ "examples": [
+  {
+   "slug": "style",
+   "title": "对照 · 观察框架",
+   "good_cap": "OK 5步把猜测变成验证规则",
+   "bad_cap": "X 无判据的凭感觉"
+  }
+ ]
+}

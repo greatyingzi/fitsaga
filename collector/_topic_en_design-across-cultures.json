@@ -1,0 +1,23 @@
+{
+ "slug": "design-across-cultures",
+ "title": "East vs West Fashion AI: What Prompt Words Translate and What Do Not",
+ "lede": "Chinese fabric terms, Western lighting setups, Japanese silhouettes — we tested which fashion concepts transfer across cultural prompt vocabularies and which collapse in translation.",
+ "type": "deep",
+ "lang": "en",
+ "body_md": "## The translation test\nWe took fashion concepts from three prompt vocabularies — Chinese (hanfu terms), Western (lighting/medium), Japanese (silhouette) — and tested which survive translation into English prompts and which collapse.\n\n## What translates well\n**Fabric behavior** translates almost perfectly — 'liquid drape' and 'matte pile' are physics, not culture. **Lighting setups** (Rembrandt, rim) are shared film vocabulary. These are universal.\n\n## What partly translates\n**Silhouette words** need context: 'bell-shaped' works globally, but 'mamian' needs a gloss (horse-face skirt). **Color symbolism** diverges — white is celebration in some cultures, mourning in others; always name the shade, never the meaning.\n\n## What collapses\n**Cultural rules stated implicitly**: 'wear it correctly' means nothing to a model. Right-lapel-over-left must be explicit. **Aesthetic labels** like 'elegant' or 'ethereal' mean different things in different training data — replace with observable descriptors.\n\n## The practical rule\nPhysics and geometry travel. Cultural meaning does not — it must be spelled out. When in doubt, describe what the eye can see, not what the concept means.\n\n## Related\nOur Chinese Garment Taxonomy and Anti-Patterns dictionary apply this principle in depth.",
+ "looks": [],
+ "faq": [
+  [
+   "Will there be a follow-up?",
+   "Yes — timelines and observations are periodically updated."
+  ]
+ ],
+ "examples": [
+  {
+   "slug": "style",
+   "title": "对照 · 观察框架",
+   "good_cap": "OK 物理可译/文化需明说",
+   "bad_cap": "X 文化语义自动迁移"
+  }
+ ]
+}

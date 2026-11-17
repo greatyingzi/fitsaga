@@ -12,6 +12,7 @@ GROUPS = [
   ("创作工具", ["style-deconstruction-workflow", "reference-hygiene", "the-prompt-lab-method", "ai-fashion-copyright-map"]),
   ("数据与实证", ["the-68-experiments", "what-4547-images-say", "why-1587-suits", "negative-results-matter", "content-as-structure"]),
   ("复盘与边界", ["failure-cases-postmortem", "where-rules-break", "before-after-deconstruction", "edge-cases-of-hanfu", "what-we-stopped-believing"]),
+  ("跨文化与时间", ["east-west-collar", "fashion-ai-timeline", "what-readers-save", "design-across-cultures", "from-tips-to-science"]),
 ]
 def main():
     idx = {}
