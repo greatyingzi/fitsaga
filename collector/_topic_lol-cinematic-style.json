@@ -1,0 +1,23 @@
+{
+ "slug": "lol-cinematic-style",
+ "title": "英雄联盟 CG 风格 AI 生成指南：把游戏过场翻译成 prompt",
+ "lede": "“曙光预告”这类游戏 CG 是 AI 生成的高频参考源——史诗光影、角色特写、魔法特效。这篇把 CG 语言拆成可复制的 prompt 公式，并注明版权边界。",
+ "type": "hot",
+ "lang": "zh",
+ "body_md": "## 一句话结论\n游戏 CG 风格 = **低角度史诗构图 + 体积光/边缘光 + 魔法粒子 + 电影级色调**——四层齐才是 CG 感，缺一层就是普通游戏截图。\n\n## 视觉拆解\n### 1 · 构图：英雄式低角度\n**low angle shot, heroic composition, dramatic perspective, subject fills frame** ——  CG 预告的主角永远略仰视，视觉上就赢了。\n### 2 · 光：体积光 + 轮廓光\n**volumetric lighting, god rays, rim light on character, cinematic color grading**\n### 3 · 特效：魔法粒子\n**glowing particles, magic runes floating, energy trails, atmospheric haze** ——  词要具体，泛写 \"cool effects\" 无效。\n### 4 · 色调：冷暖对撞\n**teal and orange color grading, deep shadows, golden highlights** ——  游戏 CG 的标配色调。\n\n## Prompt 公式\n`fantasy character, low angle heroic shot, volumetric god rays, rim light, glowing blue magic particles, teal and orange grading, epic atmosphere, cinematic still, game cinematic style`\n\n## 版权阶梯\n借配色和光位（Level 1）安全；借完整角色造型（Level 3）只能做同人声明——拳头/拳头游戏的角色是注册商标，别商用。\n\n## 追更\n每次大型赛事/新预告发布后更新当季色彩与特效词库。",
+ "looks": [],
+ "faq": [
+  [
+   "游戏 CG 和电影预告的区别？",
+   "CG 更强调轮廓光与粒子特效，电影预告更依赖写实布光——prompt 里写 'game cinematic style' 才会命中前者。"
+  ]
+ ],
+ "examples": [
+  {
+   "slug": "style",
+   "title": "对照 · 游戏CG的史诗光",
+   "good_cap": "OK 低角度+体积光+蓝粒子+青橙调",
+   "bad_cap": "X 普通游戏截图"
+  }
+ ]
+}

@@ -43,5 +43,10 @@
   "scope": "fitsaga",
   "tags": "CF风控真相,tizi清理,自定义域绕过",
   "content": "CF workers.dev 1101 真相链(2026-11-17, 纠正此前'账号级风控/abuse导致'的错判)：①铁证实验——新建纯Hello World Worker(fitpuretest)也1101,证明与梯子流量特征/代码内容无关,是账号级+workers.dev zone级拦截;②GitHub issue cmliu/edgetunnel#1783(2026-10-07,'Error 1101,近期部署的出现情况,可能官方风控严格了',18评论共识'CF官方使用了AI检测流量特征','旧的不动才活着,不要新建/更新');③abuse邮件(10/21-28,et-lh/et-lh2/edt-test)是平行事件非根因。④决定性解法=绑定自有域名:fitpuretest绑puretest.depthsnap.com后200正常(同代码workers.dev=1101,自有域=200),证明只是workers.dev公共zone被处置,自有域绕过完全有效。⑤找到CLOUDFLARE_DNS_TOKEN(~/.hermes/.env)可建DNS记录(注意本机DNS污染,验证要用DoH+--resolve直连真实IP)。⑥R2图片通路已恢复:img.depthsnap.com/r2/hot1.webp 200返回53KB webp。⑦按主人要求清理梯子全部资产:删除Pages项目et-lh-p2、测试Worker fitpuretest、测试DNS puretest.depthsnap.com;et-lh/et-lh2/edt-test三个梯子节点此前已不存在;保留所有正常业务(home-gateway是action proxy基建不是梯子,fitsaga-r2是图缓存)。"
+ },
+ {
+  "scope": "fitsaga",
+  "tags": "十四期交付,合集50,R2通路恢复",
+  "content": "fitsaga 十四期(2026-11-17)：1)合集第四批10个(化妆教程mf2491全站最高收藏词/美妆/高级感/美式复古/日常穿搭/秋冬大衣/日系/西装/裙装/法式)——总量50合集，sitemap 1014 URL，首页导航同步；2)EN13专题对照图覆盖核对全通过(每篇1-3组无需补产)；3)CF清理后终验：梯子资产(et-lh-p2 Pages/fitpuretest Worker/puretest DNS)全删确认，正常业务(fitsaga 200/img图缓存200)健康；4)飞轮40/40。教训：CF workers.dev 1101 与梯子内容无关(纯Hello World也1101)，解法=绑自有域名(img.depthsnap.com/r2/hot1.webp 200)，CLOUDFLARE_DNS_TOKEN在~/.hermes/.env可建DNS，本机DNS污染验证须用DoH+--resolve。"
  }
 ]

@@ -1,0 +1,23 @@
+{
+ "slug": "infinity-nikki-ability-outfits",
+ "title": "Infinity Nikki Ability Outfits: Every Ability Outfit Idea, Sorted by Theme",
+ "lede": "Ability outfits are the most-searched Infinity Nikki items — fishing, floating, grooming, archery. We map the game's ability outfit families to theme references for design and AI prompts.",
+ "type": "evergreen",
+ "lang": "en",
+ "body_md": "## What are ability outfits\nIn Infinity Nikki, certain abilities (floating, fishing, grooming, archery, gigantification) require dedicated outfits. Players search for 'ability outfit ideas' constantly — and each has a strong visual identity.\n\n## The ability families\n- **Floating**: light fabrics, wings, airy silhouettes\n- **Fishing**: nautical blues, practical layers, cute boots\n- **Grooming**: pastels, soft textures, domestic charm\n- **Archery**: fitted cuts, leather accents, focused palettes\n- **Gigantification**: dramatic scale, bold prints, fantasy armor\n\n## From outfit to AI reference\nPick an ability family → extract its palette + silhouette → write a prompt (see our Game Costume Design guide for the copyright-safe three-level ladder). Ability outfits are especially good palette references because each family has a strong color identity.\n\n## Browse the full database\nOur Nikki outfit hub has 235+ suits across 18 themes — use it as your visual reference library for ability outfit design.\n\n## Related reading\nInfinity Nikki Outfit Ideas (theme index) · Game Costume Design with AI.",
+ "looks": [],
+ "faq": [
+  [
+   "Which ability outfit is rarest?",
+   "Ability outfits vary by version and event — our database tracks obtainable suits by theme, not rarity tier."
+  ]
+ ],
+ "examples": [
+  {
+   "slug": "style",
+   "title": "对照 · 能力套装设计语言",
+   "good_cap": "OK 轻盈布料+配色+粒子——能力套装感",
+   "bad_cap": "X 泛写仙翅图"
+  }
+ ]
+}

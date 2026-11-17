@@ -18,6 +18,16 @@ THEMES = [
   ("Sweet & Cute", ["甜", "糖", "果"], "sweet"),
   ("Fantasy & Magic", ["幻", "魔", "精灵"], "fantasy"),
   ("Classic & Retro", ["复", "古"], "retro"),
+  ("Wedding & Bridal", ["婚", "嫁", "誓"], "wedding"),
+  ("Gothic & Dark", ["暗", "黑", "魅"], "gothic"),
+  ("Fire & Passion", ["火", "炎", "焰"], "fire"),
+  ("Moonlight & Silver", ["银", "月"], "moonlight"),
+  ("Gold & Glory", ["金", "辉"], "gold"),
+  ("Butterfly & Wings", ["蝶", "翼", "羽"], "butterfly"),
+  ("Music & Stage", ["歌", "舞", "乐", "演"], "music"),
+  ("Ancient & Hanfu", ["汉", "唐", "宋", "古装"], "hanfu"),
+  ("Punk & Rebel", ["朋克", "叛逆", "摇滚"], "punk"),
+  ("Fairy & Elf", ["仙", "精灵", "妖"], "fairy"),
 ]
 
 def main():
@@ -28,7 +38,7 @@ def main():
         q = " OR ".join(["name LIKE ?"] * len(kws))
         rows = con.execute(f"""SELECT s.id, s.name, (SELECT img_url FROM suit_imgs WHERE suit_id=s.id LIMIT 1)
             FROM suits s WHERE s.game='无限暖暖' AND ({q})
-            AND EXISTS(SELECT 1 FROM suit_imgs WHERE suit_id=s.id) LIMIT 12""", tuple("%"+k+"%" for k in kws)).fetchall()
+            AND EXISTS(SELECT 1 FROM suit_imgs WHERE suit_id=s.id) LIMIT 16""", tuple("%"+k+"%" for k in kws)).fetchall()
         if not rows: continue
         total += len(rows)
         figs = "".join(

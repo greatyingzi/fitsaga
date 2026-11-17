@@ -18,8 +18,14 @@ def main():
     for k in ["hanfu","qipao","sweet","sexy","jk","street","winter","beauty","korean"]:
         entries.append((f"{BASE}/style/{k}.html", "0.8"))
     # 图鉴索引
-    # EN 专题页
+    # zh 专题页（自动扫描，排除 en）
     import json as _json
+    for f in sorted(pathlib.Path(".").glob("collector/_topic_*.json")):
+        if "_en_" in f.name: continue
+        t = _json.loads(f.read_text(encoding="utf-8"))
+        entries.append((BASE + "/topics/" + t["slug"], "0.8"))
+    entries.append((BASE + "/topics.html", "0.8"))
+    # EN 专题页
     for f in sorted(pathlib.Path(".").glob("collector/_topic_en_*.json")):
         t = _json.loads(f.read_text(encoding="utf-8"))
         entries.append((BASE + "/en/topics/" + t["slug"], "0.8"))
