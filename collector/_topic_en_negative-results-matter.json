@@ -1,0 +1,23 @@
+{
+ "slug": "negative-results-matter",
+ "title": "Negative Results Matter: The Prompt Rules That Failed in Our Tests",
+ "lede": "Everyone publishes what worked. We publish what did not — the prompt rules that produced no measurable change across our 68 A/B experiments, and why that matters more than the successes.",
+ "type": "deep",
+ "lang": "en",
+ "body_md": "## The publication bias problem\nEvery prompt guide reports what worked. This creates a distorted map where 'masterpiece, 8k, intricate details' appears in thousands of guides — despite producing no measurable improvement in our tests.\n\n## Our negative findings\n1. **masterpiece / best quality** — no measurable change on current models.\n2. **8k / 4k** — resolution is an output setting, not a semantic cue.\n3. **more detailed** — often adds noise rather than detail.\n4. **negation ('no blur')** — unreliable; describe the desired state instead.\n\n## Why negatives are more valuable\nA positive tip adds a word to your prompt. A verified negative REMOVES a word — and removes the doubt about whether you are missing something. The removal is the higher-value action.\n\n## The meta-lesson\nIn a field flooded with unverified tips, the willingness to say 'this did nothing' is the rarest form of authority. We publish all 68 experiment outcomes, not just the flattering ones.\n\n## Related\nOur Prompt Anti-Patterns dictionary lists the 12 words we flagged; the Prompt Lab Method shows how to verify them yourself.",
+ "looks": [],
+ "faq": [
+  [
+   "Will the numbers update?",
+   "Yes — changes are logged in the chase log."
+  ]
+ ],
+ "examples": [
+  {
+   "slug": "style",
+   "title": "对照 · 数据可视化",
+   "good_cap": "OK 诚实公布无效词——删除比添加更有价值",
+   "bad_cap": "X 成功学海报"
+  }
+ ]
+}

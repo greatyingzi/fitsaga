@@ -1,0 +1,23 @@
+{
+ "slug": "content-as-structure",
+ "title": "Content as Structure: Why 4,700 Images Are Worth Less Than 20 Frameworks",
+ "lede": "We hold 4,547 outfit images and 1,587 structured game suits. Here is the uncomfortable truth: the images are the cheap part. The frameworks derived from them are the asset.",
+ "type": "deep",
+ "lang": "en",
+ "body_md": "## The uncomfortable arithmetic\nWe hold 4,547 outfit images and 1,587 structured game suits. The images took years of collection. The 20 frameworks derived from them took 68 controlled experiments — and those frameworks are the only part competitors cannot copy.\n\n## Why images are cheap\nImages are reproducible by any scraper with an API. Google indexes them by the billion. A visitor who sees a pretty image has no reason to return — the next site has prettier ones.\n\n## Why structure is expensive\nA framework like '20 Failure Modes' requires: collect images → identify patterns → isolate variables → run experiments → codify. Each step is human judgment that cannot be shortcut by scraping.\n\n## The compounding effect\nImages deprecate (platforms change, links rot — we just removed six dead ones). Frameworks compound: every new experiment either confirms or refines an existing rule. The library grows more valuable with use.\n\n## What we decided\nOur site positioning follows this arithmetic: not 'more images' but 'more structure per image'. Every collection has a curator note; every topic has a formula; every deep article has a named framework.\n\n## Related\nThe Economy of AI Reference Images covers the cost side; the Methodology Lab is the result.",
+ "looks": [],
+ "faq": [
+  [
+   "Will the numbers update?",
+   "Yes — changes are logged in the chase log."
+  ]
+ ],
+ "examples": [
+  {
+   "slug": "style",
+   "title": "对照 · 数据可视化",
+   "good_cap": "OK 图→结构的增值流程",
+   "bad_cap": "X 未处理的图片堆"
+  }
+ ]
+}

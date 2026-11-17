@@ -10,6 +10,7 @@ GROUPS = [
   ("设计语言", ["nikki-design-language", "chinese-garment-taxonomy-en", "hanfu-color-meanings", "commerce-of-fictional-places"]),
   ("观察与洞察", ["why-mamian-went-global", "the-economy-of-ai-reference-images", "visual-trends-half-life", "why-saving-more-is-worse"]),
   ("创作工具", ["style-deconstruction-workflow", "reference-hygiene", "the-prompt-lab-method", "ai-fashion-copyright-map"]),
+  ("数据与实证", ["the-68-experiments", "what-4547-images-say", "why-1587-suits", "negative-results-matter", "content-as-structure"]),
 ]
 def main():
     idx = {}
