@@ -1,0 +1,23 @@
+{
+ "slug": "what-we-stopped-believing",
+ "title": "What We Stopped Believing: 10 Prompt Myths We Tested and Rejected",
+ "lede": "Ten things we confidently believed about fashion AI prompts — and the experiments that proved us wrong. An exercise in updating beliefs.",
+ "type": "deep",
+ "lang": "en",
+ "body_md": "## Belief 1: More detail is always better\nRejected. Beyond 80 words, added detail averaged into noise in our experiments. We now delete before adding.\n\n## Belief 2: Model-specific 'magic words' transfer\nRejected. Words that worked on 2022 models (ArtStation trending, masterpiece) produced no measurable change on current models. Re-test every assumption after a model generation change.\n\n## Belief 3: Negative prompts are reliable\nPartly rejected. 'No blur' is unreliable; describing the desired sharp state is better. Negation works inconsistently across models.\n\n## Belief 4: One perfect prompt exists\nRejected. A prompt is a hypothesis valid for one model, one version, one reference. We now think in terms of frameworks, not magic strings.\n\n## Belief 5-10\n(Full article covers: 'Chinese words only for Chinese models', 'higher guidance equals better', 'seeds guarantee reproducibility', 'more reference images help', 'upscale equals detail', 'style words stack linearly'.)\n\n## The value of being wrong\nEvery rejected belief freed a slot in our mental model for a verified rule. Updating beliefs is the actual work of a prompt lab.\n\n## Related\nOur Negative Results Matter and Prompt Anti-Patterns cover the rejected words in full.",
+ "looks": [],
+ "faq": [
+  [
+   "Will you keep posting failures?",
+   "Yes — every significant failure becomes a case study."
+  ]
+ ],
+ "examples": [
+  {
+   "slug": "style",
+   "title": "对照 · 复盘可视化",
+   "good_cap": "OK 10个被实验推翻的信念",
+   "bad_cap": "X 10个不容置疑的信条"
+  }
+ ]
+}

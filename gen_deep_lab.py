@@ -11,6 +11,7 @@ GROUPS = [
   ("观察与洞察", ["why-mamian-went-global", "the-economy-of-ai-reference-images", "visual-trends-half-life", "why-saving-more-is-worse"]),
   ("创作工具", ["style-deconstruction-workflow", "reference-hygiene", "the-prompt-lab-method", "ai-fashion-copyright-map"]),
   ("数据与实证", ["the-68-experiments", "what-4547-images-say", "why-1587-suits", "negative-results-matter", "content-as-structure"]),
+  ("复盘与边界", ["failure-cases-postmortem", "where-rules-break", "before-after-deconstruction", "edge-cases-of-hanfu", "what-we-stopped-believing"]),
 ]
 def main():
     idx = {}

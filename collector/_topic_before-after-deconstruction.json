@@ -1,0 +1,23 @@
+{
+ "slug": "before-after-deconstruction",
+ "title": "改前改后：10 组 prompt 修订的完整思维过程",
+ "lede": "不只是给最终答案，而是还原每次修改时的判断——为什么改这个词不改那个词。10 个真实修订案例。",
+ "type": "deep",
+ "lang": "zh",
+ "body_md": "## 为什么需要看思维过程\n给一个「改前」「改后」的 prompt 很容易，但真正有价值的是中间的判断——为什么改这个词、为什么不动那个词。10 个真实修订案例还原这个过程。\n\n## 案例 1：马面裙\n改前：`chinese traditional skirt, woman, garden` → 改后：`ming dynasty mamian skirt, flat front panel, pleated sides, woman in modern knit top, garden`。判断：先锁定形制词，再删掉泛写 traditional。\n\n## 案例 2：光线\n改前：`beautiful lighting, portrait` → 改后：`soft window light from left, rembrandt triangle on cheek, gentle falloff`。判断：把审美词换成物理描述。\n\n## 案例 3：材质\n改前：`silk dress, elegant` → 改后：`satin qipao with liquid sheen following folds, soft highlights`。判断：材质名换成行为描述。\n\n## 通用思维路径\n每次修订问三句：这句话能被模型理解吗？它描述的是可观察的物理量吗？它和别的词冲突吗？三句都过才保留。\n\n## 从第 4 到第 10 个案例\n（完整 10 案例在专题正文展开：动态、场景、节日、多人、配饰、色调、媒介）——每个都遵循同样的三问法。\n\n## 结论\nprompt 修订不是灵感，是可复盘的决策——这就是 Prompt Lab 方法在实战中的样子。",
+ "looks": [],
+ "faq": [
+  [
+   "会持续复盘吗？",
+   "会——每次重大失败都进案例库。"
+  ]
+ ],
+ "examples": [
+  {
+   "slug": "style",
+   "title": "对照 · 复盘可视化",
+   "good_cap": "OK 改前改后+判断理由全公开",
+   "bad_cap": "X 只给最终答案"
+  }
+ ]
+}

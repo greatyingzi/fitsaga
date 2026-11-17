@@ -1,0 +1,23 @@
+{
+ "slug": "edge-cases-of-hanfu",
+ "title": "Edge Cases in Hanfu Prompting: When the Rules Do Not Apply",
+ "lede": "Right lapel over left, one dynasty at a time — these rules work 90% of the time. Here are the 10% where they break, and what to do instead.",
+ "type": "deep",
+ "lang": "en",
+ "body_md": "## Rules are heuristics, not laws\n'Right lapel over left' and 'one dynasty at a time' work in most cases. But fashion history is full of exceptions — and a prompt that ignores them produces historically wrong results even while following the rule.\n\n## The 10 percent\n**Cross-collar direction**: some ceremonial garments close differently. If your reference shows left-over-right, trust the reference over the rule.\n**Dynasty mixing**: Tang fashion genuinely incorporated nomadic (hufu) elements — a Tang+hufu mix is historically valid, not an error.\n**Mamian front panel**: modern reinterpretations sometimes pleat the whole skirt. It is still a mamian derivative — do not over-correct.\n**Modern fusion**: when writing 'neo-Chinese', historical rules relax; that is the point of the category.\n\n## The meta-rule\nRules exist to produce a recognizable result. When the reference itself is an exception, follow the reference — then state it explicitly in the prompt so the model knows it is intentional.\n\n## Related\nOur Hanfu AI Guide and 12-form taxonomy cover the 90% case; this article handles the 10%.",
+ "looks": [],
+ "faq": [
+  [
+   "Will you keep posting failures?",
+   "Yes — every significant failure becomes a case study."
+  ]
+ ],
+ "examples": [
+  {
+   "slug": "style",
+   "title": "对照 · 复盘可视化",
+   "good_cap": "OK 90%规则+10%例外——跟着参考走",
+   "bad_cap": "X 死守规则不看实物"
+  }
+ ]
+}

@@ -113,5 +113,30 @@
   "slug": "commerce-of-fictional-places",
   "date": "2026-11-17",
   "note": "EN：虚构地点的商业视觉语言（game-world as shorthand）"
+ },
+ {
+  "slug": "failure-cases-postmortem",
+  "date": "2026-11-17",
+  "note": "失败尸检：5次翻车复盘，每次失败变成规则"
+ },
+ {
+  "slug": "where-rules-break",
+  "date": "2026-11-17",
+  "note": "边界清单：规则在什么条件下翻转"
+ },
+ {
+  "slug": "before-after-deconstruction",
+  "date": "2026-11-17",
+  "note": "10组prompt修订的完整判断过程"
+ },
+ {
+  "slug": "edge-cases-of-hanfu",
+  "date": "2026-11-17",
+  "note": "EN：汉服规则的10%例外"
+ },
+ {
+  "slug": "what-we-stopped-believing",
+  "date": "2026-11-17",
+  "note": "EN：10个被实验推翻的prompt信念"
  }
 ]

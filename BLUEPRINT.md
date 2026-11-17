@@ -64,3 +64,24 @@ M1(本周): Musinsa+堆糖采集器跑通 → items 入库1万张 → 首页+2�
 M2: BWIKI 套装采集 → nikki 详情页500个 → 合集页10个
 M3: 图片代理白标切换 → sitemap 提交 GSC/Bing → 图片 SEO 基建(alt/image sitemap)
 M4: 端侧试穿 demo(档1贴图) → AI remix 云端版(档3,按次付费)验证付费意愿
+
+
+---
+
+## 七、内容体系现状（2026-11-17 更新）
+
+**定位升级**：不只是「图片→结构→故事」，而是双层内容体系：
+- **教程层**：23 篇双语专题（形制/光线/面料/prompt 公式 + 68 组正反例对照图 + prompt 复制块 + 参考图包下载）
+- **洞察层**：30 篇数据驱动深度长文（方法论实验室 /deep-lab.html，7 分组）
+
+**深度内容的护城河逻辑**：数据别人没有（4,547 图库 / 1,587 套装 / 68 组对照实验 / 132 海外搜索词）+ 框架原创（失败模式图鉴 / prompt 语法学 / 塑料感三因 / 1秒可读性 / 半衰期 / 边界条件…）——不可速成、不可爬取。
+
+**资产规模**：50 合集 + 23 双语专题 + 30 深度文 + 10 决策文 + EN 套装 hub（235 套 / 18 主题）+ 933 套装页 + sitemap 1,068+ URL。
+
+**关键基建**：
+- 双环境：test 分支 → fitsaga-dev（staging）；main 分支 → fitsaga（prod，注意 CF 生产分支名 = main，与 git master 解耦）
+- action proxy：ops-runner 公共仓 proxy.yml + 私有 hub data-core-01 的 sites.json；cfut OAuth token 无 DNS 权限，DNS 用 ~/.hermes/.env 的 CLOUDFLARE_DNS_TOKEN
+- 图片路径：热链 + meta referrer no-referrer；R2 缓存经 img.depthsnap.com 自有域（绕开 workers.dev 风控——该账号 workers.dev 全量 1101，与内容无关，纯 Hello World 也中招）
+- 验证工具：audit_flywheel.js（40 场景）+ linkscan.js；curl 验线上必须下载到文件再 grep（管道 grep 会因引号转义假 0）
+
+**待用户输入**：GSC token / 正式域名定名 / 花瓣 cookie（均有文档占位）。
