@@ -1,0 +1,23 @@
+{
+ "slug": "commerce-of-fictional-places",
+ "title": "Why GTA6-Style Prompts Matter: The Commerce of Fictional Places",
+ "lede": "Vice City is a fictional place with more visual recognition than most real cities. We analyze why game-world aesthetics became the biggest prompt category — and what it means for creators.",
+ "type": "deep",
+ "lang": "en",
+ "body_md": "## Fictional places as shared visual language\nWhen millions share the same mental image of a place that does not exist, it becomes a visual shorthand. Vice City style communicates palette, era, and mood in two words.\n\n## Why game worlds beat real places\nReal city aesthetics are contested. Fictional worlds are authored — one consistent visual identity maintained for decades. That consistency is what makes them promptable.\n\n## The search evidence\nOur Google suggest pool shows vice city style generating eight query variants (font, shirt, wallpaper, art, clothes) — more search diversity than most real fashion terms.\n\n## What this means for creators\nGame-world references are a shared design vocabulary, not just fandom. Using them as palette and mood references is legitimate; copying exact characters is not.\n\n## The risk\nTrends tied to a single release have short half-lives. We pair them with evergreen structure guides so traffic lands somewhere durable.",
+ "looks": [],
+ "faq": [
+  [
+   "Will this be updated?",
+   "Yes — the framework is revised as new data arrives; see the chase log."
+  ]
+ ],
+ "examples": [
+  {
+   "slug": "style",
+   "title": "对照 · 观察框架",
+   "good_cap": "OK 虚构世界的统一视觉语言",
+   "bad_cap": "X 普通街道"
+  }
+ ]
+}

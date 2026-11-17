@@ -1,0 +1,23 @@
+{
+ "slug": "the-readability-paradox",
+ "title": "The Readability Paradox: Why 'Simple' Fashion Images Win",
+ "lede": "We looked at the save-ranked structure of 4,700 real outfit references: the most-saved images are not the most detailed. They are the most instantly readable. Here is why simplicity wins — and when it fails.",
+ "type": "deep",
+ "lang": "en",
+ "body_md": "## The paradox\nCreators assume more detail equals more value. Our save-ranked library says otherwise: images with fewer competing elements outperform complex compositions in saves.\n\n## Why readability beats detail\nA viewer decides to save in roughly one second. In that window the brain processes one color story and one silhouette. A second competing element creates comparison — and comparison creates hesitation.\n\n## The compression test\nDescribe any high-save image in three words: a color, a shape, a mood. If you can, it is readable. If you need a paragraph, it is over-composed.\n\n## When simplicity fails\nReadability is not emptiness. The winning formula is one strong idea plus supporting restraint — one statement accessory is fine, three is noise.\n\n## The deeper lesson\nAI makes infinite detail free — which makes restraint the scarce skill. Deciding what NOT to include is now more valuable than generating more.",
+ "looks": [],
+ "faq": [
+  [
+   "Will this be updated?",
+   "Yes — the framework is revised as new data arrives; see the chase log."
+  ]
+ ],
+ "examples": [
+  {
+   "slug": "style",
+   "title": "对照 · 观察框架",
+   "good_cap": "OK 单主色+单轮廓——1秒可读",
+   "bad_cap": "X 多元素竞争"
+  }
+ ]
+}
