@@ -1,0 +1,23 @@
+{
+ "slug": "love-nikki-dress-up-guide",
+ "title": "Love Nikki Dress Up Guide: Scoring, Stylist Arena, and Association",
+ "lede": "'Love Nikki dress up guide' is a global search staple. We translate the game's scoring logic into a structured参考 — plus how to use it as AI design reference.",
+ "type": "evergreen",
+ "lang": "en",
+ "body_md": "## What the game actually scores\nLove Nikki evaluates outfits on **style attributes** (elegant, cute, cool, etc.) and **tag combinations**. Understanding the attribute system is more useful than chasing individual items.\n\n## The three modes\n- **Story**: follow the chapter's required style attributes\n- **Stylist Arena**: opponents' choices shift the meta — keep multiple attribute sets ready\n- **Association**: collaborative goals reward specific tags — plan ahead\n\n## From game logic to AI design\nEach attribute is a visual language: 'elegant' = flowing lines, muted palette; 'cool' = sharp cuts, metallic accents. Use these as prompt modifiers: `elegant ancient chinese costume, flowing hanfu silhouette, muted palette, concept art`.\n\n## Our database advantage\nOur Nikki gallery tracks 2000+ structured suits across Miracle/Shining/Infinity Nikki — use it as a visual reference when you need an outfit idea fast.\n\n## Related\nNikki Art Reference (palette-first borrowing) · Infinity Nikki Outfit Ideas.",
+ "looks": [],
+ "faq": [
+  [
+   "Is scoring based on rarity?",
+   "Partly, but attribute matching and tag combinations matter more than rarity alone."
+  ]
+ ],
+ "examples": [
+  {
+   "slug": "style",
+   "title": "对照 · 视觉拆解",
+   "good_cap": "OK 淡彩+飘逸剪裁=优雅属性的视觉语言",
+   "bad_cap": "X 泛写游戏截图"
+  }
+ ]
+}

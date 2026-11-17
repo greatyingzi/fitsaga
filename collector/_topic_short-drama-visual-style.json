@@ -1,0 +1,23 @@
+{
+ "slug": "short-drama-visual-style",
+ "title": "短剧视觉风格 AI 拆解：为什么 4000 元成本能做出 6000 万热度",
+ "lede": "短剧的爆款视觉有公式：强对比打光、怼脸特写、反转瞬间的定格。这篇把短剧镜头语言翻译成可复制的 AI 生成 prompt，并讲清版权边界。",
+ "type": "hot",
+ "lang": "zh",
+ "body_md": "## 一句话结论\n短剧的视觉不是“精美”，是**情绪可读**——每一个镜头的打光、景别、构图都在为“下一秒要反转”服务。\n\n## 三大视觉公式\n### 1 · 打光：强对比背景虚化\n**high contrast lighting, shallow depth of field, bokeh city lights background** —— 人物从背景里“跳”出来，情绪才有重量。\n### 2 · 景别：怼脸特写\n**extreme close-up, emotional eyes, dramatic angle** —— 短剧的黄金三秒几乎都是眼睛特写。\n### 3 · 构图：权力关系\n俯拍=弱势，仰拍=强势。**low angle shot for power, high angle for vulnerability** —— 角色关系靠机位讲。\n\n## Prompt 公式\n`dramatic close-up portrait, high contrast lighting, bokeh city lights, low angle, cinematic still, emotional expression, vertical 9:16`\n\n## 追更\n短剧题材每月榜首都在变——本专题按季度更新高热度题材的视觉词库。",
+ "looks": [],
+ "faq": [
+  [
+   "短剧风格能用于商业海报吗？",
+   "视觉语言本身无版权，但具体剧照/角色形象属于片方——借风格不借画面。"
+  ]
+ ],
+ "examples": [
+  {
+   "slug": "style",
+   "title": "对照 · 视觉拆解",
+   "good_cap": "OK 怼脸特写+强对比+虚化光斑",
+   "bad_cap": "X 平光自拍无情绪"
+  }
+ ]
+}

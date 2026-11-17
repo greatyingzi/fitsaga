@@ -1,0 +1,23 @@
+{
+ "slug": "cinematic-lighting-types",
+ "title": "Types of Cinematic Lighting: A Visual Guide with AI Prompts",
+ "lede": "Searched as 'types of cinematic lighting' and 'what is cinematic lighting' — this guide maps six classic film lighting setups to copy-paste AI prompts, with real examples.",
+ "type": "evergreen",
+ "lang": "en",
+ "body_md": "## What cinematic lighting actually means\nCinematic lighting is not a filter — it is **intentional control of direction, contrast, and color temperature**. Six classic setups cover 90% of film looks.\n\n## The six setups\n1. **Rembrandt** — 45° key light, triangle on cheek. Prompt: `rembrandt lighting, soft window light from left, triangle of light on cheek`\n2. **Butterfly / Paramount** — light above, shadow under nose. Prompt: `butterfly lighting, key light from above, vintage glamour`\n3. **Split** — half face lit, half in shadow. Prompt: `split lighting, dramatic contrast, one side of face in shadow`\n4. **Rim / Backlight** — light behind subject. Prompt: `rim lighting, glowing hair, dark background, backlit portrait`\n5. **Golden hour** — low warm sun. Prompt: `golden hour, warm rim light, long soft shadows`\n6. **Low key / Noir** — minimal light, deep shadows. Prompt: `low key lighting, single lamp, film noir, deep shadows`\n\n## How to choose\nPortrait → Rembrandt or butterfly. Drama → split or noir. Atmosphere → rim or golden hour. Your prompt should name the setup, not just say 'cinematic'.\n\n## Related\nOur Lighting Prompt Guide covers the four workhorse lights in depth.",
+ "looks": [],
+ "faq": [
+  [
+   "Is 'cinematic lighting' enough in a prompt?",
+   "No — name the specific setup; models respond to concrete light words, not generic labels."
+  ]
+ ],
+ "examples": [
+  {
+   "slug": "style",
+   "title": "对照 · 视觉拆解",
+   "good_cap": "OK 伦勃朗三角光+明确光位",
+   "bad_cap": "X 泛写cinematic无效"
+  }
+ ]
+}

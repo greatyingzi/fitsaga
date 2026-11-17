@@ -1,0 +1,23 @@
+{
+ "slug": "midnight-cinema-aesthetic",
+ "title": "午夜影院美学 AI 指南：凌晨三点的电影感怎么生成",
+ "lede": "“凌晨3点电影院热闹得像过年”是社交热点——午夜场、爆满影院、散场灯光。这篇把这种城市夜生活美学拆成 prompt 公式。",
+ "type": "hot",
+ "lang": "zh",
+ "body_md": "## 一句话结论\n午夜影院美学 = **空旷街道 + 一扇亮着的厅门 + 散场后的暖光人脸**——孤独与热闹同时存在才有那个味道。\n\n## 三个场景配方\n### 1 · 影院外\n**empty street at 3am, cinema marquee glowing, wet pavement reflections, deep blue night, single warm light**\n### 2 · 散场厅内\n**dim cinema interior, rows of red seats, projector beam, faint smoke, warm ambient light**\n### 3 · 观众特写\n**tired happy face, warm light from screen, popcorn, midnight movie, candid**\n\n## Prompt 公式\n`midnight cinema, empty street, neon marquee, wet reflections, blue hour, warm interior glow, cinematic still, film grain`\n\n## 关联\n与 GTA6 迈阿密夜景、赛博朋克对照读物联动——同为“夜的光”主题。",
+ "looks": [],
+ "faq": [
+  [
+   "午夜场景总是生成得太黑？",
+   "加 'warm interior glow as key light' 指定光源——纯蓝调夜景会丢失人物细节。"
+  ]
+ ],
+ "examples": [
+  {
+   "slug": "style",
+   "title": "对照 · 视觉拆解",
+   "good_cap": "OK 午夜蓝调+暖厅光+湿地倒影",
+   "bad_cap": "X 纯黑街道丢细节"
+  }
+ ]
+}
