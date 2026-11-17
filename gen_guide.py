@@ -21,6 +21,8 @@ ARTICLE_CSS = """
 .gwrap details{background:#241b2c;border-radius:12px;margin:.6rem 0;padding:.9rem 1rem;border:1px solid #3a2a44}
 .gwrap summary{cursor:pointer;font-weight:700;color:#ffd9a8;font-size:.95rem}
 .gwrap details p{margin:.6rem 0 0;font-size:.92rem}
+.gpair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:1.5rem 0}
+.gpair figure{margin:0}.gpair img{width:100%;border-radius:10px}.gpair figcaption{font-size:.75rem;margin-top:.3rem;line-height:1.7}
 .gwrap .looks{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(150px,100%),1fr));gap:12px;margin:1.2rem 0}
 .gwrap .looks img{width:100%;border-radius:10px;aspect-ratio:3/4;object-fit:cover;display:block}
 .gwrap .looks figure{margin:0;position:relative}
@@ -98,10 +100,17 @@ def main():
     for aid, slug, title, lede, pub in rows:
         data = json.loads(open(ROOT/"collector"/f"_article_{slug}.json", encoding="utf-8").read())
         body_html = md2html(data["body"])
+        examples_html = ""
+        for ex in data.get("examples", []):
+            examples_html += "<h2>" + html.escape(ex.get("title", "对照")) + "</h2>"
+            examples_html += '<div class="gpair">'
+            examples_html += '<figure><img src="/guide-img/' + ex["slug"] + '-good.jpg" loading="lazy"><figcaption style="color:#a8e6a3">OK ' + html.escape(ex.get("good_cap", "")) + '</figcaption></figure>'
+            examples_html += '<figure><img src="/guide-img/' + ex["slug"] + '-bad.jpg" loading="lazy"><figcaption style="color:#cbb8d4">X ' + html.escape(ex.get("bad_cap", "")) + '</figcaption></figure>'
+            examples_html += "</div>"
         looks = "\n".join(
             f'<figure><img src="{html.escape(u)}" alt="{html.escape(alt)}" loading="lazy"><figcaption>{html.escape(cap)}</figcaption></figure>'
             for u, alt, cap in data["looks"])
-        page = article_html({"slug":slug,"title":title,"lede":lede,"published_at":pub}, body_html, f'<div class="looks">{looks}</div>')
+        page = article_html({"slug":slug,"title":title,"lede":lede,"published_at":pub}, body_html, examples_html + f'<div class="looks">{looks}</div>')
         (PUB / f"guide/{slug}.html").write_text(page, encoding="utf-8")
         urls.append((slug, title, lede))
     # guide索引页

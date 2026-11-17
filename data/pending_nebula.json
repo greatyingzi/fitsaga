@@ -28,5 +28,10 @@
   "scope": "fitsaga",
   "tags": "十二期交付,决策文10",
   "content": "fitsaga 十二期交付(2026-11-17)：决策文4→10篇(静奢怎么穿/针织衫选款/多巴胺配色公式/JK制服入圈/甜妹分寸感/Y2K回潮)——每篇三问对比表公式FAQ结构+词库高收藏词驱动(静奢526/针织508/多巴胺319/JK676/甜妹675/Y2K165收藏)。文章系统机制确认：collector/_article_*.json自动入库(gen_guide幂等注册,status默认draft但本批全published)+guide/<slug>.html。部署坑复现：CF边缘会在生成中途吃半成品快照(404)——重部署即愈, 大批量生成后部署前必须确认产物mtime。飞轮40/40。"
+ },
+ {
+  "scope": "fitsaga",
+  "tags": "action-proxy接入,ops-runner,自动化架构",
+  "content": "fitsaga action proxy 接入(2026-11-17)：用户告知改用 action proxy 自动化。架构查明——公共仓 greatyingzi/ops-runner 的 proxy.yml 收 repository_dispatch(site-deploy)/workflow_dispatch(site,env) → 从私有 hub data-core-01 的 tasks/sites.json 读站点配置(repo/project/prod_branch/preview_branch/prod/preview/build/gate) → 从 secret PROXY_KEYS_JSON 取站点专属 deploy key → clone 站点仓 → 跑 build → wrangler deploy dist → 线上curl校验。已完成：①hub sites.json 注册 fitsaga(build=bash build_proxy.sh, prod=main分支/prod=fitsaga.pages.dev, preview=test分支/fitsaga-dev) ②fitsaga仓库加配对deploy key(id=170137246,title=ops-runner-proxy-key2) ③build_proxy.sh全量生成到public后cp -r到dist(504文件,proxy固定部署dist而生成器写public) ④proxy_deploy.sh触发脚本 ⑤PROXY_SETUP.md含待加的key( gitignored)。唯一剩余=把PROXY_SETUP.md私钥加入ops-runner的PROXY_KEYS_JSON secret(明文不可API读, 必须人工/持token会话操作)。另外发现并修复旧daily.yml两bug：cd collector后跑根目录hot_radar.py静默失败+新生成器(b2/b3/nikki_en/downloads)未接入。"
  }
 ]
