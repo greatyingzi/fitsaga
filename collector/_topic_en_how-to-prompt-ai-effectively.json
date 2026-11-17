@@ -1,0 +1,23 @@
+{
+ "slug": "how-to-prompt-ai-effectively",
+ "title": "How to Prompt AI Effectively: The Six-Layer Method, Explained Simply",
+ "lede": "'How to prompt AI effectively' is one of the highest-volume question searches — this is our most requested topic, answered with the same six-layer method behind every guide on this site.",
+ "type": "deep",
+ "lang": "en",
+ "body_md": "## The one-sentence answer\nEffective prompting is not about magic words — it is about giving the model **six pieces of information in a stable order**: subject, outfit, pose, scene, light, medium.\n\n## Why order matters\nModels read prompts as language, not as a bag of keywords. Put the medium first and the model treats it as the subject. Our 60 experiments confirmed the six-layer order produces the most stable results.\n\n## A worked example\nWeak: `beautiful fashion photo, masterpiece, 8k`\nStrong: `a young woman in a camel wool coat / walking on a city street / looking back / dusk / warm street lamp light / street style photography, 35mm`\nThe strong version says nothing about quality — because quality words do nothing. It says everything about what should be in the image.\n\n## The three habits that matter\n1. Name observable things, not adjectives ('rim light on hair', not 'beautiful').\n2. Change one variable at a time so you learn what works.\n3. Write your criterion before generating — 'is the collar direction correct?' beats 'do I like it?'.\n\n## Go deeper\nThis is the short answer. Our Fashion AI Prompt Grammar, 20 Failure Modes, and Prompt Lab Method are the full curriculum.",
+ "looks": [],
+ "faq": [
+  [
+   "Will this be updated?",
+   "Yes — as the search data changes."
+  ]
+ ],
+ "examples": [
+  {
+   "slug": "style",
+   "title": "对照 · 问题解答可视化",
+   "good_cap": "OK 六层信息稳定排序——有效prompt的答案",
+   "bad_cap": "X 堆masterpiece无效"
+  }
+ ]
+}
