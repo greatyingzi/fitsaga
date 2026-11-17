@@ -5,3 +5,8 @@ compatibility_date = "2026-01-01"
 [[r2_buckets]]
 binding = "FITSAGA_CACHE"
 bucket_name = "fitsaga-cache"
+
+# 自定义域绑定(绕开 workers.dev 账号风控)
+[[routes]]
+pattern = "img.depthsnap.com/*"
+zone_id = "7f5c5f5fd1af9f640b0c713897ccf841"

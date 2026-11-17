@@ -33,5 +33,15 @@
   "scope": "fitsaga",
   "tags": "action-proxy接入,ops-runner,自动化架构",
   "content": "fitsaga action proxy 接入(2026-11-17)：用户告知改用 action proxy 自动化。架构查明——公共仓 greatyingzi/ops-runner 的 proxy.yml 收 repository_dispatch(site-deploy)/workflow_dispatch(site,env) → 从私有 hub data-core-01 的 tasks/sites.json 读站点配置(repo/project/prod_branch/preview_branch/prod/preview/build/gate) → 从 secret PROXY_KEYS_JSON 取站点专属 deploy key → clone 站点仓 → 跑 build → wrangler deploy dist → 线上curl校验。已完成：①hub sites.json 注册 fitsaga(build=bash build_proxy.sh, prod=main分支/prod=fitsaga.pages.dev, preview=test分支/fitsaga-dev) ②fitsaga仓库加配对deploy key(id=170137246,title=ops-runner-proxy-key2) ③build_proxy.sh全量生成到public后cp -r到dist(504文件,proxy固定部署dist而生成器写public) ④proxy_deploy.sh触发脚本 ⑤PROXY_SETUP.md含待加的key( gitignored)。唯一剩余=把PROXY_SETUP.md私钥加入ops-runner的PROXY_KEYS_JSON secret(明文不可API读, 必须人工/持token会话操作)。另外发现并修复旧daily.yml两bug：cd collector后跑根目录hot_radar.py静默失败+新生成器(b2/b3/nikki_en/downloads)未接入。"
+ },
+ {
+  "scope": "fitsaga",
+  "tags": "十三期交付,决策文对照图,action-proxy",
+  "content": "fitsaga 十三期(2026-11-17)：1)决策文对照图——gen_guide.py加examples渲染(gpair双列OK/X标签)+CogView生成6篇×1组共12张，10篇决策文中6篇新文全带对照图，线上验证OK块+图200。2)每日workflow核查修两bug：cd collector后跑根目录hot_radar.py静默失败、新生成器(b2/b3/nikki_en/downloads)未接入——已修YAML并本地实跑(雷达+草稿池+4新候选)。3)R2第六次重试仍500账号级异常。飞轮40/40。"
+ },
+ {
+  "scope": "fitsaga",
+  "tags": "CF风控真相,tizi清理,自定义域绕过",
+  "content": "CF workers.dev 1101 真相链(2026-11-17, 纠正此前'账号级风控/abuse导致'的错判)：①铁证实验——新建纯Hello World Worker(fitpuretest)也1101,证明与梯子流量特征/代码内容无关,是账号级+workers.dev zone级拦截;②GitHub issue cmliu/edgetunnel#1783(2026-10-07,'Error 1101,近期部署的出现情况,可能官方风控严格了',18评论共识'CF官方使用了AI检测流量特征','旧的不动才活着,不要新建/更新');③abuse邮件(10/21-28,et-lh/et-lh2/edt-test)是平行事件非根因。④决定性解法=绑定自有域名:fitpuretest绑puretest.depthsnap.com后200正常(同代码workers.dev=1101,自有域=200),证明只是workers.dev公共zone被处置,自有域绕过完全有效。⑤找到CLOUDFLARE_DNS_TOKEN(~/.hermes/.env)可建DNS记录(注意本机DNS污染,验证要用DoH+--resolve直连真实IP)。⑥R2图片通路已恢复:img.depthsnap.com/r2/hot1.webp 200返回53KB webp。⑦按主人要求清理梯子全部资产:删除Pages项目et-lh-p2、测试Worker fitpuretest、测试DNS puretest.depthsnap.com;et-lh/et-lh2/edt-test三个梯子节点此前已不存在;保留所有正常业务(home-gateway是action proxy基建不是梯子,fitsaga-r2是图缓存)。"
  }
 ]
