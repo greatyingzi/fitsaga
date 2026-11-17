@@ -1,0 +1,89 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 画法方法论实验室 · FitSaga</title>
+<meta name="description" content="20 篇基于独家数据的原创方法论：从失败模式图鉴、prompt 语法学，到跨文化观察与创作工具。FitSaga AI 画法研究所。">
+<style>:root{--gold:#f5c76e;--bg:#141018;--fg:#f5eef7;}
+*{margin:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--fg);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.hero{min-height:70vh;
+/* appended below */display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:3rem 1.5rem;background:radial-gradient(1200px 600px at 20% 10%,rgba(255,126,179,.25),transparent 60%),radial-gradient(1000px 500px at 80% 20%,rgba(181,84,140,.3),transparent 60%),radial-gradient(900px 500px at 50% 90%,rgba(63,111,216,.18),transparent 60%),var(--bg)}
+.hero.small{min-height:38vh}
+.hero h1{font-size:clamp(1.8rem,5vw,3.4rem);font-weight:800;line-height:1.3;background:linear-gradient(90deg,#ffd9a8,#ff7eb3,#c793ff,#8ec5ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{margin-top:.8rem;color:#cbb8d4;letter-spacing:.12em;font-size:clamp(.9rem,2vw,1.05rem)}
+.stylechips{display:flex;flex-wrap:wrap;gap:.55rem;justify-content:center;margin-top:1.8rem}
+.chip{display:inline-block;padding:.6rem 1.05rem;border-radius:999px;font-size:.9rem;font-weight:600;color:#fff;box-shadow:0 4px 12px rgba(0,0,0,.35);transition:transform .2s;opacity:.85}
+.chip:hover{transform:translateY(-2px);opacity:1}
+.chip.on{outline:2px solid #fff5;opacity:1}
+.sec{padding:2.5rem 1.5rem;max-width:1100px;margin:0 auto}
+.sec-head h2{font-size:clamp(1.3rem,3vw,1.9rem);font-weight:800}
+.sec-head p{width:100%;margin-top:.4rem;opacity:.85;font-size:.95rem}
+.intro{max-width:640px;color:#cbb8d4;line-height:1.8;font-size:.95rem;margin-bottom:1.4rem}
+.masonry{columns:3 240px;column-gap:14px}
+@media(max-width:640px){.masonry{columns:2 140px}}
+.shot{break-inside:avoid;margin-bottom:14px;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 6px 20px rgba(0,0,0,.4);background:#241b2c}
+.shot img{width:100%;display:block;transition:transform .35s}
+.shot:hover img{transform:scale(1.04)}
+.shot .cap{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:.5rem;padding:1.5rem .7rem .55rem;font-size:.78rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+.shot .cap em{font-style:normal;opacity:.75;white-space:nowrap;font-size:.78rem}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(160px,100%),1fr));gap:14px}
+.scard{background:#241b2c;border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+.scard img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.sname{padding:.6rem .7rem .1rem;font-weight:700;font-size:.9rem}
+.smeta{padding:0 .7rem .7rem;font-size:.78rem;color:#9d8fa8}
+footer{padding:2.5rem 1.5rem;text-align:center;color:#9d8fa8;font-size:.9rem;background:#0f0c13;margin-top:2rem}
+footer .links{margin-top:.7rem;display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+footer .links a{display:inline-block;padding:.55rem .9rem;border-radius:10px;background:#241b2c;font-size:.9rem;min-height:44px;line-height:1.4}
+footer .source{opacity:.6;font-size:.78rem;margin-top:.6rem;line-height:1.7}
+.sec-head a{display:inline-block;padding:.6rem .1rem;min-height:44px;line-height:1.7;font-size:.92rem}
+/* flywheel round3 fixes */
+.hero.small{min-height:26vh}
+.hero .sub{letter-spacing:.05em;max-width:22em;line-height:1.8}
+.collection-cap{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:.15rem;padding:2.2rem .8rem .6rem;font-size:.85rem;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+.shot .cap{font-size:.85rem}
+.shot .cap .view{font-size:.78rem;opacity:.8}
+.masonry .shot img{max-height:520px;object-fit:cover}
+
+/* home v3 components */
+.hero.hero2{min-height:52vh}
+.chip-hero{font-size:1rem;padding:.7rem 1.3rem;box-shadow:0 6px 20px rgba(199,147,255,.35)}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:14px}
+.srow{margin-bottom:1.6rem}
+.srow-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;font-size:1.05rem}
+.srow-h .more{font-size:.85rem;opacity:.75}
+.minirow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media(max-width:640px){.minirow{grid-template-columns:repeat(2,1fr)}}
+.mini{display:block;border-radius:12px;overflow:hidden;aspect-ratio:3/4;background:#241b2c}
+.mini img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.mini:hover img{transform:scale(1.05)}
+
+</style></head><body>
+<header class="hero small"><h1><span style="color:#c793ff">🧠 AI 画法方法论实验室</span></h1>
+<p class="sub">20 篇原创框架 · 60 组对照实验 · 4,700 张图库 · 2,000+ 套装数据</p></header>
+<main class="sec">
+<p style="color:#d8c9de;line-height:1.9;max-width:760px">这里不是 prompt 技巧合集——每一篇都是基于本站自有数据归纳出的原创框架。数据别人没有，框架不可速成，这是我们唯一的护城河。</p>
+<h2 style="color:#c793ff;margin-top:2rem">诊断与调试</h2><div class="tgrid"><a class="scard" style="padding:1rem;display:block" href="/topics/ai-fashion-failure-atlas"><div class="sname">AI 时装生成的 20 个失败模式图鉴：从 60 组对照实验里提炼的避坑地图</div><div class="smeta" style="margin-top:.4rem;line-height:1.7">不是又一份 prompt 技巧合集。这是我们把 60 组正反例对照实验、4,700+ 张真实图库逐张比对后，归纳出的 20 个高频失败模式—…</div></a>
+<a class="scard" style="padding:1rem;display:block" href="/topics/prompt-debug-checklist"><div class="sname">Prompt 调试决策树：出图不对时，按这 7 步定位而不是重生成</div><div class="smeta" style="margin-top:.4rem;line-height:1.7">出图不对就重写整个 prompt？这是最大的浪费。我们把 60 组实验的归因方法做成一棵可执行的决策树——7 步定位，只改一个变量。…</div></a>
+<a class="scard" style="padding:1rem;display:block" href="/topics/why-ai-fashion-looks-plastic"><div class="sname">为什么 AI 时尚图总有一股「塑料味」：一个可验证的三因模型</div><div class="smeta" style="margin-top:.4rem;line-height:1.7">你不是一个人觉得 AI 人像「假」。我们把 60 组对照实验按失败原因重新归类，发现塑料感只来自三个变量——而且每个都能用一句话修掉。…</div></a>
+<a class="scard" style="padding:1rem;display:block" href="/en/topics/prompt-anti-patterns"><div class="sname">Prompt 反模式辞典：12 个你以为有用、实际在帮倒忙的词</div><div class="smeta" style="margin-top:.4rem;line-height:1.7">「masterpiece, best quality, 8k」——这些词真的有用吗？我们做了控制变量实验，发现一批高频 prompt 词正在…</div></a></div>
+<h2 style="color:#c793ff;margin-top:2rem">语法与结构</h2><div class="tgrid"><a class="scard" style="padding:1rem;display:block" href="/topics/fashion-ai-prompt-grammar"><div class="sname">时尚 AI Prompt 的语法学：我们拆解了 543 条索引后发现的句法规则</div><div class="smeta" style="margin-top:.4rem;line-height:1.7">prompt 不是关键词堆砌，是有语序的语言。把站内 543 条搜索索引当语料做句法分析后，我们提炼出一套可验证的「时尚 prompt 语法…</div></a>
+<a class="scard" style="padding:1rem;display:block" href="/en/topics/the-anatomy-of-a-viral-fashion-prompt"><div class="sname">The Anatomy of a Viral Fashion Prompt: What 4,700 Real Outfits Taught Us</div><div class="smeta" style="margin-top:.4rem;line-height:1.7">We analyzed the save-ranked structure of 4,700+ real outfit references…</div></a>
+<a class="scard" style="padding:1rem;display:block" href="/en/topics/the-readability-paradox"><div class="sname">The Readability Paradox: Why &#x27;Simple&#x27; Fashion Images Win</div><div class="smeta" style="margin-top:.4rem;line-height:1.7">We looked at the save-ranked structure of 4,700 real outfit references…</div></a>
+<a class="scard" style="padding:1rem;display:block" href="/en/topics/building-a-visual-vocabulary"><div class="sname">Building a Visual Vocabulary: 80 Words That Actually Change AI Fashion Output</div><div class="smeta" style="margin-top:.4rem;line-height:1.7">Not a word dump — a tested vocabulary. We grouped 80 descriptors by th…</div></a></div>
+<h2 style="color:#c793ff;margin-top:2rem">设计语言</h2><div class="tgrid"><a class="scard" style="padding:1rem;display:block" href="/topics/nikki-design-language"><div class="sname">暖暖套装的设计语法：从 2,000+ 套装里读懂游戏时装的造型逻辑</div><div class="smeta" style="margin-top:.4rem;line-height:1.7">为什么暖暖的套装一眼就能认出是「游戏时装」而不是普通服装？我们把 2,000+ 套结构化数据当设计语料，提取出游戏时装区别于现实时装的 7 …</div></a>
+<a class="scard" style="padding:1rem;display:block" href="/en/topics/chinese-garment-taxonomy-en"><div class="sname">A Prompt Engineer&#x27;s Taxonomy of Chinese Garments: 12 Forms, Exact English Equivalents</div><div class="smeta" style="margin-top:.4rem;line-height:1.7">Hanfu, qipao, mamian, ruqun, beizi — the words get blurred together in…</div></a>
+<a class="scard" style="padding:1rem;display:block" href="/en/topics/commerce-of-fictional-places"><div class="sname">Why GTA6-Style Prompts Matter: The Commerce of Fictional Places</div><div class="smeta" style="margin-top:.4rem;line-height:1.7">Vice City is a fictional place with more visual recognition than most …</div></a></div>
+<h2 style="color:#c793ff;margin-top:2rem">观察与洞察</h2><div class="tgrid"><a class="scard" style="padding:1rem;display:block" href="/topics/why-mamian-went-global"><div class="sname">马面裙为什么在海外爆红：一次文化符号的跨语境翻译观察</div><div class="smeta" style="margin-top:.4rem;line-height:1.7">Mamian skirt 从中文圈走向海外搜索榜不是偶然。用站内 132 个海外搜索词 + 4,700 张图库收藏数据，复盘这场跨语境传播的…</div></a>
+<a class="scard" style="padding:1rem;display:block" href="/topics/the-economy-of-ai-reference-images"><div class="sname">AI 参考图的经济学：为什么「免费图」反而最贵</div><div class="smeta" style="margin-top:.4rem;line-height:1.7">做了 60 组对照实验、维护 4,700 张图库、打包 10 个参考图包——这些「免费」内容的真实成本是什么？一份来自站内的诚实账本。…</div></a>
+<a class="scard" style="padding:1rem;display:block" href="/topics/visual-trends-half-life"><div class="sname">审美也有保质期：从站内收藏数据看流行风格的半衰期</div><div class="smeta" style="margin-top:.4rem;line-height:1.7">多巴胺、美拉德、老钱风……为什么有些风格火三个月就死，有些能活三年？用站内高收藏图的时间分布做粗粒度观察。…</div></a>
+<a class="scard" style="padding:1rem;display:block" href="/topics/why-saving-more-is-worse"><div class="sname">为什么收藏越多、穿搭越乱：4,700 张图库暴露的「灵感囤积症」</div><div class="smeta" style="margin-top:.4rem;line-height:1.7">我们统计了用户收藏行为与 outfit 质量的关系，发现一个反直觉现象：收藏超过一定数量的账号，出图/搭配质量反而下降。这不是品味问题，是决…</div></a></div>
+<h2 style="color:#c793ff;margin-top:2rem">创作工具</h2><div class="tgrid"><a class="scard" style="padding:1rem;display:block" href="/topics/style-deconstruction-workflow"><div class="sname">风格拆解工作流：看到一张好图，如何 10 分钟拆成可复用的 prompt</div><div class="smeta" style="margin-top:.4rem;line-height:1.7">「我喜欢这张图的感觉」说不出所以然？这套 5 步拆解法把感觉变成结构——配色/轮廓/材质/光/姿态，每步一个可写进 prompt 的词。…</div></a>
+<a class="scard" style="padding:1rem;display:block" href="/topics/reference-hygiene"><div class="sname">参考图卫生学：为什么你的参考图正在悄悄拉低出图质量</div><div class="smeta" style="margin-top:.4rem;line-height:1.7">参考图不是越多越好。我们统计了不同参考数量下的出图质量，发现一个临界点——超过它，模型开始平均化。附一套参考图清理流程。…</div></a>
+<a class="scard" style="padding:1rem;display:block" href="/en/topics/the-prompt-lab-method"><div class="sname">The Prompt Lab Method: How We Run Controlled Experiments on AI Fashion</div><div class="smeta" style="margin-top:.4rem;line-height:1.7">We do not guess which word changed an image. We run A/B experiments wi…</div></a>
+<a class="scard" style="padding:1rem;display:block" href="/topics/ai-fashion-copyright-map"><div class="sname">AI 时尚创作的版权地图：哪些能商用、哪些只能自嗨（中国+海外双视角）</div><div class="smeta" style="margin-top:.4rem;line-height:1.7">从游戏套装到汉服形制到品牌大片，AI 时尚创作的版权边界一直模糊。我们按「输入材料→输出用途」画了一张双视角地图——明确标出安全区、灰色区和…</div></a></div>
+<p style="margin-top:2.5rem"><a href="/topics.html" style="color:#ff9ec7">← 全部专题（教程与热点）</a></p>
+</main>
+<footer><div><b style="color:#f5c76e">FitSaga</b> · AI 画法研究所</div>
+<div class="source">方法论基于站内对照实验与图库数据 · © 2026 FitSaga</div></footer>
+<script src="/search.js" defer></script><script src="/theme.js" defer></script>
+</body></html>

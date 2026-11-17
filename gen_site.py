@@ -193,6 +193,7 @@ def home():
   <p class="sub">每一种美，都值得一场时装冒险 —— 图鉴用来找灵感，画法用来做创作</p>
   <nav class="stylechips">
     <a class="chip chip-hero" style="background:linear-gradient(135deg,#3a2a44,#c793ff)" href="/topics.html">🎨 AI 画法研究所</a>
+    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#a855f766)" href="/deep-lab.html">🧠 方法论实验室</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#ffd9a866)" href="/guide.html">📖 穿搭研究所</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#a855f766)" href="/ai.html">✦ AI 灵感图鉴</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#8ec5ff66)" href="/zara.html">ZARA 大片</a>

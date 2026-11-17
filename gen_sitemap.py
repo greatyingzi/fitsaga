@@ -25,6 +25,7 @@ def main():
         t = _json.loads(f.read_text(encoding="utf-8"))
         entries.append((BASE + "/topics/" + t["slug"], "0.8"))
     entries.append((BASE + "/topics.html", "0.8"))
+    entries.append((BASE + "/deep-lab.html", "0.9"))
     # EN 专题页
     for f in sorted(pathlib.Path(".").glob("collector/_topic_en_*.json")):
         t = _json.loads(f.read_text(encoding="utf-8"))

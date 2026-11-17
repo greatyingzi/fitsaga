@@ -1,0 +1,23 @@
+{
+ "slug": "the-prompt-lab-method",
+ "title": "The Prompt Lab Method: How We Run Controlled Experiments on AI Fashion",
+ "lede": "We do not guess which word changed an image. We run A/B experiments with one variable at a time — here is the lab method behind every framework on this site, reproducible by anyone.",
+ "type": "deep",
+ "lang": "en",
+ "body_md": "## Why a lab method\nMost prompt advice is anecdotal: someone changed a word and liked the result. That is not evidence — it is one observation with no control. We treat every prompt claim as a hypothesis and test it like a lab.\n\n## The protocol\n1. **Fix a baseline prompt** — keep it unchanged across the experiment.\n2. **Change exactly one variable** — one light word, one fabric word, one palette term.\n3. **Generate both versions** — same seed if the model supports it.\n4. **Judge against a criterion, not a feeling** — e.g. 'is the collar direction correct?', not 'does it look better?'.\n5. **Record the result** — even a null result is data.\n\n## Why one variable matters\nChange three words and the output improves: you now know nothing. Change one word and it improves: you have a reusable rule. This is how we built the 20 Failure Modes atlas from 60 experiments.\n\n## Criteria beat taste\n'Looks better' drifts with mood. A criterion ('rim light visible on hair', 'flat front panel visible') is binary and repeatable. Write the criterion before generating.\n\n## Reproduce it yourself\nPick any claim from our guides. Run the five-step protocol. If it fails on your model, record that too — model-specific null results are the next research question.\n\n## The cumulative effect\nOne experiment teaches one rule. Sixty experiments teach a system. That is the difference between prompt tips and a prompt science.",
+ "looks": [],
+ "faq": [
+  [
+   "Do I need special tools?",
+   "No — the method itself is the tool."
+  ]
+ ],
+ "examples": [
+  {
+   "slug": "style",
+   "title": "对照 · 工具可视化",
+   "good_cap": "OK A/B对照+单一变量+明确判据",
+   "bad_cap": "X 无对照的轶事"
+  }
+ ]
+}

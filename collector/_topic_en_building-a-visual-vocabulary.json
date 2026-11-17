@@ -1,0 +1,23 @@
+{
+ "slug": "building-a-visual-vocabulary",
+ "title": "Building a Visual Vocabulary: 80 Words That Actually Change AI Fashion Output",
+ "lede": "Not a word dump — a tested vocabulary. We grouped 80 descriptors by the layer they affect (light, fabric, form, motion, medium) and marked which ones actually moved the needle in 60 experiments.",
+ "type": "deep",
+ "lang": "en",
+ "body_md": "## A vocabulary, not a word dump\nThere are thousands of prompt words online. Most are untested. We took 80 descriptors, ran them through controlled experiments, and grouped them by which visual layer they affect.\n\n## The five layers\n**Light**: directional / rim / volumetric / diffused /Rembrandt / low-key\n**Fabric**: liquid drape / matte pile / layered transparency / visible stitch / natural fading\n**Form**: cross-collar / flat front panel / A-line / bell silhouette / asymmetric hem\n**Motion**: mid-motion / contrapposto / candid / looking back / fabric floating\n**Medium**: film grain / 35mm / editorial / matte painting / concept art\n\n## Which words actually moved the needle\nIn our 60 experiments, fabric behavior words produced the largest visible change, followed by named light setups. Generic quality words (masterpiece, 8k) produced no measurable change — see our Anti-Patterns dictionary.\n\n## How to use this vocabulary\nPick one word per layer, maximum five words total. More than that and the model averages them. Each word should be something you can point to in the output.\n\n## Test it yourself\nTake any word from the list, swap it into a baseline prompt, and run our Lab Method. Build your own tested subset — that is worth more than any cheat sheet.",
+ "looks": [],
+ "faq": [
+  [
+   "Do I need special tools?",
+   "No — the method itself is the tool."
+  ]
+ ],
+ "examples": [
+  {
+   "slug": "style",
+   "title": "对照 · 工具可视化",
+   "good_cap": "OK 80词按5层分组+实验标记",
+   "bad_cap": "X 无差别词堆"
+  }
+ ]
+}
