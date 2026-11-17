@@ -167,9 +167,9 @@ def topic_cards_html():
         t = _json.loads(f.read_text(encoding="utf-8"))
         if t.get("lang") == "en": continue
         sub = "en/topics" if t.get("lang") == "en" else "topics"
-        emoji = "🔥" if t.get("type") == "hot" else "📚"
+        emoji = "🔥" if t.get("type") == "hot" else ("🧠" if t.get("type") == "deep" else "📚")
         cards.append("<a class='scard' style='padding:1rem;display:block' href=/" + sub + "/" + t["slug"] + "'><div class='sname'>" + emoji + " " + htmlMod.escape(t["title"]) + "</div><div class='smeta' style='margin-top:.4rem;line-height:1.7'>" + htmlMod.escape(t["lede"][:60]) + "…</div></a>")
-    cards.sort(key=lambda c: 0 if "🔥" in c else 1)
+    cards.sort(key=lambda c: 0 if "🔥" in c else (1 if "🧠" in c else 2))
     return chr(10).join(cards)
 
 def home():

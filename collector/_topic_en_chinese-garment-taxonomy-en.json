@@ -1,0 +1,23 @@
+{
+ "slug": "chinese-garment-taxonomy-en",
+ "title": "A Prompt Engineer's Taxonomy of Chinese Garments: 12 Forms, Exact English Equivalents",
+ "lede": "Hanfu, qipao, mamian, ruqun, beizi — the words get blurred together in most prompt guides. This taxonomy maps 12 Chinese garment forms to precise English prompt equivalents, with the cultural rules models need to be told explicitly.",
+ "type": "deep",
+ "lang": "en",
+ "body_md": "## Why a taxonomy is needed\n'Hanfu' alone is a category error in prompting — it is like asking for 'Western clothing'. A model given that word produces a costume-drama average of every dynasty. The fix is a taxonomy: dynasty → garment form → detail word.\n\n## The 12 forms\n1. **Mamian skirt (Ming)** — `horse-face skirt, flat front panel, pleated sides`\n2. **Ruqun (Tang)** — `chest-high ruqun, high-waisted, flowing sleeves`\n3. **Cross-collar upper (universal)** — `cross-collar, right lapel over left`\n4. **Beizi (Song)** — `song dynasty beizi jacket, open front, wide sleeves`\n5. **Qipao/Cheongsam (modern)** — `mandarin collar qipao, fitted silk, side slit`\n6. **Zhan'ao (Ming)** — `standing collar robe, Ming formal`\n7. **Daxiushan (Tang)** — `large-sleeve shirt, Tang court style`\n8. **Shenyi (Han)** — `cross-collar robe, wrapped, ancient Chinese`\n9. **Hufu (Tang)** — `Tang nomadic-influenced outfit, fitted trousers`\n10. **Aoqun (Ming)** — `jacket and skirt set, short jacket`\n11. **Shawl (Pibo, Tang)** — `long silk ribbon shawl, Tang`\n12. **Festival robe (modern)** — `neo-Chinese festive robe, red and gold`\n\n## The two rules models must be told\n**Right lapel over left** (left-over-right is historically for the deceased). **Dynasty consistency** — never mix two dynasty words in one prompt; the model will average the silhouettes into something ahistorical.\n\n## Complete formula example\n`a woman in a Ming dynasty mamian skirt, flat front panel with golden brocade, cross-collar right lapel over left top, buyao hairpin, classical garden, soft window light`\n\n## Related\nOur Hanfu AI Guide and 'Mamian Skirt How to Wear' cover the most-searched forms in depth.",
+ "looks": [],
+ "faq": [
+  [
+   "Which form is best for beginners?",
+   "The mamian skirt — it pairs with modern tops and needs no special hairstyle."
+  ]
+ ],
+ "examples": [
+  {
+   "slug": "style",
+   "title": "对照 · 方法论可视化",
+   "good_cap": "OK 12形制对照表——精确英文映射",
+   "bad_cap": "X 随机服装拼贴"
+  }
+ ]
+}

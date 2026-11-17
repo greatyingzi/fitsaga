@@ -1,0 +1,23 @@
+{
+ "slug": "fashion-ai-prompt-grammar",
+ "title": "时尚 AI Prompt 的语法学：我们拆解了 543 条索引后发现的句法规则",
+ "lede": "prompt 不是关键词堆砌，是有语序的语言。把站内 543 条搜索索引当语料做句法分析后，我们提炼出一套可验证的「时尚 prompt 语法」——顺序、权重、否定、密度四条规则。",
+ "type": "deep",
+ "lang": "zh",
+ "body_md": "## 核心发现：模型读的是顺序，不是词袋\n同样 8 个词，换顺序出图差异巨大。我们把 543 条索引按结构拆分后确认：**时尚 prompt 有稳定语序**，违反语序会导致权重错配。\n\n## 规则一：六层语序（由内向外）\n`主体 → 服装(类型+面料+颜色) → 姿态 → 场景 → 光 → 媒介`\n这是我们在照片转译法里验证过的顺序，反过来写（先说媒介再说主体）会让模型把风格当主体。\n\n## 规则二：邻近即权重\n修饰语紧贴被修饰词才生效。`a velvet hanfu jacket` 里 velvet 修饰 hanfu；写成 `a hanfu jacket, velvet` 会变成独立风格标签，权重下降。\n\n## 规则三：否定要用肯定替代\n模型对 `no / not` 的理解不稳定。`not kimono` 不如 `chinese cross-collar` —— 给正确指令比禁止错误更有效。这是我们从 20 个失败模式里反复验证的。\n\n## 规则四：密度天花板\n40-80 词是甜区。低于 30 词缺氛围层，高于 120 词模型开始平均化。多出来的细节不要堆进同一句——拆成两张分别生成再融合。\n\n## 一个完整范例解剖\n`[主体] a young asian woman / [服装] in a camel wool coat over white straight trousers / [姿态] walking, looking back / [场景] city street at dusk / [光] warm street lamp light / [媒介] street style photography, 35mm film grain` —— 六层各就各位，出图稳定。\n\n## 验证方法\n每次只改一层，生成两张对比——这就是我们做 60 组实验的方法论，也是这套语法的证据来源。",
+ "looks": [],
+ "faq": [
+  [
+   "中文 prompt 适用吗？",
+   "语序规则通用；中文模型对中文形制词响应更好，我们的汉服指南有对照表。"
+  ]
+ ],
+ "examples": [
+  {
+   "slug": "style",
+   "title": "对照 · 方法论可视化",
+   "good_cap": "OK 六层语序信息图——邻近即权重",
+   "bad_cap": "X 无序词堆砌"
+  }
+ ]
+}

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>AI 时装生成的 20 个失败模式图鉴：从 60 组对照实验里提炼的避坑地图 · FitSaga AI 画法研究所</title>
+<meta name="description" content="不是又一份 prompt 技巧合集。这是我们把 60 组正反例对照实验、4,700+ 张真实图库逐张比对后，归纳出的 20 个高频失败模式——每个都给出识别方法和修正词。">
+<meta property="og:title" content="AI 时装生成的 20 个失败模式图鉴：从 60 组对照实验里提炼的避坑地图">
+<meta property="og:description" content="不是又一份 prompt 技巧合集。这是我们把 60 组正反例对照实验、4,700+ 张真实图库逐张比对后，归纳出的 20 个高频失败模式——每个都给出识别方法和修正词。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fitsaga.pages.dev/topics/ai-fashion-failure-atlas">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" hreflang="en" href="https://fitsaga.pages.dev/en/topics/" + t["slug"] + "">
+<link rel="alternate" hreflang="zh" href="https://fitsaga.pages.dev/topics/" + t["slug"] + "">
+<link rel="canonical" href="https://fitsaga.pages.dev/topics/ai-fashion-failure-atlas">
+<style>:root{--gold:#f5c76e;--bg:#141018;--fg:#f5eef7;}
+*{margin:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--fg);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.hero{min-height:70vh;
+/* appended below */display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:3rem 1.5rem;background:radial-gradient(1200px 600px at 20% 10%,rgba(255,126,179,.25),transparent 60%),radial-gradient(1000px 500px at 80% 20%,rgba(181,84,140,.3),transparent 60%),radial-gradient(900px 500px at 50% 90%,rgba(63,111,216,.18),transparent 60%),var(--bg)}
+.hero.small{min-height:38vh}
+.hero h1{font-size:clamp(1.8rem,5vw,3.4rem);font-weight:800;line-height:1.3;background:linear-gradient(90deg,#ffd9a8,#ff7eb3,#c793ff,#8ec5ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{margin-top:.8rem;color:#cbb8d4;letter-spacing:.12em;font-size:clamp(.9rem,2vw,1.05rem)}
+.stylechips{display:flex;flex-wrap:wrap;gap:.55rem;justify-content:center;margin-top:1.8rem}
+.chip{display:inline-block;padding:.6rem 1.05rem;border-radius:999px;font-size:.9rem;font-weight:600;color:#fff;box-shadow:0 4px 12px rgba(0,0,0,.35);transition:transform .2s;opacity:.85}
+.chip:hover{transform:translateY(-2px);opacity:1}
+.chip.on{outline:2px solid #fff5;opacity:1}
+.sec{padding:2.5rem 1.5rem;max-width:1100px;margin:0 auto}
+.sec-head h2{font-size:clamp(1.3rem,3vw,1.9rem);font-weight:800}
+.sec-head p{width:100%;margin-top:.4rem;opacity:.85;font-size:.95rem}
+.intro{max-width:640px;color:#cbb8d4;line-height:1.8;font-size:.95rem;margin-bottom:1.4rem}
+.masonry{columns:3 240px;column-gap:14px}
+@media(max-width:640px){.masonry{columns:2 140px}}
+.shot{break-inside:avoid;margin-bottom:14px;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 6px 20px rgba(0,0,0,.4);background:#241b2c}
+.shot img{width:100%;display:block;transition:transform .35s}
+.shot:hover img{transform:scale(1.04)}
+.shot .cap{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:.5rem;padding:1.5rem .7rem .55rem;font-size:.78rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+.shot .cap em{font-style:normal;opacity:.75;white-space:nowrap;font-size:.78rem}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(160px,100%),1fr));gap:14px}
+.scard{background:#241b2c;border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+.scard img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.sname{padding:.6rem .7rem .1rem;font-weight:700;font-size:.9rem}
+.smeta{padding:0 .7rem .7rem;font-size:.78rem;color:#9d8fa8}
+footer{padding:2.5rem 1.5rem;text-align:center;color:#9d8fa8;font-size:.9rem;background:#0f0c13;margin-top:2rem}
+footer .links{margin-top:.7rem;display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+footer .links a{display:inline-block;padding:.55rem .9rem;border-radius:10px;background:#241b2c;font-size:.9rem;min-height:44px;line-height:1.4}
+footer .source{opacity:.6;font-size:.78rem;margin-top:.6rem;line-height:1.7}
+.sec-head a{display:inline-block;padding:.6rem .1rem;min-height:44px;line-height:1.7;font-size:.92rem}
+/* flywheel round3 fixes */
+.hero.small{min-height:26vh}
+.hero .sub{letter-spacing:.05em;max-width:22em;line-height:1.8}
+.collection-cap{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:.15rem;padding:2.2rem .8rem .6rem;font-size:.85rem;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+.shot .cap{font-size:.85rem}
+.shot .cap .view{font-size:.78rem;opacity:.8}
+.masonry .shot img{max-height:520px;object-fit:cover}
+
+/* home v3 components */
+.hero.hero2{min-height:52vh}
+.chip-hero{font-size:1rem;padding:.7rem 1.3rem;box-shadow:0 6px 20px rgba(199,147,255,.35)}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:14px}
+.srow{margin-bottom:1.6rem}
+.srow-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;font-size:1.05rem}
+.srow-h .more{font-size:.85rem;opacity:.75}
+.minirow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media(max-width:640px){.minirow{grid-template-columns:repeat(2,1fr)}}
+.mini{display:block;border-radius:12px;overflow:hidden;aspect-ratio:3/4;background:#241b2c}
+.mini img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.mini:hover img{transform:scale(1.05)}
+
+</style><style>.twrap{max-width:760px;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+.twrap h1{font-size:clamp(1.5rem,4vw,2.1rem);font-weight:800;line-height:1.4;color:#fff}
+.twrap .badge{display:inline-block;padding:.3rem .8rem;border-radius:999px;background:linear-gradient(135deg,#ff7eb3,#a855f7);color:#fff;font-size:.78rem;font-weight:700;margin-bottom:1rem}
+.twrap .lede{font-size:1.02rem;line-height:2;color:#f0e8f3;border-left:3px solid #a855f7;padding-left:1rem;margin:1.4rem 0}
+.twrap h2{font-size:1.25rem;color:#ffd9a8;margin:2rem 0 .7rem;font-weight:800}
+.twrap h3{font-size:1.02rem;color:#c793ff;margin:1.4rem 0 .5rem}
+.twrap p{line-height:2;color:#e8dff0;margin:.7rem 0;font-size:.95rem}
+.twrap p b{color:#ff9ec7}
+.twrap pre{background:#0f0c13;border:1px solid #3a2a44;border-radius:12px;padding:1rem 1.1rem;overflow-x:auto;margin:1rem 0}
+.twrap pre code{color:#8ec5ff;font-size:.82rem;line-height:1.9;font-family:ui-monospace,Menlo,monospace}
+.twrap details{background:#1a1420;border-radius:12px;margin:.6rem 0;padding:.9rem 1rem;border:1px solid #3a2a44}
+.twrap summary{cursor:pointer;font-weight:700;color:#ffd9a8}
+.twrap details p{margin:.5rem 0 0;font-size:.92rem}
+.twrap .chase{background:linear-gradient(135deg,#2a1832,#4a1f45);border-radius:14px;padding:1rem 1.1rem;margin:1.5rem 0;border-left:3px solid #ff7eb3}
+.twrap .chase b{color:#ff7eb3}
+.twrap .meta{color:#9d8fa8;font-size:.85rem;margin:.6rem 0}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI 时装生成的 20 个失败模式图鉴：从 60 组对照实验里提炼的避坑地图", "description": "不是又一份 prompt 技巧合集。这是我们把 60 组正反例对照实验、4,700+ 张真实图库逐张比对后，归纳出的 20 个高频失败模式——每个都给出识别方法和修正词。", "datePublished": "2026-11-17", "author": {"@type": "Organization", "name": "FitSaga"}}</script>
+</head><body>
+<div class="twrap"><article>
+<span class="badge">EVERGREEN</span>
+<h1>AI 时装生成的 20 个失败模式图鉴：从 60 组对照实验里提炼的避坑地图</h1>
+<div class="meta">FitSaga AI 画法研究所 · 2026-11-17</div>
+<div class="lede">不是又一份 prompt 技巧合集。这是我们把 60 组正反例对照实验、4,700+ 张真实图库逐张比对后，归纳出的 20 个高频失败模式——每个都给出识别方法和修正词。</div>
+<h2>为什么需要失败模式图鉴</h2>
+<p>网上教 prompt 的文章都在告诉你「写什么」，但真正的瓶颈是「为什么这张图不对」。我们做了 60 组对照实验（每组只改变一个变量），把失败归纳成 20 个可识别的模式——这是从失败侧反向建立的地图。</p>
+<h2>第一类：形制崩坏（4 种）</h2>
+<p><b>1 · 交领方向反了</b> —— 右衽变左衽（文化错误）。识别：看领口重叠方向。修正词：`cross-collar, right lapel over left`</p>
+<p><b>2 · 马面裙失去裙门</b> —— 平铺前片消失、整圈打褶。识别：正面无平整面。修正：`flat front panel, pleated sides`</p>
+<p><b>3 · 朝代混搭</b> —— 唐制上衣配明制裙。识别：腰线高度矛盾。修正：锁定一个朝代词，全句不出现第二个。</p>
+<p><b>4 · 汉服变和服</b> —— 交领变直领、腰带变宽腰封。修正：`cross collar chinese style, NOT kimono`</p>
+<h2>第二类：材质失真（4 种）</h2>
+<p><b>5 · 丝绒发亮</b> —— 物理上吸光的材质被画成反光。修正：`light-absorbing, matte pile`</p>
+<p><b>6 · 纱变塑料</b> —— 单层透明无层次。修正：`layered transparency`</p>
+<p><b>7 · 缎面无流动</b> —— 只有颜色没有高光走向。修正：`liquid sheen following folds`</p>
+<p><b>8 · 三种材质平均</b> —— 全身一种质感。修正：显式写三样 matte+flowing+sheer。</p>
+<h2>第三类：光线错误（4 种）</h2>
+<p><b>9 · 逆光黑脸</b> —— 有轮廓光无正面补光。修正：`soft fill light on face`</p>
+<p><b>10 · 塑料皮肤</b> —— 全域均匀柔光。修正：`directional light, gentle falloff`</p>
+<p><b>11 · 空气感缺失</b> —— 主体像贴纸。修正：`atmospheric perspective, dust motes`</p>
+<p><b>12 · 光的来源矛盾</b> —— 影子方向与光源不一致。修正：只写一个主光源。</p>
+<h2>第四类：人体与动态（4 种）</h2>
+<p><b>13 · 手指融合</b> —— 多指/无指。修正：`hands relaxed, five fingers visible` 或让手出画</p>
+<p><b>14 · 站姿僵直</b> —— 缺重心。修正：`contrapposto, weight on one leg`</p>
+<p><b>15 · 多人脸平均</b> —— 两张脸糊成一张。修正：n≥2 时写 &#x27;distinct faces&#x27;</p>
+<p><b>16 · 衣服穿在手外</b> —— 袖口与手关系错乱。修正：避免复杂手势。</p>
+<h2>第五类：文化与场景（4 种）</h2>
+<p><b>17 · 春节图变红包图</b> —— 缺人物叙事。修正：`editorial photography` 而非节日词</p>
+<p><b>18 · 场景年代错位</b> —— 汉服配柏油路现代广告牌。修正：写清 `ancient chinese town`</p>
+<p><b>19 · 性感越界</b> —— 从时尚大片滑向擦边。修正：`editorial, tasteful, no cleavage emphasis`</p>
+<p><b>20 · 配饰堆叠</b> —— 步摇+发钗+耳环+项链全上变戏服。修正：配饰上限两件。</p>
+<h2>使用方法</h2>
+<p>出图后不要凭「感觉不对」重生成——对照这张图定位到具体编号，只改那一层的词。这就是我们从 60 组实验里学到的最有用的一件事：<b>一次只改一个变量，才知道什么在起作用</b>。</p>
+<h3>对照 · 方法论可视化</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><figure style="margin:0"><div style="background:#1d4d2b;color:#a8e6a3;font-size:.72rem;padding:.3rem .6rem;border-radius:8px 8px 0 0;font-weight:700">OK PROMPT</div><img src="/topics/ai-fashion-failure-atlas/style-good.jpg" loading="lazy" style="width:100%;border-radius:10px"><figcaption style="font-size:.75rem;color:#8ec5ff;line-height:1.7">OK OK 失败图鉴可视化——识别20个模式</figcaption></figure><figure style="margin:0"><div style="background:#4d1d1d;color:#e6a8a8;font-size:.72rem;padding:.3rem .6rem;border-radius:8px 8px 0 0;font-weight:700">WEAK</div><img src="/topics/ai-fashion-failure-atlas/style-bad.jpg" loading="lazy" style="width:100%;border-radius:10px;opacity:.85"><figcaption style="font-size:.75rem;color:#cbb8d4;line-height:1.7">X X 干净图看不出问题</figcaption></figure></div>
+<p style="margin-top:2rem;color:#9d8fa8;font-size:.85rem">相关专题：</p><nav class="stylechips" style="margin-top:.4rem;justify-content:flex-start"><a class="chip" style="background:linear-gradient(135deg,#2a1832,#a855f766)" href=/topics/cny-hanfu-ai>春节 AI 生成国风大片：从拜年服到新中</a></nav><a class="chip" style="background:linear-gradient(135deg,#2a1832,#a855f766)" href=/topics/cyberpunk-vs-miami>赛博朋克 vs 迈阿密美学：一张表分清两</a></nav><a class="chip" style="background:linear-gradient(135deg,#2a1832,#a855f766)" href=/topics/fabric-texture-prompt>面料质感 AI prompt 指南：让布</a></nav>
+
+<div class="chase"><b>🔄 追更日志</b><div style="margin:.25rem 0"><b style="color:#ffd9a8">2026-11-17</b> — 深度方法论基石：60组对照实验→20个失败模式图鉴</div></div>
+
+<h2>常见问题</h2><div><details><summary>这套图鉴会更新吗？</summary><p>会——每批新实验若发现新模式就追加编号，追更日志可查。</p></details></div>
+<p style="margin-top:2.5rem"><a href="/topics.html">← 全部专题</a> · <a href="/">Home</a></p>
+</article></div>
+<script src="/lightbox.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/theme.js" defer></script>
+</body></html>
