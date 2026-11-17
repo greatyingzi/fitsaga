@@ -53,5 +53,10 @@
   "scope": "fitsaga",
   "tags": "十五期交付,Nikki扩容,EN扩产",
   "content": "fitsaga 十五期(2026-11-17)：1)Nikki EN hub主题扩容10→18主题、套图103→235(新增Wedding/Gothic/Fire/Moonlight/Gold/Butterfly/Music/Hanfu/Punk/Fairy主题，每主题LIMIT 12→16)；2)EN新专题3篇——vice-city-style-guide(海外高搜词'vice city style'8变体)/mamian-skirt-how-to-wear('mamian skirt how to wear'长尾)/infinity-nikki-ability-outfits('ability outfit ideas'海外玩家需求)；3)热点草稿池转化2篇zh——lol-cinematic-style(曙光预告CG视觉)/skin-design-ai(冠军皮肤狐狸)；4)修复长期bug——gen_sitemap.py此前只扫描en/zh专题的zh页从没进sitemap(长期遗漏)，改为自动扫描_topic_*.json排除en，sitemap 1014→1030；5)5篇新专题各配CogView对照图，飞轮40/40全绿。"
+ },
+ {
+  "scope": "fitsaga",
+  "tags": "深度内容创作,数据驱动,原创框架",
+  "content": "fitsaga 深度内容专项第一批(2026-11-17, 主人定位'只管负责内容深度创作')：5篇基于自有独家数据的原创框架长文——①AI时装生成20个失败模式图鉴(60组对照实验归纳,5大类各4模式)②时尚AI prompt语法学(543条索引句法分析→6层语序/邻近权重/肯定替代否定/密度天花板)③暖暖套装设计语法(2000+套装→游戏时装7条语法)④The Anatomy of a Viral Fashion Prompt(4700图库→1秒可读性理论:单主色+单轮廓+单情绪)⑤A Prompt Engineer's Taxonomy of Chinese Garments(12形制精确英文映射+2条文化硬规则)。首页新增🧠深度徽章+排序hot>deep>普通。sitemap 1042。这类内容的特点=数据别人没有+框架原创,是真正的差异化护城河。飞轮40/40。"
  }
 ]

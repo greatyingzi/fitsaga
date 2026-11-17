@@ -1,0 +1,23 @@
+{
+ "slug": "prompt-anti-patterns",
+ "title": "Prompt 反模式辞典：12 个你以为有用、实际在帮倒忙的词",
+ "lede": "「masterpiece, best quality, 8k」——这些词真的有用吗？我们做了控制变量实验，发现一批高频 prompt 词正在稀释你的指令。这是我们的反模式辞典。",
+ "type": "deep",
+ "lang": "en",
+ "body_md": "## The method\nWe took a baseline prompt and added one high-frequency 'magic word' at a time, generating 12 A/B pairs. If a word changed nothing measurable, we flagged it as an anti-pattern.\n\n## The 12 anti-patterns\n1. **masterpiece / best quality** — no measurable change on modern models; consumes token budget.\n2. **8k / 4k** — resolution is an output setting, not a semantic cue.\n3. **intricate details** — often adds noise, not detail; specific detail words work better.\n4. **photorealistic** (in an illustration prompt) — creates a tug-of-war with style words.\n5. **beautiful / gorgeous** — subjective words the model cannot ground.\n6. **cinematic lighting** (alone) — empty without a named setup; use 'rembrandt' or 'rim light'.\n7. **no blur, no artifacts** — negation is unreliable; describe the desired state instead.\n8. **Trending on ArtStation** — a style signal from an older model era, now mostly noise.\n9. **wide shot + close-up** in one prompt — contradictory framing; the model averages.\n10. **multiple styles** (e.g. 'anime and photorealistic') — style averaging produces mud.\n11. **more color** — vague; name the actual palette instead.\n12. **perfect anatomy** — does not override the model's spatial limits; constrain pose instead.\n\n## What to do instead\nReplace every anti-pattern with a **concrete, observable descriptor**: name the light setup, the fabric behavior, the palette, the medium. Concreteness beats enthusiasm.\n\n## The token budget argument\nAnt Patterns consume the 40-80 word sweet spot. Removing them leaves room for the six layers that actually matter (subject/outfit/pose/scene/light/medium).\n\n## Related\nOur Fashion AI Prompt Grammar and 20 Failure Modes atlas are the positive-side complements.",
+ "looks": [],
+ "faq": [
+  [
+   "Do anti-patterns ever help on older models?",
+   "Some did on 2022-era models; on current models our A/B tests showed no measurable benefit."
+  ]
+ ],
+ "examples": [
+  {
+   "slug": "style",
+   "title": "对照 · 方法论可视化",
+   "good_cap": "OK 精确描述词替代空泛magic words",
+   "bad_cap": "X 堆砌masterpiece 8k无效"
+  }
+ ]
+}

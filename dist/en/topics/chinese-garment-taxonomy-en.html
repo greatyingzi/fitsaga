@@ -93,22 +93,22 @@ footer .source{opacity:.6;font-size:.78rem;margin-top:.6rem;line-height:1.7}
 <h2>Why a taxonomy is needed</h2>
 <p>&#x27;Hanfu&#x27; alone is a category error in prompting — it is like asking for &#x27;Western clothing&#x27;. A model given that word produces a costume-drama average of every dynasty. The fix is a taxonomy: dynasty → garment form → detail word.</p>
 <h2>The 12 forms</h2>
-<p>1. <b>Mamian skirt (Ming)</b> — `horse-face skirt, flat front panel, pleated sides`</p>
-<p>2. <b>Ruqun (Tang)</b> — `chest-high ruqun, high-waisted, flowing sleeves`</p>
-<p>3. <b>Cross-collar upper (universal)</b> — `cross-collar, right lapel over left`</p>
-<p>4. <b>Beizi (Song)</b> — `song dynasty beizi jacket, open front, wide sleeves`</p>
-<p>5. <b>Qipao/Cheongsam (modern)</b> — `mandarin collar qipao, fitted silk, side slit`</p>
-<p>6. <b>Zhan&#x27;ao (Ming)</b> — `standing collar robe, Ming formal`</p>
-<p>7. <b>Daxiushan (Tang)</b> — `large-sleeve shirt, Tang court style`</p>
-<p>8. <b>Shenyi (Han)</b> — `cross-collar robe, wrapped, ancient Chinese`</p>
-<p>9. <b>Hufu (Tang)</b> — `Tang nomadic-influenced outfit, fitted trousers`</p>
-<p>10. <b>Aoqun (Ming)</b> — `jacket and skirt set, short jacket`</p>
-<p>11. <b>Shawl (Pibo, Tang)</b> — `long silk ribbon shawl, Tang`</p>
-<p>12. <b>Festival robe (modern)</b> — `neo-Chinese festive robe, red and gold`</p>
+<p>1. <b>Mamian skirt (Ming)</b> — <code style='background:#2a1f35;padding:.1rem .35rem;border-radius:4px;color:#c9a8ff'>horse-face skirt, flat front panel, pleated sides</code></p>
+<p>2. <b>Ruqun (Tang)</b> — <code style='background:#2a1f35;padding:.1rem .35rem;border-radius:4px;color:#c9a8ff'>chest-high ruqun, high-waisted, flowing sleeves</code></p>
+<p>3. <b>Cross-collar upper (universal)</b> — <code style='background:#2a1f35;padding:.1rem .35rem;border-radius:4px;color:#c9a8ff'>cross-collar, right lapel over left</code></p>
+<p>4. <b>Beizi (Song)</b> — <code style='background:#2a1f35;padding:.1rem .35rem;border-radius:4px;color:#c9a8ff'>song dynasty beizi jacket, open front, wide sleeves</code></p>
+<p>5. <b>Qipao/Cheongsam (modern)</b> — <code style='background:#2a1f35;padding:.1rem .35rem;border-radius:4px;color:#c9a8ff'>mandarin collar qipao, fitted silk, side slit</code></p>
+<p>6. <b>Zhan&#x27;ao (Ming)</b> — <code style='background:#2a1f35;padding:.1rem .35rem;border-radius:4px;color:#c9a8ff'>standing collar robe, Ming formal</code></p>
+<p>7. <b>Daxiushan (Tang)</b> — <code style='background:#2a1f35;padding:.1rem .35rem;border-radius:4px;color:#c9a8ff'>large-sleeve shirt, Tang court style</code></p>
+<p>8. <b>Shenyi (Han)</b> — <code style='background:#2a1f35;padding:.1rem .35rem;border-radius:4px;color:#c9a8ff'>cross-collar robe, wrapped, ancient Chinese</code></p>
+<p>9. <b>Hufu (Tang)</b> — <code style='background:#2a1f35;padding:.1rem .35rem;border-radius:4px;color:#c9a8ff'>Tang nomadic-influenced outfit, fitted trousers</code></p>
+<p>10. <b>Aoqun (Ming)</b> — <code style='background:#2a1f35;padding:.1rem .35rem;border-radius:4px;color:#c9a8ff'>jacket and skirt set, short jacket</code></p>
+<p>11. <b>Shawl (Pibo, Tang)</b> — <code style='background:#2a1f35;padding:.1rem .35rem;border-radius:4px;color:#c9a8ff'>long silk ribbon shawl, Tang</code></p>
+<p>12. <b>Festival robe (modern)</b> — <code style='background:#2a1f35;padding:.1rem .35rem;border-radius:4px;color:#c9a8ff'>neo-Chinese festive robe, red and gold</code></p>
 <h2>The two rules models must be told</h2>
 <p><b>Right lapel over left</b> (left-over-right is historically for the deceased). <b>Dynasty consistency</b> — never mix two dynasty words in one prompt; the model will average the silhouettes into something ahistorical.</p>
 <h2>Complete formula example</h2>
-<p>`a woman in a Ming dynasty mamian skirt, flat front panel with golden brocade, cross-collar right lapel over left top, buyao hairpin, classical garden, soft window light`</p>
+<p><code style='background:#2a1f35;padding:.1rem .35rem;border-radius:4px;color:#c9a8ff'>a woman in a Ming dynasty mamian skirt, flat front panel with golden brocade, cross-collar right lapel over left top, buyao hairpin, classical garden, soft window light</code></p>
 <h2>Related</h2>
 <p>Our Hanfu AI Guide and &#x27;Mamian Skirt How to Wear&#x27; cover the most-searched forms in depth.</p>
 <h3>对照 · 方法论可视化</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><figure style="margin:0"><div style="background:#1d4d2b;color:#a8e6a3;font-size:.72rem;padding:.3rem .6rem;border-radius:8px 8px 0 0;font-weight:700">OK PROMPT</div><img src="/topics/chinese-garment-taxonomy-en/style-good.jpg" loading="lazy" style="width:100%;border-radius:10px"><figcaption style="font-size:.75rem;color:#8ec5ff;line-height:1.7">OK OK 12形制对照表——精确英文映射</figcaption></figure><figure style="margin:0"><div style="background:#4d1d1d;color:#e6a8a8;font-size:.72rem;padding:.3rem .6rem;border-radius:8px 8px 0 0;font-weight:700">WEAK</div><img src="/topics/chinese-garment-taxonomy-en/style-bad.jpg" loading="lazy" style="width:100%;border-radius:10px;opacity:.85"><figcaption style="font-size:.75rem;color:#cbb8d4;line-height:1.7">X X 随机服装拼贴</figcaption></figure></div>

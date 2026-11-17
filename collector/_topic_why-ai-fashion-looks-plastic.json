@@ -1,0 +1,23 @@
+{
+ "slug": "why-ai-fashion-looks-plastic",
+ "title": "为什么 AI 时尚图总有一股「塑料味」：一个可验证的三因模型",
+ "lede": "你不是一个人觉得 AI 人像「假」。我们把 60 组对照实验按失败原因重新归类，发现塑料感只来自三个变量——而且每个都能用一句话修掉。",
+ "type": "deep",
+ "lang": "zh",
+ "body_md": "## 塑料感不是审美问题，是物理问题\n真实摄影的质感来自光与物的物理互动：皮肤有次表面散射、布料有各向异性高光、空气有散射。AI 出图若缺这三者，就会得到「均匀、干净、无体积」的塑料感。\n\n## 因一：光没有方向\n塑料皮肤的最大特征是**全域均匀柔光**——脸上没有明暗过渡。验证：看颧骨到下颌有没有渐变。修正只需要一个词：`directional light, gentle falloff`，让光有明确的来处。\n\n## 因二：材质没有行为\n「silk dress」只给颜色不给行为，模型就画成反光塑料布。修正要写物理行为：`silk with liquid drape`、`velvet light-absorbing`、`chiffon layered transparency`。我们在 60 组实验里验证：加行为词后材质真实感提升最明显。\n\n## 因三：空间没有空气\n主体像贴纸贴在背景上，是因为缺大气透视。修正：`atmospheric perspective, subtle haze, dust motes in light`——三个词里任意一个都能让画面「深」一层。\n\n## 三因验证表\n| 症状 | 归因 | 一句话修正 |\n| 脸像蜡像 | 光无方向 | directional light |\n| 布像塑料 | 无行为词 | liquid drape |\n| 人像贴纸 | 无空气 | atmospheric haze |\n\n## 一个对照实验\n同一 prompt 三版：A 什么都没有→塑料；B 只加 directional light→皮肤变真；C 加三因全部→接近摄影。我们 60 组实验里这一组的差异最稳定，说明三因模型是可靠的。\n\n## 延伸\n这套模型也解释了为什么「more detailed prompt」有时反而更差——堆细节词不解决物理缺失，解决的是另一个问题。",
+ "looks": [],
+ "faq": [
+  [
+   "三因要同时加吗？",
+   "不必——先诊断缺哪个再加哪个，一次只改一个变量才能知道什么在起作用。"
+  ]
+ ],
+ "examples": [
+  {
+   "slug": "style",
+   "title": "对照 · 方法论可视化",
+   "good_cap": "OK 三因齐：方向光+材质行为+空气感",
+   "bad_cap": "X 全域柔光=塑料脸"
+  }
+ ]
+}

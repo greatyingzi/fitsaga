@@ -63,5 +63,30 @@
   "slug": "chinese-garment-taxonomy-en",
   "date": "2026-11-17",
   "note": "深度方法论基石：12种汉服形制→精确英文映射分类学"
+ },
+ {
+  "slug": "why-ai-fashion-looks-plastic",
+  "date": "2026-11-17",
+  "note": "深度框架：塑料感三因模型（光方向/材质行为/空气感）"
+ },
+ {
+  "slug": "seasonal-color-engine",
+  "date": "2026-11-17",
+  "note": "深度框架：肤色×对比度2×2可计算配色引擎"
+ },
+ {
+  "slug": "why-saving-more-is-worse",
+  "date": "2026-11-17",
+  "note": "反直觉发现：收藏囤积症与决策结构"
+ },
+ {
+  "slug": "ai-fashion-copyright-map",
+  "date": "2026-11-17",
+  "note": "双视角版权地图（输入L0-L3×三种用途）"
+ },
+ {
+  "slug": "prompt-anti-patterns",
+  "date": "2026-11-17",
+  "note": "12个反模式辞典（控制变量实验）"
  }
 ]

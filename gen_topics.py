@@ -45,9 +45,11 @@ def md2html(md):
             out.append("<h3>" + html.escape(line[4:]) + "</h3>")
         elif line.startswith("- "):
             t = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", html.escape(line[2:]))
+            t = re.sub(r"\`([^\`]+)\`", r"<code style='background:#2a1f35;padding:.1rem .35rem;border-radius:4px;color:#c9a8ff'>\1</code>", t)
             out.append("<p style='padding-left:1.2rem'>· " + t + "</p>")
         elif line.strip():
             t = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", html.escape(line))
+            t = re.sub(r"\`([^\`]+)\`", r"<code style='background:#2a1f35;padding:.1rem .35rem;border-radius:4px;color:#c9a8ff'>\1</code>", t)
             out.append("<p>" + t + "</p>")
     return NL.join(out)
 

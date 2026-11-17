@@ -93,20 +93,20 @@ footer .source{opacity:.6;font-size:.78rem;margin-top:.6rem;line-height:1.7}
 <h2>核心发现：模型读的是顺序，不是词袋</h2>
 <p>同样 8 个词，换顺序出图差异巨大。我们把 543 条索引按结构拆分后确认：<b>时尚 prompt 有稳定语序</b>，违反语序会导致权重错配。</p>
 <h2>规则一：六层语序（由内向外）</h2>
-<p>`主体 → 服装(类型+面料+颜色) → 姿态 → 场景 → 光 → 媒介`</p>
+<p><code style='background:#2a1f35;padding:.1rem .35rem;border-radius:4px;color:#c9a8ff'>主体 → 服装(类型+面料+颜色) → 姿态 → 场景 → 光 → 媒介</code></p>
 <p>这是我们在照片转译法里验证过的顺序，反过来写（先说媒介再说主体）会让模型把风格当主体。</p>
 <h2>规则二：邻近即权重</h2>
-<p>修饰语紧贴被修饰词才生效。`a velvet hanfu jacket` 里 velvet 修饰 hanfu；写成 `a hanfu jacket, velvet` 会变成独立风格标签，权重下降。</p>
+<p>修饰语紧贴被修饰词才生效。<code style='background:#2a1f35;padding:.1rem .35rem;border-radius:4px;color:#c9a8ff'>a velvet hanfu jacket</code> 里 velvet 修饰 hanfu；写成 <code style='background:#2a1f35;padding:.1rem .35rem;border-radius:4px;color:#c9a8ff'>a hanfu jacket, velvet</code> 会变成独立风格标签，权重下降。</p>
 <h2>规则三：否定要用肯定替代</h2>
-<p>模型对 `no / not` 的理解不稳定。`not kimono` 不如 `chinese cross-collar` —— 给正确指令比禁止错误更有效。这是我们从 20 个失败模式里反复验证的。</p>
+<p>模型对 <code style='background:#2a1f35;padding:.1rem .35rem;border-radius:4px;color:#c9a8ff'>no / not</code> 的理解不稳定。<code style='background:#2a1f35;padding:.1rem .35rem;border-radius:4px;color:#c9a8ff'>not kimono</code> 不如 <code style='background:#2a1f35;padding:.1rem .35rem;border-radius:4px;color:#c9a8ff'>chinese cross-collar</code> —— 给正确指令比禁止错误更有效。这是我们从 20 个失败模式里反复验证的。</p>
 <h2>规则四：密度天花板</h2>
 <p>40-80 词是甜区。低于 30 词缺氛围层，高于 120 词模型开始平均化。多出来的细节不要堆进同一句——拆成两张分别生成再融合。</p>
 <h2>一个完整范例解剖</h2>
-<p>`[主体] a young asian woman / [服装] in a camel wool coat over white straight trousers / [姿态] walking, looking back / [场景] city street at dusk / [光] warm street lamp light / [媒介] street style photography, 35mm film grain` —— 六层各就各位，出图稳定。</p>
+<p><code style='background:#2a1f35;padding:.1rem .35rem;border-radius:4px;color:#c9a8ff'>[主体] a young asian woman / [服装] in a camel wool coat over white straight trousers / [姿态] walking, looking back / [场景] city street at dusk / [光] warm street lamp light / [媒介] street style photography, 35mm film grain</code> —— 六层各就各位，出图稳定。</p>
 <h2>验证方法</h2>
 <p>每次只改一层，生成两张对比——这就是我们做 60 组实验的方法论，也是这套语法的证据来源。</p>
 <h3>对照 · 方法论可视化</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><figure style="margin:0"><div style="background:#1d4d2b;color:#a8e6a3;font-size:.72rem;padding:.3rem .6rem;border-radius:8px 8px 0 0;font-weight:700">OK PROMPT</div><img src="/topics/fashion-ai-prompt-grammar/style-good.jpg" loading="lazy" style="width:100%;border-radius:10px"><figcaption style="font-size:.75rem;color:#8ec5ff;line-height:1.7">OK OK 六层语序信息图——邻近即权重</figcaption></figure><figure style="margin:0"><div style="background:#4d1d1d;color:#e6a8a8;font-size:.72rem;padding:.3rem .6rem;border-radius:8px 8px 0 0;font-weight:700">WEAK</div><img src="/topics/fashion-ai-prompt-grammar/style-bad.jpg" loading="lazy" style="width:100%;border-radius:10px;opacity:.85"><figcaption style="font-size:.75rem;color:#cbb8d4;line-height:1.7">X X 无序词堆砌</figcaption></figure></div>
-<p style="margin-top:2rem;color:#9d8fa8;font-size:.85rem">相关专题：</p><nav class="stylechips" style="margin-top:.4rem;justify-content:flex-start"><a class="chip" style="background:linear-gradient(135deg,#2a1832,#a855f766)" href=/topics/ai-fashion-failure-atlas>AI 时装生成的 20 个失败模式图鉴：</a></nav><a class="chip" style="background:linear-gradient(135deg,#2a1832,#a855f766)" href=/topics/cny-hanfu-ai>春节 AI 生成国风大片：从拜年服到新中</a></nav><a class="chip" style="background:linear-gradient(135deg,#2a1832,#a855f766)" href=/topics/cyberpunk-vs-miami>赛博朋克 vs 迈阿密美学：一张表分清两</a></nav>
+<p style="margin-top:2rem;color:#9d8fa8;font-size:.85rem">相关专题：</p><nav class="stylechips" style="margin-top:.4rem;justify-content:flex-start"><a class="chip" style="background:linear-gradient(135deg,#2a1832,#a855f766)" href=/topics/ai-fashion-copyright-map>AI 时尚创作的版权地图：哪些能商用、哪</a></nav><a class="chip" style="background:linear-gradient(135deg,#2a1832,#a855f766)" href=/topics/ai-fashion-failure-atlas>AI 时装生成的 20 个失败模式图鉴：</a></nav><a class="chip" style="background:linear-gradient(135deg,#2a1832,#a855f766)" href=/topics/cny-hanfu-ai>春节 AI 生成国风大片：从拜年服到新中</a></nav>
 
 <div class="chase"><b>🔄 追更日志</b><div style="margin:.25rem 0"><b style="color:#ffd9a8">2026-11-17</b> — 深度方法论基石：543条索引句法分析→prompt语法学</div></div>
 
