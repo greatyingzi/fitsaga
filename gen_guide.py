@@ -58,6 +58,7 @@ def article_html(a, body_html, looks_html, related_html=""):
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="referrer" content="no-referrer">
 <title>{html.escape(a["title"])} · FitSaga 穿搭研究所</title>
+<meta property="og:title" content="FitSaga · 穿搭图鉴与AI画法研究所">
 <meta name="description" content="{html.escape(a["lede"][:80])}">
 <link rel="canonical" href="https://fitsaga.pages.dev/guide/{a["slug"]}">
 <style>{CSS}</style><style>{ARTICLE_CSS}</style>
@@ -146,6 +147,7 @@ def main():
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>穿搭研究所 · FitSaga</title>
+<meta property="og:title" content="FitSaga · 穿搭图鉴与AI画法研究所">
 <meta name="description" content="穿搭决策指南：风格怎么穿、派别怎么选、一周方案怎么排——每个建议都来自真实搭配图与搜索词证据。">
 <style>{CSS}</style></head><body>
 <header class="hero small"><h1><span style="color:#ffd9a8">穿搭研究所</span></h1>

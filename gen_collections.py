@@ -64,6 +64,7 @@ def main():
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="referrer" content="no-referrer">
 <title>{html.escape(c["title"])} · FitSaga</title>
+<meta property="og:title" content="FitSaga · 穿搭图鉴与AI画法研究所">
 <meta name="description" content="{html.escape(c["desc"])}共 {len(cards)} 套，数据来自无限暖暖套装库。">
 <link rel="canonical" href="https://fitsaga.pages.dev/collection/{c["slug"]}">
 <style>{CSS}</style></head><body>
@@ -135,6 +136,7 @@ def gen_item_collections():
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="referrer" content="no-referrer">
 <title>{html.escape(title)} · FitSaga</title>
+<meta property="og:title" content="FitSaga · 穿搭图鉴与AI画法研究所">
 <meta name="description" content="{html.escape(desc)}">
 <link rel="canonical" href="https://fitsaga.pages.dev/collection/{slug}">
 <style>{CSS}</style></head><body>

@@ -50,6 +50,7 @@ def main():
 <title>{html.escape(c["title"])} · FitSaga</title>
 <meta name="description" content="{html.escape(c["desc"])}">
 <link rel="canonical" href="https://fitsaga.pages.dev/collection/{c["slug"]}">
+  <meta property="og:title" content="{html.escape(c["title"])} · FitSaga">
 <style>{CSS}</style></head><body>
 <header class="hero small"><h1><span style="color:#ff7eb3">{html.escape(c["title"])}</span></h1>
 <p class="sub">{len(rows)} 套 · 按收藏热度排序 · 每日更新</p></header>

@@ -18,6 +18,8 @@ def main(cap=300):
         SELECT s.id, COALESCE(s.alias_zh, s.name), s.game, COUNT(si.id) FROM suits s
         JOIN suit_imgs si ON si.suit_id=s.id
         GROUP BY s.id HAVING COUNT(si.id)>0 ORDER BY s.id LIMIT ?""", (cap,)).fetchall()
+    gen_ids = [r[0] for r in rows]  # 只链接到本次生成的套装,避免cap外断链
+    id_ph = ",".join("?" for _ in gen_ids)
     urls = []
     made = 0
     for sid, name, game, n in rows:
@@ -27,7 +29,7 @@ def main(cap=300):
             f'<figure class="shot"><img src="{html.escape(u)}" alt="{html.escape(game+name+kind)}" loading="lazy"><figcaption class="cap">{html.escape(kind)}</figcaption></figure>'
             for u, kind in imgs)
         # 同风格相关: 同游戏其他套装随机4个
-        rel = con.execute("SELECT id, COALESCE(alias_zh, name) AS rn FROM suits WHERE game=? AND id<>? AND EXISTS(SELECT 1 FROM suit_imgs WHERE suit_id=suits.id) ORDER BY ABS(id - ?) ASC LIMIT 6", (game, sid, sid)).fetchall()
+        rel = con.execute("SELECT id, COALESCE(alias_zh, name) AS rn FROM suits WHERE game=? AND id<>? AND EXISTS(SELECT 1 FROM suit_imgs WHERE suit_id=suits.id) AND id IN (%s) ORDER BY ABS(id - ?) ASC LIMIT 6" % id_ph, [game, sid] + gen_ids + [sid]).fetchall()
         rel_html = "\n".join(
             f'<a class="chip" href="/nikki/s/{slugify(rn)}">{html.escape(rn)}</a>' for _, rn in rel)
         # 按套装名主题匹配深度文(命中率提升)
@@ -45,7 +47,14 @@ def main(cap=300):
                 break
         if not deep_links:
             deep_links = [("nikki-design-language","设计语法"),("the-prompt-lab-method","实验方法")]
-        deep_html = ' · '.join('<a style="color:#c793ff" href=/en/topics/' + ds + '>' + dt + ' →</a>' for ds, dt in deep_links)
+        def deep_path(slug):
+            import json as _j
+            for _f in (ROOT / "collector").glob("_topic_*.json"):
+                _t = _j.loads(_f.read_text(encoding="utf-8"))
+                if _t.get("slug") == slug:
+                    return ("en/topics" if _t.get("lang") == "en" else "topics") + "/" + slug
+            return "topics/" + slug
+        deep_html = ' · '.join('<a style="color:#c793ff" href=/' + deep_path(ds) + '>' + dt + ' →</a>' for ds, dt in deep_links)
         ai_block = '<div style="margin-top:2rem;background:linear-gradient(135deg,#2a1832,#4a1f45);border-radius:14px;padding:1rem 1.1rem;border-left:3px solid #c793ff"><b style="color:#c793ff">🧠 从图鉴到方法论</b><p style="margin:.4rem 0 0;font-size:.85rem;color:#d8c9de;line-height:1.8">' + deep_html + ' · <a style="color:#ff9ec7" href="/deep-lab.html">全部35篇 →</a></p></div>'
         page = f'''<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8">
@@ -54,6 +63,7 @@ def main(cap=300):
 <title>{html.escape(name)} · {html.escape(game)}套装图鉴 · FitSaga</title>
 <meta name="description" content="{html.escape(name)}({html.escape(game)})套装图鉴：{n}张展示图/部件图/海报，来源BWIKI，点击查看。">
 <link rel="canonical" href="https://fitsaga.pages.dev/nikki/s/{slug}">
+  <meta property="og:title" content="{html.escape(name)} · FitSaga">
 <style>{CSS}</style></head><body>
 <header class="hero small"><h1><span style="color:#f5c76e">{html.escape(name)}</span></h1>
 <p class="sub">{html.escape(game)} · {n} 张图 · 数据来自 BWIKI</p></header>

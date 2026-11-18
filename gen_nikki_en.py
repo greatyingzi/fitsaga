@@ -54,6 +54,7 @@ def main():
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="referrer" content="no-referrer">
 <title>Infinity Nikki Outfits: {total} Suits by Theme · FitSaga</title>
+<meta property="og:title" content="FitSaga · 穿搭图鉴与AI画法研究所">
 <meta name="description" content="Browse {total}+ Infinity Nikki outfits grouped by theme — dreamy, floral, starlit, snowy, oceanic. Real in-game suit references for AI palette borrowing and fan design.">
 <link rel="canonical" href="https://fitsaga.pages.dev/en/nikki-outfits">
 <meta property="og:title" content="Infinity Nikki Outfits by Theme · FitSaga">

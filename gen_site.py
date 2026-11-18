@@ -98,6 +98,7 @@ def page(title, desc, body, accent, path="/"):
 <meta name="referrer" content="no-referrer">
 {OG_TAGS}{GSC_META}
 <title>{esc(title)}</title>
+<meta property="og:title" content="FitSaga · 穿搭图鉴与AI画法研究所">
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{BASE}{esc(path)}">
 <style>{CSS}</style>

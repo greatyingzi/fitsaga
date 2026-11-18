@@ -57,7 +57,8 @@ def gen_nikki_pages(limit_games=("无限暖暖", "闪耀暖暖", "奇迹暖暖",
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="referrer" content="no-referrer">
-<title>{html_mod.escape(game)}套装图鉴 · FitSaga</title>
+<title>{html_mod.escape(game)}套装图鉴{' · 第' + str(page_no) + '页' if total_pages > 1 else ''} · FitSaga</title>
+<meta property="og:title" content="FitSaga · 穿搭图鉴与AI画法研究所">
 <meta name="description" content="{html_mod.escape(game)}全部套装图鉴：展示图、部件图、海报，逐张标注来源。">
 <style>{CSS}</style><style>
 .sgrid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px}}

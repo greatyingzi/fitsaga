@@ -103,5 +103,10 @@
   "scope": "fitsaga",
   "tags": "命中率提升第二轮,套装页导流",
   "content": "fitsaga命中率提升第二轮(2026-11-18)：300个套装详情页(nikki/s/)原本只有2个固定教程链接、无深度文链接。改造gen_nikki_detail.py加DEEP_BY_KW主题匹配:按套装名关键词(梦/夜/星/花/婚/雪/金等)动态推荐2篇深度文+全方法论入口。验证:300/300套装页都有'从图鉴到方法论'区块,且主题匹配生效(心湖涟漪→1秒可读性+设计语法;予梦心时→主题推荐)。线上复测深度链接1/sitemap1077/飞轮40/40。至此命中率链路完整:933图→300套装页→主题深度文→方法论专区←74专题←10决策文,全部互通。"
+ },
+ {
+  "scope": "fitsaga",
+  "tags": "自我迭代飞轮,孤儿页修复,SQL bug",
+  "content": "fitsaga自我迭代飞轮首轮(2026-11-18)：审计发现21个孤儿页(0入链)。逐项修复:①/en/nikki-outfits(235套英文hub)全站无入链→首页hero+套装数据库入口 ②3个孤儿合集(qipao-modern/french-style/带空格commute)→导航,并删除带前导空格坏文件 ③5个nikki索引页(miracle/shining/miraclehd/zara)→hub+首页导航 ④3个陈旧分页(zara-2/-3/miraclehd-3,其中miraclehd-3显示'第3/2页'逻辑不存在)→删除 ⑤9个孤儿套装页——真根因是gen_nikki_detail.py的SQL参数bug:ORDER BY ABS(id-?)有3个?但只传2参数(game,sid),导致相关推荐查询一直抛异常被>/dev/null吞掉,推荐区全空!修复为(game,sid,sid)后300页互链完整。审计脚本也曾有bug:只统计.html结尾的href,而CF Pages无后缀URL(/nikki/s/xxx)不算入链——修正后准确。最终孤儿21→1(仅404页)。教训:静默失败被重定向吞掉是隐形杀手,关键生成步骤不要>/dev/null或要检查exit code。"
  }
 ]

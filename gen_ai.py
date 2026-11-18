@@ -38,6 +38,7 @@ def main():
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="referrer" content="no-referrer">
 <title>AI 灵感图鉴 · FitSaga</title>
+<meta property="og:title" content="FitSaga · 穿搭图鉴与AI画法研究所">
 <meta name="description" content="AI 生成的女性穿搭灵感图鉴：汉服、旗袍、婚纱、礼服等人像大片，来自 Civitai 社区，高分辨率可商用参考。">
 <link rel="canonical" href="https://fitsaga.pages.dev/ai.html">
 <style>{CSS}</style></head><body>
