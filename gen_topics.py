@@ -73,8 +73,8 @@ def main():
             base = "/topics/" + t["slug"] + "/"
             ex_html += "<h3>" + html.escape(ex2["title"]) + "</h3>"
             ex_html += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">'
-            ex_html += '<figure style="margin:0"><div style="background:#1d4d2b;color:#a8e6a3;font-size:.72rem;padding:.3rem .6rem;border-radius:8px 8px 0 0;font-weight:700">OK PROMPT</div><img src="' + base + s2 + '-good.jpg" loading="lazy" style="width:100%;border-radius:10px"><figcaption style="font-size:.75rem;color:#8ec5ff;line-height:1.7">OK ' + html.escape(ex2["good_cap"]) + '</figcaption></figure>'
-            ex_html += '<figure style="margin:0"><div style="background:#4d1d1d;color:#e6a8a8;font-size:.72rem;padding:.3rem .6rem;border-radius:8px 8px 0 0;font-weight:700">WEAK</div><img src="' + base + s2 + '-bad.jpg" loading="lazy" style="width:100%;border-radius:10px;opacity:.85"><figcaption style="font-size:.75rem;color:#cbb8d4;line-height:1.7">X ' + html.escape(ex2["bad_cap"]) + '</figcaption></figure>'
+            ex_html += '<figure style="margin:0"><div style="background:#1d4d2b;color:#a8e6a3;font-size:.72rem;padding:.3rem .6rem;border-radius:8px 8px 0 0;font-weight:700">OK PROMPT</div><img src="' + base + s2 + '-good.jpg" alt="正例参考图" loading="lazy" style="width:100%;border-radius:10px"><figcaption style="font-size:.75rem;color:#8ec5ff;line-height:1.7">OK ' + html.escape(ex2["good_cap"]) + '</figcaption></figure>'
+            ex_html += '<figure style="margin:0"><div style="background:#4d1d1d;color:#e6a8a8;font-size:.72rem;padding:.3rem .6rem;border-radius:8px 8px 0 0;font-weight:700">WEAK</div><img src="' + base + s2 + '-bad.jpg" alt="反例参考图" loading="lazy" style="width:100%;border-radius:10px;opacity:.85"><figcaption style="font-size:.75rem;color:#cbb8d4;line-height:1.7">X ' + html.escape(ex2["bad_cap"]) + '</figcaption></figure>'
             ex_html += '</div>'
             if ex2.get("good_prompt"):
                 gp = html.escape(ex2["good_prompt"])

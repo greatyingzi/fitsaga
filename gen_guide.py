@@ -106,8 +106,8 @@ def main():
         for ex in data.get("examples", []):
             examples_html += "<h2>" + html.escape(ex.get("title", "对照")) + "</h2>"
             examples_html += '<div class="gpair">'
-            examples_html += '<figure><img src="/guide-img/' + ex["slug"] + '-good.jpg" loading="lazy"><figcaption style="color:#a8e6a3">OK ' + html.escape(ex.get("good_cap", "")) + '</figcaption></figure>'
-            examples_html += '<figure><img src="/guide-img/' + ex["slug"] + '-bad.jpg" loading="lazy"><figcaption style="color:#cbb8d4">X ' + html.escape(ex.get("bad_cap", "")) + '</figcaption></figure>'
+            examples_html += '<figure><img src="/guide-img/' + ex["slug"] + '-good.jpg" alt="正例参考图" loading="lazy"><figcaption style="color:#a8e6a3">OK ' + html.escape(ex.get("good_cap", "")) + '</figcaption></figure>'
+            examples_html += '<figure><img src="/guide-img/' + ex["slug"] + '-bad.jpg" alt="反例参考图" loading="lazy"><figcaption style="color:#cbb8d4">X ' + html.escape(ex.get("bad_cap", "")) + '</figcaption></figure>'
             examples_html += "</div>"
         # 相关专题推荐(命中率提升: 决策文→专题)
         RELATED = {
