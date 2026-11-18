@@ -93,5 +93,10 @@
   "scope": "fitsaga",
   "tags": "读者问题调研,问题驱动内容,元内容",
   "content": "fitsaga 读者问题调研(2026-11-17)：盘点发现站内无搜索查询日志(search.js仅前端fetch索引不落库),只能用代理词(Google suggest 132词+热榜7条)推测需求。递归挖12种子词得到28个问题型词,诚实分级: nikki outfit ideas占10/28(单主题过度代表)、mamian skirt how to wear命中已有选题(验证方向但suggest滞后)、suggest会被通用权重带偏(how to prompt claude等无关词需人工过滤)。方法原则:代理词只用于选题发现找空白,绝不用于需求量化。落地4篇:how-to-prompt-ai-effectively/wedding-guest-outfit-ideas-male/shining-nikki-outfit-ideas+元内容how-we-research-reader-questions(公开调研局限)。方法论专区扩为9组40卡(新增读者问题组)。sitemap 1077,飞轮40/40。"
+ },
+ {
+  "scope": "fitsaga",
+  "tags": "命中率提升,不扩量,旧数据可达性",
+  "content": "fitsaga命中率提升专项(2026-11-18, 用户问'还要继续扩吗'——诚实答不该单纯扩量,应提高旧数据命中率)：审计发现三处断链并全部修复——①决策文→专题0/10(gen_guide.py加RELATED映射+延伸阅读区块,10/10覆盖)②专题→方法论专区16/74(gen_topics.py的rel_html加统一入口,74/74覆盖)③搜索索引合集硬编码只20个(gen_search_index.py改自动扫描public/collection/读h1标题,索引621→652,合集20→51)。套装页→专题原本50/50已好。线上复测:决策文延伸阅读1/专题方法论入口1/线上索引652(合集51)/sitemap1077/飞轮40/40。核心判断:内容量已达39深度文+23专题+50合集+933套装页,继续堆量边际递减,补内部链接让旧数据可达才是提高命中率的正确路径。"
  }
 ]

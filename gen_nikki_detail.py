@@ -30,6 +30,23 @@ def main(cap=300):
         rel = con.execute("SELECT id,name FROM suits WHERE game=? AND id<>? AND EXISTS(SELECT 1 FROM suit_imgs WHERE suit_id=suits.id) ORDER BY RANDOM() LIMIT 4", (game, sid)).fetchall()
         rel_html = "\n".join(
             f'<a class="chip" href="/nikki/s/{slugify(rn)}">{html.escape(rn)}</a>' for _, rn in rel)
+        # 按套装名主题匹配深度文(命中率提升)
+        DEEP_BY_KW = [
+            (["梦","夜","星","幻"], [("the-anatomy-of-a-viral-fashion-prompt","1秒可读性"),("nikki-design-language","设计语法")]),
+            (["花","春","樱","甜"], [("style-deconstruction-workflow","风格拆解5步"),("seasonal-color-engine","色彩引擎")]),
+            (["婚","嫁","誓"], [("fashion-ai-prompt-grammar","prompt语法学"),("ai-fashion-failure-atlas","失败模式图鉴")]),
+            (["雪","冬","海","水"], [("building-a-visual-vocabulary","80词视觉词汇"),("where-rules-break","规则边界")]),
+            (["金","贵","王","冠"], [("chinese-garment-taxonomy-en","形制分类学"),("how-to-prompt-ai-effectively","有效prompt六层")]),
+        ]
+        deep_links = []
+        for kws, picks in DEEP_BY_KW:
+            if any(k in name for k in kws):
+                deep_links = picks[:2]
+                break
+        if not deep_links:
+            deep_links = [("nikki-design-language","设计语法"),("the-prompt-lab-method","实验方法")]
+        deep_html = ' · '.join('<a style="color:#c793ff" href=/en/topics/' + ds + '>' + dt + ' →</a>' for ds, dt in deep_links)
+        ai_block = '<div style="margin-top:2rem;background:linear-gradient(135deg,#2a1832,#4a1f45);border-radius:14px;padding:1rem 1.1rem;border-left:3px solid #c793ff"><b style="color:#c793ff">🧠 从图鉴到方法论</b><p style="margin:.4rem 0 0;font-size:.85rem;color:#d8c9de;line-height:1.8">' + deep_html + ' · <a style="color:#ff9ec7" href="/deep-lab.html">全部35篇 →</a></p></div>'
         page = f'''<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -42,7 +59,7 @@ def main(cap=300):
 <p class="sub">{html.escape(game)} · {n} 张图 · 数据来自 BWIKI</p></header>
 <main class="sec">
 <div class="masonry">{cards}</div>
-<div style="margin-top:2rem;background:linear-gradient(135deg,#2a1832,#4a1f45);border-radius:14px;padding:1rem 1.1rem;border-left:3px solid #c793ff"><b style="color:#c793ff">🎨 AI 画法推荐</b><p style="margin:.4rem 0 0;font-size:.85rem;color:#d8c9de;line-height:1.8">想用 AI 画这种风格？看<a style="color:#ff9ec7" href="/topics/hanfu-prompt-guide">汉服形制 prompt 指南</a>与<a style="color:#ff9ec7" href="/topics/nikki-art-reference">游戏时装借色方法论</a>。</p></div>
+{ai_block}
 <p style="margin-top:1.5rem;color:#9d8fa8;font-size:.85rem">相关套装：</p>
 <nav class="stylechips" style="margin-top:.4rem">{rel_html}</nav>
 </main>
