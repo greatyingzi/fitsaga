@@ -88,5 +88,10 @@
   "scope": "fitsaga",
   "tags": "深度内容七批完成,35篇",
   "content": "fitsaga 深度内容专项七批35篇全部上线(2026-11-17)：第七批跨文化/编年史/读者视角——东西方领口语法/AI prompt哲学三次转向编年史/从下载与追问看读者真实需求(诚实局限声明)/East vs West prompt词汇翻译边界/From Tips to Science个人实验法。方法论专区 /deep-lab.html 扩为8组36卡(新增'跨文化与时间')。同时扩写7篇核心pillar文章(失败模式图鉴/68实验账本/暖暖设计语言/prompt语法学/塑料感三因/1秒理论/形制分类学)至1500-2400字,补充认知科学依据/物理基础/完整案例/边界条件。质量审计:35篇深度文无重复slug、全部有对照图、语言22zh+13en。sitemap 1073。飞轮40/40。教训:git push偶发SSL抖动重试即成功,不要误判为权限问题。"
+ },
+ {
+  "scope": "fitsaga",
+  "tags": "读者问题调研,问题驱动内容,元内容",
+  "content": "fitsaga 读者问题调研(2026-11-17)：盘点发现站内无搜索查询日志(search.js仅前端fetch索引不落库),只能用代理词(Google suggest 132词+热榜7条)推测需求。递归挖12种子词得到28个问题型词,诚实分级: nikki outfit ideas占10/28(单主题过度代表)、mamian skirt how to wear命中已有选题(验证方向但suggest滞后)、suggest会被通用权重带偏(how to prompt claude等无关词需人工过滤)。方法原则:代理词只用于选题发现找空白,绝不用于需求量化。落地4篇:how-to-prompt-ai-effectively/wedding-guest-outfit-ideas-male/shining-nikki-outfit-ideas+元内容how-we-research-reader-questions(公开调研局限)。方法论专区扩为9组40卡(新增读者问题组)。sitemap 1077,飞轮40/40。"
  }
 ]

@@ -15,15 +15,13 @@ def main():
     for k, zh in [("hanfu","古风汉服"),("qipao","旗袍优雅"),("sweet","甜美少女"),("sexy","辣妹性感"),
                   ("jk","JK制服"),("street","街头潮流"),("winter","秋冬叠穿"),("beauty","美妆变美"),("korean","韩系街拍")]:
         idx.append({"t": zh + "搭配图鉴", "u": "/style/" + k + ".html", "c": "风格"})
-    # 合集
-    for slug, t in [("starry-night","星夜漫游"),("fairytale-dream","童话与梦"),("spring-floral","花开时节"),
-                    ("ocean-rain","海洋与雨"),("dark-gothic","暗夜哥特"),("jk-uniform","JK制服精选"),
-                    ("sweet-girl","甜妹精选"),("quiet-luxury","静奢风"),("dopamine","多巴胺穿搭"),
-                    ("millard","美拉德穿搭"),("american-retro","美式复古"),("french-style","法式穿搭"),
-                    ("new-chinese","新中式"),("commute","通勤穿搭"),("knitwear","针织衫"),
-                    ("coat-season","秋冬大衣"),("qipao-modern","旗袍现代穿法"),("lolita-picks","Lolita精选"),
-                    ("hanfu-daily","汉服日常"),("travel-hanfu","古镇旅拍")]:
-        idx.append({"t": t, "u": "/collection/" + slug, "c": "合集"})
+    # 合集(自动扫描全部合集页, 不再硬编码)
+    import re as _re
+    for f in sorted((ROOT/"public"/"collection").glob("*.html")):
+        ch = f.read_text(encoding="utf-8", errors="ignore")
+        hm = _re.search(r"<h1[^>]*>(.*?)</h1>", ch, _re.S)
+        ct = _re.sub(r"<[^>]+>", "", hm.group(1)).strip() if hm else f.stem
+        idx.append({"t": ct, "u": "/collection/" + f.stem, "c": "合集"})
     # 图鉴与专题
     idx.append({"t":"无限暖暖套装图鉴","u":"/nikki/infinity.html","c":"图鉴"})
     idx.append({"t":"奇迹暖暖套装图鉴(高清)","u":"/nikki/miraclehd.html","c":"图鉴"})

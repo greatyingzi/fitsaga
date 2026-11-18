@@ -52,7 +52,7 @@ def md2html(md):
             out.append(f"<p>{t}</p>")
     return "\n".join(out)
 
-def article_html(a, body_html, looks_html):
+def article_html(a, body_html, looks_html, related_html=""):
     return f'''<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -71,7 +71,8 @@ def article_html(a, body_html, looks_html):
 {body_html}
 {looks_html}
 </article>
-<p style="margin-top:2.5rem"><a href="/guide.html">← 返回穿搭研究所</a> · <a href="/">首页</a></p>
+{related_html}
+<p style="margin-top:2.5rem"><a href="/guide.html">← 返回穿搭研究所</a> · <a href="/deep-lab.html">🧠 方法论实验室</a> · <a href="/">首页</a></p>
 </div>
 <script src="/lightbox.js" defer></script>
 <script src="/search.js" defer></script>
@@ -107,10 +108,32 @@ def main():
             examples_html += '<figure><img src="/guide-img/' + ex["slug"] + '-good.jpg" loading="lazy"><figcaption style="color:#a8e6a3">OK ' + html.escape(ex.get("good_cap", "")) + '</figcaption></figure>'
             examples_html += '<figure><img src="/guide-img/' + ex["slug"] + '-bad.jpg" loading="lazy"><figcaption style="color:#cbb8d4">X ' + html.escape(ex.get("bad_cap", "")) + '</figcaption></figure>'
             examples_html += "</div>"
+        # 相关专题推荐(命中率提升: 决策文→专题)
+        RELATED = {
+            "laoqianfeng-ruwen": ["quiet-luxury", "dopamine", "old-money", "minimalist"],
+            "lolita-xuanpai": ["jk-lolita-ai-guide", "lolita-picks", "jk-uniform"],
+            "mamiqun-shangyi": ["hanfu-prompt-guide", "mamian", "hanfu-daily"],
+            "xiaogez-xiangao": ["petite", "pear-shape", "commute"],
+            "jingshefeng-zenmechuan": ["quiet-luxury", "elegant", "old-money", "minimalist"],
+            "zhenzhishan-xuankuan": ["knitwear", "coat-season", "winter-coat"],
+            "duobapei-secaigongshi": ["dopamine", "color-psychology", "seasonal-color-engine"],
+            "jkzhifu-ruquan": ["jk-uniform", "jk-lolita-ai-guide", "first-love"],
+            "tianmei-bianjie": ["sweet-girl", "first-love", "milk-style"],
+            "y2k-huichao": ["y2k", "american-retro-b", "street"],
+        }
+        related_slugs = RELATED.get(slug, [])
+        related_html = ""
+        if related_slugs:
+            chips = "".join(
+                f'<a class="chip" style="background:linear-gradient(135deg,#2a1832,#a855f766)" href="/collection/{rs}">相关合集</a>'
+                if not rs.endswith("-guide") and not rs.endswith("-engine") and not rs.endswith("-psychology")
+                else f'<a class="chip" style="background:linear-gradient(135deg,#2a1832,#c793ff)" href="/topics/{rs}">相关专题</a>'
+                for rs in related_slugs)
+            related_html = '<div style="margin-top:2rem;padding:1rem;background:#241b2c;border-radius:12px"><b style="color:#c793ff">延伸阅读 · 从文章到图库</b><nav class="stylechips" style="margin-top:.6rem;justify-content:flex-start">' + chips + '</nav></div>'
         looks = "\n".join(
             f'<figure><img src="{html.escape(u)}" alt="{html.escape(alt)}" loading="lazy"><figcaption>{html.escape(cap)}</figcaption></figure>'
             for u, alt, cap in data["looks"])
-        page = article_html({"slug":slug,"title":title,"lede":lede,"published_at":pub}, body_html, examples_html + f'<div class="looks">{looks}</div>')
+        page = article_html({"slug":slug,"title":title,"lede":lede,"published_at":pub}, body_html, examples_html + f'<div class="looks">{looks}</div>', related_html)
         (PUB / f"guide/{slug}.html").write_text(page, encoding="utf-8")
         urls.append((slug, title, lede))
     # guide索引页

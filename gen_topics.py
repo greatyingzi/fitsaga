@@ -121,6 +121,7 @@ def main():
             _sub2 = 'en/topics' if t2.get("lang") == "en" else 'topics'
             rel_html += '<a class="chip" style="background:linear-gradient(135deg,#2a1832,#a855f766)" href=/' + _sub2 + '/' + t2["slug"] + '>' + html.escape(t2["title"][:20]) + '</a>'
             rel_html += '</nav>'
+            rel_html += '<p style="margin-top:1rem"><a style="color:#c793ff;font-size:.9rem" href="/deep-lab.html">🧠 这里有 35 篇基于站内数据的方法论长文 · 进入方法论实验室 →</a></p>'
 
         chase = ""
         try:
