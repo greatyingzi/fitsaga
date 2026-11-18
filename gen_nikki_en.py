@@ -64,6 +64,7 @@ def main():
 <main class="sec">
 <p style="color:#d8c9de;line-height:1.8">Every theme below pulls <b>real in-game suits</b> with images. The workflow: pick a suit → extract its palette → rebuild it as a prompt (see <a style="color:#8ec5ff" href="/en/topics/infinity-nikki-outfit-ideas">the ideas guide</a> and <a style="color:#8ec5ff" href="/en/topics/game-costume-design-ai">the copyright ladder</a>).</p>
 {"".join(cards_all)}
+<p style="margin-top:1.5rem;color:#c793ff"><b>Other suit galleries:</b> <a href="/nikki/miracle.html">Miracle Nikki</a> · <a href="/nikki/shining.html">Shining Nikki</a> · <a href="/nikki/miraclehd.html">Miracle HD</a> · <a href="/nikki/zara.html">ZARA editorial</a></p>
 <p style="margin-top:2rem"><a style="color:#ff7eb3" href="/en/topics.html">← All AI reference topics</a></p>
 </main>
 <footer><div><b style="color:#f5c76e">FitSaga</b> · AI Reference</div>

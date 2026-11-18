@@ -198,6 +198,8 @@ def home():
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#a855f766)" href="/ai.html">✦ AI 灵感图鉴</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#8ec5ff66)" href="/zara.html">ZARA 大片</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#8ec5ff66)" href="/downloads.html">⬇ 参考图包</a>
+    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#c793ff)" href="/en/nikki-outfits">👗 套装数据库</a>
+    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#ff7eb366)" href="/nikki/miraclehd.html">奇迹暖暖HD</a>
   </nav>
 </section>
 <section class="sec" id="ailab" style="padding-top:1.5rem">
@@ -248,6 +250,8 @@ def home():
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#8ec5ff66)" href="/collection/office">职场通勤</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#cbb8d466)" href="/collection/qipao">旗袍</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#a855f766)" href="/collection/mamian">马面裙</a>
+    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#ffd9a866)" href="/collection/qipao-modern">旗袍现代</a>
+    <a class="chip" style="background:linear-gradient(135deg,#2a1832,#8ec5ff66)" href="/collection/french-style">法式穿搭</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#ff7eb366)" href="/collection/makeup-tutorial">化妆教程</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#8ec5ff66)" href="/collection/daily-wear">日常穿搭</a>
     <a class="chip" style="background:linear-gradient(135deg,#2a1832,#ffd9a866)" href="/collection/winter-coat">秋冬大衣</a>

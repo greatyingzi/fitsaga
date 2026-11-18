@@ -27,7 +27,7 @@ def main(cap=300):
             f'<figure class="shot"><img src="{html.escape(u)}" alt="{html.escape(game+name+kind)}" loading="lazy"><figcaption class="cap">{html.escape(kind)}</figcaption></figure>'
             for u, kind in imgs)
         # 同风格相关: 同游戏其他套装随机4个
-        rel = con.execute("SELECT id,name FROM suits WHERE game=? AND id<>? AND EXISTS(SELECT 1 FROM suit_imgs WHERE suit_id=suits.id) ORDER BY RANDOM() LIMIT 4", (game, sid)).fetchall()
+        rel = con.execute("SELECT id, COALESCE(alias_zh, name) AS rn FROM suits WHERE game=? AND id<>? AND EXISTS(SELECT 1 FROM suit_imgs WHERE suit_id=suits.id) ORDER BY ABS(id - ?) ASC LIMIT 6", (game, sid, sid)).fetchall()
         rel_html = "\n".join(
             f'<a class="chip" href="/nikki/s/{slugify(rn)}">{html.escape(rn)}</a>' for _, rn in rel)
         # 按套装名主题匹配深度文(命中率提升)
